@@ -1,0 +1,6 @@
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\DAL\bin\Release\DAL.dll.config
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\DAL\bin\Release\DAL.dll
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\DAL\bin\Release\DAL.pdb
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\DAL\obj\Release\DAL.dll
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\DAL\obj\Release\DAL.pdb
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache

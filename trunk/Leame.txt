@@ -1,0 +1,10 @@
+1. Descargue en una carpeta el Sitio de la Solucion y proyecto de biblioteca de clases
+ Repositorio: 
+  https://signus2014.googlecode.com/svn/trunk/
+
+2. Descargue en otra carpeta el sitio de web de signus:	
+   Repositorio:
+	https://signus2012.googlecode.com/svn/trunk
+
+3. Abrir la solucion 
+4. Agregar el sitio web de signus a la solucion y colocar como proyecto de inicio
