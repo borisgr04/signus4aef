@@ -48,6 +48,7 @@ namespace BLL
                         InicializarConsecutivoMovimiento();
                         lCartPago = Pagar();
                         lCartSFavor = SaldoAFavor();
+                        ActualizarSoportePago();
                         db.SaveChanges();
                         byaRpt.Mensaje = "Se realizó el pago";
                         lErrorG = false;
@@ -83,6 +84,23 @@ namespace BLL
                 }
         }
             return byaRpt.Mensaje;
+        }
+
+        private void ActualizarSoportePago()
+        {
+                PAGOS_SOP spa = db.PAGOS_SOP.Where(t => t.PAG_NDOC == decl.DEC_COD ).FirstOrDefault();
+                if (spa != null)
+                {
+                    if (spa.PAG_EST == "AP")
+                    {
+                        throw new Exception("El soporte de pago ya fue aplicado.");
+                    }
+                    else
+                    {
+                        spa.PAG_EST="AP";
+                        db.Entry(spa).State= EntityState.Modified;
+                    }
+                }
         }
 
         private void RegistrarReqDeclaracion()

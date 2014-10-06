@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AplicarSoportePagoBLL.cs" />
     <Compile Include="ConSaldoFavor.cs" />
     <Compile Include="Dec_RequiDTO.cs" />
     <Compile Include="Entidades\Pagos_Sop_DTO.cs" />
