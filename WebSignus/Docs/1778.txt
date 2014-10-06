@@ -1,0 +1,30 @@
+824001058;;40;2012;04;4001;16;2012/04/02;CC;65730592;Amaya Hoyos Nilvia Yolanda;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;16;2012/04/02;CC;94072765;Ariza Orozco Willman;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;16;2012/04/02;CC;77166648;Barros Carranza Wilson;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;16;2012/04/02;CC;77166811;Dominguez Pacheco Anderson;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;16;2012/04/02;CC;77165982;Guarnizo Ramirez Luifer Jose;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;16;2012/04/02;CC;77167562;Hernandez Buelvas Abimael;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;16;2012/04/02;CC;71972809;Jaramillo Beltran Oscar Luis;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;16;2012/04/02;CC;77167406;Montes Arias Edwin;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;16;2012/04/02;CC;77165939;Orozco Almanza Jose Luis;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;16;2012/04/02;CC;12641706;Quiroz Morron Carlos;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;16;2012/04/02;CC;19586097;Salcedo Celis Teodoberto;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;16;2012/04/02;CC;12703720;Sierra Suarez Luis;Abono de sesiones ordinarias del mes de febrero de 2012;1096900;0,01;10969
+824001058;;40;2012;04;4001;16;2012/04/02;CC;77164036;Sotomayor Perez Jose Vicente;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4001;19;2012/04/09;CC;77163907;Garcia Hernandez Jaime;Pago suministro implementos de aseo, refrigerio y cafeteria para uso de la corporacion correspondiente a los meses de marzo y abril de 2012;415400;0,01;4154
+824001058;;40;2012;04;4001;21;2012/04/11;CC;77167184;Pertuz Garcia Jhon;Prestacion de servicio de mantenimiento preventivo y correctivo de equipos de computos e impresoras de la corporacion;310000;0,01;3100
+824001058;;40;2012;04;4002;16;2012/04/02;CC;65730592;Amaya Hoyos Nilvia Yolanda;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;16;2012/04/02;CC;94072765;Ariza Orozco Willman;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;16;2012/04/02;CC;77166648;Barros Carranza Wilson;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;16;2012/04/02;CC;77166811;Dominguez Pacheco Anderson;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;16;2012/04/02;CC;77165982;Guarnizo Ramirez Luifer Jose;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;16;2012/04/02;CC;77167562;Hernandez Buelvas Abimael;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;16;2012/04/02;CC;71972809;Jaramillo Beltran Oscar Luis;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;16;2012/04/02;CC;77167406;Montes Arias Edwin;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;16;2012/04/02;CC;77165939;Orozco Almanza Jose Luis;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;16;2012/04/02;CC;12641706;Quiroz Morron Carlos;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;16;2012/04/02;CC;19586097;Salcedo Celis Teodoberto;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;16;2012/04/02;CC;12703720;Sierra Suarez Luis;Abono de sesiones ordinarias del mes de febrero de 2012;1096900;0,01;10969
+824001058;;40;2012;04;4002;16;2012/04/02;CC;77164036;Sotomayor Perez Jose Vicente;Abono de sesiones ordinarias del mes de febrero de 2012;731300;0,01;7313
+824001058;;40;2012;04;4002;19;2012/04/09;CC;77163907;Garcia Hernandez Jaime;Pago suministro implementos de aseo, refrigerio y cafeteria para uso de la corporacion correspondiente a los meses de marzo y abril de 2012;415400;0,01;4154
+824001058;;40;2012;04;4002;21;2012/04/11;CC;77167184;Pertuz Garcia Jhon;Prestacion de servicio de mantenimiento preventivo y correctivo de equipos de computos e impresoras de la corporacion;310000;0,01;3100

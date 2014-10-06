@@ -1,0 +1,18 @@
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Debug\BLL.dll
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Debug\BLL.pdb
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Debug\ByAUtil.dll
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Debug\DAL.dll
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Debug\ByAUtil.pdb
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Debug\DAL.pdb
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\obj\Debug\BLL.dll
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\obj\Debug\BLL.pdb
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\BLL\bin\Debug\BLL.dll
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\BLL\bin\Debug\BLL.pdb
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\BLL\bin\Debug\ByAUtil.dll
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\BLL\bin\Debug\DAL.dll
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\BLL\bin\Debug\ByAUtil.pdb
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\BLL\bin\Debug\DAL.pdb
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\BLL\obj\Debug\BLL.dll
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\BLL\obj\Debug\BLL.pdb

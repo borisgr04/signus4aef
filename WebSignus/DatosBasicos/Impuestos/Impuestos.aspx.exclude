@@ -1,0 +1,91 @@
+<%@ Page Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Impuestos.aspx.vb"
+ Inherits="DatosBasicos_Impuestos_Impuestos" title="Untitled Page" UICulture="auto" Culture="auto"%>
+<asp:Content ID="Content1" ContentPlaceHolderID="SampleContent" Runat="Server">
+<script type='text/javascript'>
+// Add click handlers for buttons to show and hide modal popup on pageLoad
+        function pageLoad() {
+            //$addHandler($get("showModalPopupClientButton"), 'click', showModalPopupViaClient);
+            //$addHandler($get("hideModalPopupViaClientButton"), 'click', hideModalPopupViaClient);        
+            $addHandler($get("BtnCerrar"), 'click', CerrarModalTercero);        
+            $addHandler($get("BtnCancelar"), 'click', CerrarModalTercero);        
+        }
+         function CerrarModalTercero(ev) {
+            ev.preventDefault();        
+            var modalPopupBehavior2 = $find('programmaticModalPopupBehavior2');
+            modalPopupBehavior2.hide();
+        }
+        
+          function CerrarModalEliminar(ev) {
+            ev.preventDefault();        
+            var modalPopupBehavior2 = $find('programmaticModalPopupBehavior');
+            modalPopupBehavior2.hide();
+        }
+        
+        </script>
+<div class="demoarea">
+    <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true"
+        EnableScriptLocalization="true">
+    </ajaxToolkit:ToolkitScriptManager>
+    <br />
+    <asp:UpdatePanel id="UpdatePanel1" runat="server">
+        <contenttemplate>
+&nbsp;<asp:Label id="Tit" runat="server" Text="IMPUESTOS" CssClass="Titulo"></asp:Label><BR /><asp:Label id="MsgResult" runat="server"></asp:Label> <BR />Clase de Impuesto&nbsp; <asp:DropDownList id="CmbClase" runat="server" AutoPostBack="True" DataValueField="CLIM_CODI" DataSourceID="ObjClaImp" DataTextField="CLIM_NOMB" OnSelectedIndexChanged="CmbClase_SelectedIndexChanged"></asp:DropDownList> <asp:HiddenField id="Oper" runat="server"></asp:HiddenField><asp:GridView id="GridView1" runat="server" ForeColor="#333333" AutoGenerateColumns="False" DataKeyNames="imp_cod" OnRowCommand="GridView1_RowCommand" ShowFooter="True" CellPadding="4" GridLines="None">
+<RowStyle BackColor="#F7F6F3" ForeColor="#333333"></RowStyle>
+<Columns>
+<asp:TemplateField HeaderText="C&#243;digo" SortExpression="IMP_COD"><FooterTemplate>
+                <asp:LinkButton ID="lnkNuevo" runat="server" CausesValidation="False" CommandName="Nuevo"
+                        Text="Nuevo Registro"></asp:LinkButton>
+                
+</FooterTemplate>
+<ItemTemplate>
+<asp:Label id="LbCod" runat="server" Text='<%# Bind("IMP_COD") %>' __designer:wfdid="w69"></asp:Label> 
+</ItemTemplate>
+</asp:TemplateField>
+<asp:TemplateField HeaderText="Nombre" SortExpression="IMP_NOM"><ItemTemplate>
+<asp:Label id="LbNom" runat="server" Text='<%# Bind("IMP_NOM") %>' __designer:wfdid="w70"></asp:Label> 
+</ItemTemplate>
+</asp:TemplateField>
+<asp:TemplateField HeaderText="Observacion" SortExpression="IMP_OBS"><ItemTemplate>
+<asp:Label id="Lbobs" runat="server" Text='<%# Bind("IMP_OBS") %>' __designer:wfdid="w71"></asp:Label> 
+</ItemTemplate>
+</asp:TemplateField>
+<asp:TemplateField HeaderText="Norma" SortExpression="IMP_NOR"><ItemTemplate>
+<asp:Label id="Lbnor" runat="server" Text='<%# Bind("IMP_NOR") %>' __designer:wfdid="w75"></asp:Label> 
+</ItemTemplate>
+</asp:TemplateField>
+<asp:TemplateField HeaderText="Clase de Declaracion" SortExpression="IMP_CLA"><ItemTemplate>
+<asp:Label id="Lbcla" runat="server" Text='<%# Bind("IMP_CLA") %>' __designer:wfdid="w74"></asp:Label> 
+</ItemTemplate>
+</asp:TemplateField>
+<asp:TemplateField HeaderText="Unidad" SortExpression="IMP_UNI"><ItemTemplate>
+<asp:Label id="Lbuni" runat="server" Text='<%# Bind("IMP_UNI") %>' __designer:wfdid="w77"></asp:Label> 
+</ItemTemplate>
+</asp:TemplateField>
+<asp:ButtonField CommandName="Editar" ImageUrl="~/images/Operaciones/Edit2.png" Text="Editar" ButtonType="Image"></asp:ButtonField>
+<asp:ButtonField CommandName="Eliminar" ImageUrl="~/images/Operaciones/delete2.png" Text="Eliminar" ButtonType="Image"></asp:ButtonField>
+<asp:CommandField SelectImageUrl="~/images/Operaciones/Select.png" ShowSelectButton="True" ButtonType="Image"></asp:CommandField>
+</Columns>
+
+<FooterStyle BackColor="White" Font-Bold="True" ForeColor="#5D7B9D"></FooterStyle>
+
+<PagerStyle HorizontalAlign="Center" BackColor="#284775" ForeColor="White"></PagerStyle>
+
+<SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333"></SelectedRowStyle>
+
+<HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White"></HeaderStyle>
+
+<EditRowStyle BackColor="#999999"></EditRowStyle>
+
+<AlternatingRowStyle BackColor="White" ForeColor="#284775"></AlternatingRowStyle>
+</asp:GridView> <asp:ObjectDataSource id="ObjClaImp" runat="server" SelectMethod="GetRecords" TypeName="Clase_Impto"></asp:ObjectDataSource><BR /><asp:MultiView id="MultiView1" runat="server"><asp:View id="View1" runat="server"><asp:ObjectDataSource id="ObjUnidades" runat="server" SelectMethod="GetRecords" TypeName="Unidades"></asp:ObjectDataSource>&nbsp; </asp:View>&nbsp; </asp:MultiView>&nbsp; <BR />
+</contenttemplate>
+    </asp:UpdatePanel><asp:UpdatePanel id="UpdatePanel2" runat="server"><contenttemplate>
+<!-- Mensaje de Salida--><BR /><asp:Button style="DISPLAY: none" id="hiddenTargetControlForModalPopup2" runat="server"></asp:Button> <ajaxToolkit:ModalPopupExtender id="ModalPopupTer" runat="server" TargetControlID="hiddenTargetControlForModalPopup2" RepositionMode="RepositionOnWindowScroll" BehaviorID="programmaticModalPopupBehavior2" BackgroundCssClass="modalBackground" DropShadow="True" PopupControlID="programmaticPopup2" PopupDragHandleControlID="programmaticPopupDragHandle2">
+            </ajaxToolkit:ModalPopupExtender> <ajaxToolkit:CalendarExtender id="CalendarExtender1" runat="server" TargetControlID="TxtFInew"></ajaxToolkit:CalendarExtender> <ajaxToolkit:CalendarExtender id="CalendarExtender2" runat="server" TargetControlID="TxtFFnew"></ajaxToolkit:CalendarExtender>&nbsp; &nbsp; &nbsp; <TABLE><TBODY><TR><TD colSpan=3><asp:Label id="SubT" runat="server" CssClass="SubTitulo" Text="Nuevo"></asp:Label></TD></TR><TR><TD style="WIDTH: 98px">Código</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtCodNew" runat="server"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px">Nombre </TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtNomNew" runat="server" Width="229px"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px">Unidad</TD><TD style="WIDTH: 100px"><asp:DropDownList id="CboUniNew" runat="server" DataTextField="Uni_Nom" DataSourceID="ObjUnidades" DataValueField="uni_Cod"></asp:DropDownList></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px">Codigo de Barra</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtBarNew" runat="server" Width="226px" MaxLength="<%$ AppSettings:BAR_COD %>"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px">Norma</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtNorNew" runat="server" Width="272px" TextMode="MultiLine"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px; HEIGHT: 23px">Abreviatura</TD><TD style="WIDTH: 100px; HEIGHT: 23px"><asp:TextBox id="TxtAbrNew" runat="server" Width="47px"></asp:TextBox></TD><TD style="WIDTH: 100px; HEIGHT: 23px"></TD></TR><TR><TD style="WIDTH: 98px">Fecha de Inicio</TD><TD style="WIDTH: 100px"><asp:TextBox id="txtFINew" runat="server"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px">Fecha de Fin</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtFFnew" runat="server"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px; HEIGHT: 40px">Observación</TD><TD style="WIDTH: 100px; HEIGHT: 40px"><asp:TextBox id="TxtObsNew" runat="server" TextMode="MultiLine"></asp:TextBox></TD><TD style="WIDTH: 100px; HEIGHT: 40px"></TD></TR><TR><TD style="TEXT-ALIGN: center" colSpan=3><asp:Button id="BtnGuardar" onclick="BtnGuardar_Click" runat="server" Text="Guardar"></asp:Button>&nbsp;&nbsp;<asp:Button id="BtnEliminar" onclick="BtnEliminar_Click" runat="server" Text="Eliminar" __designer:wfdid="w105"></asp:Button>&nbsp; <asp:Button id="BtnCancelar" onclick="BtnCancelar_Click" runat="server" Text="Cancelar"></asp:Button> </TD></TR></TBODY></TABLE>
+</contenttemplate>
+    </asp:UpdatePanel>&nbsp;<br />
+    <br />
+    <br />
+    &nbsp;</div>
+</asp:Content>
+

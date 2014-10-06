@@ -1,0 +1,26 @@
+824001058;;40;2011;10;4001;144;2011/10/10;CC;12639670;Miguel Villalva Ortega;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;77167406;Edwin Montes Arias;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;71972809;Oscar Jaramillo B.;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;12640149;Marcos Guerrero Julio;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;19586097;Teodoberto Salcedo C.;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;12642619;Julio Cantillo Calceta;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;77166397;Hernando Soraca G.;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;77165939;Jose Luis Orozco A.;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;12703720;Luis Sierra Suarez;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;65730592;Nilvia Yolanda Amaya;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;77163764;Juan Gomez Rodriguez;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;77163394;Andres Nuñez Sierra;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4001;144;2011/10/10;CC;5012964;Sixto Ortiz Daza;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;12639670;Miguel Villalva Ortega;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;77167406;Edwin Montes Arias;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;71972809;Oscar Jaramillo B.;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;12640149;Marcos Guerrero Julio;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;19586097;Teodoberto Salcedo C.;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;12642619;Julio Cantillo Calceta;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;77166397;Hernando Soraca G.;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;77165939;Jose Luis Orozco A.;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;12703720;Luis Sierra Suarez;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;65730592;Nilvia Yolanda Amaya;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;77163764;Juan Gomez Rodriguez;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;77163394;Andres Nuñez Sierra;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;10;4002;144;2011/10/10;CC;5012964;Sixto Ortiz Daza;Pago sesiones ordinarias del mes de agosto de 2011;723000;0,01;7230

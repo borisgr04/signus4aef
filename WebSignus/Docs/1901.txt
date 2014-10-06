@@ -1,0 +1,8 @@
+900312737;3;40;2012;05;4001;31;30/05/2012;CC;13.362.145;Javier Pedroza Quintero;Servicio de trasnporte escolar para los alumnos del C. U. Venadillo.;3510800;0,01;35108
+900312737;3;40;2012;05;4002;31;30/05/2012;CC;13.362.145;Javier Pedroza Quintero;Servicio de trasnporte escolar para los alumnos del C. U. Venadillo.;3510800;0,01;35108
+900312737;3;40;2012;05;4001;32;30/05/2012;CC;1.348.950;Deixy Yanes Quintero;Suministro de útiles escolares y de oficina;1349000;0,01;13490
+900312737;3;40;2012;05;4002;32;30/05/2012;CC;1.348.950;Deixy Yanes Quintero;Suministro de útiles escolares y de oficina;1349000;0,01;13490
+900312737;3;40;2012;05;4001;33;30/05/2012;CC;36.501.175;Ana Graciela Umaña Quintero;Suministro de útiles de aseo y cafetería;981000;0,01;9810
+900312737;3;40;2012;05;4002;33;30/05/2012;CC;36.501.175;Ana Graciela Umaña Quintero;Suministro de útiles de aseo y cafetería;981000;0,01;9810
+900312737;3;40;2012;05;4001;35;30/05/2012;CC;18904181;Jesús Mauricio López Duarte;Servicios Profesionales como contador;330000;0,01;3300
+900312737;3;40;2012;05;4002;35;30/05/2012;CC;18904181;Jesús Mauricio López Duarte;Servicios Profesionales como contador;330000;0,01;3300

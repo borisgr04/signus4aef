@@ -1,0 +1,22 @@
+900001322;6;40;2011;07;4001;1;30/07/2011;NIT;82000013;ferrirepuestos el ebanista;materiales y suministro;961000;0,01;9610
+900001322;6;40;2011;07;4001;2;30/07/2011;NIT;1325828;compuplane je;materiales y suministro;130000;0,01;1300
+900001322;6;40;2011;07;4001;3;30/07/2011;NIT;2635841;creditos ara;materiales y suministro;104000;0,01;1040
+900001322;6;40;2011;07;4001;3;30/07/2011;NIT;652871;veterinaria el corral;materiales y suministro;71000;0,01;710
+900001322;6;40;2011;07;4001;4;30/07/2011;NIT;568742;ferreteria rd;materiales y suministro;805000;0,01;8050
+900001322;6;40;2011;07;4001;5;30/07/2011;NIT;165874;centro informatico eniac;materiales y suministro;779900;0,01;7799
+900001322;6;40;2011;07;4001;6;30/07/2011;NIT;8567914;jhon jaider camacho lengua;materiales y suministro;900000;0,01;9000
+900001322;6;40;2011;07;4001;7;30/07/2011;NIT;7895421;cacharreria el ahorro;materiales y suministro;100000;0,01;1000
+900001322;6;40;2011;07;4001;8;30/07/2011;NIT;1325828;compuplane je;materiales y suministro;70000;0,01;700
+900001322;6;40;2011;07;4001;9;30/07/2011;NIT;4578921;centro electrico;materiales y suministro;96000;0,01;960
+900001322;6;40;2011;07;4001;10;30/07/2011;NIT;568742;ferreteria rd;materiales y suministro;429400;0,01;4294
+900001322;6;40;2011;07;4002;1;30/07/2011;NIT;82000013;ferrirepuestos el ebanista;materiales y suministro;961000;0,01;9610
+900001322;6;40;2011;07;4002;2;30/07/2011;NIT;1325828;compuplane je;materiales y suministro;130000;0,01;1300
+900001322;6;40;2011;07;4002;3;30/07/2011;NIT;2635841;creditos ara;materiales y suministro;104000;0,01;1040
+900001322;6;40;2011;07;4002;3;30/07/2011;NIT;652871;veterinaria el corral;materiales y suministro;71000;0,01;710
+900001322;6;40;2011;07;4002;4;30/07/2011;NIT;568742;ferreteria rd;materiales y suministro;805000;0,01;8050
+900001322;6;40;2011;07;4002;5;30/07/2011;NIT;165874;centro informatico eniac;materiales y suministro;779900;0,01;7799
+900001322;6;40;2011;07;4002;6;30/07/2011;NIT;8567914;jhon jaider camacho lengua;materiales y suministro;900000;0,01;9000
+900001322;6;40;2011;07;4002;7;30/07/2011;NIT;7895421;cacharreria el ahorro;materiales y suministro;100000;0,01;1000
+900001322;6;40;2011;07;4002;8;30/07/2011;NIT;1325828;compuplane je;materiales y suministro;70000;0,01;700
+900001322;6;40;2011;07;4002;9;30/07/2011;NIT;4578921;centro electrico;materiales y suministro;96000;0,01;960
+900001322;6;40;2011;07;4002;10;30/07/2011;NIT;568742;ferreteria rd;materiales y suministro;429400;0,01;4294

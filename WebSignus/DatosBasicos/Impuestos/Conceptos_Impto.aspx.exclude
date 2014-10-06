@@ -1,0 +1,88 @@
+<%@ Page Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Conceptos_Impto.aspx.vb" Inherits="DatosBasicos_Impuestos_Conceptos_Impto" title="Untitled Page" 
+UICulture="auto" Culture="auto"%>
+<asp:Content ID="Content2" ContentPlaceHolderID="SampleContent" Runat="Server">
+<div class="demoarea">
+    <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true"
+        EnableScriptLocalization="true">
+    </ajaxToolkit:ToolkitScriptManager>
+    <br />
+    <asp:UpdatePanel id="UpdatePanel1" runat="server">
+        <contenttemplate>
+&nbsp;<asp:Label id="Tit" runat="server" Text="CONCEPTOS IMPUESTOS" CssClass="Titulo"></asp:Label><BR /><asp:Label id="MsgResult" runat="server"></asp:Label><BR />Clase de Impuesto <asp:DropDownList id="CmbClase" runat="server" __designer:dtid="5910974510923786" __designer:wfdid="w67" AutoPostBack="True" DataValueField="CLIM_CODI" DataSourceID="ObjClaImp" DataTextField="CLIM_NOMB" OnSelectedIndexChanged="CmbClase_SelectedIndexChanged"></asp:DropDownList>Seleccione&nbsp;de Impuesto&nbsp; <asp:DropDownList id="CboImpto" runat="server" __designer:wfdid="w66" AutoPostBack="True" DataValueField="IMP_COD" DataSourceID="ObjImp" DataTextField="IMP_NOM" OnSelectedIndexChanged="CboImpto_SelectedIndexChanged"></asp:DropDownList>&nbsp; <asp:Button id="BtnConsultar" runat="server" Text="Consultar" __designer:dtid="281474976710671" __designer:wfdid="w1" OnClick="BtnConsultar_Click"></asp:Button><BR />Conceptos por Impuesto<BR /><asp:GridView id="GridView1" runat="server" ForeColor="#333333" AutoGenerateColumns="False" DataKeyNames="coim_cod" OnRowCommand="GridView1_RowCommand" ShowFooter="True" CellPadding="4" GridLines="None">
+<FooterStyle BackColor="White" Font-Bold="True" ForeColor="#5D7B9D"></FooterStyle>
+<RowStyle BackColor="#F7F6F3" ForeColor="#333333"></RowStyle>
+            <Columns>
+                <asp:TemplateField HeaderText="C&#243;digo" SortExpression="COIM_COD">
+                    <FooterTemplate>
+                            <asp:LinkButton ID="lnkNuevo" runat="server" CausesValidation="False" CommandName="Nuevo"
+                            Text="Nuevo Registro"></asp:LinkButton>
+                    </FooterTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="LbCod" runat="server" Text='<%# Bind("COIM_COD") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                
+                <asp:TemplateField HeaderText="Nombre" SortExpression="COIM_NOM">
+                <ItemTemplate>
+                   <asp:Label ID="LbNom" runat="server" Text='<%# Bind("COIM_NOM") %>'></asp:Label>
+                </ItemTemplate>
+                
+                </asp:TemplateField>
+                
+                <asp:TemplateField HeaderText="Tipo de Concepto" SortExpression="TCON_NOM">
+                <ItemTemplate>
+                   <asp:Label ID="LbNom" runat="server" Text='<%# Bind("TCON_NOM") %>'></asp:Label>
+                </ItemTemplate>
+                </asp:TemplateField>
+                
+                <asp:TemplateField HeaderText="Estado" SortExpression="COIM_EST">
+                <ItemTemplate>
+                   <asp:Label ID="LbNom" runat="server" Text='<%# Bind("COIM_EST") %>'></asp:Label>
+                </ItemTemplate>
+                </asp:TemplateField>
+                
+                <asp:TemplateField HeaderText="Prioridad" SortExpression="COIM_PRI">
+                <ItemTemplate>
+                   <asp:Label ID="LbNom" runat="server" Text='<%# Bind("COIM_PRI") %>'></asp:Label>
+                </ItemTemplate>
+                </asp:TemplateField>
+                
+                <asp:TemplateField HeaderText="Tipo Mov" SortExpression="COIM_TMOV">
+                <ItemTemplate>
+                   <asp:Label ID="LbNom" runat="server" Text='<%# Bind("COIM_TMOV") %>'></asp:Label>
+                </ItemTemplate>
+                </asp:TemplateField>
+
+                
+                <asp:ButtonField CommandName="Editar" Text="Editar"></asp:ButtonField>
+                <asp:ButtonField CommandName="Eliminar" Text="Eliminar"></asp:ButtonField>
+</Columns>
+
+<PagerStyle HorizontalAlign="Center" BackColor="#284775" ForeColor="White"></PagerStyle>
+
+<SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333"></SelectedRowStyle>
+
+<HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White"></HeaderStyle>
+
+<EditRowStyle BackColor="#999999"></EditRowStyle>
+
+<AlternatingRowStyle BackColor="White" ForeColor="#284775"></AlternatingRowStyle>
+</asp:GridView><BR /><!-- <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White"></FooterStyle>--><asp:SqlDataSource id="SqlConceptos_Impto" runat="server" __designer:wfdid="w70" SelectCommand="SELECT COIM_COD, COIM_NOM, TCON_NOM, COIM_EST, COIM_PRI, COIM_TMOV FROM DERWEB.VCONCEPTOS_IMP WHERE (COIM_CIMP = :Coim_CImp)" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>"><SelectParameters>
+<asp:ControlParameter ControlID="CboImpto" PropertyName="SelectedValue" Name="Coim_CImp"></asp:ControlParameter>
+</SelectParameters>
+</asp:SqlDataSource> <asp:ObjectDataSource id="ObjImp" runat="server" SelectMethod="GetByCLASE" TypeName="Impuestos"><SelectParameters>
+<asp:ControlParameter ControlID="CmbClase" PropertyName="SelectedValue" Name="IMP_CLA"></asp:ControlParameter>
+</SelectParameters>
+</asp:ObjectDataSource> <asp:ObjectDataSource id="ObjClaImp" runat="server" __designer:dtid="5910974510923822" __designer:wfdid="w68" SelectMethod="GetRecords" TypeName="Clase_Impto"></asp:ObjectDataSource> <asp:HiddenField id="Oper" runat="server"></asp:HiddenField><BR /><asp:MultiView id="MultiView1" runat="server"><asp:View id="View1" runat="server"><TABLE><TBODY><TR><TD colSpan=3><asp:Label id="SubT" runat="server" Text="Nuevo" CssClass="SubTitulo"></asp:Label></TD></TR><TR><TD style="WIDTH: 98px">Código</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtCodNew" runat="server"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px">Nombre </TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtNomNew" runat="server" Width="229px"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px">Tipo de Concepto</TD><TD style="WIDTH: 100px"><asp:DropDownList id="CboTConNew" runat="server" DataTextField="TCON_NOM" DataSourceID="SqlTipConceptos" DataValueField="TCON_COD"></asp:DropDownList></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px">Estado</TD><TD style="WIDTH: 100px"><asp:DropDownList id="CboEst" runat="server" __designer:wfdid="w71"><asp:ListItem Value="AC">ACTIVO</asp:ListItem>
+<asp:ListItem Value="IN">INACTIVO</asp:ListItem>
+</asp:DropDownList></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px">Prioridad</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtPri" runat="server" Width="47px" __designer:wfdid="w72"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px">Tipo Movimiento</TD><TD style="WIDTH: 100px"><asp:DropDownList id="CboTipMov" runat="server" DataTextField="TMOV_NOM" DataSourceID="SqlTMOV" DataValueField="TMOV_COD" __designer:wfdid="w71"><asp:ListItem Value="AC">ACTIVO</asp:ListItem>
+<asp:ListItem Value="IN">INACTIVO</asp:ListItem>
+</asp:DropDownList> </TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px"></TD><TD style="WIDTH: 100px"></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px"></TD><TD style="WIDTH: 100px"></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 98px"></TD><TD style="WIDTH: 100px"></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="TEXT-ALIGN: center" colSpan=3><asp:Button id="BtnGuardar" onclick="BtnGuardar_Click" runat="server" Text="Guardar"></asp:Button><asp:Button id="BtnCancelar" onclick="BtnCancelar_Click" runat="server" Text="Cancelar"></asp:Button></TD></TR></TBODY></TABLE> <asp:SqlDataSource id="SqlTMOV" runat="server" __designer:wfdid="w74" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="Select * From vTip_Mov"></asp:SqlDataSource> <asp:SqlDataSource id="SqlTipConceptos" runat="server" __designer:wfdid="w74" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="Select * From vTip_Conceptos"></asp:SqlDataSource> </asp:View>&nbsp; </asp:MultiView>&nbsp; <BR />
+</contenttemplate>
+    </asp:UpdatePanel>
+    <br />
+    <br />
+    &nbsp;</div>
+</asp:Content>
+
+

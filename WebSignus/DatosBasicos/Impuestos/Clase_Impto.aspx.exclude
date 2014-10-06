@@ -1,0 +1,61 @@
+<%@ Page Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Clase_Impto.aspx.vb" Inherits="DatosBasicos_Impuestos_Clase_Impto" title="Untitled Page" UICulture="auto" Culture="auto"%>
+
+<%@ Register Assembly="eWorld.UI, Version=2.0.6.2393, Culture=neutral, PublicKeyToken=24d65337282035f2"
+    Namespace="eWorld.UI" TagPrefix="ew" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="SampleContent" Runat="Server">
+<div class="demoarea">
+    <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true"
+        EnableScriptLocalization="true">
+    </ajaxToolkit:ToolkitScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+<asp:Label id="Tit" runat="server" Text="CLASE DE IMPUESTOS" Width="345px" CssClass="Titulo"></asp:Label> <asp:Label id="MsgResult" runat="server"></asp:Label> <asp:HiddenField id="Oper" runat="server"></asp:HiddenField> <BR /><asp:GridView id="GridView1" runat="server" ForeColor="#333333" GridLines="None" CellPadding="4" ShowFooter="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleting="GridView1_RowDeleting" OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand" OnRowCancelingEdit="GridView1_RowCancelingEdit" DataKeyNames="CLIM_CODI" AutoGenerateColumns="False">
+        <Columns>
+           <asp:TemplateField HeaderText="CODIGO" SortExpression="CLIM_CODI" >
+                <ItemTemplate >
+                    <asp:Label ID="LbCod" runat="server" Text='<%# Bind("CLIM_CODI") %>'></asp:Label>
+                </ItemTemplate>
+                <FooterTemplate>
+                <asp:LinkButton ID="lnkNuevo" runat="server" CausesValidation="False" CommandName="Nuevo"
+                        Text="Nuevo Registro"></asp:LinkButton>
+                </FooterTemplate>
+                
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="NOMBRE" SortExpression="CLIM_NOMB" >
+                <ItemTemplate >
+                    <asp:Label ID="LbNom" runat="server" Text='<%# Bind("CLIM_NOMB") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+             <asp:TemplateField HeaderText="FECHA_INICIO" SortExpression="CLIM_FEIN" >
+                <ItemTemplate >
+                    <asp:Label ID="LbFEIN" runat="server" Text='<%# Bind("CLIM_FEIN") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+             <asp:TemplateField HeaderText="FECHA_FIN" SortExpression="CLIM_FEFI"  >
+                <ItemTemplate  >
+                    <asp:Label ID="LbFEFI" runat="server" Text='<%# Bind("CLIM_FEFI") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:ButtonField CommandName="Editar" Text="Editar" />
+            <asp:ButtonField CommandName="Eliminar" Text="Eliminar" />
+        </Columns>
+        <FooterStyle BackColor="White" Font-Bold="True" ForeColor="#5D7B9D" />
+        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+        <EditRowStyle BackColor="#999999" />
+        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+    </asp:GridView> <asp:MultiView id="MultiView1" runat="server" ActiveViewIndex="0"><asp:View id="View1" runat="server"><TABLE><TBODY><TR><TD colSpan=3><asp:Label id="Label1" runat="server" Text="Editar" CssClass="SubTitulo"></asp:Label></TD></TR><TR><TD style="WIDTH: 100px">Código</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtCod" runat="server" ReadOnly="True"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 100px">Nombre</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtNom" runat="server"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 100px">Fecha de Inicio</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtFecIni" runat="server"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 100px">Fecha de Fin</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtFecFin" runat="server"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="TEXT-ALIGN: center" colSpan=3><asp:Button id="BtnGuardar" onclick="BtnGuardar_Click" runat="server" Text="Guardar"></asp:Button> <asp:Button id="BtnCancelar" onclick="BtnCancelar_Click" runat="server" Text="Cancelar"></asp:Button></TD></TR></TBODY></TABLE>&nbsp; <ajaxToolkit:CalendarExtender id="CalendarExtender1" runat="server" TargetControlID="TxtFecIni">
+                    </ajaxToolkit:CalendarExtender> <ajaxToolkit:CalendarExtender id="CalendarExtender2" runat="server" TargetControlID="TxtFecFin">
+                    </ajaxToolkit:CalendarExtender> </asp:View> <asp:View id="View2" runat="server"><TABLE><TBODY><TR><TD colSpan=3><asp:Label id="Label2" runat="server" Text="Nuevo Registro" CssClass="SubTitulo"></asp:Label></TD></TR><TR><TD style="WIDTH: 100px">Código</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtCodNew" runat="server" ReadOnly="True"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 100px">Nombre</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtNomNew" runat="server"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 100px">Fecha de Inicio</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtFINew" runat="server"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="WIDTH: 100px">Fecha de Fin</TD><TD style="WIDTH: 100px"><asp:TextBox id="TxtFFNew" runat="server"></asp:TextBox></TD><TD style="WIDTH: 100px"></TD></TR><TR><TD style="TEXT-ALIGN: center" colSpan=3><asp:Button id="BtnGuardarN" onclick="BtnGuardarN_Click" runat="server" Text="Guardar"></asp:Button> <asp:Button id="BtnCancel" runat="server" Text="Cancelar" OnClick="BtnCancel_Click"></asp:Button></TD></TR></TBODY></TABLE>&nbsp; <ajaxToolkit:CalendarExtender id="CalendarExtender3" runat="server" TargetControlID="TxtFINew">
+                    </ajaxToolkit:CalendarExtender><ajaxToolkit:CalendarExtender id="CalendarExtender4" runat="server" TargetControlID="TxtFFNew">
+                    </ajaxToolkit:CalendarExtender> </asp:View> </asp:MultiView> 
+</ContentTemplate>
+    </asp:UpdatePanel>
+    &nbsp;&nbsp;&nbsp;<br />
+</div>
+
+
+</asp:Content>
+

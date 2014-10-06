@@ -1,0 +1,47 @@
+892300123;1;40;2012;06;4001;194;06/06/2012;CC;5084410;Gonzalez Picon Fabio Alberto;Contrato de Suministro  005;6280000;0,01;62800
+892300123;1;40;2012;06;4002;194;06/06/2012;CC;5084410;Gonzalez Picon Fabio Alberto;Contrato de Suministro  005;6280000;0,01;62800
+892300123;1;40;2012;06;4001;197;06/06/2012;CC;88139204;Manzano Velasquez Wilson Martin;Contrato de prestacion de servicios;1409100;0,01;14091
+892300123;1;40;2012;06;4002;197;06/06/2012;CC;88139204;Manzano Velasquez Wilson Martin;Contrato de prestacion de servicios;1409100;0,01;14091
+892300123;1;40;2012;06;4001;200;06/06/2012;CC;26863409;Pinto Velasquez Antonia del Rosario;Contrato de prestacion de servicios;1529400;0,01;15294
+892300123;1;40;2012;06;4002;200;06/06/2012;CC;26863409;Pinto Velasquez Antonia del Rosario;Contrato de prestacion de servicios;1529400;0,01;15294
+892300123;1;40;2012;06;4001;201;06/06/2012;CC;26863393;Lengua Mieles Glenis Rocio;Contrato de prestacion de servicios;1320000;0,01;13200
+892300123;1;40;2012;06;4001;204;06/06/2012;CC;18904412;Cradenas Osorio Andres Mauricio;Contrato de prestacion de servicios;1629000;0,01;16290
+892300123;1;40;2012;06;4002;204;06/06/2012;CC;18904412;Cradenas Osorio Andres Mauricio;Contrato de prestacion de servicios;1629000;0,01;16290
+892300123;1;40;2012;06;4002;221;12/06/2012;CC;91522730;Pacheco Wandurriaga Andres J;Contrato de interventoria;1629000;0,01;16290
+892300123;1;40;2012;06;4001;208;07/06/2012;CC;5036352;Guerrero Barbosa Jhon Jairo;Contrato de prestacion de servicios;2150000;0,01;21500
+892300123;1;40;2012;06;4002;208;07/06/2012;CC;5036352;Guerrero Barbosa Jhon Jairo;Contrato prestacion de servicios;2150000;0,01;21500
+892300123;1;40;2012;06;4001;209;07/06/2012;CC;5084732;Casadiegos Suarez Alvaro;Contrato prestacion de servicios;4000000;0,01;40000
+892300123;1;40;2012;06;4002;209;07/06/2012;CC;5084732;Casadiegos Suarez Alvaro;Contrato  prestacion de servicios;4000000;0,01;40000
+892300123;1;40;2012;06;4001;212;08/06/2012;CC;72121025;Cervantes Jimenez Waldir Albero;Contrato  prestacion de servicios;2887500;0,01;28875
+892300123;1;40;2012;06;4001;213;08/06/2012;CC;37180517;Ortiz Martinez Mayerly;Contrato prestacion de servicios;2887500;0,01;28875
+892300123;1;40;2012;06;4001;214;08/06/2012;CC;37180517;Quintero Alvaernia Viviana;Contrato prestacion de servicios;2887500;0,01;28875
+892300123;1;40;2012;06;4002;214;08/06/2012;CC;13485454;Quintero Alvaernia Viviana;Contrato prestacion de servicios;2887500;0,01;28875
+892300123;1;40;2012;06;4001;220;12/06/2012;CC;13485454;Vila Vega Manuel Guillermo;Contrato prestacion de servicios;3710000;0,01;37100
+892300123;1;40;2012;06;4002;220;12/06/2012;CC;18904432;Vila Vega Manuel Guillermo;Contrato prestacion de servicios;3710000;0,01;37100
+892300123;1;40;2012;06;4001;231;14/06/2012;CC;18904432;Gomez Osorio Jorge Mario;Contrato prestacion de servicios;1050000;0,01;10500
+892300123;1;40;2012;06;4002;231;14/06/2012;CC;18904432;Gomez Osorio Jorge Mario;Contrato prestacion de servicios;1050000;0,01;10500
+892300123;1;40;2012;06;4001;232;14/06/2012;CC;1064836077;Sanchez Suarez Nataly;Contrato prestacion de servicios;750000;0,01;7500
+892300123;1;40;2012;06;4001;235;14/06/2012;CC;49782615;Santana Saumeth Liliana;Contrato prestacion de servicios;2700000;0,01;27000
+892300123;1;40;2012;06;4002;235;14/06/2012;CC;49782615;Santana Saumeth Liliana;Contrato prestacion de servicios;2700000;0,01;27000
+892300123;1;40;2012;06;4002;237;14/06/2012;CC;26863116;Contreras Arias Maria Bertilde;Contrato prestacion de servicios;2388888;0,01;23888,88
+892300123;1;40;2012;06;4001;237;14/06/2012;CC;26863116;Contreras Arias Maria Bertilde;Contrato prestacion de servicios;2388888;0,01;23888,88
+892300123;1;40;2012;06;4001;238;14/06/2012;CC;5084402;Sanchez Chinchilla Javier Orlando;Contrato prestacion de servicios;2000000;0,01;20000
+892300123;1;40;2012;06;4002;238;14/06/2012;CC;5084402;Sanchez Chinchilla Javier Orlando;Contrato prestacion de servicios;2000000;0,01;20000
+892300123;1;40;2012;06;4001;239;14/06/2012;CC;26863615;Ortiz Escalante Mery;Contrato prestacion de servicios;778860;0,01;7788,6
+892300123;1;40;2012;06;4001;240;14/06/2012;CC;19222211;Osorio Orozco Adriano Eduvar;Convenio prestacion servicios;3900000;0,01;39000
+892300123;1;40;2012;06;4001;241;14/06/2012;CC;1064839001;Garcia Chacon Malca Irina;Contrato prestacion de servicios;778860;0,01;7788,6
+892300123;1;40;2012;06;4001;243;15/06/2012;CC;72004661;Alvarez Padilla Luis Antonio;Contrato prestacion de servicios;8500000;0,01;85000
+892300123;1;40;2012;06;4002;243;15/06/2012;CC;72004661;Alvarez Padilla Luis Antonio;Contrato prestacion de servicios;8500000;0,01;85000
+892300123;1;40;2012;06;4001;251;25/06/2012;CC;13485454;Vila Vega Manuel Guillermo;Contrato prestacion de servicios;3710000;0,01;37100
+892300123;1;40;2012;06;4002;251;25/06/2012;CC;13485454;Vila Vega Manuel Guillermo;Contrato prestacion de servicios;3710000;0,01;37100
+892300123;1;40;2012;06;4001;252;25/06/2012;CC;1064838030;Perez Salazar Marisol;Contrato prestacion de servicios;750000;0,01;7500
+892300123;1;40;2012;06;4001;253;25/06/2012;CC;26863491;Pallares Sierra Claudia Liliana;Contrato prestacion de servicios;750000;0,01;7500
+892300123;1;40;2012;06;4001;254;25/06/2012;CC;106483745;Chinchilla Sanchez Norelys;Contrato prestacion de servicios;750000;0,01;7500
+892300123;1;40;2012;06;4001;255;25/06/2012;CC;18904109;Jimenez lozano Jose Luis;Contrato prestacion de servicios;1200000;0,01;12000
+892300123;1;40;2012;06;4002;255;25/06/2012;CC;18904109;Jimenez lozano Jose Luis;Contrato prestacion de servicios;1200000;0,01;12000
+892300123;1;40;2012;06;4001;256;25/06/2012;CC;1064836293;Sanchez Chacon Yuny Daliana;Contrato prestacion de servicios;1666700;0,01;16667
+892300123;1;40;2012;06;4001;260;25/06/2012;CC;72004661;Alvarez Padilla Luis Antonio;Contrato prestacion de servicios;8500000;0,01;85000
+892300123;1;40;2012;06;4002;260;25/06/2012;CC;72004661;Alvarez Padilla Luis Antonio;Contrato prestacion de servicios;8500000;0,01;85000
+892300123;1;40;2012;06;4001;261;26/06/2012;CC;72125268;Ramirez Gonzalez Yesid Fernando;Contrato prestacion de servicios;1700000;0,01;17000
+892300123;1;40;2012;06;4002;261;26/06/2012;CC;72125268;Ramirez Gonzalez Yesid Fernando;Contrato prestacion de servicios;1700000;0,01;17000
+892300123;1;40;2012;06;4001;221;12/06/2012;CC;91522730;Pacheco Wandurriaga Andres J;Contrato de interventoria;4740000;0,01;47400

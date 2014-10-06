@@ -1,0 +1,10 @@
+892300265;9;40;2011;10;4001;137;08/10/2011;CC;72181906;Cerbantes Barrios Aristides;Eleboración rejas, cerramiento kiosko, apmpliación parasol;3700000;0,01;37000
+892300265;9;40;2011;10;4002;137;08/10/2011;CC;72181906;Cerbantes Barrios Aristides;Eleboración rejas, cerramiento kiosko, apmpliación parasol;3700000;0,01;37000
+892300265;9;40;2011;10;4001;138;12/10/2011;CC;77189025;Morón Rivera Juan Pablo;Estudio de suelos instalaciones institución;1500000;0,01;15000
+892300265;9;40;2011;10;4002;138;12/10/2011;CC;77189025;Morón Rivera Juan Pablo;Estudio de suelos instalaciones institución;1500000;0,01;15000
+892300265;9;40;2011;10;4001;139;19/10/2011;NIT;860028580;Distribuidora de papeles S.A.;Compra de papelería para uso institucional;1100000;0,01;11000
+892300265;9;40;2011;10;4002;139;19/10/2011;NIT;860028580;Distribuidora de papeles S.A.;Compra de papelería para uso institucional;1100000;0,01;11000
+892300265;9;40;2011;10;4001;141;19/10/2011;CC;6772256;Ernel Villa Amaya;Asesorias Formación Complementaria;700000;0,01;7000
+892300265;9;40;2011;10;4002;141;19/10/2011;CC;6772256;Ernel Villa Amaya;Asesorias Formación Complementaria;700000;0,01;7000
+892300265;9;40;2011;10;4001;142;27/10/2011;CC;5091658;Trillos Trillos Argemiro;Servicio de transporte alumnos vereda la Vega;1250000;0,01;12500
+892300265;9;40;2011;10;4002;142;27/10/2011;CC;5091658;Trillos Trillos Argemiro;Servicio de transporte alumnos vereda la Vega;1250000;0,01;12500

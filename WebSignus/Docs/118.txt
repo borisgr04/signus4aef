@@ -1,0 +1,34 @@
+824001058;;40;2011;08;4001;113;2011/08/07;CC;77166397;Hernando Soraca G.;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;632600;0,01;6326
+824001058;;40;2011;08;4001;113;2011/08/07;CC;12642619;Julio Cantillo Calceta;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;632600;0,01;6326
+824001058;;40;2011;08;4001;113;2011/08/07;CC;12639670;Miguel Villalva Ortega;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4001;113;2011/08/07;CC;12640149;Marcos Guerrero Julio;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;632600;0,01;6326
+824001058;;40;2011;08;4001;113;2011/08/07;CC;71972809;Oscar Jaramillo B.;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4001;113;2011/08/07;CC;77167406;Edwin Montes Arias;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4001;113;2011/08/07;CC;19586097;Teodoberto Salcedo C.;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4001;113;2011/08/07;CC;77165939;Jose Luis Orozco A.;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4001;113;2011/08/07;CC;65730592;Nilvia Yolanda Amaya;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;632600;0,01;6326
+824001058;;40;2011;08;4001;113;2011/08/07;CC;77163764;Juan Gomez Rodriguez;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;632600;0,01;6326
+824001058;;40;2011;08;4001;113;2011/08/07;CC;77163394;Andres Nuñez Sierra;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4001;113;2011/08/07;CC;5012964;Sixto Ortiz Daza;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4001;113;2011/08/07;CC;12703720;Luis Sierra Suarez;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4001;114;2011/08/07;CC;72165452;Rosmel Francisco Galvis Anillo;Pago honorarios de asesorias contables y presupuestales en manejo de presupuesto y elaboracion de los estados financieros con corte a junio 30 de 2011;530000;0,01;5300
+824001058;;40;2011;08;4001;115;2011/08/07;CC;77163907;Jaime Garcia H.;Pago suministro de implementos de Aseo, refrigerio y cafeteria para uso de la corporacion;262000;0,01;2620
+824001058;;40;2011;08;4001;116;2011/08/07;CC;36592790;Io Leris Palacio S.;Pago suministro utiles de oficina y servicio de Fotocopia para uso de la corporacion ;310000;0,01;3100
+824001058;;40;2011;08;4001;118;2011/08/07;CC;77166373;Jesus David Cantillo;Pago servicio Comedor y varios en reunion de los honorables concejales con motivo a la instalación del tercer periodo de sesiones ordinarias de la vigencia 2011;270000;0,01;2700
+824001058;;40;2011;08;4002;113;2011/08/07;CC;77166397;Hernando Soraca G.;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;632600;0,01;6326
+824001058;;40;2011;08;4002;113;2011/08/07;CC;12642619;Julio Cantillo Calceta;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;632600;0,01;6326
+824001058;;40;2011;08;4002;113;2011/08/07;CC;12639670;Miguel Villalva Ortega;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4002;113;2011/08/07;CC;12640149;Marcos Guerrero Julio;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;632600;0,01;6326
+824001058;;40;2011;08;4002;113;2011/08/07;CC;71972809;Oscar Jaramillo B.;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4002;113;2011/08/07;CC;77167406;Edwin Montes Arias;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4002;113;2011/08/07;CC;19586097;Teodoberto Salcedo C.;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4002;113;2011/08/07;CC;77165939;Jose Luis Orozco A.;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4002;113;2011/08/07;CC;65730592;Nilvia Yolanda Amaya;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;632600;0,01;6326
+824001058;;40;2011;08;4002;113;2011/08/07;CC;77163764;Juan Gomez Rodriguez;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;632600;0,01;6326
+824001058;;40;2011;08;4002;113;2011/08/07;CC;77163394;Andres Nuñez Sierra;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4002;113;2011/08/07;CC;5012964;Sixto Ortiz Daza;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4002;113;2011/08/07;CC;12703720;Luis Sierra Suarez;Pago sesiones Extraordinarias del mes de julio y abono de sesiones Ordinarias del mes de agosto de 2011;723000;0,01;7230
+824001058;;40;2011;08;4002;114;2011/08/07;CC;72165452;Rosmel Francisco Galvis Anillo;Pago honorarios de asesorias contables y presupuestales en manejo de presupuesto y elaboracion de los estados financieros con corte a junio 30 de 2011;530000;0,01;5300
+824001058;;40;2011;08;4002;115;2011/08/07;CC;77163907;Jaime Garcia H.;Pago suministro de implementos de Aseo, refrigerio y cafeteria para uso de la corporacion;262000;0,01;2620
+824001058;;40;2011;08;4002;116;2011/08/07;CC;36592790;Io Leris Palacio S.;Pago suministro utiles de oficina y servicio de Fotocopia para uso de la corporacion ;310000;0,01;3100
+824001058;;40;2011;08;4002;118;2011/08/07;CC;77166373;Jesus David Cantillo;Pago servicio Comedor y varios en reunion de los honorables concejales con motivo a la instalación del tercer periodo de sesiones ordinarias de la vigencia 2011;270000;0,01;2700

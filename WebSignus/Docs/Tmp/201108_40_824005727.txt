@@ -1,0 +1,13 @@
+824005727;8;40;2011;08;4001;78;2011/08/25;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de abril al 13 de mayo de 2011;200000;0,01;2000
+824005727;8;40;2011;08;4001;97;2011/08/25;CC;36592790;Io Leris Palacio S.;suministro de papeleria y fotocopias para uso de la personeria;457400;0,01;4574
+824005727;8;40;2011;08;4001;99;2011/08/25;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de mayo al 13 de julio de 2011;200000;0,01;2000
+824005727;8;40;2011;08;4001;115;2011/08/25;CC;18934814;Aquilino Ternera Rada;servicio de transporte al personero a diferentes veredas del Municipio;100000;0,01;1000
+824005727;8;40;2011;08;4001;118;2011/08/25;CC;36594007;Bibiana Medina Aroca;emision de cuñas en la programacion general de la emisora villa stereo durante los meses de mayo y junio;215000;0,01;2150
+824005727;8;40;2011;08;4001;119;2011/08/25;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de junio al 13 de julio;200000;0,01;2000
+824005727;8;40;2011;08;4001;138;2011/08/25;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de julio al 13 de agosto;200000;0,01;2000
+824005727;8;40;2011;08;4002;97;2011/08/25;CC;36592790;Io Leris Palacio S.;suministro de papeleria y fotocopias para uso de la personeria;457400;0,01;4574
+824005727;8;40;2011;08;4002;99;2011/08/25;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de mayo al 13 de julio de 2011;200000;0,01;2000
+824005727;8;40;2011;08;4002;115;2011/08/25;CC;18934814;Aquilino Ternera Rada;servicio de transporte al personero a diferentes veredas del Municipio;100000;0,01;1000
+824005727;8;40;2011;08;4002;118;2011/08/25;CC;36594007;Bibiana Medina Aroca;emision de cuñas en la programacion general de la emisora villa stereo durante los meses de mayo y junio;215000;0,01;2150
+824005727;8;40;2011;08;4002;119;2011/08/25;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de junio al 13 de julio;200000;0,01;2000
+824005727;8;40;2011;08;4002;138;2011/08/25;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de julio al 13 de agosto;200000;0,01;2000

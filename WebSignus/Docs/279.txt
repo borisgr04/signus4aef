@@ -1,0 +1,3 @@
+824001698;4;40;2011;09;4001;72;14/09/2011;CC;5731418;Lenis Gómez Altamar;Adecuaciones y arreglos planta física sede 1;6915000;0,01;69150
+824001698;4;40;2011;09;4001;73;14/09/2011;CC;18921619;Manuel Medina Carvajalino;Estudio voltaje y elaboración plano eléctrico ;650000;0,01;6500
+824001698;4;40;2011;09;4001;74;14/09/2011;CC;10523196;Jorge Elicio Malagón Arias;Filmación y Editación material Foro Educ. M/pal.;230000;0,01;2300

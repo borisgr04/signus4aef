@@ -1,0 +1,20 @@
+824001542;4;40;2012;04;4001;027;10/04/2012;CC;9309179;CUELLO CUELLO MARCISO;Mantenimiento y adecuacion de abanicos, aires acondicionados y alumbrado de los salones de la sede urbana de niñas.;4500000;0,01;45000
+824001542;4;40;2012;04;4002;027;10/04/2012;CC;9309179;CUELLO CUELLO MARCISO;Mantenimiento y adecuacion de abanicos, aires acondicionados y alumbrado de los salones de la sede urbana de niñas.;4500000;0,01;45000
+824001542;4;40;2012;04;4001;030;12/04/2012;CC;77028451;RIVERO GUTIERREZ ELDER;Actualizacion del hospedaje web software sipes.;580000;0,01;5800
+824001542;4;40;2012;04;4002;030;12/04/2012;CC;77028451;RIVERO GUTIERREZ ELDER;Actualizacion del hospedaje web software sipes.;580000;0,01;5800
+824001542;4;40;2012;04;4001;031;12/04/2012;CC;12722247;VILORIA JIMENEZ DONALDO;Suministro de elementos de oficina para la I.E. SAN JOSE;4771000;0,01;47710
+824001542;4;40;2012;04;4002;031;12/04/2012;CC;12722247;VILORIA JIMENEZ DONALDO;Suministro de elementos de oficina para la I.E. SAN JOSE;4771000;0,01;47710
+824001542;4;40;2012;04;4001;032;13/04/2012;CC;77040013;RAMIREZ MARTINEZ ROBERTO CARLOS;Pago de asesoria contable y financiera;750000;0,01;7500
+824001542;4;40;2012;04;4002;032;13/04/2012;CC;77040013;RAMIREZ MARTINEZ ROBERTO CARLOS;Pago de asesoria contable y financiera;750000;0,01;7500
+824001542;4;40;2012;04;4001;033;16/04/2012;CC;77040271;LOPEZ TORRES MEISSNER;Mantenimientos y limpieza del sonidos de la sede principal de todos los salones.;1417700;0,01;14177
+824001542;4;40;2012;04;4002;033;16/04/2012;CC;77040271;LOPEZ TORRES MEISSNER;Mantenimientos y limpieza del sonidos de la sede principal de todos los salones.;1417700;0,01;14177
+824001542;4;40;2012;04;4001;034;18/04/2012;CC;9309179;CUELLO CUELLO MARCISO;Mantenimiento bateria sanitaria sede principal;523400;0,01;5234
+824001542;4;40;2012;04;4002;034;18/04/2012;CC;9309179;CUELLO CUELLO MARCISO;Mantenimiento bateria sanitaria sede principal;523400;0,01;5234
+824001542;4;40;2012;04;4001;035;19/04/2012;CC;84101527;ALVARADO OROZCO EBER E.;Instalacion   de transformador y acometida en baja tension.;11240900;0,01;112409
+824001542;4;40;2012;04;4002;035;19/04/2012;CC;84101527;ALVARADO OROZCO EBER E.;Instalacion   de transformador y acometida en baja tension.;11240900;0,01;112409
+824001542;4;40;2012;04;4001;038;24/04/2012;CC;49732884;DAVILA GARCIA YOLANDA ESTHER;Suministro de materiales para la instalacion del transformador;3492000;0,01;34920
+824001542;4;40;2012;04;4002;038;24/04/2012;CC;49732884;DAVILA GARCIA YOLANDA ESTHER;Suministro de materiales para la instalacion del transformador;3492000;0,01;34920
+824001542;4;40;2012;04;4001;039;26/04/2012;CC;77038586;CALDERON LEONARDO;Suministros de 4 ventanas para la sede anexa la Florida;1252700;0,01;12527
+824001542;4;40;2012;04;4002;039;26/04/2012;CC;77038586;CALDERON LEONARDO;Suministros de 4 ventanas para la sede anexa la Florida;1252700;0,01;12527
+824001542;4;40;2012;04;4001;040;26/04/2012;CC;77040284;POTOSI MUÑOZ JAIDER LUIS;Mantenimiento y adecuacion de abanicos, aires acondicionados y alumbrado de la sede urb. De varones;2178800;0,01;21788
+824001542;4;40;2012;04;4002;040;26/04/2012;CC;77040284;POTOSI MUÑOZ JAIDER LUIS;Mantenimiento y adecuacion de abanicos, aires acondicionados y alumbrado de la sede urb. De varones;2178800;0,01;21788

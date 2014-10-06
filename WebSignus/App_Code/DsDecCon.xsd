@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsDecCon" targetNamespace="http://tempuri.org/DsDecCon.xsd" xmlns:mstns="http://tempuri.org/DsDecCon.xsd" xmlns="http://tempuri.org/DsDecCon.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix=":" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="Oracle.DataAccess.Client" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsDecCon" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsDecCon" msprop:Generator_UserDSName="DsDecCon">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VCODE_CDEC" msprop:Generator_UserTableName="VCODE_CDEC" msprop:Generator_RowEvArgName="VCODE_CDECRowChangeEvent" msprop:Generator_TableVarName="tableVCODE_CDEC" msprop:Generator_TablePropName="VCODE_CDEC" msprop:Generator_RowDeletingName="VCODE_CDECRowDeleting" msprop:Generator_RowChangingName="VCODE_CDECRowChanging" msprop:Generator_RowDeletedName="VCODE_CDECRowDeleted" msprop:Generator_TableClassName="VCODE_CDECDataTable" msprop:Generator_RowChangedName="VCODE_CDECRowChanged" msprop:Generator_RowEvHandlerName="VCODE_CDECRowChangeEventHandler" msprop:Generator_RowClassName="VCODE_CDECRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODE_CDEC" msprop:Generator_ColumnVarNameInTable="columnCODE_CDEC" msprop:Generator_ColumnPropNameInRow="CODE_CDEC" msprop:Generator_ColumnPropNameInTable="CODE_CDECColumn" msprop:Generator_UserColumnName="CODE_CDEC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_CODI" msprop:Generator_ColumnVarNameInTable="columnCODE_CODI" msprop:Generator_ColumnPropNameInRow="CODE_CODI" msprop:Generator_ColumnPropNameInTable="CODE_CODIColumn" msprop:Generator_UserColumnName="CODE_CODI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_TICO" msprop:Generator_ColumnVarNameInTable="columnCODE_TICO" msprop:Generator_ColumnPropNameInRow="CODE_TICO" msprop:Generator_ColumnPropNameInTable="CODE_TICOColumn" msprop:Generator_UserColumnName="CODE_TICO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_NOMB" msprop:Generator_ColumnVarNameInTable="columnCODE_NOMB" msprop:Generator_ColumnPropNameInRow="CODE_NOMB" msprop:Generator_ColumnPropNameInTable="CODE_NOMBColumn" msprop:Generator_UserColumnName="CODE_NOMB">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_FEIN" msprop:Generator_ColumnVarNameInTable="columnCODE_FEIN" msprop:Generator_ColumnPropNameInRow="CODE_FEIN" msprop:Generator_ColumnPropNameInTable="CODE_FEINColumn" msprop:Generator_UserColumnName="CODE_FEIN" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CODE_FEFI" msprop:Generator_ColumnVarNameInTable="columnCODE_FEFI" msprop:Generator_ColumnPropNameInRow="CODE_FEFI" msprop:Generator_ColumnPropNameInTable="CODE_FEFIColumn" msprop:Generator_UserColumnName="CODE_FEFI" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="COCD_CDEC" msprop:Generator_ColumnVarNameInTable="columnCOCD_CDEC" msprop:Generator_ColumnPropNameInRow="COCD_CDEC" msprop:Generator_ColumnPropNameInTable="COCD_CDECColumn" msprop:Generator_UserColumnName="COCD_CDEC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_TMOV" msprop:Generator_ColumnVarNameInTable="columnCODE_TMOV" msprop:Generator_ColumnPropNameInRow="CODE_TMOV" msprop:Generator_ColumnPropNameInTable="CODE_TMOVColumn" msprop:Generator_UserColumnName="CODE_TMOV" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_ABVB" msprop:Generator_ColumnVarNameInTable="columnCODE_ABVB" msprop:Generator_ColumnPropNameInRow="CODE_ABVB" msprop:Generator_ColumnPropNameInTable="CODE_ABVBColumn" msprop:Generator_UserColumnName="CODE_ABVB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_VADE" msprop:Generator_ColumnVarNameInTable="columnCODE_VADE" msprop:Generator_ColumnPropNameInRow="CODE_VADE" msprop:Generator_ColumnPropNameInTable="CODE_VADEColumn" msprop:Generator_UserColumnName="CODE_VADE" type="xs:long" minOccurs="0" />
+              <xs:element name="CODE_ABVD" msprop:Generator_ColumnVarNameInTable="columnCODE_ABVD" msprop:Generator_ColumnPropNameInRow="CODE_ABVD" msprop:Generator_ColumnPropNameInTable="CODE_ABVDColumn" msprop:Generator_UserColumnName="CODE_ABVD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_VACA" msprop:Generator_ColumnVarNameInTable="columnCODE_VACA" msprop:Generator_ColumnPropNameInRow="CODE_VACA" msprop:Generator_ColumnPropNameInTable="CODE_VACAColumn" msprop:Generator_UserColumnName="CODE_VACA" type="xs:long" minOccurs="0" />
+              <xs:element name="CODE_SECO" msprop:Generator_ColumnVarNameInTable="columnCODE_SECO" msprop:Generator_ColumnPropNameInRow="CODE_SECO" msprop:Generator_ColumnPropNameInTable="CODE_SECOColumn" msprop:Generator_UserColumnName="CODE_SECO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_TARI" msprop:Generator_ColumnVarNameInTable="columnCODE_TARI" msprop:Generator_ColumnPropNameInRow="CODE_TARI" msprop:Generator_ColumnPropNameInTable="CODE_TARIColumn" msprop:Generator_UserColumnName="CODE_TARI" type="xs:double" minOccurs="0" />
+              <xs:element name="CODE_IMPTO" msprop:Generator_ColumnVarNameInTable="columnCODE_IMPTO" msprop:Generator_ColumnPropNameInRow="CODE_IMPTO" msprop:Generator_ColumnPropNameInTable="CODE_IMPTOColumn" msprop:Generator_UserColumnName="CODE_IMPTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_TSAN" msprop:Generator_ColumnVarNameInTable="columnCODE_TSAN" msprop:Generator_ColumnPropNameInRow="CODE_TSAN" msprop:Generator_ColumnPropNameInTable="CODE_TSANColumn" msprop:Generator_UserColumnName="CODE_TSAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_CART" msprop:Generator_ColumnVarNameInTable="columnCODE_CART" msprop:Generator_ColumnPropNameInRow="CODE_CART" msprop:Generator_ColumnPropNameInTable="CODE_CARTColumn" msprop:Generator_UserColumnName="CODE_CART" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_VABA" msprop:Generator_ColumnVarNameInTable="columnCODE_VABA" msprop:Generator_ColumnPropNameInRow="CODE_VABA" msprop:Generator_ColumnPropNameInTable="CODE_VABAColumn" msprop:Generator_UserColumnName="CODE_VABA" type="xs:long" minOccurs="0" />
+              <xs:element name="CODE_ISVB" msprop:Generator_ColumnVarNameInTable="columnCODE_ISVB" msprop:Generator_ColumnPropNameInRow="CODE_ISVB" msprop:Generator_ColumnPropNameInTable="CODE_ISVBColumn" msprop:Generator_UserColumnName="CODE_ISVB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_REDE" msprop:Generator_ColumnVarNameInTable="columnCODE_REDE" msprop:Generator_ColumnPropNameInRow="CODE_REDE" msprop:Generator_ColumnPropNameInTable="CODE_REDEColumn" msprop:Generator_UserColumnName="CODE_REDE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_DENR" msprop:Generator_ColumnVarNameInTable="columnCODE_DENR" msprop:Generator_ColumnPropNameInRow="CODE_DENR" msprop:Generator_ColumnPropNameInTable="CODE_DENRColumn" msprop:Generator_UserColumnName="CODE_DENR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_VASU" msprop:Generator_ColumnVarNameInTable="columnCODE_VASU" msprop:Generator_ColumnPropNameInRow="CODE_VASU" msprop:Generator_ColumnPropNameInTable="CODE_VASUColumn" msprop:Generator_UserColumnName="CODE_VASU" type="xs:long" />
+              <xs:element name="CODE_VAOF" msprop:Generator_ColumnVarNameInTable="columnCODE_VAOF" msprop:Generator_ColumnPropNameInRow="CODE_VAOF" msprop:Generator_ColumnPropNameInTable="CODE_VAOFColumn" msprop:Generator_UserColumnName="CODE_VAOF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_USBD" msprop:Generator_ColumnVarNameInTable="columnCODE_USBD" msprop:Generator_ColumnPropNameInRow="CODE_USBD" msprop:Generator_ColumnPropNameInTable="CODE_USBDColumn" msprop:Generator_UserColumnName="CODE_USBD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_USAP" msprop:Generator_ColumnVarNameInTable="columnCODE_USAP" msprop:Generator_ColumnPropNameInRow="CODE_USAP" msprop:Generator_ColumnPropNameInTable="CODE_USAPColumn" msprop:Generator_UserColumnName="CODE_USAP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_DEES" msprop:Generator_ColumnVarNameInTable="columnCODE_DEES" msprop:Generator_ColumnPropNameInRow="CODE_DEES" msprop:Generator_ColumnPropNameInTable="CODE_DEESColumn" msprop:Generator_UserColumnName="CODE_DEES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SECC_CODI" msprop:Generator_ColumnVarNameInTable="columnSECC_CODI" msprop:Generator_ColumnPropNameInRow="SECC_CODI" msprop:Generator_ColumnPropNameInTable="SECC_CODIColumn" msprop:Generator_UserColumnName="SECC_CODI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SECC_NOMB" msprop:Generator_ColumnVarNameInTable="columnSECC_NOMB" msprop:Generator_ColumnPropNameInRow="SECC_NOMB" msprop:Generator_ColumnPropNameInTable="SECC_NOMBColumn" msprop:Generator_UserColumnName="SECC_NOMB">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_FREG" msprop:Generator_ColumnVarNameInTable="columnCODE_FREG" msprop:Generator_ColumnPropNameInRow="CODE_FREG" msprop:Generator_ColumnPropNameInTable="CODE_FREGColumn" msprop:Generator_UserColumnName="CODE_FREG" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CODE_VADE1" msdata:Caption="CODE_VADE" msprop:Generator_ColumnVarNameInTable="columnCODE_VADE1" msprop:Generator_ColumnPropNameInRow="CODE_VADE1" msprop:Generator_ColumnPropNameInTable="CODE_VADE1Column" msprop:Generator_UserColumnName="CODE_VADE1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CODE_VACA1" msdata:Caption="CODE_VACA" msprop:Generator_ColumnVarNameInTable="columnCODE_VACA1" msprop:Generator_ColumnPropNameInRow="CODE_VACA1" msprop:Generator_ColumnPropNameInTable="CODE_VACA1Column" msprop:Generator_UserColumnName="CODE_VACA1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CODE_VABA1" msdata:Caption="CODE_VABA" msprop:Generator_ColumnVarNameInTable="columnCODE_VABA1" msprop:Generator_ColumnPropNameInRow="CODE_VABA1" msprop:Generator_ColumnPropNameInTable="CODE_VABA1Column" msprop:Generator_UserColumnName="CODE_VABA1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CODE_VASU1" msdata:Caption="CODE_VASU" msprop:Generator_ColumnVarNameInTable="columnCODE_VASU1" msprop:Generator_ColumnPropNameInRow="CODE_VASU1" msprop:Generator_ColumnPropNameInTable="CODE_VASU1Column" msprop:Generator_UserColumnName="CODE_VASU1" type="xs:decimal" />
+              <xs:element name="CODE_VAOF1" msdata:Caption="CODE_VAOF" msprop:Generator_ColumnVarNameInTable="columnCODE_VAOF1" msprop:Generator_ColumnPropNameInRow="CODE_VAOF1" msprop:Generator_ColumnPropNameInTable="CODE_VAOF1Column" msprop:Generator_UserColumnName="CODE_VAOF1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CODE_PESA" msprop:Generator_ColumnVarNameInTable="columnCODE_PESA" msprop:Generator_ColumnPropNameInRow="CODE_PESA" msprop:Generator_ColumnPropNameInTable="CODE_PESAColumn" msprop:Generator_UserColumnName="CODE_PESA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_AÑSA" msprop:Generator_ColumnVarNameInTable="columnCODE_AÑSA" msprop:Generator_ColumnPropNameInRow="CODE_AÑSA" msprop:Generator_ColumnPropNameInTable="CODE_AÑSAColumn" msprop:Generator_UserColumnName="CODE_AÑSA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_CCAR" msprop:Generator_ColumnVarNameInTable="columnCODE_CCAR" msprop:Generator_ColumnPropNameInRow="CODE_CCAR" msprop:Generator_ColumnPropNameInTable="CODE_CCARColumn" msprop:Generator_UserColumnName="CODE_CCAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_SUM" msprop:Generator_ColumnVarNameInTable="columnCODE_SUM" msprop:Generator_ColumnPropNameInRow="CODE_SUM" msprop:Generator_ColumnPropNameInTable="CODE_SUMColumn" msprop:Generator_UserColumnName="CODE_SUM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_DCOD" msprop:Generator_ColumnVarNameInTable="columnCODE_DCOD" msprop:Generator_ColumnPropNameInRow="CODE_DCOD" msprop:Generator_ColumnPropNameInTable="CODE_DCODColumn" msprop:Generator_UserColumnName="CODE_DCOD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_VIG" msprop:Generator_ColumnVarNameInTable="columnCODE_VIG" msprop:Generator_ColumnPropNameInRow="CODE_VIG" msprop:Generator_ColumnPropNameInTable="CODE_VIGColumn" msprop:Generator_UserColumnName="CODE_VIG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_DOAD" msprop:Generator_ColumnVarNameInTable="columnCODE_DOAD" msprop:Generator_ColumnPropNameInRow="CODE_DOAD" msprop:Generator_ColumnPropNameInTable="CODE_DOADColumn" msprop:Generator_UserColumnName="CODE_DOAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_CTAR" msprop:Generator_ColumnVarNameInTable="columnCODE_CTAR" msprop:Generator_ColumnPropNameInRow="CODE_CTAR" msprop:Generator_ColumnPropNameInTable="CODE_CTARColumn" msprop:Generator_UserColumnName="CODE_CTAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_FNOV" msprop:Generator_ColumnVarNameInTable="columnCODE_FNOV" msprop:Generator_ColumnPropNameInRow="CODE_FNOV" msprop:Generator_ColumnPropNameInTable="CODE_FNOVColumn" msprop:Generator_UserColumnName="CODE_FNOV" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CODE_VBCA" msprop:Generator_ColumnVarNameInTable="columnCODE_VBCA" msprop:Generator_ColumnPropNameInRow="CODE_VBCA" msprop:Generator_ColumnPropNameInTable="CODE_VBCAColumn" msprop:Generator_UserColumnName="CODE_VBCA" type="xs:long" minOccurs="0" />
+              <xs:element name="CODE_TACA" msprop:Generator_ColumnVarNameInTable="columnCODE_TACA" msprop:Generator_ColumnPropNameInRow="CODE_TACA" msprop:Generator_ColumnPropNameInTable="CODE_TACAColumn" msprop:Generator_UserColumnName="CODE_TACA" type="xs:double" minOccurs="0" />
+              <xs:element name="SECC_USAP" msprop:Generator_ColumnVarNameInTable="columnSECC_USAP" msprop:Generator_ColumnPropNameInRow="SECC_USAP" msprop:Generator_ColumnPropNameInTable="SECC_USAPColumn" msprop:Generator_UserColumnName="SECC_USAP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SECC_USBD" msprop:Generator_ColumnVarNameInTable="columnSECC_USBD" msprop:Generator_ColumnPropNameInRow="SECC_USBD" msprop:Generator_ColumnPropNameInTable="SECC_USBDColumn" msprop:Generator_UserColumnName="SECC_USBD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SECC_FREG" msprop:Generator_ColumnVarNameInTable="columnSECC_FREG" msprop:Generator_ColumnPropNameInRow="SECC_FREG" msprop:Generator_ColumnPropNameInTable="SECC_FREGColumn" msprop:Generator_UserColumnName="SECC_FREG" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SECC_FNOV" msprop:Generator_ColumnVarNameInTable="columnSECC_FNOV" msprop:Generator_ColumnPropNameInRow="SECC_FNOV" msprop:Generator_ColumnPropNameInTable="SECC_FNOVColumn" msprop:Generator_UserColumnName="SECC_FNOV" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

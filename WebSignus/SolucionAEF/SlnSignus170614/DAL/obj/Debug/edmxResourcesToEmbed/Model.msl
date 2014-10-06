@@ -1,0 +1,2028 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="ACPA_APG">
+      <EntityTypeMapping TypeName="Model.ACPA_APG">
+        <MappingFragment StoreEntitySet="ACPA_APG">
+          <ScalarProperty Name="APG_APNU" ColumnName="APG_APNU" />
+          <ScalarProperty Name="APG_CDEC" ColumnName="APG_CDEC" />
+          <ScalarProperty Name="APG_AGRA" ColumnName="APG_AGRA" />
+          <ScalarProperty Name="APG_PGRA" ColumnName="APG_PGRA" />
+          <ScalarProperty Name="APG_FNOV" ColumnName="APG_FNOV" />
+          <ScalarProperty Name="APG_USBD" ColumnName="APG_USBD" />
+          <ScalarProperty Name="APG_USAP" ColumnName="APG_USAP" />
+          <ScalarProperty Name="APG_FREG" ColumnName="APG_FREG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACPA_DEUDA">
+      <EntityTypeMapping TypeName="Model.ACPA_DEUDA">
+        <MappingFragment StoreEntitySet="ACPA_DEUDA">
+          <ScalarProperty Name="APDE_APNU" ColumnName="APDE_APNU" />
+          <ScalarProperty Name="APDE_CDEC" ColumnName="APDE_CDEC" />
+          <ScalarProperty Name="APDE_AGRA" ColumnName="APDE_AGRA" />
+          <ScalarProperty Name="APDE_PGRA" ColumnName="APDE_PGRA" />
+          <ScalarProperty Name="APDE_COCO" ColumnName="APDE_COCO" />
+          <ScalarProperty Name="APDE_VALO" ColumnName="APDE_VALO" />
+          <ScalarProperty Name="APDE_DOAD" ColumnName="APDE_DOAD" />
+          <ScalarProperty Name="APDE_NDOC" ColumnName="APDE_NDOC" />
+          <ScalarProperty Name="APDE_FNOV" ColumnName="APDE_FNOV" />
+          <ScalarProperty Name="APDE_NOMC" ColumnName="APDE_NOMC" />
+          <ScalarProperty Name="APDE_USBD" ColumnName="APDE_USBD" />
+          <ScalarProperty Name="APDE_USAP" ColumnName="APDE_USAP" />
+          <ScalarProperty Name="APDE_FREG" ColumnName="APDE_FREG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACUE_PAGO">
+      <EntityTypeMapping TypeName="Model.ACUE_PAGO">
+        <MappingFragment StoreEntitySet="ACUE_PAGO">
+          <ScalarProperty Name="ACPA_CDEC" ColumnName="ACPA_CDEC" />
+          <ScalarProperty Name="ACPA_NUME" ColumnName="ACPA_NUME" />
+          <ScalarProperty Name="ACPA_NIT_AR" ColumnName="ACPA_NIT_AR" />
+          <ScalarProperty Name="ACPA_TIP_AR" ColumnName="ACPA_TIP_AR" />
+          <ScalarProperty Name="ACPA_REP_LEG" ColumnName="ACPA_REP_LEG" />
+          <ScalarProperty Name="ACPA_NIT_REP_LEG" ColumnName="ACPA_NIT_REP_LEG" />
+          <ScalarProperty Name="ACPA_REP_EXP" ColumnName="ACPA_REP_EXP" />
+          <ScalarProperty Name="ACPA_GARA" ColumnName="ACPA_GARA" />
+          <ScalarProperty Name="ACPA_USBD" ColumnName="ACPA_USBD" />
+          <ScalarProperty Name="ACPA_USAP" ColumnName="ACPA_USAP" />
+          <ScalarProperty Name="ACPA_FREG" ColumnName="ACPA_FREG" />
+          <ScalarProperty Name="ACPA_VALO" ColumnName="ACPA_VALO" />
+          <ScalarProperty Name="ACPA_POCI" ColumnName="ACPA_POCI" />
+          <ScalarProperty Name="ACPA_VACI" ColumnName="ACPA_VACI" />
+          <ScalarProperty Name="ACPA_NCUO" ColumnName="ACPA_NCUO" />
+          <ScalarProperty Name="ACPA_FNOV" ColumnName="ACPA_FNOV" />
+          <ScalarProperty Name="ACPA_SALD" ColumnName="ACPA_SALD" />
+          <ScalarProperty Name="ACPA_EST" ColumnName="ACPA_EST" />
+          <ScalarProperty Name="ACPA_NEXP" ColumnName="ACPA_NEXP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AGENTES">
+      <EntityTypeMapping TypeName="Model.AGENTES">
+        <MappingFragment StoreEntitySet="AGENTES">
+          <ScalarProperty Name="AGE_NIT" ColumnName="AGE_NIT" />
+          <ScalarProperty Name="AGE_NOM" ColumnName="AGE_NOM" />
+          <ScalarProperty Name="AGE_TIP" ColumnName="AGE_TIP" />
+          <ScalarProperty Name="AGE_MPIO" ColumnName="AGE_MPIO" />
+          <ScalarProperty Name="AGE_EMAI" ColumnName="AGE_EMAI" />
+          <ScalarProperty Name="AGE_TEL" ColumnName="AGE_TEL" />
+          <ScalarProperty Name="AGE_DIR" ColumnName="AGE_DIR" />
+          <ScalarProperty Name="AGE_CED" ColumnName="AGE_CED" />
+          <ScalarProperty Name="AGE_REP" ColumnName="AGE_REP" />
+          <ScalarProperty Name="AGE_USU" ColumnName="AGE_USU" />
+          <ScalarProperty Name="AGE_FREG" ColumnName="AGE_FREG" />
+          <ScalarProperty Name="AGE_FNOV" ColumnName="AGE_FNOV" />
+          <ScalarProperty Name="AGE_EST" ColumnName="AGE_EST" />
+          <ScalarProperty Name="AGE_OBS" ColumnName="AGE_OBS" />
+          <ScalarProperty Name="AGE_FFIN" ColumnName="AGE_FFIN" />
+          <ScalarProperty Name="AGE_USAP" ColumnName="AGE_USAP" />
+          <ScalarProperty Name="AGE_USBD" ColumnName="AGE_USBD" />
+          <ScalarProperty Name="AGE_CONS" ColumnName="AGE_CONS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ANULACIONES">
+      <EntityTypeMapping TypeName="Model.ANULACIONES">
+        <MappingFragment StoreEntitySet="ANULACIONES">
+          <ScalarProperty Name="ANUL_TDAN" ColumnName="ANUL_TDAN" />
+          <ScalarProperty Name="ANUL_NDAN" ColumnName="ANUL_NDAN" />
+          <ScalarProperty Name="ANUL_TDOC" ColumnName="ANUL_TDOC" />
+          <ScalarProperty Name="ANUL_NDOC" ColumnName="ANUL_NDOC" />
+          <ScalarProperty Name="ANUL_OBSE" ColumnName="ANUL_OBSE" />
+          <ScalarProperty Name="ANUL_FREG" ColumnName="ANUL_FREG" />
+          <ScalarProperty Name="ANUL_USAP" ColumnName="ANUL_USAP" />
+          <ScalarProperty Name="ANUL_USBD" ColumnName="ANUL_USBD" />
+          <ScalarProperty Name="ANUL_EST" ColumnName="ANUL_EST" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BANCOS">
+      <EntityTypeMapping TypeName="Model.BANCOS">
+        <MappingFragment StoreEntitySet="BANCOS">
+          <ScalarProperty Name="BAN_COD" ColumnName="BAN_COD" />
+          <ScalarProperty Name="BAN_NOM" ColumnName="BAN_NOM" />
+          <ScalarProperty Name="BAN_USAP" ColumnName="BAN_USAP" />
+          <ScalarProperty Name="BAN_USBD" ColumnName="BAN_USBD" />
+          <ScalarProperty Name="BAN_EST" ColumnName="BAN_EST" />
+          <ScalarProperty Name="BAN_FREG" ColumnName="BAN_FREG" />
+          <ScalarProperty Name="BAN_FNOV" ColumnName="BAN_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BASES_LIQ">
+      <EntityTypeMapping TypeName="Model.BASES_LIQ">
+        <MappingFragment StoreEntitySet="BASES_LIQ">
+          <ScalarProperty Name="BALI_NRAD" ColumnName="BALI_NRAD" />
+          <ScalarProperty Name="BALI_NIT" ColumnName="BALI_NIT" />
+          <ScalarProperty Name="BALI_CDEC" ColumnName="BALI_CDEC" />
+          <ScalarProperty Name="BALI_AÑO" ColumnName="BALI_AÑO" />
+          <ScalarProperty Name="BALI_PERI" ColumnName="BALI_PERI" />
+          <ScalarProperty Name="BALI_ARCH" ColumnName="BALI_ARCH" />
+          <ScalarProperty Name="BALI_EST" ColumnName="BALI_EST" />
+          <ScalarProperty Name="BALI_USAP" ColumnName="BALI_USAP" />
+          <ScalarProperty Name="BALI_USBD" ColumnName="BALI_USBD" />
+          <ScalarProperty Name="BALI_FESI" ColumnName="BALI_FESI" />
+          <ScalarProperty Name="BALI_FECH" ColumnName="BALI_FECH" />
+          <ScalarProperty Name="BALI_FDCO" ColumnName="BALI_FDCO" />
+          <ScalarProperty Name="BALI_FREG" ColumnName="BALI_FREG" />
+          <ScalarProperty Name="BALI_FNOV" ColumnName="BALI_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CALENDARIO">
+      <EntityTypeMapping TypeName="Model.CALENDARIO">
+        <MappingFragment StoreEntitySet="CALENDARIO">
+          <ScalarProperty Name="CAL_PER" ColumnName="CAL_PER" />
+          <ScalarProperty Name="CAL_VIG" ColumnName="CAL_VIG" />
+          <ScalarProperty Name="CAL_FINI" ColumnName="CAL_FINI" />
+          <ScalarProperty Name="CAL_FFIN" ColumnName="CAL_FFIN" />
+          <ScalarProperty Name="CAL_CLA" ColumnName="CAL_CLA" />
+          <ScalarProperty Name="CAL_DES" ColumnName="CAL_DES" />
+          <ScalarProperty Name="CAL_USBD" ColumnName="CAL_USBD" />
+          <ScalarProperty Name="CAL_USAP" ColumnName="CAL_USAP" />
+          <ScalarProperty Name="CAL_FREG" ColumnName="CAL_FREG" />
+          <ScalarProperty Name="CAL_FNOV" ColumnName="CAL_FNOV" />
+          <ScalarProperty Name="CAL_FVEN" ColumnName="CAL_FVEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CARTERAD">
+      <EntityTypeMapping TypeName="Model.CARTERAD">
+        <MappingFragment StoreEntitySet="CARTERAD">
+          <ScalarProperty Name="CAR_ID" ColumnName="CAR_ID" />
+          <ScalarProperty Name="CAR_NIT" ColumnName="CAR_NIT" />
+          <ScalarProperty Name="CAR_ANO" ColumnName="CAR_ANO" />
+          <ScalarProperty Name="CAR_PER" ColumnName="CAR_PER" />
+          <ScalarProperty Name="CAR_COCA" ColumnName="CAR_COCA" />
+          <ScalarProperty Name="CAR_TCON" ColumnName="CAR_TCON" />
+          <ScalarProperty Name="CAR_VADE" ColumnName="CAR_VADE" />
+          <ScalarProperty Name="CAR_VDB" ColumnName="CAR_VDB" />
+          <ScalarProperty Name="CAR_VCR" ColumnName="CAR_VCR" />
+          <ScalarProperty Name="CAR_VPA" ColumnName="CAR_VPA" />
+          <ScalarProperty Name="CAR_CDEC" ColumnName="CAR_CDEC" />
+          <ScalarProperty Name="CAR_CCON" ColumnName="CAR_CCON" />
+          <ScalarProperty Name="CAR_CIMP" ColumnName="CAR_CIMP" />
+          <ScalarProperty Name="CAR_TPAG" ColumnName="CAR_TPAG" />
+          <ScalarProperty Name="CAR_VIG" ColumnName="CAR_VIG" />
+          <ScalarProperty Name="CAR_FNOV" ColumnName="CAR_FNOV" />
+          <ScalarProperty Name="CAR_EST" ColumnName="CAR_EST" />
+          <ScalarProperty Name="CAR_FREG" ColumnName="CAR_FREG" />
+          <ScalarProperty Name="CAR_USAP" ColumnName="CAR_USAP" />
+          <ScalarProperty Name="CAR_USBD" ColumnName="CAR_USBD" />
+          <ScalarProperty Name="CAR_DCOD" ColumnName="CAR_DCOD" />
+          <ScalarProperty Name="CAR_FVEN" ColumnName="CAR_FVEN" />
+          <ScalarProperty Name="CAR_TDOC" ColumnName="CAR_TDOC" />
+          <ScalarProperty Name="CAR_SUIM" ColumnName="CAR_SUIM" />
+          <ScalarProperty Name="CAR_ACPA" ColumnName="CAR_ACPA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASE_DEC">
+      <EntityTypeMapping TypeName="Model.CLASE_DEC">
+        <MappingFragment StoreEntitySet="CLASE_DEC">
+          <ScalarProperty Name="CLD_COD" ColumnName="CLD_COD" />
+          <ScalarProperty Name="CLD_NOM" ColumnName="CLD_NOM" />
+          <ScalarProperty Name="CLD_USBD" ColumnName="CLD_USBD" />
+          <ScalarProperty Name="CLD_USAP" ColumnName="CLD_USAP" />
+          <ScalarProperty Name="CLD_FREG" ColumnName="CLD_FREG" />
+          <ScalarProperty Name="CLD_FNOV" ColumnName="CLD_FNOV" />
+          <ScalarProperty Name="CLD_FIN" ColumnName="CLD_FIN" />
+          <ScalarProperty Name="CLD_FFI" ColumnName="CLD_FFI" />
+          <ScalarProperty Name="CLD_CONS" ColumnName="CLD_CONS" />
+          <ScalarProperty Name="CLD_EST" ColumnName="CLD_EST" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASE_IMPTO">
+      <EntityTypeMapping TypeName="Model.CLASE_IMPTO">
+        <MappingFragment StoreEntitySet="CLASE_IMPTO">
+          <ScalarProperty Name="CLIM_CODI" ColumnName="CLIM_CODI" />
+          <ScalarProperty Name="CLIM_NOMB" ColumnName="CLIM_NOMB" />
+          <ScalarProperty Name="CLIM_FEIN" ColumnName="CLIM_FEIN" />
+          <ScalarProperty Name="CLIM_FEFI" ColumnName="CLIM_FEFI" />
+          <ScalarProperty Name="CLIM_USBD" ColumnName="CLIM_USBD" />
+          <ScalarProperty Name="CLIM_FNOV" ColumnName="CLIM_FNOV" />
+          <ScalarProperty Name="CLIM_FREG" ColumnName="CLIM_FREG" />
+          <ScalarProperty Name="CLIM_USAP" ColumnName="CLIM_USAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASE_NOTIFICACION">
+      <EntityTypeMapping TypeName="Model.CLASE_NOTIFICACION">
+        <MappingFragment StoreEntitySet="CLASE_NOTIFICACION">
+          <ScalarProperty Name="COD_NOTIFICACION" ColumnName="COD_NOTIFICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLD_IMP">
+      <EntityTypeMapping TypeName="Model.CLD_IMP">
+        <MappingFragment StoreEntitySet="CLD_IMP">
+          <ScalarProperty Name="CLD_COD" ColumnName="CLD_COD" />
+          <ScalarProperty Name="CLD_CIMP" ColumnName="CLD_CIMP" />
+          <ScalarProperty Name="CLD_ABIM" ColumnName="CLD_ABIM" />
+          <ScalarProperty Name="CLD_ABVA" ColumnName="CLD_ABVA" />
+          <ScalarProperty Name="CLD_FNOV" ColumnName="CLD_FNOV" />
+          <ScalarProperty Name="CLD_FREG" ColumnName="CLD_FREG" />
+          <ScalarProperty Name="CLD_USAP" ColumnName="CLD_USAP" />
+          <ScalarProperty Name="CLD_USBD" ColumnName="CLD_USBD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CODE_CDEC">
+      <EntityTypeMapping TypeName="Model.CODE_CDEC">
+        <MappingFragment StoreEntitySet="CODE_CDEC">
+          <ScalarProperty Name="CODE_CDEC1" ColumnName="CODE_CDEC" />
+          <ScalarProperty Name="CODE_CODI" ColumnName="CODE_CODI" />
+          <ScalarProperty Name="CODE_TICO" ColumnName="CODE_TICO" />
+          <ScalarProperty Name="CODE_NOMB" ColumnName="CODE_NOMB" />
+          <ScalarProperty Name="CODE_TMOV" ColumnName="CODE_TMOV" />
+          <ScalarProperty Name="CODE_ABVB" ColumnName="CODE_ABVB" />
+          <ScalarProperty Name="CODE_VADE" ColumnName="CODE_VADE" />
+          <ScalarProperty Name="CODE_ABVD" ColumnName="CODE_ABVD" />
+          <ScalarProperty Name="CODE_VACA" ColumnName="CODE_VACA" />
+          <ScalarProperty Name="CODE_SECO" ColumnName="CODE_SECO" />
+          <ScalarProperty Name="CODE_TARI" ColumnName="CODE_TARI" />
+          <ScalarProperty Name="CODE_IMPTO" ColumnName="CODE_IMPTO" />
+          <ScalarProperty Name="CODE_TSAN" ColumnName="CODE_TSAN" />
+          <ScalarProperty Name="CODE_CART" ColumnName="CODE_CART" />
+          <ScalarProperty Name="CODE_VABA" ColumnName="CODE_VABA" />
+          <ScalarProperty Name="CODE_ISVB" ColumnName="CODE_ISVB" />
+          <ScalarProperty Name="CODE_REDE" ColumnName="CODE_REDE" />
+          <ScalarProperty Name="CODE_DENR" ColumnName="CODE_DENR" />
+          <ScalarProperty Name="CODE_VASU" ColumnName="CODE_VASU" />
+          <ScalarProperty Name="CODE_VAOF" ColumnName="CODE_VAOF" />
+          <ScalarProperty Name="CODE_USBD" ColumnName="CODE_USBD" />
+          <ScalarProperty Name="CODE_USAP" ColumnName="CODE_USAP" />
+          <ScalarProperty Name="CODE_DEES" ColumnName="CODE_DEES" />
+          <ScalarProperty Name="CODE_FREG" ColumnName="CODE_FREG" />
+          <ScalarProperty Name="CODE_PESA" ColumnName="CODE_PESA" />
+          <ScalarProperty Name="CODE_AÑSA" ColumnName="CODE_AÑSA" />
+          <ScalarProperty Name="CODE_CCAR" ColumnName="CODE_CCAR" />
+          <ScalarProperty Name="CODE_SUM" ColumnName="CODE_SUM" />
+          <ScalarProperty Name="CODE_DCOD" ColumnName="CODE_DCOD" />
+          <ScalarProperty Name="CODE_VIG" ColumnName="CODE_VIG" />
+          <ScalarProperty Name="CODE_DOAD" ColumnName="CODE_DOAD" />
+          <ScalarProperty Name="CODE_CTAR" ColumnName="CODE_CTAR" />
+          <ScalarProperty Name="CODE_FNOV" ColumnName="CODE_FNOV" />
+          <ScalarProperty Name="CODE_VBCA" ColumnName="CODE_VBCA" />
+          <ScalarProperty Name="CODE_TACA" ColumnName="CODE_TACA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CON_ROF">
+      <EntityTypeMapping TypeName="Model.CON_ROF">
+        <MappingFragment StoreEntitySet="CON_ROF">
+          <ScalarProperty Name="CORP_CDEC" ColumnName="CORP_CDEC" />
+          <ScalarProperty Name="CORP_CODI" ColumnName="CORP_CODI" />
+          <ScalarProperty Name="CORP_TICO" ColumnName="CORP_TICO" />
+          <ScalarProperty Name="CORP_NOMB" ColumnName="CORP_NOMB" />
+          <ScalarProperty Name="CORP_TMOV" ColumnName="CORP_TMOV" />
+          <ScalarProperty Name="CORP_ABVB" ColumnName="CORP_ABVB" />
+          <ScalarProperty Name="CORP_VADE" ColumnName="CORP_VADE" />
+          <ScalarProperty Name="CORP_ABVD" ColumnName="CORP_ABVD" />
+          <ScalarProperty Name="CORP_VACA" ColumnName="CORP_VACA" />
+          <ScalarProperty Name="CORP_SECO" ColumnName="CORP_SECO" />
+          <ScalarProperty Name="CORP_TARI" ColumnName="CORP_TARI" />
+          <ScalarProperty Name="CORP_IMPTO" ColumnName="CORP_IMPTO" />
+          <ScalarProperty Name="CORP_TSAN" ColumnName="CORP_TSAN" />
+          <ScalarProperty Name="CORP_CART" ColumnName="CORP_CART" />
+          <ScalarProperty Name="CORP_VABA" ColumnName="CORP_VABA" />
+          <ScalarProperty Name="CORP_ISVB" ColumnName="CORP_ISVB" />
+          <ScalarProperty Name="CORP_REDE" ColumnName="CORP_REDE" />
+          <ScalarProperty Name="CORP_DENR" ColumnName="CORP_DENR" />
+          <ScalarProperty Name="CORP_VASU" ColumnName="CORP_VASU" />
+          <ScalarProperty Name="CORP_VAOF" ColumnName="CORP_VAOF" />
+          <ScalarProperty Name="CORP_USBD" ColumnName="CORP_USBD" />
+          <ScalarProperty Name="CORP_USAP" ColumnName="CORP_USAP" />
+          <ScalarProperty Name="CORP_DEES" ColumnName="CORP_DEES" />
+          <ScalarProperty Name="CORP_FREG" ColumnName="CORP_FREG" />
+          <ScalarProperty Name="CORP_PESA" ColumnName="CORP_PESA" />
+          <ScalarProperty Name="CORP_AÑSA" ColumnName="CORP_AÑSA" />
+          <ScalarProperty Name="CORP_CCAR" ColumnName="CORP_CCAR" />
+          <ScalarProperty Name="CORP_SUM" ColumnName="CORP_SUM" />
+          <ScalarProperty Name="CORP_DCOD" ColumnName="CORP_DCOD" />
+          <ScalarProperty Name="CORP_VIG" ColumnName="CORP_VIG" />
+          <ScalarProperty Name="CORP_DOAD" ColumnName="CORP_DOAD" />
+          <ScalarProperty Name="CORP_CTAR" ColumnName="CORP_CTAR" />
+          <ScalarProperty Name="CORP_FNOV" ColumnName="CORP_FNOV" />
+          <ScalarProperty Name="CORP_VBCA" ColumnName="CORP_VBCA" />
+          <ScalarProperty Name="CORP_TACA" ColumnName="CORP_TACA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONC_CART">
+      <EntityTypeMapping TypeName="Model.CONC_CART">
+        <MappingFragment StoreEntitySet="CONC_CART">
+          <ScalarProperty Name="CCAR_COD" ColumnName="CCAR_COD" />
+          <ScalarProperty Name="CCAR_AVCO" ColumnName="CCAR_AVCO" />
+          <ScalarProperty Name="CCAR_NOM" ColumnName="CCAR_NOM" />
+          <ScalarProperty Name="CCAR_TICO" ColumnName="CCAR_TICO" />
+          <ScalarProperty Name="CCAR_CDEC" ColumnName="CCAR_CDEC" />
+          <ScalarProperty Name="CCAR_USAP" ColumnName="CCAR_USAP" />
+          <ScalarProperty Name="CCAR_FREG" ColumnName="CCAR_FREG" />
+          <ScalarProperty Name="CCAR_FNOV" ColumnName="CCAR_FNOV" />
+          <ScalarProperty Name="CCAR_USBD" ColumnName="CCAR_USBD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONC_CDEC">
+      <EntityTypeMapping TypeName="Model.CONC_CDEC">
+        <MappingFragment StoreEntitySet="CONC_CDEC">
+          <ScalarProperty Name="COCD_CDEC" ColumnName="COCD_CDEC" />
+          <ScalarProperty Name="COCD_CODI" ColumnName="COCD_CODI" />
+          <ScalarProperty Name="COCD_TICO" ColumnName="COCD_TICO" />
+          <ScalarProperty Name="COCD_NOMB" ColumnName="COCD_NOMB" />
+          <ScalarProperty Name="COCD_REDE" ColumnName="COCD_REDE" />
+          <ScalarProperty Name="COCD_TMOV" ColumnName="COCD_TMOV" />
+          <ScalarProperty Name="COCD_ABVB" ColumnName="COCD_ABVB" />
+          <ScalarProperty Name="COCD_VADE" ColumnName="COCD_VADE" />
+          <ScalarProperty Name="COCD_ABVD" ColumnName="COCD_ABVD" />
+          <ScalarProperty Name="COCD_VACA" ColumnName="COCD_VACA" />
+          <ScalarProperty Name="COCD_SECO" ColumnName="COCD_SECO" />
+          <ScalarProperty Name="COCD_TARI" ColumnName="COCD_TARI" />
+          <ScalarProperty Name="COCD_IMPTO" ColumnName="COCD_IMPTO" />
+          <ScalarProperty Name="COCD_TSAN" ColumnName="COCD_TSAN" />
+          <ScalarProperty Name="COCD_CART" ColumnName="COCD_CART" />
+          <ScalarProperty Name="COCD_VABA" ColumnName="COCD_VABA" />
+          <ScalarProperty Name="COCD_ISVB" ColumnName="COCD_ISVB" />
+          <ScalarProperty Name="COCD_OPER" ColumnName="COCD_OPER" />
+          <ScalarProperty Name="COCD_CCAR" ColumnName="COCD_CCAR" />
+          <ScalarProperty Name="COCD_AÑSA" ColumnName="COCD_AÑSA" />
+          <ScalarProperty Name="COCD_PESA" ColumnName="COCD_PESA" />
+          <ScalarProperty Name="COCD_SUM" ColumnName="COCD_SUM" />
+          <ScalarProperty Name="COCD_FDCO" ColumnName="COCD_FDCO" />
+          <ScalarProperty Name="COCD_CTAR" ColumnName="COCD_CTAR" />
+          <ScalarProperty Name="TIPO_TAR" ColumnName="TIPO_TAR" />
+          <ScalarProperty Name="COCD_USAP" ColumnName="COCD_USAP" />
+          <ScalarProperty Name="COCD_FREG" ColumnName="COCD_FREG" />
+          <ScalarProperty Name="COCD_FNOV" ColumnName="COCD_FNOV" />
+          <ScalarProperty Name="COCD_USBD" ColumnName="COCD_USBD" />
+          <ScalarProperty Name="COCD_REVB" ColumnName="COCD_REVB" />
+          <ScalarProperty Name="FORMULA" ColumnName="FORMULA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONCEPTOS_IMP">
+      <EntityTypeMapping TypeName="Model.CONCEPTOS_IMP">
+        <MappingFragment StoreEntitySet="CONCEPTOS_IMP">
+          <ScalarProperty Name="COIM_CIMP" ColumnName="COIM_CIMP" />
+          <ScalarProperty Name="COIM_COD" ColumnName="COIM_COD" />
+          <ScalarProperty Name="COIM_NOM" ColumnName="COIM_NOM" />
+          <ScalarProperty Name="COIM_TARIFA" ColumnName="COIM_TARIFA" />
+          <ScalarProperty Name="COIM_FNOV" ColumnName="COIM_FNOV" />
+          <ScalarProperty Name="COIM_EST" ColumnName="COIM_EST" />
+          <ScalarProperty Name="COIM_PRI" ColumnName="COIM_PRI" />
+          <ScalarProperty Name="COIM_TCON" ColumnName="COIM_TCON" />
+          <ScalarProperty Name="COIM_TMOV" ColumnName="COIM_TMOV" />
+          <ScalarProperty Name="COIM_IDX" ColumnName="COIM_IDX" />
+          <ScalarProperty Name="COIM_USBD" ColumnName="COIM_USBD" />
+          <ScalarProperty Name="COIM_USAP" ColumnName="COIM_USAP" />
+          <ScalarProperty Name="COIM_FREG" ColumnName="COIM_FREG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONSECUTIVOS">
+      <EntityTypeMapping TypeName="Model.CONSECUTIVOS">
+        <MappingFragment StoreEntitySet="CONSECUTIVOS">
+          <ScalarProperty Name="CONS_VIG" ColumnName="CONS_VIG" />
+          <ScalarProperty Name="CONS_ID" ColumnName="CONS_ID" />
+          <ScalarProperty Name="CONS_NOM" ColumnName="CONS_NOM" />
+          <ScalarProperty Name="CONS_PRX" ColumnName="CONS_PRX" />
+          <ScalarProperty Name="CONS_INI" ColumnName="CONS_INI" />
+          <ScalarProperty Name="CONS_USAP" ColumnName="CONS_USAP" />
+          <ScalarProperty Name="CONS_USBD" ColumnName="CONS_USBD" />
+          <ScalarProperty Name="CONS_FREG" ColumnName="CONS_FREG" />
+          <ScalarProperty Name="CONS_FNOV" ColumnName="CONS_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONT_PERI">
+      <EntityTypeMapping TypeName="Model.CONT_PERI">
+        <MappingFragment StoreEntitySet="CONT_PERI">
+          <ScalarProperty Name="COPE_AÑO" ColumnName="COPE_AÑO" />
+          <ScalarProperty Name="COPE_MES" ColumnName="COPE_MES" />
+          <ScalarProperty Name="COPE_ESTA" ColumnName="COPE_ESTA" />
+          <ScalarProperty Name="COPE_FNOV" ColumnName="COPE_FNOV" />
+          <ScalarProperty Name="COPE_USBD" ColumnName="COPE_USBD" />
+          <ScalarProperty Name="COPE_USAP" ColumnName="COPE_USAP" />
+          <ScalarProperty Name="COPE_FREG" ColumnName="COPE_FREG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COPIAS_RPT">
+      <EntityTypeMapping TypeName="Model.COPIAS_RPT">
+        <MappingFragment StoreEntitySet="COPIAS_RPT">
+          <ScalarProperty Name="COP_COD" ColumnName="COP_COD" />
+          <ScalarProperty Name="COP_NOM" ColumnName="COP_NOM" />
+          <ScalarProperty Name="COP_USAP" ColumnName="COP_USAP" />
+          <ScalarProperty Name="COP_USBD" ColumnName="COP_USBD" />
+          <ScalarProperty Name="COP_FREG" ColumnName="COP_FREG" />
+          <ScalarProperty Name="COP_FNOV" ColumnName="COP_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CORREOSE">
+      <EntityTypeMapping TypeName="Model.CORREOSE">
+        <MappingFragment StoreEntitySet="CORREOSE">
+          <ScalarProperty Name="CORR_CODI" ColumnName="CORR_CODI" />
+          <ScalarProperty Name="CORR_NOMB" ColumnName="CORR_NOMB" />
+          <ScalarProperty Name="CORR_DATO" ColumnName="CORR_DATO" />
+          <ScalarProperty Name="CORR_BODY" ColumnName="CORR_BODY" />
+          <ScalarProperty Name="CORR_USAP" ColumnName="CORR_USAP" />
+          <ScalarProperty Name="CORR_USBD" ColumnName="CORR_USBD" />
+          <ScalarProperty Name="CORR_FREG" ColumnName="CORR_FREG" />
+          <ScalarProperty Name="CORR_FNOV" ColumnName="CORR_FNOV" />
+          <ScalarProperty Name="CORR_CAMP" ColumnName="CORR_CAMP" />
+          <ScalarProperty Name="CORR_VISTA" ColumnName="CORR_VISTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTA_BANCO">
+      <EntityTypeMapping TypeName="Model.CTA_BANCO">
+        <MappingFragment StoreEntitySet="CTA_BANCO">
+          <ScalarProperty Name="CTA_BACO" ColumnName="CTA_BACO" />
+          <ScalarProperty Name="CTA_NRO" ColumnName="CTA_NRO" />
+          <ScalarProperty Name="CTA_TIP" ColumnName="CTA_TIP" />
+          <ScalarProperty Name="CTA_CODBAR" ColumnName="CTA_CODBAR" />
+          <ScalarProperty Name="CTA_EST" ColumnName="CTA_EST" />
+          <ScalarProperty Name="CTA_USAP" ColumnName="CTA_USAP" />
+          <ScalarProperty Name="CTA_USBD" ColumnName="CTA_USBD" />
+          <ScalarProperty Name="CTA_DESC" ColumnName="CTA_DESC" />
+          <ScalarProperty Name="CTA_SUC" ColumnName="CTA_SUC" />
+          <ScalarProperty Name="CTA_FREG" ColumnName="CTA_FREG" />
+          <ScalarProperty Name="CTA_FNOV" ColumnName="CTA_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTRL_PAGOS">
+      <EntityTypeMapping TypeName="Model.CTRL_PAGOS">
+        <MappingFragment StoreEntitySet="CTRL_PAGOS">
+          <ScalarProperty Name="NUM_LOTE" ColumnName="NUM_LOTE" />
+          <ScalarProperty Name="FECHA_SUBIDA" ColumnName="FECHA_SUBIDA" />
+          <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+          <ScalarProperty Name="FEC_REG" ColumnName="FEC_REG" />
+          <ScalarProperty Name="USBD" ColumnName="USBD" />
+          <ScalarProperty Name="FEC_MOD" ColumnName="FEC_MOD" />
+          <ScalarProperty Name="USAP" ColumnName="USAP" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUOT_ACPA">
+      <EntityTypeMapping TypeName="Model.CUOT_ACPA">
+        <MappingFragment StoreEntitySet="CUOT_ACPA">
+          <ScalarProperty Name="CUAP_APNU" ColumnName="CUAP_APNU" />
+          <ScalarProperty Name="CUAP_CUNU" ColumnName="CUAP_CUNU" />
+          <ScalarProperty Name="CUAP_VALO" ColumnName="CUAP_VALO" />
+          <ScalarProperty Name="CUAP_PAGO" ColumnName="CUAP_PAGO" />
+          <ScalarProperty Name="CUAP_FEPA" ColumnName="CUAP_FEPA" />
+          <ScalarProperty Name="CUAP_FREG" ColumnName="CUAP_FREG" />
+          <ScalarProperty Name="CUAP_USBD" ColumnName="CUAP_USBD" />
+          <ScalarProperty Name="CUAP_USAP" ColumnName="CUAP_USAP" />
+          <ScalarProperty Name="CUAP_FNOV" ColumnName="CUAP_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEC_REQUI">
+      <EntityTypeMapping TypeName="Model.DEC_REQUI">
+        <MappingFragment StoreEntitySet="DEC_REQUI">
+          <ScalarProperty Name="DR_CODDEC" ColumnName="DR_CODDEC" />
+          <ScalarProperty Name="DR_PERI" ColumnName="DR_PERI" />
+          <ScalarProperty Name="DR_ANO" ColumnName="DR_ANO" />
+          <ScalarProperty Name="DR_CODREQ" ColumnName="DR_CODREQ" />
+          <ScalarProperty Name="DR_ESTADO" ColumnName="DR_ESTADO" />
+          <ScalarProperty Name="DR_FECRAD" ColumnName="DR_FECRAD" />
+          <ScalarProperty Name="DR_USBD" ColumnName="DR_USBD" />
+          <ScalarProperty Name="DR_USAP" ColumnName="DR_USAP" />
+          <ScalarProperty Name="DR_FECPRE" ColumnName="DR_FECPRE" />
+          <ScalarProperty Name="DR_FUNC" ColumnName="DR_FUNC" />
+          <ScalarProperty Name="DR_NRORAD" ColumnName="DR_NRORAD" />
+          <ScalarProperty Name="DR_FREG" ColumnName="DR_FREG" />
+          <ScalarProperty Name="DR_FNOV" ColumnName="DR_FNOV" />
+          <ScalarProperty Name="DR_CDEC" ColumnName="DR_CDEC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DECLARACION">
+      <EntityTypeMapping TypeName="Model.DECLARACION">
+        <MappingFragment StoreEntitySet="DECLARACION">
+          <ScalarProperty Name="DEC_NRO" ColumnName="DEC_NRO" />
+          <ScalarProperty Name="DEC_NIT" ColumnName="DEC_NIT" />
+          <ScalarProperty Name="DEC_PER" ColumnName="DEC_PER" />
+          <ScalarProperty Name="DEC_ANO" ColumnName="DEC_ANO" />
+          <ScalarProperty Name="DEC_VIG" ColumnName="DEC_VIG" />
+          <ScalarProperty Name="DEC_EST" ColumnName="DEC_EST" />
+          <ScalarProperty Name="DEC_FREG" ColumnName="DEC_FREG" />
+          <ScalarProperty Name="DEC_CNRO" ColumnName="DEC_CNRO" />
+          <ScalarProperty Name="DEC_USAP" ColumnName="DEC_USAP" />
+          <ScalarProperty Name="DEC_USBD" ColumnName="DEC_USBD" />
+          <ScalarProperty Name="DEC_CONS" ColumnName="DEC_CONS" />
+          <ScalarProperty Name="DEC_TIP" ColumnName="DEC_TIP" />
+          <ScalarProperty Name="DEC_SIG_DEC" ColumnName="DEC_SIG_DEC" />
+          <ScalarProperty Name="DEC_SIG_CTRF" ColumnName="DEC_SIG_CTRF" />
+          <ScalarProperty Name="DEC_RAZSOC" ColumnName="DEC_RAZSOC" />
+          <ScalarProperty Name="DEC_SCR_TIP" ColumnName="DEC_SCR_TIP" />
+          <ScalarProperty Name="DEC_SIG_DEC_TDOC" ColumnName="DEC_SIG_DEC_TDOC" />
+          <ScalarProperty Name="DEC_SIG_CTRF_TDOC" ColumnName="DEC_SIG_CTRF_TDOC" />
+          <ScalarProperty Name="DEC_SIG_CTRF_NOM" ColumnName="DEC_SIG_CTRF_NOM" />
+          <ScalarProperty Name="DEC_SIG_DEC_NOM" ColumnName="DEC_SIG_DEC_NOM" />
+          <ScalarProperty Name="DEC_SIG_CTRF_TAR_PRO" ColumnName="DEC_SIG_CTRF_TAR_PRO" />
+          <ScalarProperty Name="DEC_TDOC" ColumnName="DEC_TDOC" />
+          <ScalarProperty Name="DEC_DVER" ColumnName="DEC_DVER" />
+          <ScalarProperty Name="DEC_TRET" ColumnName="DEC_TRET" />
+          <ScalarProperty Name="DEC_TSAN" ColumnName="DEC_TSAN" />
+          <ScalarProperty Name="DEC_TRS" ColumnName="DEC_TRS" />
+          <ScalarProperty Name="DEC_PRS" ColumnName="DEC_PRS" />
+          <ScalarProperty Name="DEC_PIM" ColumnName="DEC_PIM" />
+          <ScalarProperty Name="DEC_PTOT" ColumnName="DEC_PTOT" />
+          <ScalarProperty Name="DEC_CSAN" ColumnName="DEC_CSAN" />
+          <ScalarProperty Name="DEC_CDEC" ColumnName="DEC_CDEC" />
+          <ScalarProperty Name="DEC_EST_FIS" ColumnName="DEC_EST_FIS" />
+          <ScalarProperty Name="DEC_FPRE" ColumnName="DEC_FPRE" />
+          <ScalarProperty Name="DEC_COD" ColumnName="DEC_COD" />
+          <ScalarProperty Name="DEC_FDCO" ColumnName="DEC_FDCO" />
+          <ScalarProperty Name="DEC_FVEN" ColumnName="DEC_FVEN" />
+          <ScalarProperty Name="DEC_BACO" ColumnName="DEC_BACO" />
+          <ScalarProperty Name="DEC_CTA" ColumnName="DEC_CTA" />
+          <ScalarProperty Name="DEC_ROF" ColumnName="DEC_ROF" />
+          <ScalarProperty Name="DEC_DOAD" ColumnName="DEC_DOAD" />
+          <ScalarProperty Name="DEC_FNOV" ColumnName="DEC_FNOV" />
+          <ScalarProperty Name="DEC_ESFI" ColumnName="DEC_ESFI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPARTAMENTOS">
+      <EntityTypeMapping TypeName="Model.DEPARTAMENTOS">
+        <MappingFragment StoreEntitySet="DEPARTAMENTOS">
+          <ScalarProperty Name="COD_DEPTO" ColumnName="COD_DEPTO" />
+          <ScalarProperty Name="NOM_DEPTO" ColumnName="NOM_DEPTO" />
+          <ScalarProperty Name="ABREV_DISFON" ColumnName="ABREV_DISFON" />
+          <ScalarProperty Name="USAP" ColumnName="USAP" />
+          <ScalarProperty Name="USBD" ColumnName="USBD" />
+          <ScalarProperty Name="FREG" ColumnName="FREG" />
+          <ScalarProperty Name="FNOV" ColumnName="FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIST_CART">
+      <EntityTypeMapping TypeName="Model.DIST_CART">
+        <MappingFragment StoreEntitySet="DIST_CART">
+          <ScalarProperty Name="DICA_CDEC" ColumnName="DICA_CDEC" />
+          <ScalarProperty Name="DICA_CODD" ColumnName="DICA_CODD" />
+          <ScalarProperty Name="DICA_CODC" ColumnName="DICA_CODC" />
+          <ScalarProperty Name="DICA_FDCO" ColumnName="DICA_FDCO" />
+          <ScalarProperty Name="DICA_ORDE" ColumnName="DICA_ORDE" />
+          <ScalarProperty Name="DICA_USAP" ColumnName="DICA_USAP" />
+          <ScalarProperty Name="DICA_USBD" ColumnName="DICA_USBD" />
+          <ScalarProperty Name="DICA_FREG" ColumnName="DICA_FREG" />
+          <ScalarProperty Name="DICA_FNOV" ColumnName="DICA_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOC_APG">
+      <EntityTypeMapping TypeName="Model.DOC_APG">
+        <MappingFragment StoreEntitySet="DOC_APG">
+          <ScalarProperty Name="DAPG_NIT" ColumnName="DAPG_NIT" />
+          <ScalarProperty Name="DAPG_CDEC" ColumnName="DAPG_CDEC" />
+          <ScalarProperty Name="DAPG_AÑO" ColumnName="DAPG_AÑO" />
+          <ScalarProperty Name="DAPG_PER" ColumnName="DAPG_PER" />
+          <ScalarProperty Name="DAPG_FELA" ColumnName="DAPG_FELA" />
+          <ScalarProperty Name="DAPG_FNOT" ColumnName="DAPG_FNOT" />
+          <ScalarProperty Name="DAPG_ESTA" ColumnName="DAPG_ESTA" />
+          <ScalarProperty Name="DAPG_USBD" ColumnName="DAPG_USBD" />
+          <ScalarProperty Name="DAPG_USAP" ColumnName="DAPG_USAP" />
+          <ScalarProperty Name="DAPG_FREG" ColumnName="DAPG_FREG" />
+          <ScalarProperty Name="DAPG_DOAD" ColumnName="DAPG_DOAD" />
+          <ScalarProperty Name="DAPG_DCOD" ColumnName="DAPG_DCOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DPAGO_ROAP">
+      <EntityTypeMapping TypeName="Model.DPAGO_ROAP">
+        <MappingFragment StoreEntitySet="DPAGO_ROAP">
+          <ScalarProperty Name="DPAP_APNU" ColumnName="DPAP_APNU" />
+          <ScalarProperty Name="DPAP_CUNU" ColumnName="DPAP_CUNU" />
+          <ScalarProperty Name="DPAP_PAGO" ColumnName="DPAP_PAGO" />
+          <ScalarProperty Name="DPAP_FEPA" ColumnName="DPAP_FEPA" />
+          <ScalarProperty Name="DPAP_FREG" ColumnName="DPAP_FREG" />
+          <ScalarProperty Name="DPAP_USBD" ColumnName="DPAP_USBD" />
+          <ScalarProperty Name="DPAP_USAP" ColumnName="DPAP_USAP" />
+          <ScalarProperty Name="DPAP_FNOV" ColumnName="DPAP_FNOV" />
+          <ScalarProperty Name="DPAP_RNUM" ColumnName="DPAP_RNUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPRESA_MENSAJERIA">
+      <EntityTypeMapping TypeName="Model.EMPRESA_MENSAJERIA">
+        <MappingFragment StoreEntitySet="EMPRESA_MENSAJERIA">
+          <ScalarProperty Name="COD_EMME" ColumnName="COD_EMME" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTIDAD">
+      <EntityTypeMapping TypeName="Model.ENTIDAD">
+        <MappingFragment StoreEntitySet="ENTIDAD">
+          <ScalarProperty Name="ENT_NIT" ColumnName="ENT_NIT" />
+          <ScalarProperty Name="ENT_NOM" ColumnName="ENT_NOM" />
+          <ScalarProperty Name="ENT_DIR" ColumnName="ENT_DIR" />
+          <ScalarProperty Name="ENT_TEL" ColumnName="ENT_TEL" />
+          <ScalarProperty Name="ENT_EMAIL" ColumnName="ENT_EMAIL" />
+          <ScalarProperty Name="ENT_DPTO" ColumnName="ENT_DPTO" />
+          <ScalarProperty Name="ENT_MPIO" ColumnName="ENT_MPIO" />
+          <ScalarProperty Name="ENT_CEDRES" ColumnName="ENT_CEDRES" />
+          <ScalarProperty Name="ENT_NOMRES" ColumnName="ENT_NOMRES" />
+          <ScalarProperty Name="ENT_LOGO" ColumnName="ENT_LOGO" />
+          <ScalarProperty Name="ENT_USAP" ColumnName="ENT_USAP" />
+          <ScalarProperty Name="ENT_USBD" ColumnName="ENT_USBD" />
+          <ScalarProperty Name="ENT_FREG" ColumnName="ENT_FREG" />
+          <ScalarProperty Name="ENT_FNOV" ColumnName="ENT_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOS">
+      <EntityTypeMapping TypeName="Model.ESTADOS">
+        <MappingFragment StoreEntitySet="ESTADOS">
+          <ScalarProperty Name="EST_COD" ColumnName="EST_COD" />
+          <ScalarProperty Name="EST_DES" ColumnName="EST_DES" />
+          <ScalarProperty Name="EST_USAP" ColumnName="EST_USAP" />
+          <ScalarProperty Name="EST_USBD" ColumnName="EST_USBD" />
+          <ScalarProperty Name="EST_FREG" ColumnName="EST_FREG" />
+          <ScalarProperty Name="EST_FNOV" ColumnName="EST_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXPE_ANULA">
+      <EntityTypeMapping TypeName="Model.EXPE_ANULA">
+        <MappingFragment StoreEntitySet="EXPE_ANULA">
+          <ScalarProperty Name="EXPE_NUME" ColumnName="EXPE_NUME" />
+          <ScalarProperty Name="EXPE_ID" ColumnName="EXPE_ID" />
+          <ScalarProperty Name="EXPE_FANU" ColumnName="EXPE_FANU" />
+          <ScalarProperty Name="EXPE_OBSE" ColumnName="EXPE_OBSE" />
+          <ScalarProperty Name="TABLA" ColumnName="TABLA" />
+          <ScalarProperty Name="EXPE_USAP" ColumnName="EXPE_USAP" />
+          <ScalarProperty Name="EXPE_USBD" ColumnName="EXPE_USBD" />
+          <ScalarProperty Name="EXPE_FREG" ColumnName="EXPE_FREG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXPE_APG">
+      <EntityTypeMapping TypeName="Model.EXPE_APG">
+        <MappingFragment StoreEntitySet="EXPE_APG">
+          <ScalarProperty Name="EXAP_NUME" ColumnName="EXAP_NUME" />
+          <ScalarProperty Name="EXAP_DOAD" ColumnName="EXAP_DOAD" />
+          <ScalarProperty Name="EXAP_AGRA" ColumnName="EXAP_AGRA" />
+          <ScalarProperty Name="EXAP_PGRA" ColumnName="EXAP_PGRA" />
+          <ScalarProperty Name="EXAP_ESTA" ColumnName="EXAP_ESTA" />
+          <ScalarProperty Name="EXPE_USBD" ColumnName="EXPE_USBD" />
+          <ScalarProperty Name="EXPE_USAP" ColumnName="EXPE_USAP" />
+          <ScalarProperty Name="EXPE_FREG" ColumnName="EXPE_FREG" />
+          <ScalarProperty Name="EXAP_OBSE" ColumnName="EXAP_OBSE" />
+          <ScalarProperty Name="EXPE_CDEC" ColumnName="EXPE_CDEC" />
+          <ScalarProperty Name="EXAP_EXPR" ColumnName="EXAP_EXPR" />
+          <ScalarProperty Name="EXAP_SUIM" ColumnName="EXAP_SUIM" />
+          <ScalarProperty Name="EXAP_DCOD" ColumnName="EXAP_DCOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXPE_NOTIF">
+      <EntityTypeMapping TypeName="Model.EXPE_NOTIF">
+        <MappingFragment StoreEntitySet="EXPE_NOTIF">
+          <ScalarProperty Name="EXNF_ID" ColumnName="EXNF_ID" />
+          <ScalarProperty Name="EXNF_FREB" ColumnName="EXNF_FREB" />
+          <ScalarProperty Name="EXNF_NOTIF" ColumnName="EXNF_NOTIF" />
+          <ScalarProperty Name="EXNF_MEDIO" ColumnName="EXNF_MEDIO" />
+          <ScalarProperty Name="EXNF_FENV" ColumnName="EXNF_FENV" />
+          <ScalarProperty Name="EXNF_REC" ColumnName="EXNF_REC" />
+          <ScalarProperty Name="EXNF_OBS" ColumnName="EXNF_OBS" />
+          <ScalarProperty Name="EXNF_EMM" ColumnName="EXNF_EMM" />
+          <ScalarProperty Name="EXTR_NUME" ColumnName="EXTR_NUME" />
+          <ScalarProperty Name="EXTR_TRAC" ColumnName="EXTR_TRAC" />
+          <ScalarProperty Name="EXTR_GUIA" ColumnName="EXTR_GUIA" />
+          <ScalarProperty Name="EXTR_USAP" ColumnName="EXTR_USAP" />
+          <ScalarProperty Name="EXTR_USBD" ColumnName="EXTR_USBD" />
+          <ScalarProperty Name="EXTR_FREG" ColumnName="EXTR_FREG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXPE_TRAM">
+      <EntityTypeMapping TypeName="Model.EXPE_TRAM">
+        <MappingFragment StoreEntitySet="EXPE_TRAM">
+          <ScalarProperty Name="EXTR_NUME" ColumnName="EXTR_NUME" />
+          <ScalarProperty Name="EXTR_DOAD" ColumnName="EXTR_DOAD" />
+          <ScalarProperty Name="EXTR_FELA" ColumnName="EXTR_FELA" />
+          <ScalarProperty Name="EXTR_TANT" ColumnName="EXTR_TANT" />
+          <ScalarProperty Name="EXTR_TACT" ColumnName="EXTR_TACT" />
+          <ScalarProperty Name="EXTR_TRNU" ColumnName="EXTR_TRNU" />
+          <ScalarProperty Name="EXTR_RENI" ColumnName="EXTR_RENI" />
+          <ScalarProperty Name="EXTR_TRPT" ColumnName="EXTR_TRPT" />
+          <ScalarProperty Name="EXTR_RPTA" ColumnName="EXTR_RPTA" />
+          <ScalarProperty Name="EXTR_OBSE" ColumnName="EXTR_OBSE" />
+          <ScalarProperty Name="EXTR_ADJU" ColumnName="EXTR_ADJU" />
+          <ScalarProperty Name="EXTR_ANEX" ColumnName="EXTR_ANEX" />
+          <ScalarProperty Name="EXTR_USAP" ColumnName="EXTR_USAP" />
+          <ScalarProperty Name="EXTR_USBD" ColumnName="EXTR_USBD" />
+          <ScalarProperty Name="EXTR_FREG" ColumnName="EXTR_FREG" />
+          <ScalarProperty Name="EXTR_DONU" ColumnName="EXTR_DONU" />
+          <ScalarProperty Name="EXTR_PLAN" ColumnName="EXTR_PLAN" />
+          <ScalarProperty Name="EXPE_FREB" ColumnName="EXPE_FREB" />
+          <ScalarProperty Name="EXPE_FEXP" ColumnName="EXPE_FEXP" />
+          <ScalarProperty Name="EXPE_NOTIF" ColumnName="EXPE_NOTIF" />
+          <ScalarProperty Name="EXTR_DOC" ColumnName="EXTR_DOC" />
+          <ScalarProperty Name="EXTR_ID" ColumnName="EXTR_ID" />
+          <ScalarProperty Name="EXTR_DATO1" ColumnName="EXTR_DATO1" />
+          <ScalarProperty Name="EXTR_PDF" ColumnName="EXTR_PDF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXPEDIENTES">
+      <EntityTypeMapping TypeName="Model.EXPEDIENTES">
+        <MappingFragment StoreEntitySet="EXPEDIENTES">
+          <ScalarProperty Name="EXPE_NIT" ColumnName="EXPE_NIT" />
+          <ScalarProperty Name="EXPE_CDEC" ColumnName="EXPE_CDEC" />
+          <ScalarProperty Name="EXPE_FELA" ColumnName="EXPE_FELA" />
+          <ScalarProperty Name="EXPE_FCIE" ColumnName="EXPE_FCIE" />
+          <ScalarProperty Name="EXPE_TRAC" ColumnName="EXPE_TRAC" />
+          <ScalarProperty Name="EXPE_USBD" ColumnName="EXPE_USBD" />
+          <ScalarProperty Name="EXPE_USAP" ColumnName="EXPE_USAP" />
+          <ScalarProperty Name="EXPE_FREG" ColumnName="EXPE_FREG" />
+          <ScalarProperty Name="EXPE_DOAD" ColumnName="EXPE_DOAD" />
+          <ScalarProperty Name="EXPE_DONU" ColumnName="EXPE_DONU" />
+          <ScalarProperty Name="EXPE_FNOV" ColumnName="EXPE_FNOV" />
+          <ScalarProperty Name="EXPE_OBSE" ColumnName="EXPE_OBSE" />
+          <ScalarProperty Name="EXPE_TPRO" ColumnName="EXPE_TPRO" />
+          <ScalarProperty Name="EXPE_PROC" ColumnName="EXPE_PROC" />
+          <ScalarProperty Name="EXPE_ANEX" ColumnName="EXPE_ANEX" />
+          <ScalarProperty Name="EXPE_NUME" ColumnName="EXPE_NUME" />
+          <ScalarProperty Name="EXPE_NPRO" ColumnName="EXPE_NPRO" />
+          <ScalarProperty Name="EXPE_FEXP" ColumnName="EXPE_FEXP" />
+          <ScalarProperty Name="EXPE_EXTRID" ColumnName="EXPE_EXTRID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FM_BASESLIQ01">
+      <EntityTypeMapping TypeName="Model.FM_BASESLIQ01">
+        <MappingFragment StoreEntitySet="FM_BASESLIQ01">
+          <ScalarProperty Name="NIT_AR" ColumnName="NIT_AR" />
+          <ScalarProperty Name="DV_AR" ColumnName="DV_AR" />
+          <ScalarProperty Name="CDEC" ColumnName="CDEC" />
+          <ScalarProperty Name="IMPTO" ColumnName="IMPTO" />
+          <ScalarProperty Name="AGRAVABLE" ColumnName="AGRAVABLE" />
+          <ScalarProperty Name="PGRAVABLE" ColumnName="PGRAVABLE" />
+          <ScalarProperty Name="NDOC" ColumnName="NDOC" />
+          <ScalarProperty Name="FOPER" ColumnName="FOPER" />
+          <ScalarProperty Name="TIDE" ColumnName="TIDE" />
+          <ScalarProperty Name="NIDE" ColumnName="NIDE" />
+          <ScalarProperty Name="DV" ColumnName="DV" />
+          <ScalarProperty Name="RAZSOC" ColumnName="RAZSOC" />
+          <ScalarProperty Name="CONCEPTO" ColumnName="CONCEPTO" />
+          <ScalarProperty Name="VALORBASE" ColumnName="VALORBASE" />
+          <ScalarProperty Name="TARIFA" ColumnName="TARIFA" />
+          <ScalarProperty Name="VALORIMPTO" ColumnName="VALORIMPTO" />
+          <ScalarProperty Name="NRO_RAD" ColumnName="NRO_RAD" />
+          <ScalarProperty Name="USAP" ColumnName="USAP" />
+          <ScalarProperty Name="USBD" ColumnName="USBD" />
+          <ScalarProperty Name="FESI" ColumnName="FESI" />
+          <ScalarProperty Name="FREG" ColumnName="FREG" />
+          <ScalarProperty Name="FNOV" ColumnName="FNOV" />
+          <ScalarProperty Name="COD_MPIO" ColumnName="COD_MPIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FMTO_IMP">
+      <EntityTypeMapping TypeName="Model.FMTO_IMP">
+        <MappingFragment StoreEntitySet="FMTO_IMP">
+          <ScalarProperty Name="FMIM_CAMP" ColumnName="FMIM_CAMP" />
+          <ScalarProperty Name="FMIM_TIDA" ColumnName="FMIM_TIDA" />
+          <ScalarProperty Name="FMIM_CODI" ColumnName="FMIM_CODI" />
+          <ScalarProperty Name="FMIM_INDX" ColumnName="FMIM_INDX" />
+          <ScalarProperty Name="FMIM_LONG" ColumnName="FMIM_LONG" />
+          <ScalarProperty Name="FMIM_USAP" ColumnName="FMIM_USAP" />
+          <ScalarProperty Name="FMIM_USBD" ColumnName="FMIM_USBD" />
+          <ScalarProperty Name="FMIM_FREG" ColumnName="FMIM_FREG" />
+          <ScalarProperty Name="FMIM_FNOV" ColumnName="FMIM_FNOV" />
+          <ScalarProperty Name="FMIM_EST" ColumnName="FMIM_EST" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FMTOS">
+      <EntityTypeMapping TypeName="Model.FMTOS">
+        <MappingFragment StoreEntitySet="FMTOS">
+          <ScalarProperty Name="FMTO_CODI" ColumnName="FMTO_CODI" />
+          <ScalarProperty Name="FMTO_NOMB" ColumnName="FMTO_NOMB" />
+          <ScalarProperty Name="FMTO_DESC" ColumnName="FMTO_DESC" />
+          <ScalarProperty Name="FMTO_CDEC" ColumnName="FMTO_CDEC" />
+          <ScalarProperty Name="FMTO_EST" ColumnName="FMTO_EST" />
+          <ScalarProperty Name="FMTO_USAP" ColumnName="FMTO_USAP" />
+          <ScalarProperty Name="FMTO_USBD" ColumnName="FMTO_USBD" />
+          <ScalarProperty Name="FMTO_FREG" ColumnName="FMTO_FREG" />
+          <ScalarProperty Name="FMTO_FNOV" ColumnName="FMTO_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORM_AYUD">
+      <EntityTypeMapping TypeName="Model.FORM_AYUD">
+        <MappingFragment StoreEntitySet="FORM_AYUD">
+          <ScalarProperty Name="FOAY_CODI" ColumnName="FOAY_CODI" />
+          <ScalarProperty Name="FOAY_NREN" ColumnName="FOAY_NREN" />
+          <ScalarProperty Name="FOAY_FDCO" ColumnName="FOAY_FDCO" />
+          <ScalarProperty Name="FOAY_TITU" ColumnName="FOAY_TITU" />
+          <ScalarProperty Name="FOAY_DESC" ColumnName="FOAY_DESC" />
+          <ScalarProperty Name="FOAY_USAP" ColumnName="FOAY_USAP" />
+          <ScalarProperty Name="FOAY_USBD" ColumnName="FOAY_USBD" />
+          <ScalarProperty Name="FOAY_FREG" ColumnName="FOAY_FREG" />
+          <ScalarProperty Name="FOAY_FNOV" ColumnName="FOAY_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORMULARIOS_DEC">
+      <EntityTypeMapping TypeName="Model.FORMULARIOS_DEC">
+        <MappingFragment StoreEntitySet="FORMULARIOS_DEC">
+          <ScalarProperty Name="FODE_CODI" ColumnName="FODE_CODI" />
+          <ScalarProperty Name="FODE_CDEC" ColumnName="FODE_CDEC" />
+          <ScalarProperty Name="FODE_FOWE" ColumnName="FODE_FOWE" />
+          <ScalarProperty Name="FODE_RPTE" ColumnName="FODE_RPTE" />
+          <ScalarProperty Name="FODE_FEIN" ColumnName="FODE_FEIN" />
+          <ScalarProperty Name="FODE_FEFI" ColumnName="FODE_FEFI" />
+          <ScalarProperty Name="FODE_USBD" ColumnName="FODE_USBD" />
+          <ScalarProperty Name="FODE_FREG" ColumnName="FODE_FREG" />
+          <ScalarProperty Name="FODE_USAP" ColumnName="FODE_USAP" />
+          <ScalarProperty Name="FODE_OPER" ColumnName="FODE_OPER" />
+          <ScalarProperty Name="FODE_FOWI" ColumnName="FODE_FOWI" />
+          <ScalarProperty Name="FODE_NOMB" ColumnName="FODE_NOMB" />
+          <ScalarProperty Name="FODE_EST" ColumnName="FODE_EST" />
+          <ScalarProperty Name="FODE_OPVP" ColumnName="FODE_OPVP" />
+          <ScalarProperty Name="FODE_FNOV" ColumnName="FODE_FNOV" />
+          <ScalarProperty Name="FODE_OBS" ColumnName="FODE_OBS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORMULASL">
+      <EntityTypeMapping TypeName="Model.FORMULASL">
+        <MappingFragment StoreEntitySet="FORMULASL">
+          <ScalarProperty Name="FORM_CODI" ColumnName="FORM_CODI" />
+          <ScalarProperty Name="FORM_FEIN" ColumnName="FORM_FEIN" />
+          <ScalarProperty Name="FORM_FEFI" ColumnName="FORM_FEFI" />
+          <ScalarProperty Name="FORM_FORM" ColumnName="FORM_FORM" />
+          <ScalarProperty Name="FORM_NORM" ColumnName="FORM_NORM" />
+          <ScalarProperty Name="FORM_CONC" ColumnName="FORM_CONC" />
+          <ScalarProperty Name="FORM_USAP" ColumnName="FORM_USAP" />
+          <ScalarProperty Name="FORM_USBD" ColumnName="FORM_USBD" />
+          <ScalarProperty Name="FORM_FREG" ColumnName="FORM_FREG" />
+          <ScalarProperty Name="FORM_FNOV" ColumnName="FORM_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORMULASLT">
+      <EntityTypeMapping TypeName="Model.FORMULASLT">
+        <MappingFragment StoreEntitySet="FORMULASLT">
+          <ScalarProperty Name="FORM_CODI" ColumnName="FORM_CODI" />
+          <ScalarProperty Name="FORM_FEIN" ColumnName="FORM_FEIN" />
+          <ScalarProperty Name="FORM_FEFI" ColumnName="FORM_FEFI" />
+          <ScalarProperty Name="FORM_FORM" ColumnName="FORM_FORM" />
+          <ScalarProperty Name="FORM_NORM" ColumnName="FORM_NORM" />
+          <ScalarProperty Name="FORM_CIMP" ColumnName="FORM_CIMP" />
+          <ScalarProperty Name="FORM_USAP" ColumnName="FORM_USAP" />
+          <ScalarProperty Name="FORM_USBD" ColumnName="FORM_USBD" />
+          <ScalarProperty Name="FORM_FREG" ColumnName="FORM_FREG" />
+          <ScalarProperty Name="FORM_FNOV" ColumnName="FORM_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HAUDITORIA">
+      <EntityTypeMapping TypeName="Model.HAUDITORIA">
+        <MappingFragment StoreEntitySet="HAUDITORIA">
+          <ScalarProperty Name="HAUDCODI" ColumnName="HAUDCODI" />
+          <ScalarProperty Name="HAUDTABL" ColumnName="HAUDTABL" />
+          <ScalarProperty Name="HAUDIDEN" ColumnName="HAUDIDEN" />
+          <ScalarProperty Name="HAUDTIPO" ColumnName="HAUDTIPO" />
+          <ScalarProperty Name="HAUDDESC" ColumnName="HAUDDESC" />
+          <ScalarProperty Name="HAUDUSER" ColumnName="HAUDUSER" />
+          <ScalarProperty Name="HAUDFESI" ColumnName="HAUDFESI" />
+          <ScalarProperty Name="HAUDUSBD" ColumnName="HAUDUSBD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMPUESTOS">
+      <EntityTypeMapping TypeName="Model.IMPUESTOS">
+        <MappingFragment StoreEntitySet="IMPUESTOS">
+          <ScalarProperty Name="IMP_COD" ColumnName="IMP_COD" />
+          <ScalarProperty Name="IMP_NOM" ColumnName="IMP_NOM" />
+          <ScalarProperty Name="IMP_OBS" ColumnName="IMP_OBS" />
+          <ScalarProperty Name="IMP_NOR" ColumnName="IMP_NOR" />
+          <ScalarProperty Name="IMP_CLA" ColumnName="IMP_CLA" />
+          <ScalarProperty Name="IMP_UNI" ColumnName="IMP_UNI" />
+          <ScalarProperty Name="IMP_USAP" ColumnName="IMP_USAP" />
+          <ScalarProperty Name="IMP_USBD" ColumnName="IMP_USBD" />
+          <ScalarProperty Name="IMP_FREG" ColumnName="IMP_FREG" />
+          <ScalarProperty Name="IMP_FNOV" ColumnName="IMP_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MENU">
+      <EntityTypeMapping TypeName="Model.MENU">
+        <MappingFragment StoreEntitySet="MENU">
+          <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PADREID" ColumnName="PADREID" />
+          <ScalarProperty Name="POSICION" ColumnName="POSICION" />
+          <ScalarProperty Name="ICONO" ColumnName="ICONO" />
+          <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="MODULO" ColumnName="MODULO" />
+          <ScalarProperty Name="ROLES" ColumnName="ROLES" />
+          <ScalarProperty Name="TARGET" ColumnName="TARGET" />
+          <ScalarProperty Name="PPAL" ColumnName="PPAL" />
+          <ScalarProperty Name="USAP" ColumnName="USAP" />
+          <ScalarProperty Name="USBD" ColumnName="USBD" />
+          <ScalarProperty Name="FREG" ColumnName="FREG" />
+          <ScalarProperty Name="FNOV" ColumnName="FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MENU_PERFIL">
+      <EntityTypeMapping TypeName="Model.MENU_PERFIL">
+        <MappingFragment StoreEntitySet="MENU_PERFIL">
+          <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+          <ScalarProperty Name="PERFIL" ColumnName="PERFIL" />
+          <ScalarProperty Name="MODULO" ColumnName="MODULO" />
+          <ScalarProperty Name="USAP" ColumnName="USAP" />
+          <ScalarProperty Name="USBD" ColumnName="USBD" />
+          <ScalarProperty Name="FREG" ColumnName="FREG" />
+          <ScalarProperty Name="FNOV" ColumnName="FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MUNICIPIOS">
+      <EntityTypeMapping TypeName="Model.MUNICIPIOS">
+        <MappingFragment StoreEntitySet="MUNICIPIOS">
+          <ScalarProperty Name="MUN_COD" ColumnName="MUN_COD" />
+          <ScalarProperty Name="MUN_NOM" ColumnName="MUN_NOM" />
+          <ScalarProperty Name="MUN_USAP" ColumnName="MUN_USAP" />
+          <ScalarProperty Name="MUN_USBD" ColumnName="MUN_USBD" />
+          <ScalarProperty Name="MUN_FREG" ColumnName="MUN_FREG" />
+          <ScalarProperty Name="MUN_FNOV" ColumnName="MUN_FNOV" />
+          <ScalarProperty Name="MUN_DPCO" ColumnName="MUN_DPCO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORA_ASPNET_APPLICATIONS">
+      <EntityTypeMapping TypeName="Model.ORA_ASPNET_APPLICATIONS">
+        <MappingFragment StoreEntitySet="ORA_ASPNET_APPLICATIONS">
+          <ScalarProperty Name="APPLICATIONNAME" ColumnName="APPLICATIONNAME" />
+          <ScalarProperty Name="LOWEREDAPPLICATIONNAME" ColumnName="LOWEREDAPPLICATIONNAME" />
+          <ScalarProperty Name="APPLICATIONID" ColumnName="APPLICATIONID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORA_ASPNET_MEMBERSHIP">
+      <EntityTypeMapping TypeName="Model.ORA_ASPNET_MEMBERSHIP">
+        <MappingFragment StoreEntitySet="ORA_ASPNET_MEMBERSHIP">
+          <ScalarProperty Name="APPLICATIONID" ColumnName="APPLICATIONID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="PASSWORDFORMAT" ColumnName="PASSWORDFORMAT" />
+          <ScalarProperty Name="PASSWORDSALT" ColumnName="PASSWORDSALT" />
+          <ScalarProperty Name="MOBILEPIN" ColumnName="MOBILEPIN" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="LOWEREDEMAIL" ColumnName="LOWEREDEMAIL" />
+          <ScalarProperty Name="PASSWORDQUESTION" ColumnName="PASSWORDQUESTION" />
+          <ScalarProperty Name="PASSWORDANSWER" ColumnName="PASSWORDANSWER" />
+          <ScalarProperty Name="ISAPPROVED" ColumnName="ISAPPROVED" />
+          <ScalarProperty Name="ISLOCKEDOUT" ColumnName="ISLOCKEDOUT" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="LASTLOGINDATE" ColumnName="LASTLOGINDATE" />
+          <ScalarProperty Name="LASTPASSWORDCHANGEDDATE" ColumnName="LASTPASSWORDCHANGEDDATE" />
+          <ScalarProperty Name="LASTLOCKOUTDATE" ColumnName="LASTLOCKOUTDATE" />
+          <ScalarProperty Name="FAILEDPWDATTEMPTCOUNT" ColumnName="FAILEDPWDATTEMPTCOUNT" />
+          <ScalarProperty Name="FAILEDPWDATTEMPTWINSTART" ColumnName="FAILEDPWDATTEMPTWINSTART" />
+          <ScalarProperty Name="FAILEDPWDANSWERATTEMPTCOUNT" ColumnName="FAILEDPWDANSWERATTEMPTCOUNT" />
+          <ScalarProperty Name="FAILEDPWDANSWERATTEMPTWINSTART" ColumnName="FAILEDPWDANSWERATTEMPTWINSTART" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORA_ASPNET_PATHS">
+      <EntityTypeMapping TypeName="Model.ORA_ASPNET_PATHS">
+        <MappingFragment StoreEntitySet="ORA_ASPNET_PATHS">
+          <ScalarProperty Name="APPLICATIONID" ColumnName="APPLICATIONID" />
+          <ScalarProperty Name="PATHID" ColumnName="PATHID" />
+          <ScalarProperty Name="PATH" ColumnName="PATH" />
+          <ScalarProperty Name="LOWEREDPATH" ColumnName="LOWEREDPATH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORA_ASPNET_PERSONALIZNALLUSERS">
+      <EntityTypeMapping TypeName="Model.ORA_ASPNET_PERSONALIZNALLUSERS">
+        <MappingFragment StoreEntitySet="ORA_ASPNET_PERSONALIZNALLUSERS">
+          <ScalarProperty Name="PATHID" ColumnName="PATHID" />
+          <ScalarProperty Name="PAGESETTINGS" ColumnName="PAGESETTINGS" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORA_ASPNET_PERSONALIZNPERUSER">
+      <EntityTypeMapping TypeName="Model.ORA_ASPNET_PERSONALIZNPERUSER">
+        <MappingFragment StoreEntitySet="ORA_ASPNET_PERSONALIZNPERUSER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PATHID" ColumnName="PATHID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="PAGESETTINGS" ColumnName="PAGESETTINGS" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORA_ASPNET_PROFILE">
+      <EntityTypeMapping TypeName="Model.ORA_ASPNET_PROFILE">
+        <MappingFragment StoreEntitySet="ORA_ASPNET_PROFILE">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="PROPERTYNAMES" ColumnName="PROPERTYNAMES" />
+          <ScalarProperty Name="PROPERTYVALUESSTRING" ColumnName="PROPERTYVALUESSTRING" />
+          <ScalarProperty Name="PROPERTYVALUESBINARY" ColumnName="PROPERTYVALUESBINARY" />
+          <ScalarProperty Name="LASTUPDATEDDATE" ColumnName="LASTUPDATEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORA_ASPNET_ROLES">
+      <EntityTypeMapping TypeName="Model.ORA_ASPNET_ROLES">
+        <MappingFragment StoreEntitySet="ORA_ASPNET_ROLES">
+          <ScalarProperty Name="APPLICATIONID" ColumnName="APPLICATIONID" />
+          <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+          <ScalarProperty Name="ROLENAME" ColumnName="ROLENAME" />
+          <ScalarProperty Name="LOWEREDROLENAME" ColumnName="LOWEREDROLENAME" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORA_ASPNET_SESSIONAPPLICATIONS">
+      <EntityTypeMapping TypeName="Model.ORA_ASPNET_SESSIONAPPLICATIONS">
+        <MappingFragment StoreEntitySet="ORA_ASPNET_SESSIONAPPLICATIONS">
+          <ScalarProperty Name="APPID" ColumnName="APPID" />
+          <ScalarProperty Name="APPNAME" ColumnName="APPNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORA_ASPNET_SESSIONS">
+      <EntityTypeMapping TypeName="Model.ORA_ASPNET_SESSIONS">
+        <MappingFragment StoreEntitySet="ORA_ASPNET_SESSIONS">
+          <ScalarProperty Name="SESSIONID" ColumnName="SESSIONID" />
+          <ScalarProperty Name="CREATED" ColumnName="CREATED" />
+          <ScalarProperty Name="EXPIRES" ColumnName="EXPIRES" />
+          <ScalarProperty Name="LOCKDATE" ColumnName="LOCKDATE" />
+          <ScalarProperty Name="LOCKDATELOCAL" ColumnName="LOCKDATELOCAL" />
+          <ScalarProperty Name="LOCKCOOKIE" ColumnName="LOCKCOOKIE" />
+          <ScalarProperty Name="TIMEOUT" ColumnName="TIMEOUT" />
+          <ScalarProperty Name="LOCKED" ColumnName="LOCKED" />
+          <ScalarProperty Name="SESSIONITEMSHORT" ColumnName="SESSIONITEMSHORT" />
+          <ScalarProperty Name="SESSIONITEMLONG" ColumnName="SESSIONITEMLONG" />
+          <ScalarProperty Name="FLAGS" ColumnName="FLAGS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORA_ASPNET_SITEMAP">
+      <EntityTypeMapping TypeName="Model.ORA_ASPNET_SITEMAP">
+        <MappingFragment StoreEntitySet="ORA_ASPNET_SITEMAP">
+          <ScalarProperty Name="APPLICATIONID" ColumnName="APPLICATIONID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ROLES" ColumnName="ROLES" />
+          <ScalarProperty Name="PARENT" ColumnName="PARENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORA_ASPNET_USERS">
+      <EntityTypeMapping TypeName="Model.ORA_ASPNET_USERS">
+        <MappingFragment StoreEntitySet="ORA_ASPNET_USERS">
+          <ScalarProperty Name="APPLICATIONID" ColumnName="APPLICATIONID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="LOWEREDUSERNAME" ColumnName="LOWEREDUSERNAME" />
+          <ScalarProperty Name="MOBILEALIAS" ColumnName="MOBILEALIAS" />
+          <ScalarProperty Name="ISANONYMOUS" ColumnName="ISANONYMOUS" />
+          <ScalarProperty Name="LASTACTIVITYDATE" ColumnName="LASTACTIVITYDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAR_IMP">
+      <EntityTypeMapping TypeName="Model.PAR_IMP">
+        <MappingFragment StoreEntitySet="PAR_IMP">
+          <ScalarProperty Name="PAR_CIM" ColumnName="PAR_CIM" />
+          <ScalarProperty Name="PAR_COD" ColumnName="PAR_COD" />
+          <ScalarProperty Name="PAR_NOM" ColumnName="PAR_NOM" />
+          <ScalarProperty Name="PAR_TID" ColumnName="PAR_TID" />
+          <ScalarProperty Name="PAR_TAM" ColumnName="PAR_TAM" />
+          <ScalarProperty Name="PAR_USAP" ColumnName="PAR_USAP" />
+          <ScalarProperty Name="PAR_USBD" ColumnName="PAR_USBD" />
+          <ScalarProperty Name="PAR_FREG" ColumnName="PAR_FREG" />
+          <ScalarProperty Name="PAR_FNOV" ColumnName="PAR_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAR_LIQ_DET">
+      <EntityTypeMapping TypeName="Model.PAR_LIQ_DET">
+        <MappingFragment StoreEntitySet="PAR_LIQ_DET">
+          <ScalarProperty Name="PALI_PLCO" ColumnName="PALI_PLCO" />
+          <ScalarProperty Name="PALI_COID" ColumnName="PALI_COID" />
+          <ScalarProperty Name="PALI_FEIN" ColumnName="PALI_FEIN" />
+          <ScalarProperty Name="PALI_FEFI" ColumnName="PALI_FEFI" />
+          <ScalarProperty Name="PALI_VALO" ColumnName="PALI_VALO" />
+          <ScalarProperty Name="PAR_DEC" ColumnName="PAR_DEC" />
+          <ScalarProperty Name="PALI_VANU" ColumnName="PALI_VANU" />
+          <ScalarProperty Name="PALI_VADA" ColumnName="PALI_VADA" />
+          <ScalarProperty Name="PALI_USAP" ColumnName="PALI_USAP" />
+          <ScalarProperty Name="PALI_USBD" ColumnName="PALI_USBD" />
+          <ScalarProperty Name="PALI_FREG" ColumnName="PALI_FREG" />
+          <ScalarProperty Name="PALI_FNOV" ColumnName="PALI_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PARA_LIQU">
+      <EntityTypeMapping TypeName="Model.PARA_LIQU">
+        <MappingFragment StoreEntitySet="PARA_LIQU">
+          <ScalarProperty Name="PALI_CODI" ColumnName="PALI_CODI" />
+          <ScalarProperty Name="PALI_NOMB" ColumnName="PALI_NOMB" />
+          <ScalarProperty Name="PALI_TIDA" ColumnName="PALI_TIDA" />
+          <ScalarProperty Name="PALI_VARI" ColumnName="PALI_VARI" />
+          <ScalarProperty Name="PALI_ESTA" ColumnName="PALI_ESTA" />
+          <ScalarProperty Name="PALI_DESC" ColumnName="PALI_DESC" />
+          <ScalarProperty Name="PALI_USAP" ColumnName="PALI_USAP" />
+          <ScalarProperty Name="PALI_USBD" ColumnName="PALI_USBD" />
+          <ScalarProperty Name="PALI_FREG" ColumnName="PALI_FREG" />
+          <ScalarProperty Name="PALI_FNOV" ColumnName="PALI_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROC_LOTE">
+      <EntityTypeMapping TypeName="Model.PROC_LOTE">
+        <MappingFragment StoreEntitySet="PROC_LOTE">
+          <ScalarProperty Name="PRLT_NUM" ColumnName="PRLT_NUM" />
+          <ScalarProperty Name="PRLT_PLAN" ColumnName="PRLT_PLAN" />
+          <ScalarProperty Name="PRLT_DOC" ColumnName="PRLT_DOC" />
+          <ScalarProperty Name="PRLT_PDF" ColumnName="PRLT_PDF" />
+          <ScalarProperty Name="PRLT_TRAM" ColumnName="PRLT_TRAM" />
+          <ScalarProperty Name="PRLT_PROC" ColumnName="PRLT_PROC" />
+          <ScalarProperty Name="PRLT_USAP" ColumnName="PRLT_USAP" />
+          <ScalarProperty Name="PRLT_USBD" ColumnName="PRLT_USBD" />
+          <ScalarProperty Name="PRLT_FREG" ColumnName="PRLT_FREG" />
+          <ScalarProperty Name="PRLT_CDEC" ColumnName="PRLT_CDEC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROCESOS">
+      <EntityTypeMapping TypeName="Model.PROCESOS">
+        <MappingFragment StoreEntitySet="PROCESOS">
+          <ScalarProperty Name="PROC_CODI" ColumnName="PROC_CODI" />
+          <ScalarProperty Name="PROC_NOMB" ColumnName="PROC_NOMB" />
+          <ScalarProperty Name="PROC_TPCO" ColumnName="PROC_TPCO" />
+          <ScalarProperty Name="PROC_USAP" ColumnName="PROC_USAP" />
+          <ScalarProperty Name="PROC_USBD" ColumnName="PROC_USBD" />
+          <ScalarProperty Name="PROC_FREG" ColumnName="PROC_FREG" />
+          <ScalarProperty Name="PROC_FNOV" ColumnName="PROC_FNOV" />
+          <ScalarProperty Name="PROC_HAB" ColumnName="PROC_HAB" />
+          <ScalarProperty Name="PROC_TINI" ColumnName="PROC_TINI" />
+          <ScalarProperty Name="PROC_TFIN" ColumnName="PROC_TFIN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RECACUERDO">
+      <EntityTypeMapping TypeName="Model.RECACUERDO">
+        <MappingFragment StoreEntitySet="RECACUERDO">
+          <ScalarProperty Name="RAP_CONS" ColumnName="RAP_CONS" />
+          <ScalarProperty Name="RAP_NIT" ColumnName="RAP_NIT" />
+          <ScalarProperty Name="RAP_PER" ColumnName="RAP_PER" />
+          <ScalarProperty Name="RAP_ANO" ColumnName="RAP_ANO" />
+          <ScalarProperty Name="RAP_COD" ColumnName="RAP_COD" />
+          <ScalarProperty Name="RAP_CDEC" ColumnName="RAP_CDEC" />
+          <ScalarProperty Name="RAP_DECC" ColumnName="RAP_DECC" />
+          <ScalarProperty Name="RAP_VPA" ColumnName="RAP_VPA" />
+          <ScalarProperty Name="RAP_TRAP" ColumnName="RAP_TRAP" />
+          <ScalarProperty Name="RAP_FREG" ColumnName="RAP_FREG" />
+          <ScalarProperty Name="RAP_EST" ColumnName="RAP_EST" />
+          <ScalarProperty Name="RAP_TDOC" ColumnName="RAP_TDOC" />
+          <ScalarProperty Name="RAP_FRAD" ColumnName="RAP_FRAD" />
+          <ScalarProperty Name="RAP_FNOV" ColumnName="RAP_FNOV" />
+          <ScalarProperty Name="RAP_USBD" ColumnName="RAP_USBD" />
+          <ScalarProperty Name="RAP_USAP" ColumnName="RAP_USAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RECOFICIAL">
+      <EntityTypeMapping TypeName="Model.RECOFICIAL">
+        <MappingFragment StoreEntitySet="RECOFICIAL">
+          <ScalarProperty Name="ROF_CONS" ColumnName="ROF_CONS" />
+          <ScalarProperty Name="ROF_NIT" ColumnName="ROF_NIT" />
+          <ScalarProperty Name="ROF_VPA" ColumnName="ROF_VPA" />
+          <ScalarProperty Name="ROF_INT" ColumnName="ROF_INT" />
+          <ScalarProperty Name="ROF_COD" ColumnName="ROF_COD" />
+          <ScalarProperty Name="ROF_CDEC" ColumnName="ROF_CDEC" />
+          <ScalarProperty Name="ROF_DECC" ColumnName="ROF_DECC" />
+          <ScalarProperty Name="ROF_FNOV" ColumnName="ROF_FNOV" />
+          <ScalarProperty Name="ROF_USBD" ColumnName="ROF_USBD" />
+          <ScalarProperty Name="ROF_USAP" ColumnName="ROF_USAP" />
+          <ScalarProperty Name="ROF_FREG" ColumnName="ROF_FREG" />
+          <ScalarProperty Name="ROF_EST" ColumnName="ROF_EST" />
+          <ScalarProperty Name="ROF_SAN" ColumnName="ROF_SAN" />
+          <ScalarProperty Name="ROF_TDOC" ColumnName="ROF_TDOC" />
+          <ScalarProperty Name="ROF_FRAD" ColumnName="ROF_FRAD" />
+          <ScalarProperty Name="ROF_TROF" ColumnName="ROF_TROF" />
+          <ScalarProperty Name="ROF_TPAG" ColumnName="ROF_TPAG" />
+          <ScalarProperty Name="ROF_CTABCO" ColumnName="ROF_CTABCO" />
+          <ScalarProperty Name="ROF_BCO" ColumnName="ROF_BCO" />
+          <ScalarProperty Name="ROF_ANO" ColumnName="ROF_ANO" />
+          <ScalarProperty Name="ROF_PER" ColumnName="ROF_PER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REL_INT_MORA">
+      <EntityTypeMapping TypeName="Model.REL_INT_MORA">
+        <MappingFragment StoreEntitySet="REL_INT_MORA">
+          <ScalarProperty Name="RLIM_NUM" ColumnName="RLIM_NUM" />
+          <ScalarProperty Name="RLIM_DOAD" ColumnName="RLIM_DOAD" />
+          <ScalarProperty Name="RLIM_VALOR" ColumnName="RLIM_VALOR" />
+          <ScalarProperty Name="RLIM_TDOC" ColumnName="RLIM_TDOC" />
+          <ScalarProperty Name="RLIM_PER" ColumnName="RLIM_PER" />
+          <ScalarProperty Name="RLIM_ANO" ColumnName="RLIM_ANO" />
+          <ScalarProperty Name="RLIM_NIT" ColumnName="RLIM_NIT" />
+          <ScalarProperty Name="RLIM_DCOD" ColumnName="RLIM_DCOD" />
+          <ScalarProperty Name="RLIM_CDEC" ColumnName="RLIM_CDEC" />
+          <ScalarProperty Name="RLIM_USAP" ColumnName="RLIM_USAP" />
+          <ScalarProperty Name="RLIM_USBD" ColumnName="RLIM_USBD" />
+          <ScalarProperty Name="RLIM_FREG" ColumnName="RLIM_FREG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RELA_AGETER">
+      <EntityTypeMapping TypeName="Model.RELA_AGETER">
+        <MappingFragment StoreEntitySet="RELA_AGETER">
+          <ScalarProperty Name="REL_CONS" ColumnName="REL_CONS" />
+          <ScalarProperty Name="REL_TDOC" ColumnName="REL_TDOC" />
+          <ScalarProperty Name="REL_AGE" ColumnName="REL_AGE" />
+          <ScalarProperty Name="REL_DVER" ColumnName="REL_DVER" />
+          <ScalarProperty Name="REL_TDOCREV" ColumnName="REL_TDOCREV" />
+          <ScalarProperty Name="REL_REV" ColumnName="REL_REV" />
+          <ScalarProperty Name="REL_TREV" ColumnName="REL_TREV" />
+          <ScalarProperty Name="REL_TARPRO" ColumnName="REL_TARPRO" />
+          <ScalarProperty Name="REL_TDOCDEC" ColumnName="REL_TDOCDEC" />
+          <ScalarProperty Name="REL_DEC" ColumnName="REL_DEC" />
+          <ScalarProperty Name="REL_TDEC" ColumnName="REL_TDEC" />
+          <ScalarProperty Name="REL_EST" ColumnName="REL_EST" />
+          <ScalarProperty Name="REL_USBD" ColumnName="REL_USBD" />
+          <ScalarProperty Name="REL_USAP" ColumnName="REL_USAP" />
+          <ScalarProperty Name="REL_FNOV" ColumnName="REL_FNOV" />
+          <ScalarProperty Name="REL_FREG" ColumnName="REL_FREG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REQUI_DECLARACION">
+      <EntityTypeMapping TypeName="Model.REQUI_DECLARACION">
+        <MappingFragment StoreEntitySet="REQUI_DECLARACION">
+          <ScalarProperty Name="REQ_CLDEC" ColumnName="REQ_CLDEC" />
+          <ScalarProperty Name="REQ_COD" ColumnName="REQ_COD" />
+          <ScalarProperty Name="REQ_DESC" ColumnName="REQ_DESC" />
+          <ScalarProperty Name="REQ_FINI" ColumnName="REQ_FINI" />
+          <ScalarProperty Name="REQ_FFIN" ColumnName="REQ_FFIN" />
+          <ScalarProperty Name="REQ_USAP" ColumnName="REQ_USAP" />
+          <ScalarProperty Name="REQ_USBD" ColumnName="REQ_USBD" />
+          <ScalarProperty Name="REQ_FREG" ColumnName="REQ_FREG" />
+          <ScalarProperty Name="REQ_FNOV" ColumnName="REQ_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SECCIONES">
+      <EntityTypeMapping TypeName="Model.SECCIONES">
+        <MappingFragment StoreEntitySet="SECCIONES">
+          <ScalarProperty Name="SECC_CODI" ColumnName="SECC_CODI" />
+          <ScalarProperty Name="SECC_NOMB" ColumnName="SECC_NOMB" />
+          <ScalarProperty Name="SECC_USAP" ColumnName="SECC_USAP" />
+          <ScalarProperty Name="SECC_USBD" ColumnName="SECC_USBD" />
+          <ScalarProperty Name="SECC_FREG" ColumnName="SECC_FREG" />
+          <ScalarProperty Name="SECC_FNOV" ColumnName="SECC_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TARIFAS_IMP">
+      <EntityTypeMapping TypeName="Model.TARIFAS_IMP">
+        <MappingFragment StoreEntitySet="TARIFAS_IMP">
+          <ScalarProperty Name="TARI_FEIN" ColumnName="TARI_FEIN" />
+          <ScalarProperty Name="TARI_FEFI" ColumnName="TARI_FEFI" />
+          <ScalarProperty Name="TARI_FORM" ColumnName="TARI_FORM" />
+          <ScalarProperty Name="TARI_NORM" ColumnName="TARI_NORM" />
+          <ScalarProperty Name="TARI_IMP" ColumnName="TARI_IMP" />
+          <ScalarProperty Name="TARI_CODI" ColumnName="TARI_CODI" />
+          <ScalarProperty Name="TARI_USAP" ColumnName="TARI_USAP" />
+          <ScalarProperty Name="TARI_USBD" ColumnName="TARI_USBD" />
+          <ScalarProperty Name="TARI_FREG" ColumnName="TARI_FREG" />
+          <ScalarProperty Name="TARI_FNOV" ColumnName="TARI_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDECLARANTE">
+      <EntityTypeMapping TypeName="Model.TDECLARANTE">
+        <MappingFragment StoreEntitySet="TDECLARANTE">
+          <ScalarProperty Name="TDEC_COD" ColumnName="TDEC_COD" />
+          <ScalarProperty Name="TDEC_NOMB" ColumnName="TDEC_NOMB" />
+          <ScalarProperty Name="TDEC_USAP" ColumnName="TDEC_USAP" />
+          <ScalarProperty Name="TDEC_USBD" ColumnName="TDEC_USBD" />
+          <ScalarProperty Name="TDEC_FREG" ColumnName="TDEC_FREG" />
+          <ScalarProperty Name="TDEC_FNOV" ColumnName="TDEC_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDOC_IDE">
+      <EntityTypeMapping TypeName="Model.TDOC_IDE">
+        <MappingFragment StoreEntitySet="TDOC_IDE">
+          <ScalarProperty Name="TDOC_COD" ColumnName="TDOC_COD" />
+          <ScalarProperty Name="TDOC_NOM" ColumnName="TDOC_NOM" />
+          <ScalarProperty Name="TDOC_USAP" ColumnName="TDOC_USAP" />
+          <ScalarProperty Name="TDOC_USBD" ColumnName="TDOC_USBD" />
+          <ScalarProperty Name="TDOC_FREG" ColumnName="TDOC_FREG" />
+          <ScalarProperty Name="TDOC_FNOV" ColumnName="TDOC_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TER_DEC">
+      <EntityTypeMapping TypeName="Model.TER_DEC">
+        <MappingFragment StoreEntitySet="TER_DEC">
+          <ScalarProperty Name="TEDE_CODI" ColumnName="TEDE_CODI" />
+          <ScalarProperty Name="TEDE_TNIT" ColumnName="TEDE_TNIT" />
+          <ScalarProperty Name="TEDE_CDEC" ColumnName="TEDE_CDEC" />
+          <ScalarProperty Name="TEDE_FINI" ColumnName="TEDE_FINI" />
+          <ScalarProperty Name="TEDE_FFIN" ColumnName="TEDE_FFIN" />
+          <ScalarProperty Name="TEDE_USAP" ColumnName="TEDE_USAP" />
+          <ScalarProperty Name="TEDE_USBD" ColumnName="TEDE_USBD" />
+          <ScalarProperty Name="TEDE_FREG" ColumnName="TEDE_FREG" />
+          <ScalarProperty Name="TEDE_FNOV" ColumnName="TEDE_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TERCEROS">
+      <EntityTypeMapping TypeName="Model.TERCEROS">
+        <MappingFragment StoreEntitySet="TERCEROS">
+          <ScalarProperty Name="TER_CONS" ColumnName="TER_CONS" />
+          <ScalarProperty Name="TER_TDOC" ColumnName="TER_TDOC" />
+          <ScalarProperty Name="TER_NIT" ColumnName="TER_NIT" />
+          <ScalarProperty Name="TER_DVER" ColumnName="TER_DVER" />
+          <ScalarProperty Name="TER_NOM" ColumnName="TER_NOM" />
+          <ScalarProperty Name="TER_TIP" ColumnName="TER_TIP" />
+          <ScalarProperty Name="TER_MPIO" ColumnName="TER_MPIO" />
+          <ScalarProperty Name="TER_EMAI" ColumnName="TER_EMAI" />
+          <ScalarProperty Name="TER_TEL" ColumnName="TER_TEL" />
+          <ScalarProperty Name="TER_DIR" ColumnName="TER_DIR" />
+          <ScalarProperty Name="TER_CED" ColumnName="TER_CED" />
+          <ScalarProperty Name="TER_REP" ColumnName="TER_REP" />
+          <ScalarProperty Name="TER_USU" ColumnName="TER_USU" />
+          <ScalarProperty Name="TER_TUS" ColumnName="TER_TUS" />
+          <ScalarProperty Name="TER_FREG" ColumnName="TER_FREG" />
+          <ScalarProperty Name="TER_FNOV" ColumnName="TER_FNOV" />
+          <ScalarProperty Name="TER_FFIN" ColumnName="TER_FFIN" />
+          <ScalarProperty Name="TER_EST" ColumnName="TER_EST" />
+          <ScalarProperty Name="TER_OBS" ColumnName="TER_OBS" />
+          <ScalarProperty Name="TER_USAP" ColumnName="TER_USAP" />
+          <ScalarProperty Name="TER_USBD" ColumnName="TER_USBD" />
+          <ScalarProperty Name="TER_REP_TD" ColumnName="TER_REP_TD" />
+          <ScalarProperty Name="TER_REP_EXP" ColumnName="TER_REP_EXP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_AGENT">
+      <EntityTypeMapping TypeName="Model.TIPO_AGENT">
+        <MappingFragment StoreEntitySet="TIPO_AGENT">
+          <ScalarProperty Name="TAG_COD" ColumnName="TAG_COD" />
+          <ScalarProperty Name="TAG_NOM" ColumnName="TAG_NOM" />
+          <ScalarProperty Name="TAG_EST" ColumnName="TAG_EST" />
+          <ScalarProperty Name="TAG_USAP" ColumnName="TAG_USAP" />
+          <ScalarProperty Name="TAG_USBD" ColumnName="TAG_USBD" />
+          <ScalarProperty Name="TAG_FREG" ColumnName="TAG_FREG" />
+          <ScalarProperty Name="TAG_FNOV" ColumnName="TAG_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_CONCEPTOS">
+      <EntityTypeMapping TypeName="Model.TIPO_CONCEPTOS">
+        <MappingFragment StoreEntitySet="TIPO_CONCEPTOS">
+          <ScalarProperty Name="TCON_COD" ColumnName="TCON_COD" />
+          <ScalarProperty Name="TCON_NOM" ColumnName="TCON_NOM" />
+          <ScalarProperty Name="TCON_USAP" ColumnName="TCON_USAP" />
+          <ScalarProperty Name="TCON_USBD" ColumnName="TCON_USBD" />
+          <ScalarProperty Name="TCON_FREG" ColumnName="TCON_FREG" />
+          <ScalarProperty Name="TCON_FNOV" ColumnName="TCON_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_CUENTA">
+      <EntityTypeMapping TypeName="Model.TIPO_CUENTA">
+        <MappingFragment StoreEntitySet="TIPO_CUENTA">
+          <ScalarProperty Name="TCTA_CODI" ColumnName="TCTA_CODI" />
+          <ScalarProperty Name="TCTA_NOMB" ColumnName="TCTA_NOMB" />
+          <ScalarProperty Name="TCTA_USAP" ColumnName="TCTA_USAP" />
+          <ScalarProperty Name="TCTA_USBD" ColumnName="TCTA_USBD" />
+          <ScalarProperty Name="TCTA_FREG" ColumnName="TCTA_FREG" />
+          <ScalarProperty Name="TCTA_FNOV" ColumnName="TCTA_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_DATO">
+      <EntityTypeMapping TypeName="Model.TIPO_DATO">
+        <MappingFragment StoreEntitySet="TIPO_DATO">
+          <ScalarProperty Name="TIDA_CODI" ColumnName="TIDA_CODI" />
+          <ScalarProperty Name="TIDA_ORACLE" ColumnName="TIDA_ORACLE" />
+          <ScalarProperty Name="TIDA_NET" ColumnName="TIDA_NET" />
+          <ScalarProperty Name="TIDA_USAP" ColumnName="TIDA_USAP" />
+          <ScalarProperty Name="TIDA_USBD" ColumnName="TIDA_USBD" />
+          <ScalarProperty Name="TIDA_FREG" ColumnName="TIDA_FREG" />
+          <ScalarProperty Name="TIDA_FNOV" ColumnName="TIDA_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_DEC">
+      <EntityTypeMapping TypeName="Model.TIPO_DEC">
+        <MappingFragment StoreEntitySet="TIPO_DEC">
+          <ScalarProperty Name="TDEC_COD" ColumnName="TDEC_COD" />
+          <ScalarProperty Name="TDEC_NOM" ColumnName="TDEC_NOM" />
+          <ScalarProperty Name="TDEC_FIN" ColumnName="TDEC_FIN" />
+          <ScalarProperty Name="TDEC_FFI" ColumnName="TDEC_FFI" />
+          <ScalarProperty Name="TDEC_USBD" ColumnName="TDEC_USBD" />
+          <ScalarProperty Name="TDEC_USAP" ColumnName="TDEC_USAP" />
+          <ScalarProperty Name="TDEC_FREG" ColumnName="TDEC_FREG" />
+          <ScalarProperty Name="TDEC_FNOV" ColumnName="TDEC_FNOV" />
+          <ScalarProperty Name="TDEC_CDEC" ColumnName="TDEC_CDEC" />
+          <ScalarProperty Name="TDEC_CODI" ColumnName="TDEC_CODI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_DOC">
+      <EntityTypeMapping TypeName="Model.TIPO_DOC">
+        <MappingFragment StoreEntitySet="TIPO_DOC">
+          <ScalarProperty Name="TIDO_CODI" ColumnName="TIDO_CODI" />
+          <ScalarProperty Name="TIDO_NOMB" ColumnName="TIDO_NOMB" />
+          <ScalarProperty Name="TIDO_EST" ColumnName="TIDO_EST" />
+          <ScalarProperty Name="TIDO_USAP" ColumnName="TIDO_USAP" />
+          <ScalarProperty Name="TIDO_USBD" ColumnName="TIDO_USBD" />
+          <ScalarProperty Name="TIDO_FREG" ColumnName="TIDO_FREG" />
+          <ScalarProperty Name="TIDO_FNOV" ColumnName="TIDO_FNOV" />
+          <ScalarProperty Name="TIDO_FIRMA" ColumnName="TIDO_FIRMA" />
+          <ScalarProperty Name="TIDO_RESP" ColumnName="TIDO_RESP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_DOC_CONS">
+      <EntityTypeMapping TypeName="Model.TIPO_DOC_CONS">
+        <MappingFragment StoreEntitySet="TIPO_DOC_CONS">
+          <ScalarProperty Name="TIDO_CODI" ColumnName="TIDO_CODI" />
+          <ScalarProperty Name="TIDO_CDEC" ColumnName="TIDO_CDEC" />
+          <ScalarProperty Name="TIDO_CONS" ColumnName="TIDO_CONS" />
+          <ScalarProperty Name="TIDO_USAP" ColumnName="TIDO_USAP" />
+          <ScalarProperty Name="TIDO_USBD" ColumnName="TIDO_USBD" />
+          <ScalarProperty Name="TIDO_FREG" ColumnName="TIDO_FREG" />
+          <ScalarProperty Name="TIDO_FNOV" ColumnName="TIDO_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_MOV">
+      <EntityTypeMapping TypeName="Model.TIPO_MOV">
+        <MappingFragment StoreEntitySet="TIPO_MOV">
+          <ScalarProperty Name="TMOV_COD" ColumnName="TMOV_COD" />
+          <ScalarProperty Name="TMOV_NOM" ColumnName="TMOV_NOM" />
+          <ScalarProperty Name="TMOV_USAP" ColumnName="TMOV_USAP" />
+          <ScalarProperty Name="TMOV_USBD" ColumnName="TMOV_USBD" />
+          <ScalarProperty Name="TMOV_FREG" ColumnName="TMOV_FREG" />
+          <ScalarProperty Name="TMOV_FNOV" ColumnName="TMOV_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_PAGO">
+      <EntityTypeMapping TypeName="Model.TIPO_PAGO">
+        <MappingFragment StoreEntitySet="TIPO_PAGO">
+          <ScalarProperty Name="TPAG_COD" ColumnName="TPAG_COD" />
+          <ScalarProperty Name="TPAG_NOM" ColumnName="TPAG_NOM" />
+          <ScalarProperty Name="TPAG_USAP" ColumnName="TPAG_USAP" />
+          <ScalarProperty Name="TPAG_USBD" ColumnName="TPAG_USBD" />
+          <ScalarProperty Name="TPAG_FREG" ColumnName="TPAG_FREG" />
+          <ScalarProperty Name="TPAG_FNOV" ColumnName="TPAG_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_PROCESO">
+      <EntityTypeMapping TypeName="Model.TIPO_PROCESO">
+        <MappingFragment StoreEntitySet="TIPO_PROCESO">
+          <ScalarProperty Name="TPRO_CODI" ColumnName="TPRO_CODI" />
+          <ScalarProperty Name="TPRO_NOMB" ColumnName="TPRO_NOMB" />
+          <ScalarProperty Name="TPRO_USAP" ColumnName="TPRO_USAP" />
+          <ScalarProperty Name="TPRO_USBD" ColumnName="TPRO_USBD" />
+          <ScalarProperty Name="TPRO_FREG" ColumnName="TPRO_FREG" />
+          <ScalarProperty Name="TPRO_FNOV" ColumnName="TPRO_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_SANCIONES">
+      <EntityTypeMapping TypeName="Model.TIPO_SANCIONES">
+        <MappingFragment StoreEntitySet="TIPO_SANCIONES">
+          <ScalarProperty Name="TSAN_COD" ColumnName="TSAN_COD" />
+          <ScalarProperty Name="TSAN_NOM" ColumnName="TSAN_NOM" />
+          <ScalarProperty Name="TSAN_FORM" ColumnName="TSAN_FORM" />
+          <ScalarProperty Name="TSAN_PAR" ColumnName="TSAN_PAR" />
+          <ScalarProperty Name="TSAN_DEC" ColumnName="TSAN_DEC" />
+          <ScalarProperty Name="TSAN_DETI" ColumnName="TSAN_DETI" />
+          <ScalarProperty Name="TSAN_USAP" ColumnName="TSAN_USAP" />
+          <ScalarProperty Name="TSAN_USBD" ColumnName="TSAN_USBD" />
+          <ScalarProperty Name="TSAN_FREG" ColumnName="TSAN_FREG" />
+          <ScalarProperty Name="TSAN_FNOV" ColumnName="TSAN_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOUSUA">
+      <EntityTypeMapping TypeName="Model.TIPOUSUA">
+        <MappingFragment StoreEntitySet="TIPOUSUA">
+          <ScalarProperty Name="TUS_COD" ColumnName="TUS_COD" />
+          <ScalarProperty Name="TUS_NOM" ColumnName="TUS_NOM" />
+          <ScalarProperty Name="TUS_USAP" ColumnName="TUS_USAP" />
+          <ScalarProperty Name="TUS_USBD" ColumnName="TUS_USBD" />
+          <ScalarProperty Name="TUS_FREG" ColumnName="TUS_FREG" />
+          <ScalarProperty Name="TUS_FNOV" ColumnName="TUS_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAM_TER">
+      <EntityTypeMapping TypeName="Model.TRAM_TER">
+        <MappingFragment StoreEntitySet="TRAM_TER">
+          <ScalarProperty Name="TRTE_NIT" ColumnName="TRTE_NIT" />
+          <ScalarProperty Name="TRTE_TRAM" ColumnName="TRTE_TRAM" />
+          <ScalarProperty Name="TRTE_USAP" ColumnName="TRTE_USAP" />
+          <ScalarProperty Name="TRTE_USBD" ColumnName="TRTE_USBD" />
+          <ScalarProperty Name="TRTE_FREG" ColumnName="TRTE_FREG" />
+          <ScalarProperty Name="TRTE_FNOV" ColumnName="TRTE_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAMITES">
+      <EntityTypeMapping TypeName="Model.TRAMITES">
+        <MappingFragment StoreEntitySet="TRAMITES">
+          <ScalarProperty Name="TRAM_CODI" ColumnName="TRAM_CODI" />
+          <ScalarProperty Name="TRAM_NOMB" ColumnName="TRAM_NOMB" />
+          <ScalarProperty Name="TRAM_RESP" ColumnName="TRAM_RESP" />
+          <ScalarProperty Name="TRAM_GSAN" ColumnName="TRAM_GSAN" />
+          <ScalarProperty Name="TRAM_COSA" ColumnName="TRAM_COSA" />
+          <ScalarProperty Name="TRAM_PLAN" ColumnName="TRAM_PLAN" />
+          <ScalarProperty Name="TRAM_USAP" ColumnName="TRAM_USAP" />
+          <ScalarProperty Name="TRAM_USBD" ColumnName="TRAM_USBD" />
+          <ScalarProperty Name="TRAM_FREG" ColumnName="TRAM_FREG" />
+          <ScalarProperty Name="TRAM_FNOV" ColumnName="TRAM_FNOV" />
+          <ScalarProperty Name="TRAM_PROC" ColumnName="TRAM_PROC" />
+          <ScalarProperty Name="TRAM_TIDO" ColumnName="TRAM_TIDO" />
+          <ScalarProperty Name="TRAM_AUTO" ColumnName="TRAM_AUTO" />
+          <ScalarProperty Name="TRAM_DIAS" ColumnName="TRAM_DIAS" />
+          <ScalarProperty Name="TRAM_TIPO" ColumnName="TRAM_TIPO" />
+          <ScalarProperty Name="TRAM_VFREB" ColumnName="TRAM_VFREB" />
+          <ScalarProperty Name="TRAM_TPRO" ColumnName="TRAM_TPRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAMRELA">
+      <EntityTypeMapping TypeName="Model.TRAMRELA">
+        <MappingFragment StoreEntitySet="TRAMRELA">
+          <ScalarProperty Name="TRRE_DESD" ColumnName="TRRE_DESD" />
+          <ScalarProperty Name="TRRE_PARA" ColumnName="TRRE_PARA" />
+          <ScalarProperty Name="TRRE_DILI" ColumnName="TRRE_DILI" />
+          <ScalarProperty Name="TRRE_USAP" ColumnName="TRRE_USAP" />
+          <ScalarProperty Name="TRRE_USBD" ColumnName="TRRE_USBD" />
+          <ScalarProperty Name="TRRE_FREG" ColumnName="TRRE_FREG" />
+          <ScalarProperty Name="TRRE_FNOV" ColumnName="TRRE_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UNIDAD">
+      <EntityTypeMapping TypeName="Model.UNIDAD">
+        <MappingFragment StoreEntitySet="UNIDAD">
+          <ScalarProperty Name="UNI_COD" ColumnName="UNI_COD" />
+          <ScalarProperty Name="UNI_NOM" ColumnName="UNI_NOM" />
+          <ScalarProperty Name="UNI_USAP" ColumnName="UNI_USAP" />
+          <ScalarProperty Name="UNI_USBD" ColumnName="UNI_USBD" />
+          <ScalarProperty Name="UNI_FREG" ColumnName="UNI_FREG" />
+          <ScalarProperty Name="UNI_FNOV" ColumnName="UNI_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USEREXT">
+      <EntityTypeMapping TypeName="Model.USEREXT">
+        <MappingFragment StoreEntitySet="USEREXT">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="TIPO_USUARIO" ColumnName="TIPO_USUARIO" />
+          <ScalarProperty Name="PERFIL" ColumnName="PERFIL" />
+          <ScalarProperty Name="USAP" ColumnName="USAP" />
+          <ScalarProperty Name="USBD" ColumnName="USBD" />
+          <ScalarProperty Name="FREG" ColumnName="FREG" />
+          <ScalarProperty Name="FNOV" ColumnName="FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_ASEGURADORA">
+      <EntityTypeMapping TypeName="Model.VH_ASEGURADORA">
+        <MappingFragment StoreEntitySet="VH_ASEGURADORA">
+          <ScalarProperty Name="COD_ASEG" ColumnName="COD_ASEG" />
+          <ScalarProperty Name="NOM_ASEG" ColumnName="NOM_ASEG" />
+          <ScalarProperty Name="EST_ASEG" ColumnName="EST_ASEG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_BG_AUTO_2007">
+      <EntityTypeMapping TypeName="Model.VH_BG_AUTO_2007">
+        <MappingFragment StoreEntitySet="VH_BG_AUTO_2007">
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="LINEA" ColumnName="LINEA" />
+          <ScalarProperty Name="CILINDRADA" ColumnName="CILINDRADA" />
+          <ScalarProperty Name="V1983" ColumnName="V1983" />
+          <ScalarProperty Name="V1984" ColumnName="V1984" />
+          <ScalarProperty Name="V1985" ColumnName="V1985" />
+          <ScalarProperty Name="V1986" ColumnName="V1986" />
+          <ScalarProperty Name="V1987" ColumnName="V1987" />
+          <ScalarProperty Name="V1988" ColumnName="V1988" />
+          <ScalarProperty Name="V1989" ColumnName="V1989" />
+          <ScalarProperty Name="V1990" ColumnName="V1990" />
+          <ScalarProperty Name="V1991" ColumnName="V1991" />
+          <ScalarProperty Name="V1992" ColumnName="V1992" />
+          <ScalarProperty Name="V1993" ColumnName="V1993" />
+          <ScalarProperty Name="V1994" ColumnName="V1994" />
+          <ScalarProperty Name="V1995" ColumnName="V1995" />
+          <ScalarProperty Name="V1996" ColumnName="V1996" />
+          <ScalarProperty Name="V1997" ColumnName="V1997" />
+          <ScalarProperty Name="V1998" ColumnName="V1998" />
+          <ScalarProperty Name="V1999" ColumnName="V1999" />
+          <ScalarProperty Name="V2000" ColumnName="V2000" />
+          <ScalarProperty Name="V2001" ColumnName="V2001" />
+          <ScalarProperty Name="V2002" ColumnName="V2002" />
+          <ScalarProperty Name="V2003" ColumnName="V2003" />
+          <ScalarProperty Name="V2004" ColumnName="V2004" />
+          <ScalarProperty Name="V2005" ColumnName="V2005" />
+          <ScalarProperty Name="V2006" ColumnName="V2006" />
+          <ScalarProperty Name="LINEA_H" ColumnName="LINEA_H" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_BG_AUTO_2008">
+      <EntityTypeMapping TypeName="Model.VH_BG_AUTO_2008">
+        <MappingFragment StoreEntitySet="VH_BG_AUTO_2008">
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="LINEA" ColumnName="LINEA" />
+          <ScalarProperty Name="LINEA_H" ColumnName="LINEA_H" />
+          <ScalarProperty Name="CILINDRADA" ColumnName="CILINDRADA" />
+          <ScalarProperty Name="V1983" ColumnName="V1983" />
+          <ScalarProperty Name="V1984" ColumnName="V1984" />
+          <ScalarProperty Name="V1985" ColumnName="V1985" />
+          <ScalarProperty Name="V1986" ColumnName="V1986" />
+          <ScalarProperty Name="V1987" ColumnName="V1987" />
+          <ScalarProperty Name="V1988" ColumnName="V1988" />
+          <ScalarProperty Name="V1989" ColumnName="V1989" />
+          <ScalarProperty Name="V1990" ColumnName="V1990" />
+          <ScalarProperty Name="V1991" ColumnName="V1991" />
+          <ScalarProperty Name="V1992" ColumnName="V1992" />
+          <ScalarProperty Name="V1993" ColumnName="V1993" />
+          <ScalarProperty Name="V1994" ColumnName="V1994" />
+          <ScalarProperty Name="V1995" ColumnName="V1995" />
+          <ScalarProperty Name="V1996" ColumnName="V1996" />
+          <ScalarProperty Name="V1997" ColumnName="V1997" />
+          <ScalarProperty Name="V1998" ColumnName="V1998" />
+          <ScalarProperty Name="V1999" ColumnName="V1999" />
+          <ScalarProperty Name="V2000" ColumnName="V2000" />
+          <ScalarProperty Name="V2001" ColumnName="V2001" />
+          <ScalarProperty Name="V2002" ColumnName="V2002" />
+          <ScalarProperty Name="V2003" ColumnName="V2003" />
+          <ScalarProperty Name="V2004" ColumnName="V2004" />
+          <ScalarProperty Name="V2005" ColumnName="V2005" />
+          <ScalarProperty Name="V2006" ColumnName="V2006" />
+          <ScalarProperty Name="V2007" ColumnName="V2007" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_BG_AUTO_2009">
+      <EntityTypeMapping TypeName="Model.VH_BG_AUTO_2009">
+        <MappingFragment StoreEntitySet="VH_BG_AUTO_2009">
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="LINEA" ColumnName="LINEA" />
+          <ScalarProperty Name="LINEA_H" ColumnName="LINEA_H" />
+          <ScalarProperty Name="CILINDRADA" ColumnName="CILINDRADA" />
+          <ScalarProperty Name="V1984" ColumnName="V1984" />
+          <ScalarProperty Name="V1985" ColumnName="V1985" />
+          <ScalarProperty Name="V1986" ColumnName="V1986" />
+          <ScalarProperty Name="V1987" ColumnName="V1987" />
+          <ScalarProperty Name="V1988" ColumnName="V1988" />
+          <ScalarProperty Name="V1989" ColumnName="V1989" />
+          <ScalarProperty Name="V1990" ColumnName="V1990" />
+          <ScalarProperty Name="V1991" ColumnName="V1991" />
+          <ScalarProperty Name="V1992" ColumnName="V1992" />
+          <ScalarProperty Name="V1993" ColumnName="V1993" />
+          <ScalarProperty Name="V1994" ColumnName="V1994" />
+          <ScalarProperty Name="V1995" ColumnName="V1995" />
+          <ScalarProperty Name="V1996" ColumnName="V1996" />
+          <ScalarProperty Name="V1997" ColumnName="V1997" />
+          <ScalarProperty Name="V1998" ColumnName="V1998" />
+          <ScalarProperty Name="V1999" ColumnName="V1999" />
+          <ScalarProperty Name="V2000" ColumnName="V2000" />
+          <ScalarProperty Name="V2001" ColumnName="V2001" />
+          <ScalarProperty Name="V2002" ColumnName="V2002" />
+          <ScalarProperty Name="V2003" ColumnName="V2003" />
+          <ScalarProperty Name="V2004" ColumnName="V2004" />
+          <ScalarProperty Name="V2005" ColumnName="V2005" />
+          <ScalarProperty Name="V2006" ColumnName="V2006" />
+          <ScalarProperty Name="V2007" ColumnName="V2007" />
+          <ScalarProperty Name="V2008" ColumnName="V2008" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_CAPACIDAD_M">
+      <EntityTypeMapping TypeName="Model.VH_CAPACIDAD_M">
+        <MappingFragment StoreEntitySet="VH_CAPACIDAD_M">
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="DESDE" ColumnName="DESDE" />
+          <ScalarProperty Name="HASTA" ColumnName="HASTA" />
+          <ScalarProperty Name="VIG" ColumnName="VIG" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_CARGA_LETRA">
+      <EntityTypeMapping TypeName="Model.VH_CARGA_LETRA">
+        <MappingFragment StoreEntitySet="VH_CARGA_LETRA">
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="VIG" ColumnName="VIG" />
+          <ScalarProperty Name="CLASE_Y_CARROCERIA" ColumnName="CLASE_Y_CARROCERIA" />
+          <ScalarProperty Name="CLASIFICACION" ColumnName="CLASIFICACION" />
+          <ScalarProperty Name="MARCA_H" ColumnName="MARCA_H" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_CARROCERIA">
+      <EntityTypeMapping TypeName="Model.VH_CARROCERIA">
+        <MappingFragment StoreEntitySet="VH_CARROCERIA">
+          <ScalarProperty Name="NOM_CARROCERIA" ColumnName="NOM_CARROCERIA" />
+          <ScalarProperty Name="ID_VH_CARROCERIA" ColumnName="ID_VH_CARROCERIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_CATEGORIA">
+      <EntityTypeMapping TypeName="Model.VH_CATEGORIA">
+        <MappingFragment StoreEntitySet="VH_CATEGORIA">
+          <ScalarProperty Name="VCAT_CATEGORIA" ColumnName="VCAT_CATEGORIA" />
+          <ScalarProperty Name="VCAT_ID" ColumnName="VCAT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_CLASE_CATEGORIA">
+      <EntityTypeMapping TypeName="Model.VH_CLASE_CATEGORIA">
+        <MappingFragment StoreEntitySet="VH_CLASE_CATEGORIA">
+          <ScalarProperty Name="VCC_CLASE" ColumnName="VCC_CLASE" />
+          <ScalarProperty Name="VCC_CATEGORIA" ColumnName="VCC_CATEGORIA" />
+          <ScalarProperty Name="VCC_VIGENCIA" ColumnName="VCC_VIGENCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_CLASE_LIQ">
+      <EntityTypeMapping TypeName="Model.VH_CLASE_LIQ">
+        <MappingFragment StoreEntitySet="VH_CLASE_LIQ">
+          <ScalarProperty Name="VCL_CLASE" ColumnName="VCL_CLASE" />
+          <ScalarProperty Name="VCL_CODIGO" ColumnName="VCL_CODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_COLOR">
+      <EntityTypeMapping TypeName="Model.VH_COLOR">
+        <MappingFragment StoreEntitySet="VH_COLOR">
+          <ScalarProperty Name="NOM_COLOR" ColumnName="NOM_COLOR" />
+          <ScalarProperty Name="ID_VH_COLOR" ColumnName="ID_VH_COLOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_DATOS_LIQ">
+      <EntityTypeMapping TypeName="Model.VH_DATOS_LIQ">
+        <MappingFragment StoreEntitySet="VH_DATOS_LIQ">
+          <ScalarProperty Name="DECCOD" ColumnName="DECCOD" />
+          <ScalarProperty Name="PLACA" ColumnName="PLACA" />
+          <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="LINEA" ColumnName="LINEA" />
+          <ScalarProperty Name="MODELO" ColumnName="MODELO" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="CARROCERIA" ColumnName="CARROCERIA" />
+          <ScalarProperty Name="CILINDRAJE" ColumnName="CILINDRAJE" />
+          <ScalarProperty Name="TONELAJE" ColumnName="TONELAJE" />
+          <ScalarProperty Name="PASAJEROS" ColumnName="PASAJEROS" />
+          <ScalarProperty Name="MOTOR" ColumnName="MOTOR" />
+          <ScalarProperty Name="CHASIS" ColumnName="CHASIS" />
+          <ScalarProperty Name="BLINDADO" ColumnName="BLINDADO" />
+          <ScalarProperty Name="ANTIGUO" ColumnName="ANTIGUO" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+          <ScalarProperty Name="FECHA_COMPRA" ColumnName="FECHA_COMPRA" />
+          <ScalarProperty Name="MUN_MATRICULA" ColumnName="MUN_MATRICULA" />
+          <ScalarProperty Name="MUN_OPERACION" ColumnName="MUN_OPERACION" />
+          <ScalarProperty Name="FECHA_MAT" ColumnName="FECHA_MAT" />
+          <ScalarProperty Name="TIPO_MATRICULA" ColumnName="TIPO_MATRICULA" />
+          <ScalarProperty Name="COD_ASEGURADORA" ColumnName="COD_ASEGURADORA" />
+          <ScalarProperty Name="N_POLIZA" ColumnName="N_POLIZA" />
+          <ScalarProperty Name="FECHA_VENCIMIENTO" ColumnName="FECHA_VENCIMIENTO" />
+          <ScalarProperty Name="CONS" ColumnName="CONS" />
+          <ScalarProperty Name="FEC_LIQ" ColumnName="FEC_LIQ" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="AVALUO" ColumnName="AVALUO" />
+          <ScalarProperty Name="TARIFA" ColumnName="TARIFA" />
+          <ScalarProperty Name="DSC_MAT_TRA" ColumnName="DSC_MAT_TRA" />
+          <ScalarProperty Name="FRACCION" ColumnName="FRACCION" />
+          <ScalarProperty Name="DEC_STOT" ColumnName="DEC_STOT" />
+          <ScalarProperty Name="NOM_ASEGURADORA" ColumnName="NOM_ASEGURADORA" />
+          <ScalarProperty Name="NRO_LIQG" ColumnName="NRO_LIQG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_INSTITUTO_TRANSITO">
+      <EntityTypeMapping TypeName="Model.VH_INSTITUTO_TRANSITO">
+        <MappingFragment StoreEntitySet="VH_INSTITUTO_TRANSITO">
+          <ScalarProperty Name="VINS_CODIGO" ColumnName="VINS_CODIGO" />
+          <ScalarProperty Name="VINS_DESCRIPCION" ColumnName="VINS_DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_LINEA">
+      <EntityTypeMapping TypeName="Model.VH_LINEA">
+        <MappingFragment StoreEntitySet="VH_LINEA">
+          <ScalarProperty Name="NOM_LINEA" ColumnName="NOM_LINEA" />
+          <ScalarProperty Name="ID_VH_LINEA" ColumnName="ID_VH_LINEA" />
+          <ScalarProperty Name="ID_VH_MARCA" ColumnName="ID_VH_MARCA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_LIQ_GRUPAL">
+      <EntityTypeMapping TypeName="Model.VH_LIQ_GRUPAL">
+        <MappingFragment StoreEntitySet="VH_LIQ_GRUPAL">
+          <ScalarProperty Name="NRO_LIQG" ColumnName="NRO_LIQG" />
+          <ScalarProperty Name="FECHA_INI" ColumnName="FECHA_INI" />
+          <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+          <ScalarProperty Name="USBD" ColumnName="USBD" />
+          <ScalarProperty Name="USAP" ColumnName="USAP" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_LIQUIDLOG">
+      <EntityTypeMapping TypeName="Model.VH_LIQUIDLOG">
+        <MappingFragment StoreEntitySet="VH_LIQUIDLOG">
+          <ScalarProperty Name="NRO_LIQG" ColumnName="NRO_LIQG" />
+          <ScalarProperty Name="PLACA" ColumnName="PLACA" />
+          <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+          <ScalarProperty Name="LIQUIDO" ColumnName="LIQUIDO" />
+          <ScalarProperty Name="CATEGORIA_LIQ" ColumnName="CATEGORIA_LIQ" />
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="USBD" ColumnName="USBD" />
+          <ScalarProperty Name="USAP" ColumnName="USAP" />
+          <ScalarProperty Name="VIGENCIALIQ" ColumnName="VIGENCIALIQ" />
+          <ScalarProperty Name="FILTROVEH" ColumnName="FILTROVEH" />
+          <ScalarProperty Name="DEC_COD" ColumnName="DEC_COD" />
+          <ScalarProperty Name="LIQ_CONS" ColumnName="LIQ_CONS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_MARCA_M">
+      <EntityTypeMapping TypeName="Model.VH_MARCA_M">
+        <MappingFragment StoreEntitySet="VH_MARCA_M">
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="VIG" ColumnName="VIG" />
+          <ScalarProperty Name="MARCA_H" ColumnName="MARCA_H" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_PARQUE_AUTOMOTOR">
+      <EntityTypeMapping TypeName="Model.VH_PARQUE_AUTOMOTOR">
+        <MappingFragment StoreEntitySet="VH_PARQUE_AUTOMOTOR">
+          <ScalarProperty Name="PLACA" ColumnName="PLACA" />
+          <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="LINEA" ColumnName="LINEA" />
+          <ScalarProperty Name="MODELO" ColumnName="MODELO" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="CARROCERIA" ColumnName="CARROCERIA" />
+          <ScalarProperty Name="CILINDRAJE" ColumnName="CILINDRAJE" />
+          <ScalarProperty Name="TONELAJE" ColumnName="TONELAJE" />
+          <ScalarProperty Name="PASAJEROS" ColumnName="PASAJEROS" />
+          <ScalarProperty Name="MOTOR" ColumnName="MOTOR" />
+          <ScalarProperty Name="CHASIS" ColumnName="CHASIS" />
+          <ScalarProperty Name="BLINDADO" ColumnName="BLINDADO" />
+          <ScalarProperty Name="ANTIGUO" ColumnName="ANTIGUO" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+          <ScalarProperty Name="FECHA_COMPRA" ColumnName="FECHA_COMPRA" />
+          <ScalarProperty Name="MUN_MATRICULA" ColumnName="MUN_MATRICULA" />
+          <ScalarProperty Name="MUN_OPERACION" ColumnName="MUN_OPERACION" />
+          <ScalarProperty Name="FECHA_MAT" ColumnName="FECHA_MAT" />
+          <ScalarProperty Name="TIPO_MATRICULA" ColumnName="TIPO_MATRICULA" />
+          <ScalarProperty Name="VALOR_FACT" ColumnName="VALOR_FACT" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="FECHA_INGRESO" ColumnName="FECHA_INGRESO" />
+          <ScalarProperty Name="PARQ_USAP" ColumnName="PARQ_USAP" />
+          <ScalarProperty Name="PARQ_USBD" ColumnName="PARQ_USBD" />
+          <ScalarProperty Name="PARQ_FREG" ColumnName="PARQ_FREG" />
+          <ScalarProperty Name="FEC_EXP_TP" ColumnName="FEC_EXP_TP" />
+          <ScalarProperty Name="VINS_CODIGO" ColumnName="VINS_CODIGO" />
+          <ScalarProperty Name="IMPORTADO" ColumnName="IMPORTADO" />
+          <ScalarProperty Name="USO" ColumnName="USO" />
+          <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VH_PASAJERO_CAP">
+      <EntityTypeMapping TypeName="Model.VH_PASAJERO_CAP">
+        <MappingFragment StoreEntitySet="VH_PASAJERO_CAP">
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="DESDE" ColumnName="DESDE" />
+          <ScalarProperty Name="HASTA" ColumnName="HASTA" />
+          <ScalarProperty Name="VIG" ColumnName="VIG" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIGENCIA">
+      <EntityTypeMapping TypeName="Model.VIGENCIA">
+        <MappingFragment StoreEntitySet="VIGENCIA">
+          <ScalarProperty Name="VIG_COD" ColumnName="VIG_COD" />
+          <ScalarProperty Name="VIG_FINI" ColumnName="VIG_FINI" />
+          <ScalarProperty Name="VIG_FFIN" ColumnName="VIG_FFIN" />
+          <ScalarProperty Name="VIG_EST" ColumnName="VIG_EST" />
+          <ScalarProperty Name="VIG_USAP" ColumnName="VIG_USAP" />
+          <ScalarProperty Name="VIG_USBD" ColumnName="VIG_USBD" />
+          <ScalarProperty Name="VIG_FREG" ColumnName="VIG_FREG" />
+          <ScalarProperty Name="VIG_FNOV" ColumnName="VIG_FNOV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ORA_ASPNET_USERSINROLES" TypeName="Model.ORA_ASPNET_USERSINROLES" StoreEntitySet="ORA_ASPNET_USERSINROLES">
+      <EndProperty Name="ORA_ASPNET_ROLES">
+        <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+      </EndProperty>
+      <EndProperty Name="ORA_ASPNET_USERS">
+        <ScalarProperty Name="USERID" ColumnName="USERID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="MOVIMIENTO">
+      <EntityTypeMapping TypeName="Model.MOVIMIENTO">
+        <MappingFragment StoreEntitySet="MOVIMIENTO">
+          <ScalarProperty Name="MOV_FREG" ColumnName="MOV_FREG" />
+          <ScalarProperty Name="MOV_PAID" ColumnName="MOV_PAID" />
+          <ScalarProperty Name="MOV_PAG" ColumnName="MOV_PAG" />
+          <ScalarProperty Name="MOV_NDOC" ColumnName="MOV_NDOC" />
+          <ScalarProperty Name="MOV_TDOC" ColumnName="MOV_TDOC" />
+          <ScalarProperty Name="MOV_TMOV" ColumnName="MOV_TMOV" />
+          <ScalarProperty Name="MOV_VIG" ColumnName="MOV_VIG" />
+          <ScalarProperty Name="MOV_FNOV" ColumnName="MOV_FNOV" />
+          <ScalarProperty Name="MOV_USBD" ColumnName="MOV_USBD" />
+          <ScalarProperty Name="MOV_USAP" ColumnName="MOV_USAP" />
+          <ScalarProperty Name="MOV_EST" ColumnName="MOV_EST" />
+          <ScalarProperty Name="MOV_FMOV" ColumnName="MOV_FMOV" />
+          <ScalarProperty Name="MOV_VCR" ColumnName="MOV_VCR" />
+          <ScalarProperty Name="MOV_VDB" ColumnName="MOV_VDB" />
+          <ScalarProperty Name="MOV_SIG" ColumnName="MOV_SIG" />
+          <ScalarProperty Name="MOV_CID" ColumnName="MOV_CID" />
+          <ScalarProperty Name="MOV_PER" ColumnName="MOV_PER" />
+          <ScalarProperty Name="MOV_AÑO" ColumnName="MOV_AÑO" />
+          <ScalarProperty Name="MOV_TICO" ColumnName="MOV_TICO" />
+          <ScalarProperty Name="MOV_CCAR" ColumnName="MOV_CCAR" />
+          <ScalarProperty Name="MOV_CDEC" ColumnName="MOV_CDEC" />
+          <ScalarProperty Name="MOV_NIT" ColumnName="MOV_NIT" />
+          <ScalarProperty Name="MOV_CONS" ColumnName="MOV_CONS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAGOS">
+      <EntityTypeMapping TypeName="Model.PAGOS">
+        <MappingFragment StoreEntitySet="PAGOS">
+          <ScalarProperty Name="PAG_FNOV" ColumnName="PAG_FNOV" />
+          <ScalarProperty Name="PAG_ID" ColumnName="PAG_ID" />
+          <ScalarProperty Name="PAG_NIT" ColumnName="PAG_NIT" />
+          <ScalarProperty Name="PAG_BACO" ColumnName="PAG_BACO" />
+          <ScalarProperty Name="PAG_CTAB" ColumnName="PAG_CTAB" />
+          <ScalarProperty Name="PAG_FREG" ColumnName="PAG_FREG" />
+          <ScalarProperty Name="PAG_USBD" ColumnName="PAG_USBD" />
+          <ScalarProperty Name="PAG_USAP" ColumnName="PAG_USAP" />
+          <ScalarProperty Name="PAG_SALD" ColumnName="PAG_SALD" />
+          <ScalarProperty Name="PAG_EST" ColumnName="PAG_EST" />
+          <ScalarProperty Name="PAG_FPAG" ColumnName="PAG_FPAG" />
+          <ScalarProperty Name="PAG_TOT" ColumnName="PAG_TOT" />
+          <ScalarProperty Name="PAG_PER" ColumnName="PAG_PER" />
+          <ScalarProperty Name="PAG_ANO" ColumnName="PAG_ANO" />
+          <ScalarProperty Name="PAG_NDOC" ColumnName="PAG_NDOC" />
+          <ScalarProperty Name="PAG_TDOC" ColumnName="PAG_TDOC" />
+          <ScalarProperty Name="PAG_CDEC" ColumnName="PAG_CDEC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

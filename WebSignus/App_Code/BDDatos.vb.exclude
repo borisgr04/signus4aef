@@ -1,0 +1,313 @@
+Imports Microsoft.VisualBasic
+
+Imports System.IO
+Imports System.Data
+Imports System.Collections.Specialized
+
+'CLASE              : TbContratos
+'DESCRIPCIÓN        : Clase Base de Acceso a la Base de Datos
+'AUTOR              : BORIS GONZALEZ.
+'FECHA CREACIÓN     : 18 de Julio del 2009
+'FECHA MODIFICACION :
+
+Public Class BDDatos
+    'Privados
+    Protected cUser As NameValueCollection
+    Protected Sw_cUser As Boolean = False
+    Protected MsgOk As String = "Se Realizó la Operación Exitosamente"
+
+    Protected Tabla As String
+    Protected Vista As String
+    Protected usuario As String
+    Protected Ruta_Doc As String
+    Protected AppName As String
+    Protected inLine As Boolean
+
+    Dim MailSend As String
+    Dim MailAdmin As String
+
+    'Publicos
+    Public Doc As String, NroCon As String
+    Public dadd As String
+    'Public dbConnection As OracleConnection = New OracleConnection
+    Public Shared dbConnection As OracleConnection = New OracleConnection
+    Public lErrorG As Boolean
+    Public doc_act As String
+    Public Msg As String = ""
+
+    ReadOnly Property _MailSend() As String
+        Get
+            Return ConfigurationManager.AppSettings("MailSend").ToString
+        End Get
+    End Property
+
+    ReadOnly Property _MailAdmin() As String
+        Get
+            Return ConfigurationManager.AppSettings("MailAdmin").ToString
+        End Get
+    End Property
+
+
+    Public Function CadenaConexion() As String
+        Dim Cadena As String
+        'Consultar_Datos_de_Conexión
+        'Dim Usuario As String = ConfigurationManager.AppSettings("USUARIO")
+        'Dim Clave As String = ConfigurationManager.AppSettings("CLAVE")
+        'Dim Data_Source As String = ConfigurationManager.AppSettings("DATA_SOURCE")
+        'Cadena = "USER ID=" + Usuario + ";PASSWORD=" + Clave + ";DATA SOURCE=" + Data_Source
+        Cadena = ConfigurationManager.ConnectionStrings("ConnectionString").ConnectionString
+        Return Cadena
+    End Function
+    Public Function GetDec() As DataSet
+        Me.AbrirDB()
+        Dim queryString As String = "SELECT to_number(dec_nro)dec_nro,*  FROM  vDeclaracion"
+        'Dim queryString As String = "SELECT * FROM  Dec"
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+        Dim dataAdapter As New OracleDataAdapter
+        dataAdapter.SelectCommand = dbCommand
+        Dim dataSet As DataSet = New DataSet
+        dataAdapter.Fill(dataSet)
+        Me.CerrarBD()
+        Return dataSet
+    End Function
+    '    Public Function GetLiqImpPriv() As DataSet
+    '       Me.AbrirDB()
+    '  Dim queryString As String = "SELECT * FROM  liqprivimp"
+    ' Dim dbCommand As New OracleCommand(queryString, dbConnection)
+    'Dim dataAdapter As New OracleDataAdapter
+    '   dataAdapter.SelectCommand = dbCommand
+    'Dim dataSet As DataSet = New DataSet
+    '    dataAdapter.Fill(dataSet)
+    '    Me.CerrarBD()
+    '    Return dataSet
+    'End Function
+
+    'Public Function GetLiqConc() As DataSet
+    '    Me.AbrirDB()
+    'D'im queryString As String = "SELECT * FROM  vCODE_CDEC Order by CODE_CODI"
+    'Dim dbCommand As New OracleCommand(queryString, dbConnection)
+    'Dim dataAdapter As New OracleDataAdapter
+    '    dataAdapter.SelectCommand = dbCommand
+    'Dim dataSet As DataSet = New DataSet
+    '   dataAdapter.Fill(dataSet)
+    '   Me.CerrarBD()
+    '   Return dataSet
+    'End Function
+
+    Public Function GetRecords() As DataSet
+        Me.AbrirDB()
+        Dim queryString As String = "SELECT * FROM  " + Vista
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+        Dim dataAdapter As New OracleDataAdapter
+        dataAdapter.SelectCommand = dbCommand
+        Dim dataSet As DataSet = New DataSet
+        dataAdapter.Fill(dataSet)
+        Me.CerrarBD()
+        Return dataSet
+    End Function
+    Public Function GetRecords(ByVal Filtro As String) As System.Data.DataSet
+
+
+        Dim queryString As String = "SELECT  FROM " + Vista + " Where " + Filtro
+
+
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+        Dim dataAdapter As New OracleDataAdapter
+
+        dataAdapter.SelectCommand = dbCommand
+
+        Dim dataSet As System.Data.DataSet = New System.Data.DataSet
+        dataAdapter.Fill(dataSet)
+
+        Return dataSet
+
+    End Function
+
+
+    'CLASE              : TbContratos
+    'METODO             : Insert
+    'DESCRIPCIÓNl       : 
+    'AUTOR              : BORIS G.
+    'FECHA CREACIÓN     : 21 de Enero del 2009
+    'FECHA MODIFICACION :
+
+    Public Function GetByIde(ByVal cod As String) As DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = ""
+
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    'CLASE              : BDDATOS
+    'METODO             : ExeCommand
+    'DESCRIPCIÓNl       : Método para Ejecutar comandos 
+    'AUTOR              : BORIS G.
+    'FECHA CREACIÓN     : 22 de Julio del 2009
+    'FECHA MODIFICACION :
+    Public Function SqlExec(ByVal SqlString As String) As Integer
+        Dim dbCommand As New OracleCommand(SqlString, dbConnection)
+        Return dbCommand.ExecuteNonQuery()
+    End Function
+
+
+
+    Public Function GetByIde2(ByVal cod As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT * FROM VContratosC3 Where numero =:cod_con"
+
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+
+    Public Function UltId() As String
+
+        'Throw new("")
+        Return ""
+
+    End Function
+
+
+
+
+
+    Public Sub New()
+
+        Me.Ruta_Doc = ConfigurationManager.AppSettings("RUTA_DOC").ToString
+        If dbConnection.State = ConnectionState.Closed Then
+            dbConnection.ConnectionString = Me.CadenaConexion()
+        End If
+        Try
+            Me.usuario = Membership.GetUser().UserName
+            Me.AppName = Membership.ApplicationName.ToString()
+
+            Me.inLine = True
+        Catch ex As Exception
+            Me.inLine = False
+        End Try
+
+
+    End Sub
+
+    Public Sub AbrirDB2()
+
+        'If Me.dbConnection.State = ConnectionState.Broken Then
+        ' Me.dbConnection.Close()
+        'Me.dbConnection.Open()
+        'End If
+
+        If BDDatos.dbConnection.State <> ConnectionState.Closed Then
+            dbConnection.Close()
+        End If
+        dbConnection.Open()
+        Me.Inicializar_Usuario()
+
+    End Sub
+
+    Public Function Iniciar_Transaccion() As OracleTransaction
+        Return BDDatos.dbConnection.BeginTransaction
+    End Function
+
+    Public Sub AbrirDB()
+
+        If Not BDDatos.dbConnection Is Nothing Then
+            If Not BDDatos.dbConnection.State.Equals(ConnectionState.Closed) Then
+                'Me.Desconectar()
+                'Throw New DataException("La conexión ya se encuentra abierta.")
+                Me.CerrarBD()
+                Exit Sub
+            End If
+        End If
+        Try
+            If BDDatos.dbConnection Is Nothing Then
+
+            End If
+            BDDatos.dbConnection.Open()
+            Me.Inicializar_Usuario()
+        Catch ex As DataException
+            Throw New DataException("Error al conectarse.")
+        End Try
+    End Sub
+
+    Public Sub CerrarBD()
+        dbConnection.Close()
+        '        dbConnection.Dispose()
+    End Sub
+    Public Shared Sub CerrarSBD()
+        dbConnection.Close()
+        '        dbConnection.Dispose()
+    End Sub
+
+    Public Function Insertar() As String
+        Return ""
+    End Function
+    Public Sub Inicializar_Usuario()
+        Dim dbCommand As New OracleCommand
+        dbCommand.Connection = dbConnection
+        dbCommand.CommandText = "Begin Inicializar_Usuario('" + Me.usuario + "'); End;"
+        dbCommand.ExecuteNonQuery()
+    End Sub
+
+
+    Public Function Execute(ByVal StrSql As String) As String
+        Dim na As Integer
+        Me.AbrirDB()
+        Try
+            Dim dbCommand As New OracleCommand
+            dbCommand.Connection = dbConnection
+            dbCommand.CommandText = StrSql
+            na = dbCommand.ExecuteNonQuery()
+            Me.Msg = MsgOk + "<BR> Número de Filas Afectadas " + na.ToString
+            Me.lErrorG = False
+        Catch exo As OracleException
+            Me.lErrorG = True
+            Me.Msg = "Error de Datos:" + exo.Message
+        Catch ex As Exception
+            Me.lErrorG = True
+
+            Me.Msg = "Error de App:" + ex.Message
+        Finally
+            Me.CerrarBD()
+        End Try
+
+        Me.CerrarBD()
+        Return Msg
+    End Function
+
+    Public Function GetSelect(ByVal Sql As String) As DataTable
+        Me.AbrirDB()
+        Dim queryString As String = Sql
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+        Dim dataAdapter As New OracleDataAdapter
+        dataAdapter.SelectCommand = dbCommand
+        Dim dataTb As DataTable = New DataTable
+        dataAdapter.Fill(dataTb)
+        Me.CerrarBD()
+        Return dataTb
+
+    End Function
+    Public Shared Function InList(ByVal toExpression As Object, ByVal ParamArray toItems() As Object) As Boolean
+        Return Array.IndexOf(toItems, toExpression) > -1
+    End Function 'InList
+
+End Class

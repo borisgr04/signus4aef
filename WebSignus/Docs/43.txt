@@ -1,0 +1,26 @@
+824001058;;40;2011;07;4001;100;2011/07/22;CC;71972809;Oscar Jaramillo B.;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4001;100;2011/07/22;CC;12642619;Julio Cantillo Calceta;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4001;100;2011/07/22;CC;1;Teodoberto Salcedo C.;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4001;100;2011/07/22;CC;2;Edwin Montes Arias;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4001;100;2011/07/22;CC;3;Miguel Villalva Ortega;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4001;100;2011/07/22;CC;4;Marcos Guerrero Julio;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4001;100;2011/07/22;CC;5;Hernando Soraca G.;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4001;100;2011/07/22;CC;6;Jose Luis Orozco A.;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4001;100;2011/07/22;CC;7;Luis Sierra Suarez;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4001;100;2011/07/22;CC;8;Nilvia Yolanda Amaya;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4001;100;2011/07/22;CC;9;Juan Gomez Rodriguez;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4001;100;2011/07/22;CC;10;Andres Nuñez Sierra;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;542200;0,01;5422
+824001058;;40;2011;07;4001;100;2011/07/22;CC;11;Sixto Ortiz Daza;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;451900;0,01;4519
+824001058;;40;2011;07;4002;100;2011/07/22;CC;71972809;Oscar Jaramillo B.;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4002;100;2011/07/22;CC;12642619;Julio Cantillo Calceta;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4002;100;2011/07/22;CC;1;Teodoberto Salcedo C.;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4002;100;2011/07/22;CC;2;Edwin Montes Arias;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4002;100;2011/07/22;CC;3;Miguel Villalva Ortega;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4002;100;2011/07/22;CC;4;Marcos Guerrero Julio;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4002;100;2011/07/22;CC;5;Hernando Soraca G.;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4002;100;2011/07/22;CC;6;Jose Luis Orozco A.;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4002;100;2011/07/22;CC;7;Luis Sierra Suarez;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4002;100;2011/07/22;CC;8;Nilvia Yolanda Amaya;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4002;100;2011/07/22;CC;9;Juan Gomez Rodriguez;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;632600;0,01;6326
+824001058;;40;2011;07;4002;100;2011/07/22;CC;10;Andres Nuñez Sierra;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;542200;0,01;5422
+824001058;;40;2011;07;4002;100;2011/07/22;CC;11;Sixto Ortiz Daza;Pago sesiones ordinarias del mes de mayo y abono de sesiones extraordinarias del mes de julio de 2011;451900;0,01;4519

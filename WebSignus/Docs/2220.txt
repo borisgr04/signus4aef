@@ -1,0 +1,9 @@
+892300123;1;40;2012;06;4001;194;06/06/2012;CC;5084410;Gonzalez Picon Fabio Alberto;Contrato de Suministro  005;6280000;0,01;62800
+892300123;1;40;2012;06;4002;194;06/06/2012;CC;5084410;Gonzalez Picon Fabio Alberto;Contrato de Suministro  005;6280000;0,01;62800
+892300123;1;40;2012;06;4001;197;06/06/2012;CC;88139204;Manzano Velasquez Wilson Martin;Contrato de prestacion de servicios;1409100;0,01;14091
+892300123;1;40;2012;06;4002;197;06/06/2012;CC;88139204;Manzano Velasquez Wilson Martin;Contrato de prestacion de servicios;1409100;0,01;14091
+892300123;1;40;2012;06;4001;200;06/06/2012;CC;26863409;Pinto Velasquez Antonia del Rosario;Contrato de prestacion de servicios;1529400;0,01;15294
+892300123;1;40;2012;06;4002;200;06/06/2012;CC;26863409;Pinto Velasquez Antonia del Rosario;Contrato de prestacion de servicios;1529400;0,01;15294
+892300123;1;40;2012;06;4001;201;06/06/2012;CC;26863393;Lengua Mieles Glenis Rocio;Contrato de prestacion de servicios;1320000;0,01;13200
+892300123;1;40;2012;06;4001;204;06/06/2012;CC;18904412;Cradenas Osorio Andres Mauricio;Contrato de prestacion de servicios;1629000;0,01;16290
+892300123;1;40;2012;06;4002;204;06/06/2012;CC;18904412;Cradenas Osorio Andres Mauricio;Contrato de prestacion de servicios;1629000;0,01;16290

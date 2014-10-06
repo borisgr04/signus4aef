@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode url="default.aspx" title="Home"    >
+    
+    <siteMapNode url="seguridad/menuuser.aspx" title="Seguridad"  roles="*">
+      <siteMapNode url="seguridad/roles/admin.aspx" title="Administrar Roles" roles="Seguridad_roles"  />
+      <siteMapNode url="seguridad/usuarios/regUsuarios.aspx" title="Admin Usuarios" roles="Seguridad_usuarios"  />
+    </siteMapNode>
+    
+    <siteMapNode url="datosbasicos/" title="Datos Básicos" roles="*"  >
+      <siteMapNode url="datosbasicos/municipios.aspx" title="Municipios" roles="DatosBasicos" />
+    </siteMapNode>
+    </siteMapNode>
+
+</siteMap>

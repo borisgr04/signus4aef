@@ -1,0 +1,2 @@
+824000469;1;40;2012;06;4001;3031;06/06/2012;CC;1098624997;gutierrez urquijo ana maria;servicios profesionales;2500000;0,01;25000
+824000469;1;40;2012;06;4002;3031;06/06/2012;CC;1098624997;gutierrez urquijo ana maria;servicios profesionales;2500000;0,01;25000

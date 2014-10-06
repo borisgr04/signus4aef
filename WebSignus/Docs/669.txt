@@ -1,0 +1,15 @@
+892300306;2;40;2011;11;4001;93;2011/11/03;CC;77027544;eudardo ramos pinto;servicios tecnicos;1249500;0,01;12495
+892300306;2;40;2011;11;4001;94;2011/11/03;CC;91360395;maderas santander;suministro de madera;672000;0,01;6720
+892300306;2;40;2011;11;4002;94;2011/11/03;CC;91360395;maderas santander;suministro de madera;672000;0,01;6720
+892300306;2;40;2011;11;4001;100;2011/11/03;CC;77030372;jose gregorio jimenez mendoza;honorarios profesionales;3748500;0,01;37485
+892300306;2;40;2011;11;4002;100;2011/11/03;CC;77030372;jose gregorio jimenez mendoza;honorarios profesionales;3748500;0,01;37485
+892300306;2;40;2011;11;4001;102;2011/11/08;CC;77027544;eudardo ramos pinto;servicios tecnicos;1249500;0,01;12495
+892300306;2;40;2011;11;4001;103;2011/11/16;CC;7574453;jorge armando zambrano;mantenimientos electricos;5828000;0,01;58280
+892300306;2;40;2011;11;4002;103;2011/11/16;CC;7574453;jorge armando zambrano;mantenimientos electricos;5828000;0,01;58280
+892300306;2;40;2011;11;4001;104;2011/11/16;CC;77027986;ferreservicios de la costa;mantenimiento de aires aconcisionados;1879200;0,01;18792
+892300306;2;40;2011;11;4002;104;2011/11/16;CC;77027986;ferreservicios de la costa;mantenimiento de aires aconcisionados;1879200;0,01;18792
+892300306;2;40;2011;11;4001;105;2011/11/16;CC;49731088;ferreteria del valle;suministro de materiales para talleres;10478800;0,01;104788
+892300306;2;40;2011;11;4002;105;2011/11/16;CC;49731088;ferreteria del valle;suministro de materiales para talleres;10478800;0,01;104788
+892300306;2;40;2011;11;4001;107;2011/11/16;CC;57441545;danit espejero orozco;suministro de fotocopias;343300;0,01;3433
+892300306;2;40;2011;11;4001;111;2011/11/21;CC;49742929;rimax y mas;alquiler de sillas;255000;0,01;2550
+892300306;2;40;2011;11;4001;112;2011/11/21;CC;8298821;gabriel alberto perez ;servicios se sistematizacion;180000;0,01;1800

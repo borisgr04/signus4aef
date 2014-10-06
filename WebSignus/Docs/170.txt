@@ -1,0 +1,2 @@
+892300303;;40;2011;06;4001;6;12/06/2011;CC;26860960;Quintero Ropero Beatriz;Servicios Profecionales;1500000;0,01;15000
+892300303;;40;2011;06;4002;6;12/06/2011;CC;26860960;Quintero Ropero Beatriz;Servicios Profecionales;1500000;0,01;15000

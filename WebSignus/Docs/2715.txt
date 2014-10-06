@@ -1,0 +1,8 @@
+824006055;1;40;2012;08;4001;1;15/08/2012;CC;49743507;Auri gamez Carranza;asesoria contable y financiera.;1200000;0,01;12000
+824006055;1;40;2012;08;4001;1;24/08/2012;CC;13175729;Diego f. Quintero Ascanio.;Asesoria y orga. Banda Musical;700000;0,01;7000
+824006055;1;40;2012;08;4001;1;28/08/2012;NIT;10957863717;Gustavo J. Pino Ortiz;Sumin. Mater. Feretería útiles de aseo;2004000;0,01;20040
+824006055;1;40;2012;08;4001;1;31/08/2012;NIT;8240053379;Robinson Salina Palacios;Sumin. Papelería útiles oficina;1760000;0,01;17600
+824006055;1;40;2012;08;4002;1;15/08/2012;CC;49743507;Auri gamez Carranza;asesoria contable y financiera.;1200000;0,01;12000
+824006055;1;40;2012;08;4002;1;24/08/2012;CC;13175729;Diego f. Quintero Ascanio.;Asesoría y organ. Banda Musical;700000;0,01;7000
+824006055;1;40;2012;08;4002;1;28/08/2012;NIT;10957863717;Gustavo J. Pino Ortiz;Sumin. Mater. Feretería útiles de aseo;2004000;0,01;20040
+824006055;1;40;2012;08;4002;1;31/08/2012;NIT;8240053379;Robinson Salina Palacios;Sumin. Papelería útiles oficina;1760000;0,01;17600

@@ -1,0 +1,28 @@
+Declare
+ValorDec Number:=10000000;
+ActaAdmin Number:=0; 
+ValorSancion Number;
+mes_fraccion_ext Number:=6;
+SancionMinima Number:= 221000; -- Del periodo declarado inicialmente
+SancionMaxima Number:=ValorDec;
+Porc Number;
+Begin
+    IF ActaAdmin=0 Then
+        Porc:= 0.1;
+    Else
+        Porc:= 0.2;
+    end if;
+    ValorSancion:=ValorDec*Porc;
+     DBMS_OUTPUT.PUT_LINE('Valor Sanciones ' || ValorSancion);  
+    if mes_fraccion_ext >0 Then
+       ValorSancion:=ValorSancion+ValorDec*mes_fraccion_ext*0.05; 
+    end if;
+    DBMS_OUTPUT.PUT_LINE('Valor Sanciones ' || ValorSancion);
+    if ValorSancion<SancionMinima Then
+       ValorSancion:=SancionMinima;
+    end if;
+    if ValorSancion>SancionMaxima Then
+       ValorSancion:=SancionMaxima;
+    end if;
+    DBMS_OUTPUT.PUT_LINE('Valor Sanciones ' || ValorSancion);
+End;

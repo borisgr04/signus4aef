@@ -1,0 +1,110 @@
+<%@ Page Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Signatarios.aspx.vb" Inherits="DatosBasicos_AgentesR_Signatarios" title="Untitled Page" %>
+
+<%@ Register Src="../../CtrlUsr/Terceros/CrearTer.ascx" TagName="CrearTer" TagPrefix="uc2" %>
+<%@ Register Src="../../CtrlUsr/Terceros/ConsultaTer.ascx" TagName="ConsultaTer" TagPrefix="uc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="SampleContent" Runat="Server">
+  <script type='text/javascript'>
+  
+  
+  function enviar(tdoc,ced,dv,rsocial,tip_ter)
+        {
+            if(tip_ter=='PD'){
+                document.aspnetForm.<%=Me.TXTTIPDOC_PD.ClientID%>.value=tdoc;
+                document.aspnetForm.<%=Me.TXTNRODOC_PD.ClientID%>.value=ced;
+                document.aspnetForm.<%=Me.TXTDV_PD.ClientID%>.value=dv;
+                document.aspnetForm.<%=Me.TXTRAZSOC_PD.ClientID%>.value=rsocial;
+            }
+             if(tip_ter=='RF'){
+                 document.aspnetForm.<%=Me.TXTTIPDOC_RF.ClientID%>.value=tdoc;
+                 document.aspnetForm.<%=Me.TXTNRODOC_RF.ClientID%>.value=ced;
+                 document.aspnetForm.<%=Me.TXTDV_RF.ClientID%>.value=dv;
+                 document.aspnetForm.<%=Me.TXTRAZSOC_RF.ClientID%>.value=rsocial;
+            }
+            var modalPopupBehavior = $find('programmaticModalPopupBehavior');
+            modalPopupBehavior.hide();
+        }
+
+    function ValTipoPD (source, arguments){
+       if (document.aspnetForm.<%=Me.CbTFIRMANTE_PD.ClientID%>.value=='00')
+        {
+        arguments.IsValid=false; 
+        return;
+        }
+        arguments.IsValid=true;
+    }
+    
+    function ValTipoRF (source, arguments){
+       if (document.aspnetForm.<%=Me.CbTFIRMANTE_RF.ClientID%>.value=='00')
+        {
+        arguments.IsValid=false; 
+        return;
+        }
+        arguments.IsValid=true;
+    }
+    
+
+    function cancelClick() {
+        var label = $get('ctl00_SampleContent_LbRpt');
+        label.innerHTML = 'You hit cancel in the Confirm dialog on ' + (new Date()).localeFormat("T") + '.';
+    }
+        // Add click handlers for buttons to show and hide modal popup on pageLoad
+        function pageLoad() {
+            //$addHandler($get("showModalPopupClientButton"), 'click', showModalPopupViaClient);
+            //$addHandler($get("hideModalPopupViaClientButton"), 'click', hideModalPopupViaClient);        
+        }
+        
+        function showModalPopupViaClient(ev) {
+            ev.preventDefault();
+            var modalPopupBehavior = $find('programmaticModalPopupBehavior');
+            modalPopupBehavior.show();
+        }
+        
+        function hideModalPopupViaClient(ev) {
+            ev.preventDefault();        
+            var modalPopupBehavior = $find('programmaticModalPopupBehavior');
+            modalPopupBehavior.hide();
+        }
+
+    </script>
+<ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+   </ajaxToolkit:ToolkitScriptManager>
+
+ <div class="demoarea">
+   <asp:Label ID="LBTITULO" runat="server" CssClass="Titulo" Text="Signatarios "></asp:Label><br />
+     &nbsp;
+   <asp:UpdatePanel id="UpdatePanel1" runat="server">
+   <contenttemplate>
+<asp:Label id="MsgResult" runat="server" __designer:dtid="2251799813685255" __designer:wfdid="w67"></asp:Label> <asp:HiddenField id="Cla_Dec" runat="server" __designer:dtid="2251799813685251" __designer:wfdid="w82" Value="01"></asp:HiddenField> <asp:ValidationSummary id="ValidationSummary1" runat="server" Height="80px" __designer:dtid="844424930131973" __designer:wfdid="w62" DisplayMode="List" Width="673px" ValidationGroup="Guardar"></asp:ValidationSummary><BR /><TABLE width="100%" border=0 __designer:dtid="2251799813685260"><TBODY><TR __designer:dtid="2251799813685261"><TD onmouseover="Resaltar_On(this);" class="TbDecl" onmouseout="Resaltar_Off(this);" colSpan=16 __designer:dtid="2251799813685262">&nbsp;<asp:Label id="Label15" runat="server" Text="ENTIDAD DECLARANTE" __designer:dtid="2251799813685264" __designer:wfdid="w70"></asp:Label></TD></TR><TR __designer:dtid="2251799813685265"><TD __designer:dtid="2251799813685266"><TABLE width="100%" __designer:dtid="2251799813685267"><TBODY><TR onmouseover="Resaltar_On(this);" onmouseout="Resaltar_Off(this);" __designer:dtid="2251799813685268"><TD style="WIDTH: 1px; HEIGHT: 20px" __designer:dtid="2251799813685269"></TD><TD style="WIDTH: 100px; HEIGHT: 20px" __designer:dtid="2251799813685271"><asp:Label id="Label24" runat="server" Text="TIPO DOCUMENTO" __designer:dtid="2251799813685272" CssClass="TitDecl" __designer:wfdid="w72" Width="111px"></asp:Label></TD><TD style="WIDTH: 100px; HEIGHT: 20px" __designer:dtid="2251799813685273"><asp:Label id="Label26" runat="server" Text="NIT" __designer:dtid="2251799813685274" CssClass="TitDecl" __designer:wfdid="w73"></asp:Label></TD><TD __designer:dtid="2251799813685275"><asp:Label id="Label25" runat="server" Text="DV" __designer:dtid="2251799813685276" CssClass="TitDecl" __designer:wfdid="w74"></asp:Label></TD><TD style="HEIGHT: 20px" colSpan=12 __designer:dtid="2251799813685277"><asp:Label id="Label19" runat="server" Text="D2" __designer:dtid="2251799813685278" CssClass="TitDecl" __designer:wfdid="w75"></asp:Label> <asp:Label id="Label20" runat="server" Text="RAZON SOCIAL" __designer:dtid="2251799813685279" CssClass="TitDecl" __designer:wfdid="w76"></asp:Label></TD></TR><TR onmouseover="Resaltar_On(this);" onmouseout="Resaltar_Off(this);" __designer:dtid="2251799813685280"><TD style="WIDTH: 1px; HEIGHT: 20px" __designer:dtid="2251799813685281"></TD><TD style="WIDTH: 100px; HEIGHT: 20px" __designer:dtid="2251799813685282"><asp:Label id="TIP_DOC_IDE" runat="server" __designer:dtid="2251799813685283" __designer:wfdid="w77"></asp:Label></TD><TD style="WIDTH: 100px; HEIGHT: 20px" __designer:dtid="2251799813685284"><asp:Label id="Identificaciòn" runat="server" __designer:dtid="2251799813685285" __designer:wfdid="w78"></asp:Label></TD><TD style="WIDTH: 100px; HEIGHT: 20px" __designer:dtid="2251799813685286"><asp:Label id="DV" runat="server" __designer:dtid="2251799813685287" __designer:wfdid="w79"></asp:Label></TD><TD style="HEIGHT: 20px" colSpan=12 __designer:dtid="2251799813685288"><asp:Label id="Agente" runat="server" __designer:dtid="2251799813685289" __designer:wfdid="w80"></asp:Label></TD></TR><TR onmouseover="Resaltar_On(this);" onmouseout="Resaltar_Off(this);" __designer:dtid="2251799813685290"><TD style="WIDTH: 1px; HEIGHT: 20px" __designer:dtid="2251799813685291"></TD><TD style="HEIGHT: 20px" colSpan=15 __designer:dtid="2251799813685292">&nbsp;<asp:Label id="LBTIPODEC" runat="server" __designer:dtid="2251799813685293" __designer:wfdid="w83"></asp:Label></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>&nbsp;<BR /><TABLE width="100%" border=0><TBODY><TR><TD onmouseover="Resaltar_On(this);" class="TbDecl" onmouseout="Resaltar_Off(this);" colSpan=16>&nbsp;<asp:Label id="Label29" runat="server" Text="DATOS DE PERSONA DECLARANTE"></asp:Label></TD></TR><TR><TD style="HEIGHT: 78px"><TABLE width="100%"><TBODY><TR onmouseover="Resaltar_On(this);" onmouseout="Resaltar_Off(this);"><TD style="WIDTH: 30px; HEIGHT: 20px"></TD><TD style="WIDTH: 100px; HEIGHT: 20px"><asp:Label id="Label31" runat="server" Text="TIPO DOCUMENTO" CssClass="TitDecl" Width="111px"></asp:Label></TD><TD style="WIDTH: 83px; HEIGHT: 20px"><asp:Label id="Label32" runat="server" Text="IDENTIFICACIÓN" CssClass="TitDecl"></asp:Label></TD><TD style="WIDTH: 25px"><asp:Label id="Label33" runat="server" Text="DV" CssClass="TitDecl"></asp:Label></TD><TD style="WIDTH: 25px"></TD><TD style="HEIGHT: 20px" colSpan=12>&nbsp;<asp:Label id="Label35" runat="server" Text="RAZON SOCIAL" CssClass="TitDecl"></asp:Label></TD></TR><TR onmouseover="Resaltar_On(this);" onmouseout="Resaltar_Off(this);"><TD></TD><TD><asp:TextBox id="TXTTIPDOC_PD" runat="server" CssClass="TxtMostrarLb_Der " Width="34px" ReadOnly="True"></asp:TextBox> </TD><TD style="WIDTH: 83px; HEIGHT: 28px"><asp:TextBox id="TXTNRODOC_PD" runat="server" CssClass="TxtMostrarLb_Der " Width="94px" ReadOnly="True"></asp:TextBox>&nbsp;<ajaxToolkit:ValidatorCalloutExtender id="ValCallPD" runat="server" __designer:wfdid="w59" TargetControlID="ValReqPerDec"></ajaxToolkit:ValidatorCalloutExtender>&nbsp; </TD><TD style="WIDTH: 25px"><asp:TextBox id="TXTDV_PD" runat="server" CssClass="TxtMostrarLb_Der " Width="12px" Enabled="False" ReadOnly="True"></asp:TextBox> </TD><TD style="WIDTH: 25px; HEIGHT: 28px"><asp:LinkButton id="BtnBuscDP" runat="server">...</asp:LinkButton> <asp:RequiredFieldValidator id="ValReqPerDec" runat="server" __designer:wfdid="w57" ValidationGroup="Guardar" ErrorMessage="Seleccione la Persona Declarnte Haciendo Clik al Hipervinculo" ControlToValidate="TXTNRODOC_PD">*</asp:RequiredFieldValidator></TD><TD style="HEIGHT: 28px" colSpan=12><asp:TextBox id="TXTRAZSOC_PD" runat="server" CssClass="TxtMostrarLb_Der " Width="336px" ReadOnly="True"></asp:TextBox></TD></TR><TR onmouseover="Resaltar_On(this);" onmouseout="Resaltar_Off(this);"><TD></TD><TD><asp:Label id="Label6" runat="server" Font-Bold="True" Text="TIPO DE FIRMANTE" CssClass="TitDecl"></asp:Label></TD><TD style="WIDTH: 83px; HEIGHT: 28px"></TD><TD style="WIDTH: 25px"></TD><TD style="WIDTH: 25px; HEIGHT: 28px"></TD><TD style="HEIGHT: 28px" colSpan=12></TD></TR><TR onmouseover="Resaltar_On(this);" onmouseout="Resaltar_Off(this);"><TD></TD><TD colSpan=2><asp:DropDownList id="CbTFIRMANTE_PD" runat="server" Height="21px" Width="227px"><asp:ListItem Value="00">Seleccione una Opcion</asp:ListItem>
+        <asp:ListItem Value="PA">Pagador</asp:ListItem>
+        <asp:ListItem Value="SE">Secretaria</asp:ListItem>
+        <asp:ListItem Value="TE">Tesorero</asp:ListItem>
+        </asp:DropDownList></TD><TD style="WIDTH: 25px"><asp:CustomValidator id="ValTipFir_PD" runat="server" __designer:wfdid="w53" ValidationGroup="Guardar" ErrorMessage="Seleccione el Tipo de Firmante" ControlToValidate="CbTFIRMANTE_PD" ClientValidationFunction="ValTipoPD">*</asp:CustomValidator></TD><TD style="WIDTH: 25px; HEIGHT: 28px"></TD><TD style="HEIGHT: 28px" colSpan=12><ajaxToolkit:ValidatorCalloutExtender id="ValTipoFirmPD" runat="server" TargetControlID="ValTipFir_PD"></ajaxToolkit:ValidatorCalloutExtender></TD></TR></TBODY></TABLE>&nbsp;&nbsp; </TD></TR></TBODY></TABLE><BR /><TABLE width="100%" border=0><TBODY><TR><TD onmouseover="Resaltar_On(this);" class="TbDecl" onmouseout="Resaltar_Off(this);" colSpan=16>&nbsp; <asp:Label id="Label42" runat="server" Text="DATOS CONTADOR O REVISOR FISCAL"></asp:Label></TD></TR><TR><TD><TABLE width="100%"><TBODY><TR onmouseover="Resaltar_On(this);" onmouseout="Resaltar_Off(this);"><TD style="WIDTH: 30px; HEIGHT: 20px"></TD><TD style="WIDTH: 100px; HEIGHT: 20px"><asp:Label id="Label44" runat="server" Text="TIPO DOCUMENTO" CssClass="TitDecl" Width="111px"></asp:Label></TD><TD style="WIDTH: 58px; HEIGHT: 20px"><asp:Label id="Label2" runat="server" Text="IDENTIFICACIÓN" CssClass="TitDecl"></asp:Label></TD><TD><asp:Label id="Label46" runat="server" Text="DV" CssClass="TitDecl"></asp:Label></TD><TD style="WIDTH: 9px"></TD><TD style="WIDTH: 363px; HEIGHT: 20px" colSpan=12>&nbsp;<asp:Label id="Label48" runat="server" Text="RAZON SOCIAL" CssClass="TitDecl"></asp:Label></TD></TR><TR onmouseover="Resaltar_On(this);" onmouseout="Resaltar_Off(this);"><TD style="WIDTH: 30px; HEIGHT: 20px"></TD><TD style="WIDTH: 100px; HEIGHT: 20px"><asp:TextBox id="TXTTIPDOC_RF" runat="server" CssClass="TxtMostrarLb_Der " Width="34px" ReadOnly="True"></asp:TextBox></TD><TD style="WIDTH: 58px; HEIGHT: 20px"><asp:TextBox id="TXTNRODOC_RF" runat="server" CssClass="TxtMostrarLb_Der " Width="90px" ReadOnly="True"></asp:TextBox> <ajaxToolkit:ValidatorCalloutExtender id="ValCallRF" runat="server" __designer:wfdid="w60" TargetControlID="ValReqRevFis"></ajaxToolkit:ValidatorCalloutExtender> </TD><TD><asp:TextBox id="TXTDV_RF" runat="server" CssClass="TxtMostrarLb_Der " Width="12px" ReadOnly="True"></asp:TextBox> </TD><TD style="WIDTH: 9px"><asp:LinkButton id="BtnBuscRF" runat="server">...</asp:LinkButton> <asp:RequiredFieldValidator id="ValReqRevFis" runat="server" __designer:wfdid="w58" ValidationGroup="Guardar" ErrorMessage="Seleccione el Revisor Fiscal o Contador Haciendo Clik al Hipervinculo" ControlToValidate="TXTNRODOC_RF">*</asp:RequiredFieldValidator></TD><TD style="WIDTH: 363px; HEIGHT: 20px" colSpan=12><asp:TextBox id="TXTRAZSOC_RF" runat="server" CssClass="TxtMostrarLb_Der " Width="323px" ReadOnly="True"></asp:TextBox></TD></TR><TR onmouseover="Resaltar_On(this);" onmouseout="Resaltar_Off(this);"><TD style="WIDTH: 30px; HEIGHT: 20px"></TD><TD style="HEIGHT: 20px" colSpan=2><asp:Label id="Label1" runat="server" Font-Bold="True" Text="No TARJETA PROFESIONAL" CssClass="TitDecl"></asp:Label></TD><TD></TD><TD style="WIDTH: 9px"></TD><TD style="WIDTH: 363px; HEIGHT: 20px" colSpan=12><asp:Label id="Label3" runat="server" Font-Bold="True" Text="TIPO DE SIGNATARIO" CssClass="TitDecl"></asp:Label></TD></TR><TR onmouseover="Resaltar_On(this);" onmouseout="Resaltar_Off(this);"><TD style="WIDTH: 30px; HEIGHT: 26px"></TD><TD style="HEIGHT: 26px" colSpan=2><asp:TextBox id="TXTTRAPRO_RF" runat="server" CssClass="TxtMostrarLb_Der " Width="214px" Enabled="False" ReadOnly="True"></asp:TextBox> <asp:RequiredFieldValidator id="ValReqTarProf" runat="server" __designer:wfdid="w55" ValidationGroup="Guardar" ErrorMessage="Escriba el Número de Trajeta Profesional del Revisor Fiscal o Contador" ControlToValidate="TXTTRAPRO_RF">*</asp:RequiredFieldValidator> <ajaxToolkit:ValidatorCalloutExtender id="ValcallTarProf" runat="server" __designer:wfdid="w65" TargetControlID="ValReqTarProf"></ajaxToolkit:ValidatorCalloutExtender></TD><TD style="HEIGHT: 26px"></TD><TD style="WIDTH: 9px; HEIGHT: 26px"></TD><TD style="WIDTH: 363px; HEIGHT: 26px" colSpan=12><asp:DropDownList id="CbTFIRMANTE_RF" runat="server" Width="158px"><asp:ListItem Value="00">Seleccione una Opcion</asp:ListItem>
+        <asp:ListItem Value="RF">Revisor Fiscal</asp:ListItem>
+        <asp:ListItem Value="CO">Contador</asp:ListItem>
+        </asp:DropDownList> <asp:CustomValidator id="ValTipFir_RF" runat="server" __designer:wfdid="w54" ValidationGroup="Guardar" ErrorMessage="Seleccione el Tipo de Signatario" ControlToValidate="CbTFIRMANTE_RF" ClientValidationFunction="ValTipoRF">*</asp:CustomValidator> <ajaxToolkit:ValidatorCalloutExtender id="ValTipoFirmRF" runat="server" TargetControlID="ValTipFir_RF"></ajaxToolkit:ValidatorCalloutExtender></TD></TR></TBODY></TABLE>&nbsp; </TD></TR></TBODY></TABLE><BR /><TABLE><TBODY><TR><TD style="WIDTH: 100px"></TD><TD style="WIDTH: 100px"><asp:ImageButton id="BtnSave" onclick="BtnSave_Click1" runat="server" ImageUrl="~/images/Operaciones/save.png" ValidationGroup="Guardar"></asp:ImageButton>&nbsp; </TD><TD style="WIDTH: 100px"></TD></TR></TBODY></TABLE><BR /><TABLE width=600><TBODY><TR><TD style="WIDTH: 460px; HEIGHT: 35px">Si el&nbsp;Signatario &nbsp;no existe Haga Clik&nbsp;en el Link&nbsp;Para Crearlo</TD><TD style="WIDTH: 393px; HEIGHT: 35px"></TD></TR></TBODY></TABLE><BR />
+</contenttemplate>
+   </asp:UpdatePanel>
+      <br />
+   <asp:ObjectDataSource ID="ObjTDeclarante" runat="server" SelectMethod="GetRecords"
+      TypeName="TDeclarante">
+   </asp:ObjectDataSource>
+        <asp:HiddenField ID="Operacion" runat="server" />
+        <asp:HiddenField ID="OldDver" runat="server" />
+        <asp:HiddenField ID="OldNit" runat="server" />
+     <br />
+  <asp:UpdatePanel id="UpPanelTerceros" runat="server">
+   <contenttemplate>
+<asp:Button id="hiddenTargetControlForModalPopup1" runat="server" Style="display: none"></asp:Button><BR />&nbsp; <ajaxToolkit:ModalPopupExtender id="ModalPopuTerceros" runat="server" TargetControlID="hiddenTargetControlForModalPopup1" PopupDragHandleControlID="PanelTercPopup" PopupControlID="PanelTerceros" RepositionMode="RepositionOnWindowScroll" DropShadow="True" BackgroundCssClass="modalBackground" BehaviorID="programmaticModalPopupBehavior">
+    </ajaxToolkit:ModalPopupExtender> <asp:Panel id="PanelTerceros" runat="server" Height="229%" CssClass="ModalPanel2" Width="625px">
+        <asp:panel id="PanelTercPopup" runat="Server" Height="30px" CssClass="BarTitleModal2">
+        <div style="padding: 5px; vertical-align: middle;">
+           <div style="float: left;"> <%=Me.ConsultaTer1.Tipo%> </div>
+        </div>
+         </asp:Panel> 
+        <uc1:ConsultaTer id="ConsultaTer1" runat="server"></uc1:ConsultaTer>
+    </asp:Panel> 
+</contenttemplate>
+   </asp:UpdatePanel>
+</div>
+</asp:Content>
+

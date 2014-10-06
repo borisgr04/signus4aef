@@ -1,0 +1,19 @@
+Declare
+ValorDec Number:=10000000;
+Acepta Number:=0; 
+ValorSancion Number;
+Porc Number;
+SancionMinima Number:= 221000;
+Begin
+    IF Acepta=0 Then
+        Porc:= 0.3;
+    Else
+        Porc:= 0.15;
+    end if;
+    ValorSancion:=ValorDec*Porc;
+    DBMS_OUTPUT.PUT_LINE('Valor Sanciones ' || ValorSancion);  
+    if ValorSancion<SancionMinima Then
+       ValorSancion:=SancionMinima;
+    end if;
+    DBMS_OUTPUT.PUT_LINE('Valor Sanciones ' || ValorSancion);
+End;

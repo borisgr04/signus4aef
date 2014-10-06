@@ -1,0 +1,2 @@
+824006593;2;20;2012;02;2001;5;20/01/2012;CC;1065880628;michael higuavita;beneficio de bovinos y bufalinos;250;9460;2365000
+824006593;2;20;2012;02;2001;37;21/01/2012;CC;1065890234;liliana rocha;beneficio de bovinos y bufalinos;120;9460;1135200

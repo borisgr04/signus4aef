@@ -1,0 +1,47 @@
+892300123;1;40;2012;07;4001;271;05/07/2012;CC;26863401;Osorio Herrera Torcoroma;Contrato prestacion de servicios;1870000;0,01;18700
+892300123;1;40;2012;07;4002;271;05/07/2012;CC;26863401;Osorio Herrera Torcoroma;Contrato prestacion de servicios;1870000;0,01;18700
+892300123;1;40;2012;07;4001;272;05/07/2012;CC;26863391;Lengua Mieles Glenis Rocio;Contrato prestacion de servicios;1320000;0,01;13200
+892300123;1;40;2012;07;4002;272;05/07/2012;CC;26863391;Lengua Mieles Glenis Rocio;Contrato prestacion de servicios;1320000;0,01;13200
+892300123;1;40;2012;07;4001;274;05/07/2012;CC;37953345;Rangel Dioselina;Contrato prestacion de servicios;910700;0,01;9107
+892300123;1;40;2012;07;4001;275;05/07/2012;CC;26863409;Pinto Velasquez Antonia del Rosario;Contrato prestacion de servicios;1529400;0,01;15294
+892300123;1;40;2012;07;4002;275;05/07/2012;CC;2863409;Pinto Velasquez Antonia del Rosario;Contrato prestacion de servicios;1529000;0,01;15290
+892300123;1;40;2012;07;4001;276;05/07/2012;CC;26863950;Ruedas Mejia Luz Dary;Contrato prestacion de servicios;742900;0,01;7429
+892300123;1;40;2012;07;4001;277;05/07/2012;CC;19415676;Duran Picon Jorge Luis;Contrato prestacion de servicios;2000000;0,01;20000
+892300123;1;40;2012;07;4002;277;05/07/2012;CC;19415676;Duran Picon Jorge Luis;Contrato prestacion de servicios;2000000;0,01;20000
+892300123;1;40;2012;07;4001;279;09/07/2012;CC;18903749;Sanchez Barbosa Victor Manuel;Contrato prestacion de servicios;2727300;0,01;27273
+892300123;1;40;2012;07;4002;279;09/07/2012;CC;18903749;Sanchez Barbosa Victor Manuel;Contrato prestacion de servicios;2727300;0,01;27273
+892300123;1;40;2012;07;4001;280;09/07/2012;CC;88281015;Jacome Navarro Camilo Ernesto;Contrato de obra;126436300;0,01;1264363
+892300123;1;40;2012;07;4002;280;09/07/2012;CC;88281015;Jacome Navarro Camilo Ernesto;Contrato de obra;126436300;0,01;1264363
+892300123;1;40;2012;07;4001;281;09/07/2012;CC;5036352;Geurrero Barbosa Jhon Jairo;Contrato de prestacion de servicios;2150000;0,01;21500
+892300123;1;40;2012;07;4002;281;09/07/2012;CC;5036352;Geurrero Barbosa Jhon Jairo;Contrato de prestacion de servicios;2150000;0,01;21500
+892300123;1;40;2012;07;4001;284;09/07/2012;CC;26863956;Ortiz Sepulveda Mayerly;Contrato de prestacion de servicios;766100;0,01;7661
+892300123;1;40;2012;07;4001;287;09/07/2012;CC;13839915;Sepulveda Bustos Jaime Elisain;Contrato de prestacion de servicios;3000000;0,01;30000
+892300123;1;40;2012;07;4001;287;09/07/2012;CC;13839915;Sepulveda Bustos Jaime Elisain;Contrato de prestacion de servicios;3000000;0,01;30000
+892300123;1;40;2012;07;4001;291;11/07/2012;CC;72121025;Cervantes Jimenez Waldir Alberto;Contrato prestacion de servicios;766100;0,01;7661
+892300123;1;40;2012;07;4001;295;11/07/2012;CC;5084402;Sanchez Chinchilla Javier O;Contrato prestacion de servicios;2000000;0,01;20000
+892300123;1;40;2012;07;4002;295;11/07/2012;CC;5084402;Sanchez Cinchilla Javier O;Contrato prestacion de servicios;2000000;0,01;20000
+892300123;1;40;2012;07;4001;296;11/07/2012;CC;26863615;Ortiz Escalante Mery;Contrato prestacion de servicios;778900;0,01;7789
+892300123;1;40;2012;07;4001;297;11/07/2012;CC;18904310;Duran Chacon Manuel Fernando;Contrato prestacion de servicios;1457000;0,01;14570
+892300123;1;40;2012;07;4002;297;11/07/2012;CC;18904310;Duran Chacon Manuel Fernando;Contrato prestacion de servicios;1457000;0,01;14570
+892300123;1;40;2012;07;4001;301;11/07/2012;CC;18904412;Cardenas Osorio Andres Mauricio;Contrato prestacion de servicios;1629000;0,01;16290
+892300123;1;40;2012;07;4002;301;11/07/2012;CC;18904412;Cardenas Osorio Andres Mauricio;Contrato prestacion de servicios;1629000;0,01;16290
+892300123;1;40;2012;07;4001;303;11/07/2012;CC;5084884;Alvarez Cabrales Jeemny;Contrato prestacion de servicios;1000000;0,01;10000
+892300123;1;40;2012;07;4001;304;12/07/2012;CC;72125268;Ramirez Gonzalez Yesid F;Contrato prestacion de servicios;1700000;0,01;17000
+892300123;1;40;2012;07;4002;304;12/07/2012;CC;72125268;Ramirez Gonzalez Yesid F;Contrato prestacion de servicios;1700000;0,01;17000
+892300123;1;40;2012;07;4001;305;12/07/2012;CC;1734064;Rizzo Cabrazles Freddy F;Contrato prestacion de servicios;1000000;0,01;10000
+892300123;1;40;2012;07;4001;306;12/07/2012;CC;88140283;Rojas Sanchez Richar Jose;Contrato prestacion de servicios;1000000;0,01;10000
+892300123;1;40;2012;07;4001;307;12/07/2012;CC;1064839001;Garcia Chacon Malca Irina;Contrato prestacion de servicios;778900;0,01;7789
+892300123;1;40;2012;07;4001;308;12/07/2012;CC;19415676;Duran Picon Jorge Luis;Contrato prestacion de servicios;2000000;0,01;20000
+892300123;1;40;2012;07;4002;308;12/07/2012;CC;19415676;Duran Picon Jorge Luis;Contrato prestacion de servicios;2000000;0,01;20000
+892300123;1;40;2012;07;4001;309;12/07/2012;CC;5084732;Casadiegos Suarez Alvaro;Contrato prestacion de servicios;8000000;0,01;80000
+892300123;1;40;2012;07;4002;309;12/07/2012;CC;5084732;Casadiegos Suarez Alvaro;Contrato prestacion de servicios;8000000;0,01;80000
+892300123;1;40;2012;07;4001;313;13/07/2012;CC;26863116;Contreras Arias Maria Bertilde;Contrato prestacion de servicios;1050000;0,01;10500
+892300123;1;40;2012;07;4002;313;13/07/2012;CC;26863116;Contreras Arias Maria Bertilde;Contrato prestacion de servicios;1050000;0,01;10500
+892300123;1;40;2012;07;4001;314;13/07/2012;CC;49782615;Santana Saumeth Liliana;Contrato prestacion de servicios;2700000;0,01;27000
+892300123;1;40;2012;07;4002;314;13/07/2012;CC;49782615;Santana Saumeth Liliana;Contrato prestacion de servicios;2700000;0,01;27000
+892300123;1;40;2012;07;4001;316;13/07/2012;CC;18904432;Gomez Osorio Jorge Mario;Contrato prestacion de servicios;1050000;0,01;10500
+892300123;1;40;2012;07;4002;316;13/07/2012;CC;18904432;Gomez Osorio Jorge Mario;Contrato prestacion de servicios;1050000;0,01;10500
+892300123;1;40;2012;07;4001;332;24/07/2012;CC;1064837745;Chinchilla Sanchez Norelys;Contrato prestacion de servicios;750000;0,01;7500
+892300123;1;40;2012;07;4001;335;24/07/2012;CC;1064836077;Sanchez Suarez Nataly;Contrato prestacion de servicios;750000;0,01;7500
+892300123;1;40;2012;07;4001;336;24/07/2012;CC;26863491;Pallares Sierra Claudia Liliana;Contrato prestacion de servicios;750000;0,01;7500
+892300123;1;40;2012;07;4001;339;24/07/2012;CC;26863950;Ruedas Mejia Luz Dary;Contrato prestacion de servicios;742900;0,01;7429

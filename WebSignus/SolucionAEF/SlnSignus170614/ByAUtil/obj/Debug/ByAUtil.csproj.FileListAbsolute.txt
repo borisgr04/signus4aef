@@ -1,0 +1,8 @@
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\ByAUtil\bin\Debug\ByAUtil.dll
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\ByAUtil\bin\Debug\ByAUtil.pdb
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\ByAUtil\obj\Debug\ByAUtil.dll
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\ByAUtil\obj\Debug\ByAUtil.pdb
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\ByAUtil\bin\Debug\ByAUtil.dll
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\ByAUtil\bin\Debug\ByAUtil.pdb
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\ByAUtil\obj\Debug\ByAUtil.dll
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\ByAUtil\obj\Debug\ByAUtil.pdb

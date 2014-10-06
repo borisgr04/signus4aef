@@ -1,0 +1,58 @@
+Imports Microsoft.VisualBasic
+Imports Oracle.DataAccess.Client
+Imports System.Data
+
+Public Class example
+    Private Shared Sub Main(ByVal args As String())
+        ' Connect 
+        Dim connectStr As String = "User Id=scott;Password=tiger;Data Source=oracle"
+
+        ' Setup the Tables for sample 
+        Setup(connectStr)
+
+        ' Initialize array of data 
+        Dim myArrayDeptNo As Integer() = New Integer(2) {1, 2, 3}
+        Dim myArrayDeptName As [String]() = {"Dev", "QA", "Facility"}
+        Dim myArrayDeptLoc As [String]() = {"New York", "Maryland", "Texas"}
+
+        Dim connection As New OracleConnection(connectStr)
+        Dim command As New OracleCommand("insert into dept values (:deptno, :deptname, :loc)", connection)
+
+        ' Set the Array Size to 3. This applied to all the parameter in 
+        ' associated with this command 
+        command.ArrayBindCount = 3
+
+        ' deptno parameter 
+        Dim deptNoParam As New OracleParameter("deptno", OracleDbType.Int32)
+        deptNoParam.Direction = ParameterDirection.Input
+        deptNoParam.Value = myArrayDeptNo
+        command.Parameters.Add(deptNoParam)
+
+        ' deptname parameter 
+        Dim deptNameParam As New OracleParameter("deptname", OracleDbType.Varchar2)
+        deptNameParam.Direction = ParameterDirection.Input
+        deptNameParam.Value = myArrayDeptName
+        command.Parameters.Add(deptNameParam)
+
+        ' loc parameter 
+        Dim deptLocParam As New OracleParameter("loc", OracleDbType.Varchar2)
+        deptLocParam.Direction = ParameterDirection.Input
+        deptLocParam.Value = myArrayDeptLoc
+        command.Parameters.Add(deptLocParam)
+
+        Try
+            connection.Open()
+            command.ExecuteNonQuery()
+            Console.WriteLine("{0} Rows Inserted", command.ArrayBindCount)
+        Catch e As Exception
+            Console.WriteLine("Execution Failed:" & e.Message)
+        Finally
+            ' connection, command used server side resource, dispose them 
+            ' asap to conserve resource 
+            connection.Close()
+            command.Dispose()
+            connection.Dispose()
+        End Try
+    End Sub
+
+End Class
