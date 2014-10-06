@@ -1,0 +1,10 @@
+824000865;3;40;2011;11;4001;4;03/11/2011;CC;4842078;Mena  Asprilla   Francisco;suministro  materiales  ferreteria;4895000;0,01;48950
+824000865;3;40;2011;11;4002;4;03/11/2011;CC;4842078;Mena  Asprilla   Francisco;suministro  materiales  ferreteria;4895000;0,01;48950
+824000865;3;40;2011;11;4001;5;08/11/2011;CC;77016624;zuleta   benitez  javier  de  jesus;cambio y  mantenimiento  circuitos  electricos;2800000;0,01;28000
+824000865;3;40;2011;11;4002;5;08/11/2011;CC;77016624;zuleta   benitez  javier  de  jesus;cambio y  mantenimiento  circuitos  electricos;2800000;0,01;28000
+824000865;3;40;2011;11;4001;6;17/11/2011;CC;12714660;redondo  molina  salvador;transporte  donacion  alcaldia a  v/par  badillo;1350000;0,01;13500
+824000865;3;40;2011;11;4002;6;17/11/2011;CC;12714660;redondo  molina  salvador;transporte  donacion  alcaldia a  v/par  badillo;1350000;0,01;13500
+824000865;3;40;2011;11;4001;7;22/11/2011;CC;77024149;diaz  romero  donis  alfonso;pintura  sede  raices;1800000;0,01;18000
+824000865;3;40;2011;11;4002;7;22/11/2011;CC;77024149;diaz  romero  donis  alfonso;pintura  sede  raices;1800000;0,01;18000
+824000865;3;40;2011;11;4001;8;26/11/2011;CC;19690052;Mejia  Ponton  geovanni;reparacion  baterias  sanitarias  sedep/pal;650000;0,01;6500
+824000865;3;40;2011;11;4002;8;26/11/2011;CC;19690052;Mejia  Ponton  geovanni;reparacion  baterias  sanitarias  sedep/pal;650000;0,01;6500

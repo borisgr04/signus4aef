@@ -1,0 +1,8 @@
+900006073;1;40;2011;10;4001;2;29/10/2011;CC;4349055;Medina Acuña Jose Manuel;Suministro de Accesorios de Ferreterias;492500;0,01;4925
+900006073;1;40;2011;10;4002;2;29/10/2011;CC;4349055;Medina Acuña Jose Manuel;Suministro de Accesorios de Ferreterias;492500;0,01;4925
+900006073;1;40;2011;10;4001;3;29/10/2011;CC;77013312;Gomez Pedrozo Hernando;Suministros de Utiles y Accesorios de Oficina;1056100;0,01;10561
+900006073;1;40;2011;10;4002;3;29/10/2011;CC;77013312;Gomez Pedrozo Hernando;Suministros de Utiles y Accesorios de Oficina;1056100;0,01;10561
+900006073;1;40;2011;10;4001;4;29/10/2011;CC;49753163;Lengua Martinez Cilmarys;Suministro de Tintas, Papelerias y Otros;580000;0,01;5800
+900006073;1;40;2011;10;4002;4;29/10/2011;CC;49753163;Lengua Martinez Cilmarys;Suministro de Tintas, Papelerias y Otros;580000;0,01;5800
+900006073;1;40;2011;10;4001;5;29/10/2011;CC;5007926;Robles Pineda Alvaro;Servicios Técnicos en encerramiento del Centro;3600000;0,01;36000
+900006073;1;40;2011;10;4002;5;29/10/2011;CC;5007926;Robles Pineda Alvaro;Servicios Técnicos en encerramiento del Centro;3600000;0,01;36000

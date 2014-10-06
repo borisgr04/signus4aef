@@ -1,0 +1,8 @@
+824006055;1;40;2012;07;4001;1;12/07/2012;CC;49743507;Auri gamez Carranza;asesoria contable y financiera.;1200000;0,01;12000
+824006055;1;40;2012;07;4001;1;16/07/2012;NIT;8300797768;HB. Quimicos y equipos Ltda.;Suministro mecheros de gas para laboratorio;556800;0,01;5568
+824006055;1;40;2012;07;4001;1;24/07/2012;NIT;8000063321;Arquimueble S.A.;Suministro Mobiliario Resttaurante escolar;9714500;0,01;97145
+824006055;1;40;2012;07;4001;1;25/07/2012;CC;18919218;Miguel angel Jiménez;Mant. Prev. Y correc. 6 aires acondicionado;600000;0,01;6000
+824006055;1;40;2012;07;4002;1;12/07/2012;CC;49743507;Auri gamez Carranza;asesoria contable y financiera.;1200000;0,01;12000
+824006055;1;40;2012;07;4002;1;16/07/2012;NIT;8300797768;HB. Quimicos y equipos Ltda.;Suministro mecheros de gas para laboratorio;556800;0,01;5568
+824006055;1;40;2012;07;4002;1;24/07/2012;NIT;8000063321;Arquimueble S.A.;Suministro Mobiliario Resttaurante escolar;7005500;0,01;70055
+824006055;1;40;2012;07;4002;1;25/07/2012;CC;18919218;Miguel angel Jiménez;Mant. Prev. Y correc. 6 aires acondicionado;600000;0,01;6000

@@ -1,0 +1,27 @@
+892300123;1;40;2012;05;4001;132;03/05/2012;CC;19415676;Jorge Luis Duran Picón;Contrato de prestación de servicios;2000000;0,01;20000
+892300123;1;40;2012;05;4001;133;04/05/2012;CC;49782615;Liliana Santana Sumeth;Contrato de prestación de servicios;4000000;0,01;40000
+892300123;1;40;2012;05;4001;134;04/05/2012;CC;18903749;Victor Manuel Sanchez Barbosa;Contrato de prestación de servicios;2727300;0,01;27273
+892300123;1;40;2012;05;4001;135;04/05/2012;CC;106483745;Norelys Chinchilla Sánchez;Contrato de prestación de servicios;750000;0,01;7500
+892300123;1;40;2012;05;4001;150;09/05/2012;CC;5084732;Alvaro Casadiegos Súarez;Contrato de prestación de servicios;4000000;0,01;40000
+892300123;1;40;2012;05;4001;155;15/05/2012;CC;26863615;Meyr Ortiz Escalante;Contrato de prestación de servicios;778900;0,01;7789
+892300123;1;40;2012;05;4001;167;17/05/2012;CC;1064836077;Nataly Sanchez Suarez;Contrato de prestación de servicios;750000;0,01;7500
+892300123;1;40;2012;05;4001;168;17/05/2012;CC;1064837745;Norelys Chinchilla Sánchez;Contrato de prestación de servicios;750000;0,01;7500
+892300123;1;40;2012;05;4001;169;17/05/2012;CC;26863116;Maria Bertilde Contreras Arias;Contrato de prestación de servicios;2388900;0,01;23889
+892300123;1;40;2012;05;4001;173;17/05/2012;CC;19415676;Jorge Luis Duran Picón;Contrato de prestación de servicios;2000000;0,01;20000
+892300123;1;40;2012;05;4001;145;08/05/2012;CC;13485454;Manuel Guillermo Vila Vega;Contrato de prestación de servicios;3710000;0,01;37100
+892300123;1;40;2012;05;4001;149;08/05/2012;CC;1064838030;Marisol Perez Salazar;Contrato de prestación de servicios;750000;0,01;7500
+892300123;1;40;2012;05;4001;151;10/05/2012;CC;5084402;Javier Orlando Sanchez Chinchilla;Contrato de prestación de servicios;2000000;0,01;20000
+892300123;1;40;2012;05;4001;166;17/05/2012;CC;187904412;Andres Mauricio Cardenas Osorio;Contrato de prestación de servicios;1629000;0,01;16290
+892300123;1;40;2012;05;4001;171;17/05/2012;CC;1064838030;Marisol Perez Salazar;Contrato de prestación de servicios;750000;0,01;7500
+892300123;1;40;2012;05;4001;161;16/05/2012;CC;88261015;Camilo Ernesto Jacome Navarro;Contrato de Obra;67075600;0,01;670756
+892300123;1;40;2012;05;4001;154;15/05/2012;CC;189041090;Jose Luis Jimenez Lozano  ;Contrato de prestación de servicios;1200000;0,01;12000
+892300123;1;40;2012;05;4001;156;15/05/2012;CC;72125268;Yesid Fernando Ramirez Gonzalez;Contrato de prestación de servicios;1700000;0,01;17000
+892300123;1;40;2012;05;4001;153;15/05/2012;CC;88139204;Wilson Martin Manzano Velasquez;Contrato de prestación de servicios;1409100;0,01;14091
+892300123;1;40;2012;05;4001;162;16/05/2012;CC;88261015;Camilo Ernesto Jacome Navarro;Contrato de Obra;10001600;0,01;100016
+892300123;1;40;2012;05;4001;172;17/05/2012;CC;1064839001;Malca Irina Garcia Chacon;Contrato de prestación de servicios;778900;0,01;7789
+892300123;1;40;2012;05;4001;176;17/05/2012;CC;1064836293;Yuny Daliana Sanchez Chacon;Contrato de prestación de servicios;1666700;0,01;16667
+892300123;1;40;2012;05;4001;193;17/05/2012;CC;18904432;Jorge Mario Gomez Osorio;Contrato de prestación de servicios;750000;0,01;7500
+892300123;1;40;2012;05;4001;190;17/05/2012;CC;26863401;Torcoroma Osorio Herrera ;Contrato de prestacion de servicios;1870000;0,01;18700
+892300123;1;40;2012;05;4001;182;17/05/2012;CC;49778466;Tatiana Torres Caballero;Contrato de Suministro;12360900;0,01;123609
+892300123;1;40;2012;05;4002;192;17/05/2012;CC;18903749;Victor Manuel Sanchez Barbosa;Contrato de prestacion de servicios;27272700;0,01;272727
+892300123;1;40;2012;05;4001;183;17/05/2012;CC;18904041;Jaime Elisain Sepluveda Busto;Contrato de prestacion de servicios;12000000;0,01;120000

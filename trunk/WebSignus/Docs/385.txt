@@ -1,0 +1,2 @@
+824000480;1;40;2011;09;4001;124;05/09/2011;CC;77183689;ZAMBRANO JESU ENRIQUE;pago por mantenimiento correctivo y preventivo de equipos de computo, recarga de tinta para la impresora;300000;0,01;3000
+824000480;1;40;2011;09;4002;124;05/09/2011;CC;77183689;ZAMBRANO JESU ENRIQUE;pago por mantenimiento correctivo y preventivo de equipos de computo, recarga de tinta para la impresora;300000;0,01;3000

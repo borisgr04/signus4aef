@@ -1,0 +1,18 @@
+824001510;9;40;2011;12;4001;94;06/12/2011;CC;8298821;gabriel alverto perez loiza;pago de servicios tecnicos;200000;0,01;2000
+824001510;9;40;2011;12;4002;94;06/12/2011;CC;8298821;gabriel alverto perez loiza;pago de servicios tecnicos;200000;0,01;2000
+824001510;9;40;2011;12;4001;100;06/12/2011;CC;77164028;rodolfo gomez espitia;pago impreso y publicaciones;2766000;0,01;27660
+824001510;9;40;2011;12;4002;100;06/12/2011;CC;77164028;rodolfo gomez espitia;pago impreso y publicaciones;2766000;0,01;27660
+824001510;9;40;2011;12;4001;101;13/12/2011;CC;1100948318;julian eduardo patiño revollo;pago arrendamiento cuenta por pagar ;1000000;0,01;10000
+824001510;9;40;2011;12;4002;101;13/12/2011;CC;1100948318;julian eduardo patiño revollo;pago arrendamiento cuenta por pagar ;1000000;0,01;10000
+824001510;9;40;2011;12;4001;102;14/12/2011;CC;12684278;alvaro de la cruz salazar;pago de materiales y suministro;1165000;0,01;11650
+824001510;9;40;2011;12;4002;102;14/12/2011;CC;12684278;alvaro de la cruz salazar;pago de materiales y suministro;1165000;0,01;11650
+824001510;9;40;2011;12;4001;103;14/12/2011;CC;12685586;mauricio javier casas longas;pago gasto servicio perifoneo;150000;0,01;1500
+824001510;9;40;2011;12;4002;103;14/12/2011;CC;12685586;mauricio javier casas longas;pago gasto servicio perifoneo;150000;0,01;1500
+824001510;9;40;2011;12;4001;105;16/12/2011;CC;77172083;liberato villazon campo;pago honorarios;3333300;0,01;33333
+824001510;9;40;2011;12;4002;105;16/12/2011;CC;77172083;liberato villazon campo;pago honorarios;3333300;0,01;33333
+824001510;9;40;2011;12;4001;106;16/12/2011;CC;1063960246;laura vanessa aguilar orozco;pago arrendamiento salon grado;913500;0,01;9135
+824001510;9;40;2011;12;4002;106;16/12/2011;CC;1063960246;laura vanessa aguilar orozco;pago arrendamiento salon grado;913500;0,01;9135
+824001510;9;40;2011;12;4001;108;16/12/2011;CC;12685293;asley luis barrios medina;pago transporte de alumnos;1800000;0,01;18000
+824001510;9;40;2011;12;4002;108;16/12/2011;CC;12685293;asley luis barrios medina;pago transporte de alumnos;1800000;0,01;18000
+824001510;9;40;2011;12;4001;109;16/12/2011;CC;49789360;norelvys judith muños julio;pago suministro utiles de aseo;3593100;0,01;35931
+824001510;9;40;2011;12;4002;109;16/12/2011;CC;49789360;norelvys judith muños julio;pago suministro utiles de aseo;3593100;0,01;35931

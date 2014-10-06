@@ -1,0 +1,11 @@
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\DAL\bin\Debug\DAL.dll.config
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\DAL\bin\Debug\DAL.dll
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\DAL\bin\Debug\DAL.pdb
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\DAL\obj\Debug\DAL.dll
+C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\DAL\obj\Debug\DAL.pdb
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\DAL\bin\Debug\DAL.dll.config
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\DAL\bin\Debug\DAL.dll
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\DAL\bin\Debug\DAL.pdb
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\DAL\obj\Debug\DAL.dll
+D:\x\BYA\SitiosSignus\Solucion\SlnSignus170614\DAL\obj\Debug\DAL.pdb

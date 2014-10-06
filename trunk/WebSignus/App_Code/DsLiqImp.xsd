@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsLiqImp" targetNamespace="http://tempuri.org/DsLiqImp.xsd" xmlns:mstns="http://tempuri.org/DsLiqImp.xsd" xmlns="http://tempuri.org/DsLiqImp.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix=":" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="Oracle.DataAccess.Client" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsLiqImp" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsLiqImp" msprop:Generator_UserDSName="DsLiqImp">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LIQPRIVIMP" msprop:Generator_TableClassName="LIQPRIVIMPDataTable" msprop:Generator_RowEvArgName="LIQPRIVIMPRowChangeEvent" msprop:Generator_TableVarName="tableLIQPRIVIMP" msprop:Generator_TablePropName="LIQPRIVIMP" msprop:Generator_RowDeletingName="LIQPRIVIMPRowDeleting" msprop:Generator_UserTableName="LIQPRIVIMP" msprop:Generator_RowChangingName="LIQPRIVIMPRowChanging" msprop:Generator_RowDeletedName="LIQPRIVIMPRowDeleted" msprop:Generator_RowChangedName="LIQPRIVIMPRowChanged" msprop:Generator_RowEvHandlerName="LIQPRIVIMPRowChangeEventHandler" msprop:Generator_RowClassName="LIQPRIVIMPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LPIM_DENU" msprop:Generator_ColumnVarNameInTable="columnLPIM_DENU" msprop:Generator_ColumnPropNameInRow="LPIM_DENU" msprop:Generator_ColumnPropNameInTable="LPIM_DENUColumn" msprop:Generator_UserColumnName="LPIM_DENU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LPIM_IMCO" msprop:Generator_ColumnVarNameInTable="columnLPIM_IMCO" msprop:Generator_ColumnPropNameInRow="LPIM_IMCO" msprop:Generator_ColumnPropNameInTable="LPIM_IMCOColumn" msprop:Generator_UserColumnName="LPIM_IMCO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LPIM_IMNO" msprop:Generator_ColumnVarNameInTable="columnLPIM_IMNO" msprop:Generator_ColumnPropNameInRow="LPIM_IMNO" msprop:Generator_ColumnPropNameInTable="LPIM_IMNOColumn" msprop:Generator_UserColumnName="LPIM_IMNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LPIM_VABA" msprop:Generator_ColumnVarNameInTable="columnLPIM_VABA" msprop:Generator_ColumnPropNameInRow="LPIM_VABA" msprop:Generator_ColumnPropNameInTable="LPIM_VABAColumn" msprop:Generator_UserColumnName="LPIM_VABA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LPIM_TARI" msprop:Generator_ColumnVarNameInTable="columnLPIM_TARI" msprop:Generator_ColumnPropNameInRow="LPIM_TARI" msprop:Generator_ColumnPropNameInTable="LPIM_TARIColumn" msprop:Generator_UserColumnName="LPIM_TARI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LPIM_VADE" msprop:Generator_ColumnVarNameInTable="columnLPIM_VADE" msprop:Generator_ColumnPropNameInRow="LPIM_VADE" msprop:Generator_ColumnPropNameInTable="LPIM_VADEColumn" msprop:Generator_UserColumnName="LPIM_VADE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LPIM_VACA" msprop:Generator_ColumnVarNameInTable="columnLPIM_VACA" msprop:Generator_ColumnPropNameInRow="LPIM_VACA" msprop:Generator_ColumnPropNameInTable="LPIM_VACAColumn" msprop:Generator_UserColumnName="LPIM_VACA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LPIM_ABIM" msprop:Generator_ColumnVarNameInTable="columnLPIM_ABIM" msprop:Generator_ColumnPropNameInRow="LPIM_ABIM" msprop:Generator_ColumnPropNameInTable="LPIM_ABIMColumn" msprop:Generator_UserColumnName="LPIM_ABIM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LPIM_ABVA" msprop:Generator_ColumnVarNameInTable="columnLPIM_ABVA" msprop:Generator_ColumnPropNameInRow="LPIM_ABVA" msprop:Generator_ColumnPropNameInTable="LPIM_ABVAColumn" msprop:Generator_UserColumnName="LPIM_ABVA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

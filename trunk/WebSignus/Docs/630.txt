@@ -1,0 +1,28 @@
+824001058;;40;2011;11;4001;155;2011/11/17;CC;65730592;Amaya Hoyos Nilvia Yolanda;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;12642619;Cantillo Calceta Julio;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;77163764;Gomez Rodriguez Juan Carlos;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;12640149;Guerrero Julio Marcos;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;71972809;Jaramillo Beltran Oscar;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;77167406;Montes Arias Edwin;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;77163394;Nuñez Sierra Andres;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;19586097;Salcedo Celis Teodoberto;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;12703720;Sierra Suarez Luis;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;77166397;Soraca Guzman Hernando;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;77165939;Orozco Almanza Jose Luis;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;5012964;Ortiz Daza Sixto;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;155;2011/11/17;CC;12639670;Villalva Ortega Miguel;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4001;156;2011/11/18;CC;36594809;Rodriguez Perez Yennys;Pago suministro de cuatro abanicos Silver Air para el recinto de la corporación;240000;0,01;2400
+824001058;;40;2011;11;4002;155;2011/11/17;CC;65730592;Amaya Hoyos Nilvia Yolanda;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;12642619;Cantillo Calceta Julio;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;77163764;Gomez Rodriguez Juan Carlos;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;12640149;Guerrero Julio Marcos;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;71972809;Jaramillo Beltran Oscar;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;77167406;Montes Arias Edwin;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;77163394;Nuñez Sierra Andres;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;19586097;Salcedo Celis Teodoberto;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;12703720;Sierra Suarez Luis;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;77166397;Soraca Guzman Hernando;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;77165939;Orozco Almanza Jose Luis;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;5012964;Ortiz Daza Sixto;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;155;2011/11/17;CC;12639670;Villalva Ortega Miguel;Pago sesiones extraordinarias del mes de octubre y abono de sesiones ordinarias del mes de noviembre de 2011;723000;0,01;7230
+824001058;;40;2011;11;4002;156;2011/11/18;CC;36594809;Rodriguez Perez Yennys;Pago suministro de cuatro abanicos Silver Air para el recinto de la corporación;240000;0,01;2400

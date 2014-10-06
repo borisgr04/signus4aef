@@ -1,0 +1,4 @@
+Autor. Ing Boris Gonzalez
+Función Carpera
+Cargar archivo temporalmente.
+Se reemplaza si existe uno con el mismo nombre de anterioridad.

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSRecOf" targetNamespace="http://tempuri.org/DSRecOf.xsd" xmlns:mstns="http://tempuri.org/DSRecOf.xsd" xmlns="http://tempuri.org/DSRecOf.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix=":" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="Oracle.DataAccess.Client" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSRecOf" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DSRecOf" msprop:Generator_UserDSName="DSRecOf">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VRecOf" msprop:Generator_TableClassName="VRecOfDataTable" msprop:Generator_RowEvArgName="VRecOfRowChangeEvent" msprop:Generator_TableVarName="tableVRecOf" msprop:Generator_TablePropName="VRecOf" msprop:Generator_RowDeletingName="VRecOfRowDeleting" msprop:Generator_UserTableName="VRecOf" msprop:Generator_RowChangingName="VRecOfRowChanging" msprop:Generator_RowDeletedName="VRecOfRowDeleted" msprop:Generator_RowChangedName="VRecOfRowChanged" msprop:Generator_RowEvHandlerName="VRecOfRowChangeEventHandler" msprop:Generator_RowClassName="VRecOfRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ROF_CONS" msprop:Generator_ColumnVarNameInTable="columnROF_CONS" msprop:Generator_ColumnPropNameInRow="ROF_CONS" msprop:Generator_ColumnPropNameInTable="ROF_CONSColumn" msprop:Generator_UserColumnName="ROF_CONS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_NIT" msprop:Generator_ColumnVarNameInTable="columnROF_NIT" msprop:Generator_ColumnPropNameInRow="ROF_NIT" msprop:Generator_ColumnPropNameInTable="ROF_NITColumn" msprop:Generator_UserColumnName="ROF_NIT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_PER" msprop:Generator_ColumnVarNameInTable="columnROF_PER" msprop:Generator_ColumnPropNameInRow="ROF_PER" msprop:Generator_ColumnPropNameInTable="ROF_PERColumn" msprop:Generator_UserColumnName="ROF_PER">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_ANO" msprop:Generator_ColumnVarNameInTable="columnROF_ANO" msprop:Generator_ColumnPropNameInRow="ROF_ANO" msprop:Generator_ColumnPropNameInTable="ROF_ANOColumn" msprop:Generator_UserColumnName="ROF_ANO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_VPA" msprop:Generator_ColumnVarNameInTable="columnROF_VPA" msprop:Generator_ColumnPropNameInRow="ROF_VPA" msprop:Generator_ColumnPropNameInTable="ROF_VPAColumn" msprop:Generator_UserColumnName="ROF_VPA" type="xs:long" />
+              <xs:element name="ROF_INT" msprop:Generator_ColumnVarNameInTable="columnROF_INT" msprop:Generator_ColumnPropNameInRow="ROF_INT" msprop:Generator_ColumnPropNameInTable="ROF_INTColumn" msprop:Generator_UserColumnName="ROF_INT" type="xs:double" />
+              <xs:element name="ROF_COD" msprop:Generator_ColumnVarNameInTable="columnROF_COD" msprop:Generator_ColumnPropNameInRow="ROF_COD" msprop:Generator_ColumnPropNameInTable="ROF_CODColumn" msprop:Generator_UserColumnName="ROF_COD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_CDEC" msprop:Generator_ColumnVarNameInTable="columnROF_CDEC" msprop:Generator_ColumnPropNameInRow="ROF_CDEC" msprop:Generator_ColumnPropNameInTable="ROF_CDECColumn" msprop:Generator_UserColumnName="ROF_CDEC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_DECC" msprop:Generator_ColumnVarNameInTable="columnROF_DECC" msprop:Generator_ColumnPropNameInRow="ROF_DECC" msprop:Generator_ColumnPropNameInTable="ROF_DECCColumn" msprop:Generator_UserColumnName="ROF_DECC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_FNOV" msprop:Generator_ColumnVarNameInTable="columnROF_FNOV" msprop:Generator_ColumnPropNameInRow="ROF_FNOV" msprop:Generator_ColumnPropNameInTable="ROF_FNOVColumn" msprop:Generator_UserColumnName="ROF_FNOV" type="xs:dateTime" />
+              <xs:element name="ROF_USBD" msprop:Generator_ColumnVarNameInTable="columnROF_USBD" msprop:Generator_ColumnPropNameInRow="ROF_USBD" msprop:Generator_ColumnPropNameInTable="ROF_USBDColumn" msprop:Generator_UserColumnName="ROF_USBD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_USAP" msprop:Generator_ColumnVarNameInTable="columnROF_USAP" msprop:Generator_ColumnPropNameInRow="ROF_USAP" msprop:Generator_ColumnPropNameInTable="ROF_USAPColumn" msprop:Generator_UserColumnName="ROF_USAP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_FREG" msprop:Generator_ColumnVarNameInTable="columnROF_FREG" msprop:Generator_ColumnPropNameInRow="ROF_FREG" msprop:Generator_ColumnPropNameInTable="ROF_FREGColumn" msprop:Generator_UserColumnName="ROF_FREG" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ROF_EST" msprop:Generator_ColumnVarNameInTable="columnROF_EST" msprop:Generator_ColumnPropNameInRow="ROF_EST" msprop:Generator_ColumnPropNameInTable="ROF_ESTColumn" msprop:Generator_UserColumnName="ROF_EST" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_SAN" msprop:Generator_ColumnVarNameInTable="columnROF_SAN" msprop:Generator_ColumnPropNameInRow="ROF_SAN" msprop:Generator_ColumnPropNameInTable="ROF_SANColumn" msprop:Generator_UserColumnName="ROF_SAN" type="xs:long" minOccurs="0" />
+              <xs:element name="ROF_TDOC" msprop:Generator_ColumnVarNameInTable="columnROF_TDOC" msprop:Generator_ColumnPropNameInRow="ROF_TDOC" msprop:Generator_ColumnPropNameInTable="ROF_TDOCColumn" msprop:Generator_UserColumnName="ROF_TDOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_FRAD" msprop:Generator_ColumnVarNameInTable="columnROF_FRAD" msprop:Generator_ColumnPropNameInRow="ROF_FRAD" msprop:Generator_ColumnPropNameInTable="ROF_FRADColumn" msprop:Generator_UserColumnName="ROF_FRAD" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ROF_TROF" msprop:Generator_ColumnVarNameInTable="columnROF_TROF" msprop:Generator_ColumnPropNameInRow="ROF_TROF" msprop:Generator_ColumnPropNameInTable="ROF_TROFColumn" msprop:Generator_UserColumnName="ROF_TROF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROF_TPAG" msprop:Generator_ColumnVarNameInTable="columnROF_TPAG" msprop:Generator_ColumnPropNameInRow="ROF_TPAG" msprop:Generator_ColumnPropNameInTable="ROF_TPAGColumn" msprop:Generator_UserColumnName="ROF_TPAG" type="xs:long" minOccurs="0" />
+              <xs:element name="TER_CONS" msprop:Generator_ColumnVarNameInTable="columnTER_CONS" msprop:Generator_ColumnPropNameInRow="TER_CONS" msprop:Generator_ColumnPropNameInTable="TER_CONSColumn" msprop:Generator_UserColumnName="TER_CONS" type="xs:long" />
+              <xs:element name="TER_TDOC" msprop:Generator_ColumnVarNameInTable="columnTER_TDOC" msprop:Generator_ColumnPropNameInRow="TER_TDOC" msprop:Generator_ColumnPropNameInTable="TER_TDOCColumn" msprop:Generator_UserColumnName="TER_TDOC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_NIT" msprop:Generator_ColumnVarNameInTable="columnTER_NIT" msprop:Generator_ColumnPropNameInRow="TER_NIT" msprop:Generator_ColumnPropNameInTable="TER_NITColumn" msprop:Generator_UserColumnName="TER_NIT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_DVER" msprop:Generator_ColumnVarNameInTable="columnTER_DVER" msprop:Generator_ColumnPropNameInRow="TER_DVER" msprop:Generator_ColumnPropNameInTable="TER_DVERColumn" msprop:Generator_UserColumnName="TER_DVER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_NOM" msprop:Generator_ColumnVarNameInTable="columnTER_NOM" msprop:Generator_ColumnPropNameInRow="TER_NOM" msprop:Generator_ColumnPropNameInTable="TER_NOMColumn" msprop:Generator_UserColumnName="TER_NOM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_TIP" msprop:Generator_ColumnVarNameInTable="columnTER_TIP" msprop:Generator_ColumnPropNameInRow="TER_TIP" msprop:Generator_ColumnPropNameInTable="TER_TIPColumn" msprop:Generator_UserColumnName="TER_TIP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_MPIO" msprop:Generator_ColumnVarNameInTable="columnTER_MPIO" msprop:Generator_ColumnPropNameInRow="TER_MPIO" msprop:Generator_ColumnPropNameInTable="TER_MPIOColumn" msprop:Generator_UserColumnName="TER_MPIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_EMAI" msprop:Generator_ColumnVarNameInTable="columnTER_EMAI" msprop:Generator_ColumnPropNameInRow="TER_EMAI" msprop:Generator_ColumnPropNameInTable="TER_EMAIColumn" msprop:Generator_UserColumnName="TER_EMAI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_TEL" msprop:Generator_ColumnVarNameInTable="columnTER_TEL" msprop:Generator_ColumnPropNameInRow="TER_TEL" msprop:Generator_ColumnPropNameInTable="TER_TELColumn" msprop:Generator_UserColumnName="TER_TEL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_DIR" msprop:Generator_ColumnVarNameInTable="columnTER_DIR" msprop:Generator_ColumnPropNameInRow="TER_DIR" msprop:Generator_ColumnPropNameInTable="TER_DIRColumn" msprop:Generator_UserColumnName="TER_DIR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_CED" msprop:Generator_ColumnVarNameInTable="columnTER_CED" msprop:Generator_ColumnPropNameInRow="TER_CED" msprop:Generator_ColumnPropNameInTable="TER_CEDColumn" msprop:Generator_UserColumnName="TER_CED">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_REP" msprop:Generator_ColumnVarNameInTable="columnTER_REP" msprop:Generator_ColumnPropNameInRow="TER_REP" msprop:Generator_ColumnPropNameInTable="TER_REPColumn" msprop:Generator_UserColumnName="TER_REP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_USU" msprop:Generator_ColumnVarNameInTable="columnTER_USU" msprop:Generator_ColumnPropNameInRow="TER_USU" msprop:Generator_ColumnPropNameInTable="TER_USUColumn" msprop:Generator_UserColumnName="TER_USU">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_TUS" msprop:Generator_ColumnVarNameInTable="columnTER_TUS" msprop:Generator_ColumnPropNameInRow="TER_TUS" msprop:Generator_ColumnPropNameInTable="TER_TUSColumn" msprop:Generator_UserColumnName="TER_TUS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_FREG" msprop:Generator_ColumnVarNameInTable="columnTER_FREG" msprop:Generator_ColumnPropNameInRow="TER_FREG" msprop:Generator_ColumnPropNameInTable="TER_FREGColumn" msprop:Generator_UserColumnName="TER_FREG" type="xs:dateTime" />
+              <xs:element name="TER_FNOV" msprop:Generator_ColumnVarNameInTable="columnTER_FNOV" msprop:Generator_ColumnPropNameInRow="TER_FNOV" msprop:Generator_ColumnPropNameInTable="TER_FNOVColumn" msprop:Generator_UserColumnName="TER_FNOV" type="xs:dateTime" />
+              <xs:element name="TER_FFIN" msprop:Generator_ColumnVarNameInTable="columnTER_FFIN" msprop:Generator_ColumnPropNameInRow="TER_FFIN" msprop:Generator_ColumnPropNameInTable="TER_FFINColumn" msprop:Generator_UserColumnName="TER_FFIN" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TER_EST" msprop:Generator_ColumnVarNameInTable="columnTER_EST" msprop:Generator_ColumnPropNameInRow="TER_EST" msprop:Generator_ColumnPropNameInTable="TER_ESTColumn" msprop:Generator_UserColumnName="TER_EST">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_OBS" msprop:Generator_ColumnVarNameInTable="columnTER_OBS" msprop:Generator_ColumnPropNameInRow="TER_OBS" msprop:Generator_ColumnPropNameInTable="TER_OBSColumn" msprop:Generator_UserColumnName="TER_OBS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_USAP" msprop:Generator_ColumnVarNameInTable="columnTER_USAP" msprop:Generator_ColumnPropNameInRow="TER_USAP" msprop:Generator_ColumnPropNameInTable="TER_USAPColumn" msprop:Generator_UserColumnName="TER_USAP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_USBD" msprop:Generator_ColumnVarNameInTable="columnTER_USBD" msprop:Generator_ColumnPropNameInRow="TER_USBD" msprop:Generator_ColumnPropNameInTable="TER_USBDColumn" msprop:Generator_UserColumnName="TER_USBD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_REP_TD" msprop:Generator_ColumnVarNameInTable="columnTER_REP_TD" msprop:Generator_ColumnPropNameInRow="TER_REP_TD" msprop:Generator_ColumnPropNameInTable="TER_REP_TDColumn" msprop:Generator_UserColumnName="TER_REP_TD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

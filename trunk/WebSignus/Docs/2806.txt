@@ -1,0 +1,6 @@
+824004255;9;40;2012;08;4001;5466512;23/08/2012;CC;5466512;RESTREPO MARIO;Suministro de implementos Banda Civica Infantil y Juvenil, sede Principal y Sedes de Primaria;6284000;0,01;62840
+824004255;9;40;2012;08;4002;5466512;23/08/2012;CC;5466512;RESTREPO MARIO;Suministro de implementos Banda Civica Infantil y Juvenil, sede Principal y Sedes de Primaria;6284000;0,01;62840
+824004255;9;40;2012;08;4001;18927842;27/08/2012;NIT;189278421;CARDENAS EDUARDO;Suministro de material de ornamentación para la sede Principal y sedes Jhon F Kennedy y Villa Paraguay.;6547700;0,01;65477
+824004255;9;40;2012;08;4002;18927842;27/08/2012;NIT;189278421;CARDENAS EDUARDO;Suministro de material de ornamentación para la sede Principal y sedes Jhon F Kennedy y Villa Paraguay.;6547700;0,01;65477
+824004255;9;40;2012;08;4001;77179492;28/08/2012;NIT;771794921;QUINTERO HERNANDEZ WILDER;Suministro de materiales para la contrucción, plomeria, eléctricos entre otros para la sede Principal y sedes de primaria Jhon F Kennedy y Villa Paraguay.;10487800;0,01;104878
+824004255;9;40;2012;08;4002;77179492;28/08/2012;NIT;771794921;QUINTERO HERNANDEZ WILDER;Suministro de materiales para la contrucción, plomeria, eléctricos entre otros para la sede Principal y sedes de primaria Jhon F Kennedy y Villa Paraguay.;10487800;0,01;104878

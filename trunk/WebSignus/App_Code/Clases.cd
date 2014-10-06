@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="DBMenu">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>App_Code\DBMenu.vb</FileName>
+      <HashCode>AAAMAAACAYAAAAAAAAAwAAAAAAGAAAAAAAAQAIAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sisPerfil" Collapsed="true">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\DBMenu.vb</FileName>
+      <HashCode>AAAAAAIAAAgAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

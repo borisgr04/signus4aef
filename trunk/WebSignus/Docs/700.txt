@@ -1,0 +1,14 @@
+892300265;9;40;2011;11;4001;150;09/11/2011;CC;77189025;Morón Riveira Juan Pablo;Honorarios;1500000;0,01;15000
+892300265;9;40;2011;11;4002;150;09/11/2011;CC;77189025;Morón Riveira Juan Pablo;Honorarios;1500000;0,01;15000
+892300265;9;40;2011;11;4001;149;15/11/2011;CC;5092796;Mueguez Rodriguez Juan Manuel;Mantenimiento de la Institución;1700000;0,01;17000
+892300265;9;40;2011;11;4002;149;15/11/2011;CC;5092796;Mueguez Rodriguez Juan Manuel;Mantenimiento de la Institución;1700000;0,01;17000
+892300265;9;40;2011;11;4001;151;16/11/2011;NIT;830102475;Corporación ONG Banco ce Ciencia;Compra materila didactico;950000;0,01;9500
+892300265;9;40;2011;11;4002;151;16/11/2011;NIT;830102475;Corporación ONG Banco ce Ciencia;Compra materila didactico;950000;0,01;9500
+892300265;9;40;2011;11;4001;152;16/11/2011;CC;2091957;Ramirez Hurtado Hernando de J.;Compra de materiales de ferreteria para mtto;4700000;0,01;47000
+892300265;9;40;2011;11;4002;152;16/11/2011;CC;2091957;Ramirez Hurtado Hernando de J.;Compra de materiales de ferreteria para mtto;4700000;0,01;47000
+892300265;9;40;2011;11;4001;153;16/11/2011;CC;6772256;Villa Amaya Ernel;Asesorias ciclo complementario;700000;0,01;7000
+892300265;9;40;2011;11;4002;153;16/11/2011;CC;6772256;Villa Amaya Ernel;Asesorias ciclo complementario;700000;0,01;7000
+892300265;9;40;2011;11;4001;155;25/11/2011;CC;5091658;Trillos Trillos Argemiro;Servicio de transporte Proyecto Yukpas Men ;2200000;0,01;22000
+892300265;9;40;2011;11;4002;155;25/11/2011;CC;5091658;Trillos Trillos Argemiro;Servicio de transporte Proyecto Yukpas Men ;2200000;0,01;22000
+892300265;9;40;2011;11;4001;156;25/11/2011;CC;5091658;Torres Henry Abril;Suministro de Viveresa Proyecto Yukpa-Men;2000000;0,01;20000
+892300265;9;40;2011;11;4002;156;25/11/2011;CC;5091658;Torres Henry Abril;Suministro de Viveresa Proyecto Yukpa-Men;2000000;0,01;20000

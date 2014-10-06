@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DtIngresos" targetNamespace="http://tempuri.org/DtIngresos.xsd" xmlns:mstns="http://tempuri.org/DtIngresos.xsd" xmlns="http://tempuri.org/DtIngresos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix=":" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="Oracle.DataAccess.Client" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DtIngresos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DtIngresos" msprop:Generator_UserDSName="DtIngresos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VINGRESOS" msprop:Generator_UserTableName="VINGRESOS" msprop:Generator_RowEvArgName="VINGRESOSRowChangeEvent" msprop:Generator_TableVarName="tableVINGRESOS" msprop:Generator_TablePropName="VINGRESOS" msprop:Generator_RowDeletingName="VINGRESOSRowDeleting" msprop:Generator_RowChangingName="VINGRESOSRowChanging" msprop:Generator_RowDeletedName="VINGRESOSRowDeleted" msprop:Generator_RowEvHandlerName="VINGRESOSRowChangeEventHandler" msprop:Generator_TableClassName="VINGRESOSDataTable" msprop:Generator_RowChangedName="VINGRESOSRowChanged" msprop:Generator_RowClassName="VINGRESOSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FEC_MOV" msprop:Generator_ColumnVarNameInTable="columnFEC_MOV" msprop:Generator_ColumnPropNameInRow="FEC_MOV" msprop:Generator_ColumnPropNameInTable="FEC_MOVColumn" msprop:Generator_UserColumnName="FEC_MOV" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FEC_SIS" msprop:Generator_ColumnVarNameInTable="columnFEC_SIS" msprop:Generator_ColumnPropNameInRow="FEC_SIS" msprop:Generator_ColumnPropNameInTable="FEC_SISColumn" msprop:Generator_UserColumnName="FEC_SIS" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MOV_NDOC" msprop:Generator_ColumnVarNameInTable="columnMOV_NDOC" msprop:Generator_ColumnPropNameInRow="MOV_NDOC" msprop:Generator_ColumnPropNameInTable="MOV_NDOCColumn" msprop:Generator_UserColumnName="MOV_NDOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOV_NIT" msprop:Generator_ColumnVarNameInTable="columnMOV_NIT" msprop:Generator_ColumnPropNameInRow="MOV_NIT" msprop:Generator_ColumnPropNameInTable="MOV_NITColumn" msprop:Generator_UserColumnName="MOV_NIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_NOM" msprop:Generator_ColumnVarNameInTable="columnTER_NOM" msprop:Generator_ColumnPropNameInRow="TER_NOM" msprop:Generator_ColumnPropNameInTable="TER_NOMColumn" msprop:Generator_UserColumnName="TER_NOM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_MPIO" msprop:Generator_ColumnVarNameInTable="columnTER_MPIO" msprop:Generator_ColumnPropNameInRow="TER_MPIO" msprop:Generator_ColumnPropNameInTable="TER_MPIOColumn" msprop:Generator_UserColumnName="TER_MPIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOV_CCAR" msprop:Generator_ColumnVarNameInTable="columnMOV_CCAR" msprop:Generator_ColumnPropNameInRow="MOV_CCAR" msprop:Generator_ColumnPropNameInTable="MOV_CCARColumn" msprop:Generator_UserColumnName="MOV_CCAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOV_AÑO" msprop:Generator_ColumnVarNameInTable="columnMOV_AÑO" msprop:Generator_ColumnPropNameInRow="MOV_AÑO" msprop:Generator_ColumnPropNameInTable="MOV_AÑOColumn" msprop:Generator_UserColumnName="MOV_AÑO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAG_BACO" msprop:Generator_ColumnVarNameInTable="columnPAG_BACO" msprop:Generator_ColumnPropNameInRow="PAG_BACO" msprop:Generator_ColumnPropNameInTable="PAG_BACOColumn" msprop:Generator_UserColumnName="PAG_BACO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAG_CTAB" msprop:Generator_ColumnVarNameInTable="columnPAG_CTAB" msprop:Generator_ColumnPropNameInRow="PAG_CTAB" msprop:Generator_ColumnPropNameInTable="PAG_CTABColumn" msprop:Generator_UserColumnName="PAG_CTAB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VALOR" msprop:Generator_ColumnVarNameInTable="columnVALOR" msprop:Generator_ColumnPropNameInRow="VALOR" msprop:Generator_ColumnPropNameInTable="VALORColumn" msprop:Generator_UserColumnName="VALOR" type="xs:double" minOccurs="0" />
+              <xs:element name="MOV_CDEC" msprop:Generator_ColumnVarNameInTable="columnMOV_CDEC" msprop:Generator_ColumnPropNameInRow="MOV_CDEC" msprop:Generator_ColumnPropNameInTable="MOV_CDECColumn" msprop:Generator_UserColumnName="MOV_CDEC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CCAR_NOM" msprop:Generator_ColumnVarNameInTable="columnCCAR_NOM" msprop:Generator_ColumnPropNameInRow="CCAR_NOM" msprop:Generator_ColumnPropNameInTable="CCAR_NOMColumn" msprop:Generator_UserColumnName="CCAR_NOM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOV_PER" msprop:Generator_ColumnVarNameInTable="columnMOV_PER" msprop:Generator_ColumnPropNameInRow="MOV_PER" msprop:Generator_ColumnPropNameInTable="MOV_PERColumn" msprop:Generator_UserColumnName="MOV_PER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOV_TDOC" msprop:Generator_ColumnVarNameInTable="columnMOV_TDOC" msprop:Generator_ColumnPropNameInRow="MOV_TDOC" msprop:Generator_ColumnPropNameInTable="MOV_TDOCColumn" msprop:Generator_UserColumnName="MOV_TDOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLD_NOM" msprop:Generator_ColumnVarNameInTable="columnCLD_NOM" msprop:Generator_ColumnPropNameInRow="CLD_NOM" msprop:Generator_ColumnPropNameInTable="CLD_NOMColumn" msprop:Generator_UserColumnName="CLD_NOM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VINGRESOSM" msprop:Generator_TableClassName="VINGRESOSMDataTable" msprop:Generator_TableVarName="tableVINGRESOSM" msprop:Generator_RowChangedName="VINGRESOSMRowChanged" msprop:Generator_TablePropName="VINGRESOSM" msprop:Generator_RowDeletingName="VINGRESOSMRowDeleting" msprop:Generator_RowChangingName="VINGRESOSMRowChanging" msprop:Generator_RowEvHandlerName="VINGRESOSMRowChangeEventHandler" msprop:Generator_RowDeletedName="VINGRESOSMRowDeleted" msprop:Generator_RowClassName="VINGRESOSMRow" msprop:Generator_UserTableName="VINGRESOSM" msprop:Generator_RowEvArgName="VINGRESOSMRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FEC_MOV" msprop:Generator_ColumnVarNameInTable="columnFEC_MOV" msprop:Generator_ColumnPropNameInRow="FEC_MOV" msprop:Generator_ColumnPropNameInTable="FEC_MOVColumn" msprop:Generator_UserColumnName="FEC_MOV" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FEC_SIS" msprop:Generator_ColumnVarNameInTable="columnFEC_SIS" msprop:Generator_ColumnPropNameInRow="FEC_SIS" msprop:Generator_ColumnPropNameInTable="FEC_SISColumn" msprop:Generator_UserColumnName="FEC_SIS" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MOV_NDOC" msprop:Generator_ColumnVarNameInTable="columnMOV_NDOC" msprop:Generator_ColumnPropNameInRow="MOV_NDOC" msprop:Generator_ColumnPropNameInTable="MOV_NDOCColumn" msprop:Generator_UserColumnName="MOV_NDOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOV_NIT" msprop:Generator_ColumnVarNameInTable="columnMOV_NIT" msprop:Generator_ColumnPropNameInRow="MOV_NIT" msprop:Generator_ColumnPropNameInTable="MOV_NITColumn" msprop:Generator_UserColumnName="MOV_NIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_NOM" msprop:Generator_ColumnVarNameInTable="columnTER_NOM" msprop:Generator_ColumnPropNameInRow="TER_NOM" msprop:Generator_ColumnPropNameInTable="TER_NOMColumn" msprop:Generator_UserColumnName="TER_NOM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TER_MPIO" msprop:Generator_ColumnVarNameInTable="columnTER_MPIO" msprop:Generator_ColumnPropNameInRow="TER_MPIO" msprop:Generator_ColumnPropNameInTable="TER_MPIOColumn" msprop:Generator_UserColumnName="TER_MPIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOV_CCAR" msprop:Generator_ColumnVarNameInTable="columnMOV_CCAR" msprop:Generator_ColumnPropNameInRow="MOV_CCAR" msprop:Generator_ColumnPropNameInTable="MOV_CCARColumn" msprop:Generator_UserColumnName="MOV_CCAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOV_AÑO" msprop:Generator_ColumnVarNameInTable="columnMOV_AÑO" msprop:Generator_ColumnPropNameInRow="MOV_AÑO" msprop:Generator_ColumnPropNameInTable="MOV_AÑOColumn" msprop:Generator_UserColumnName="MOV_AÑO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAG_BACO" msprop:Generator_ColumnVarNameInTable="columnPAG_BACO" msprop:Generator_ColumnPropNameInRow="PAG_BACO" msprop:Generator_ColumnPropNameInTable="PAG_BACOColumn" msprop:Generator_UserColumnName="PAG_BACO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAG_CTAB" msprop:Generator_ColumnVarNameInTable="columnPAG_CTAB" msprop:Generator_ColumnPropNameInRow="PAG_CTAB" msprop:Generator_ColumnPropNameInTable="PAG_CTABColumn" msprop:Generator_UserColumnName="PAG_CTAB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VALOR" msprop:Generator_ColumnVarNameInTable="columnVALOR" msprop:Generator_ColumnPropNameInRow="VALOR" msprop:Generator_ColumnPropNameInTable="VALORColumn" msprop:Generator_UserColumnName="VALOR" type="xs:double" minOccurs="0" />
+              <xs:element name="MOV_CDEC" msprop:Generator_ColumnVarNameInTable="columnMOV_CDEC" msprop:Generator_ColumnPropNameInRow="MOV_CDEC" msprop:Generator_ColumnPropNameInTable="MOV_CDECColumn" msprop:Generator_UserColumnName="MOV_CDEC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CCAR_NOM" msprop:Generator_ColumnVarNameInTable="columnCCAR_NOM" msprop:Generator_ColumnPropNameInRow="CCAR_NOM" msprop:Generator_ColumnPropNameInTable="CCAR_NOMColumn" msprop:Generator_UserColumnName="CCAR_NOM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOV_PER" msprop:Generator_ColumnVarNameInTable="columnMOV_PER" msprop:Generator_ColumnPropNameInRow="MOV_PER" msprop:Generator_ColumnPropNameInTable="MOV_PERColumn" msprop:Generator_UserColumnName="MOV_PER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOV_TDOC" msprop:Generator_ColumnVarNameInTable="columnMOV_TDOC" msprop:Generator_ColumnPropNameInRow="MOV_TDOC" msprop:Generator_ColumnPropNameInTable="MOV_TDOCColumn" msprop:Generator_UserColumnName="MOV_TDOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLD_NOM" msprop:Generator_ColumnVarNameInTable="columnCLD_NOM" msprop:Generator_ColumnPropNameInRow="CLD_NOM" msprop:Generator_ColumnPropNameInTable="CLD_NOMColumn" msprop:Generator_UserColumnName="CLD_NOM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ING_A_MES" msprop:Generator_ColumnVarNameInTable="columnING_A_MES" msprop:Generator_ColumnPropNameInRow="ING_A_MES" msprop:Generator_ColumnPropNameInTable="ING_A_MESColumn" msprop:Generator_UserColumnName="ING_A_MES" type="xs:string" minOccurs="0" />
+              <xs:element name="TAG_NOM" msprop:Generator_ColumnVarNameInTable="columnTAG_NOM" msprop:Generator_ColumnPropNameInRow="TAG_NOM" msprop:Generator_ColumnPropNameInTable="TAG_NOMColumn" msprop:Generator_UserColumnName="TAG_NOM" type="xs:string" minOccurs="0" />
+              <xs:element name="MUN_NOM" msprop:Generator_ColumnVarNameInTable="columnMUN_NOM" msprop:Generator_ColumnPropNameInRow="MUN_NOM" msprop:Generator_ColumnPropNameInTable="MUN_NOMColumn" msprop:Generator_UserColumnName="MUN_NOM" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

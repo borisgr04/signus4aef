@@ -1,0 +1,12 @@
+824001542;4;40;2012;05;4001;41;03/05/2012;CC;18972391;QUIÑONES BARRAZA OMAR;Mantenimien electrico de aulas de clases de la sede principal.;130900;0,01;1309
+824001542;4;40;2012;05;4002;41;03/05/2012;CC;18972391;QUIÑONES BARRAZA OMAR;Mantenimien electrico de aulas de clases de la sede principal.;130900;0,01;1309
+824001542;4;40;2012;05;4001;44;10/05/2012;CC;77037668;BELEÑO LOPEZ RAFAEL ANTONIO;Adecuacion de la sala escuela plus sede central;11014200;0,01;110142
+824001542;4;40;2012;05;4002;44;10/05/2012;CC;77037668;BELEÑO LOPEZ RAFAEL ANTONIO;Adecuacion de la sala escuela plus sede central;11014200;0,01;110142
+824001542;4;40;2012;05;4001;45;15/05/2012;CC;9309179;CUELLO CUELLO NARCISO;Mantenimiento de la bateria sanitaria de la sede urb. De varones;897500;0,01;8975
+824001542;4;40;2012;05;4002;45;15/05/2012;CC;9309179;CUELLO CUELLO NARCISO;Mantenimiento de la bateria sanitaria de la sede urb. De varones;897500;0,01;8975
+824001542;4;40;2012;05;4001;48;23/05/2012;CC;9309179;CUELLO CUELLO NARCISO;Mantenimiento de la bateria sanitaria de la sede urb. De niñas.;1835300;0,01;18353
+824001542;4;40;2012;05;4002;48;23/05/2012;CC;9309179;CUELLO CUELLO NARCISO;Mantenimiento de la bateria sanitaria de la sede urb. De niñas.;1835300;0,01;18353
+824001542;4;40;2012;05;4001;49;25/05/2012;CC;77037668;BELEÑO LOPEZ RAFAEL ANTONIO;Mantenimientos de la sala de informatica de la sede urb. De varones.;9160300;0,01;91603
+824001542;4;40;2012;05;4002;49;25/05/2012;CC;77037668;BELEÑO LOPEZ RAFAEL ANTONIO;Mantenimientos de la sala de informatica de la sede urb. De varones.;9160300;0,01;91603
+824001542;4;40;2012;05;4001;50;28/05/2012;CC;18972391;QUIÑONES BARRAZA OMAR;Mantenimientos de lamparas y abanicos de la sede Fray Joaquin.;3598700;0,01;35987
+824001542;4;40;2012;05;4002;50;28/05/2012;CC;18972391;QUIÑONES BARRAZA OMAR;Mantenimientos de lamparas y abanicos de la sede Fray Joaquin.;3598700;0,01;35987

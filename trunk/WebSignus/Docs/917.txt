@@ -1,0 +1,20 @@
+824005727;8;40;2011;12;4001;153;2011/12/30;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de agosto al 13 de septiembre de 2011;200000;0,01;2000
+824005727;8;40;2011;12;4001;155;2011/12/30;CC;1065126134;Carlos Andres Angulo;Correo a diferentes partes del pais ;130900;0,01;1309
+824005727;8;40;2011;12;4001;173;2011/12/30;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de septiembre al 13 de octubre de 2011;200000;0,01;2000
+824005727;8;40;2011;12;4001;189;2011/12/30;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de octubre al 13 de noviembre de 2011;200000;0,01;2000
+824005727;8;40;2011;12;4001;205;2011/12/30;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de noviembre al 13 de diciembre de 2011;200000;0,01;2000
+824005727;8;40;2011;12;4001;210;2011/12/30;CC;36594007;Bibiana Medina Aroca;Publicidad en la programcion navideña durant el me de diciembre ;100000;0,01;1000
+824005727;8;40;2011;12;4001;222;2011/12/30;CC;77164535;Jose Alberto Fernandez Buelvas;Asesoria en la elaboracion del presupuesto de la Personeria Vigencia 2012;200000;0,01;2000
+824005727;8;40;2011;12;4001;223;2011/12/30;CC;5435021;Wilson Garcia Guevara;Avisos de interes para la comunidad emitios en el programa tarjeton Navideño en los meses de Noviembre y diciembre de 2011;80000;0,01;800
+824005727;8;40;2011;12;4001;224;2011/12/30;CC;1065126134;Carlos Andres Angulo;Correo a diferentes partes del pais ;27200;0,01;272
+824005727;8;40;2011;12;4001;225;2011/12/30;CC;1065128098;Ana MarcelaCardenas Visbal;Suministro de fotocopias y papeleria a la Personeria ;42000;0,01;420
+824005727;8;40;2011;12;4002;153;2011/12/30;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de agosto al 13 de septiembre de 2011;200000;0,01;2000
+824005727;8;40;2011;12;4002;155;2011/12/30;CC;1065126134;Carlos Andres Angulo;Correo a diferentes partes del pais ;130900;0,01;1309
+824005727;8;40;2011;12;4002;173;2011/12/30;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de septiembre al 13 de octubre de 2011;200000;0,01;2000
+824005727;8;40;2011;12;4002;189;2011/12/30;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de octubre al 13 de noviembre de 2011;200000;0,01;2000
+824005727;8;40;2011;12;4002;205;2011/12/30;CC;49762192;Maria Cecilia Ovavalle;Arriendo correspondiente del 13 de noviembre al 13 de diciembre de 2011;200000;0,01;2000
+824005727;8;40;2011;12;4002;210;2011/12/30;CC;36594007;Bibiana Medina Aroca;Publicidad en la programcion navideña durant el me de diciembre ;100000;0,01;1000
+824005727;8;40;2011;12;4002;222;2011/12/30;CC;77164535;Jose Alberto Fernandez Buelvas;Asesoria en la elaboracion del presupuesto de la Personeria Vigencia 2012;200000;0,01;2000
+824005727;8;40;2011;12;4002;223;2011/12/30;CC;5435021;Wilson Garcia Guevara;Avisos de interes para la comunidad emitios en el programa tarjeton Navideño en los meses de Noviembre y diciembre de 2011;80000;0,01;800
+824005727;8;40;2011;12;4002;224;2011/12/30;CC;1065126134;Carlos Andres Angulo;Correo a diferentes partes del pais ;27200;0,01;272
+824005727;8;40;2011;12;4002;225;2011/12/30;CC;1065128098;Ana Marcela Cardenas Visbal;Suministro de fotocopias y papeleria a la Personeria ;42000;0,01;420

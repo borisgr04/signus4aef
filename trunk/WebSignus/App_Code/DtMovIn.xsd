@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DtMovIn" targetNamespace="http://tempuri.org/DtMovIn.xsd" xmlns:mstns="http://tempuri.org/DtMovIn.xsd" xmlns="http://tempuri.org/DtMovIn.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix=":" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="Oracle.DataAccess.Client" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DtMovIn" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DtMovIn" msprop:Generator_UserDSName="DtMovIn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MovIng" msprop:Generator_TableClassName="MovIngDataTable" msprop:Generator_RowEvArgName="MovIngRowChangeEvent" msprop:Generator_TableVarName="tableMovIng" msprop:Generator_TablePropName="MovIng" msprop:Generator_RowDeletingName="MovIngRowDeleting" msprop:Generator_UserTableName="MovIng" msprop:Generator_RowChangingName="MovIngRowChanging" msprop:Generator_RowDeletedName="MovIngRowDeleted" msprop:Generator_RowChangedName="MovIngRowChanged" msprop:Generator_RowEvHandlerName="MovIngRowChangeEventHandler" msprop:Generator_RowClassName="MovIngRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ANO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnANO" msprop:Generator_ColumnPropNameInRow="ANO" msprop:Generator_ColumnPropNameInTable="ANOColumn" msprop:Generator_UserColumnName="ANO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MES" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMES" msprop:Generator_ColumnPropNameInRow="MES" msprop:Generator_ColumnPropNameInTable="MESColumn" msprop:Generator_UserColumnName="MES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOV_CCAR" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMOV_CCAR" msprop:Generator_ColumnPropNameInRow="MOV_CCAR" msprop:Generator_ColumnPropNameInTable="MOV_CCARColumn" msprop:Generator_UserColumnName="MOV_CCAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CCAR_NOM" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCCAR_NOM" msprop:Generator_ColumnPropNameInRow="CCAR_NOM" msprop:Generator_ColumnPropNameInTable="CCAR_NOMColumn" msprop:Generator_UserColumnName="CCAR_NOM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUM_VALOR" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSUM_VALOR" msprop:Generator_ColumnPropNameInRow="SUM_VALOR" msprop:Generator_ColumnPropNameInTable="SUM_VALORColumn" msprop:Generator_UserColumnName="SUM_VALOR" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

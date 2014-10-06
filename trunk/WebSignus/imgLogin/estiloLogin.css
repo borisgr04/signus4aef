@@ -1,0 +1,101 @@
+﻿body 
+{
+    background-color:White;
+   
+}
+
+.arab
+{
+    
+    position:relative;
+    top: 148px;
+    left: 324px;
+    width: 239px;
+    height: 171px;
+}
+
+
+
+
+.acceso 
+{
+    width:343px;
+    height:208px;
+    position:relative;
+    background-image:url('Ingreso.png');
+    background-repeat:no-repeat;
+    top: 69px;
+    left: 571px;
+    z-index:3;
+    
+}
+    
+ .logosignus
+ {
+    position:absolute;
+    top: 70px;
+    left: 448px;
+    height: 169px;
+    width: 516px;
+    background-image:url('LogoSignus3.png');
+    background-repeat:no-repeat;
+    z-index:2;
+ }
+ 
+ .cuadroinfo
+ {
+     width:320px;
+     height:auto;
+     font-size:medium;
+     font-family:Arial Tahoma;
+     color:#5e89c0;
+     position:absolute;
+    top: 135px;
+    left: 41px;
+}
+
+     
+  .logoemp
+  {
+    background-image:url('B_A.png');
+    position:relative;
+    background-repeat:no-repeat;
+    top: 153px;
+    left: 471px;
+    width: 238px;
+    height: 102px;
+}
+ .logoempresa
+  {
+    background-image:url('');
+    position:relative;
+    background-repeat:no-repeat;
+    top: 50px;
+    left: 723px;
+    width: 238px;
+    height: 102px;
+   
+}
+ 
+ .usuario
+
+{
+    position:absolute;
+    height:243px;
+    width:237px;
+    top: 274px;
+    left: 397px;
+    z-index:4;
+    
+}
+.tablitas
+{
+    position:relative;
+    top: 67px;
+    left: 30px;
+    width: 280px;
+    height:71px;
+    font-family:Tahoma;
+    font-size:small;
+}
+   

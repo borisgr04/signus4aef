@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="AcuerdosP" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\AcuerdosP.vb</FileName>
+      <HashCode>IICAAEgAAACAAAABAACBAgAAAgAABAAAACAQAEAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AsigCDec" Collapsed="true">
+    <Position X="37" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\AsigCDec.vb</FileName>
+      <HashCode>AEEAAEAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoComplete" Collapsed="true">
+    <Position X="156.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\AutoComplete.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bancos" Collapsed="true">
+    <Position X="64" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Bancos.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bancos1" Collapsed="true">
+    <Position X="79.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Bancos1.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BasesLiq" Collapsed="true">
+    <Position X="145" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\BasesLiq.vb</FileName>
+      <HashCode>AIAgAEQAAJAAAAABhggAQAAAAAAAAQAARRAAAABEAII=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BDDatos" Collapsed="true">
+    <Position X="80.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\BDDatos.vb</FileName>
+      <HashCode>IGBAAAAIAIAAAARAgAACgQAQCIBABISAAYAJAgABAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendario" Collapsed="true">
+    <Position X="120.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Calendario.vb</FileName>
+      <HashCode>QAAAAAAAAIABAAAAAAQAQAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calendario1" Collapsed="true">
+    <Position X="138.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Calendario1.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cargar_Archivo" Collapsed="true">
+    <Position X="158.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Cargar_Archivo.vb</FileName>
+      <HashCode>AIBAgAAAAAAAAAAAAAUgAAAAAAAADAEAAAAAAAAAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cargar_ClaseDec" Collapsed="true">
+    <Position X="23.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Cargar_ClaseDec.vb</FileName>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cargar_Req" Collapsed="true">
+    <Position X="39.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Cargar_Req.vb</FileName>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDeclaraciones" Collapsed="true">
+    <Position X="66.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\CDeclaraciones.vb</FileName>
+      <HashCode>ygBkAEZBBEAEMIEgCcUz1QACmsgAaogA5MFBEF0BYCQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clase_Dec" Collapsed="true">
+    <Position X="82" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Clase _Dec.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clase_Impto" Collapsed="true">
+    <Position X="93.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Clase_Impto.vb</FileName>
+      <HashCode>QAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clase_Impto1" Collapsed="true">
+    <Position X="106.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Clase_Impto1.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cld_Imp" Collapsed="true">
+    <Position X="122.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Cld_Imp.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conc_Cart" Collapsed="true">
+    <Position X="140.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Conc_Cart.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAIAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conc_Cdec" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Conc_Cdec.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAACAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conceptos_Imp" Collapsed="true">
+    <Position X="25.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Conceptos_Imp.vb</FileName>
+      <HashCode>QAYAAEAAAIAAAAAAAAAAAAAAAAEAAAAAAAABAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Consecutivos2" Collapsed="true">
+    <Position X="41.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Consecutivos.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Consecutivos" Collapsed="true">
+    <Position X="52.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\ConsecutivosVig.vb</FileName>
+      <HashCode>AAQAAEAAAAAQAAAAAAAAAAAAQAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cont_Peri" Collapsed="true">
+    <Position X="68.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Cont_Peri.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Copias_Rpt" Collapsed="true">
+    <Position X="84.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Copias_Rpt.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CorreosE" Collapsed="true">
+    <Position X="95.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\CorreosE.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEQgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Correose0" Collapsed="true">
+    <Position X="109" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Corrreose.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cta_Banco" Collapsed="true">
+    <Position X="124.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Cta_Banco.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAEAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBMenu" Collapsed="true">
+    <Position X="142.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\DBMenu.vb</FileName>
+      <HashCode>IAAMAJICAYAAAgAAEAAwAQAAgAGACACAAAASAYAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Departamentos" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Departamentos.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dist_Cart" Collapsed="true">
+    <Position X="28" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Dist_Cart.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EjemploPropiedades" Collapsed="true">
+    <Position X="163.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\EjemploPropiedades.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sisPerfil" Collapsed="true">
+    <Position X="160" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\EjemploPropiedades.vb</FileName>
+      <HashCode>AAAAAAIAAAgAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EncriptarURL" Collapsed="true">
+    <Position X="165.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\EncriptarURL.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidad" Collapsed="true">
+    <Position X="86.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Entidad.vb</FileName>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estados" Collapsed="true">
+    <Position X="97.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Estados.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fmtos" Collapsed="true">
+    <Position X="111.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Fmto.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fmto_Imp" Collapsed="true">
+    <Position X="127" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Fmto_Imp.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FmtosImp" Collapsed="true">
+    <Position X="145" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\FmtosImp.vb</FileName>
+      <HashCode>AIAQQACAAQAAYIEgAASEAAgIgEAAOUAAECQkghQAAAU=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Form_ayud" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Form_Ayud.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAEAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Formularios_Dec" Collapsed="true">
+    <Position X="30.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Formularios_Dec.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAACAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Formulaslt1" Collapsed="true">
+    <Position X="43.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Formulaslt1.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DsDecCon" Collapsed="true">
+    <Position X="160" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dsdeccon.xsd.72cecc2a.vb</FileName>
+      <HashCode>AAAAIAAAAwQAIAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DsDecl" Collapsed="true">
+    <Position X="161.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dsdecl.xsd.72cecc2a.vb</FileName>
+      <HashCode>IAAAAEAAAwAIAAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DsLiqImp" Collapsed="true">
+    <Position X="163.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dsliqimp.xsd.72cecc2a.vb</FileName>
+      <HashCode>AAAAAAAAAwAAIAJABAAAQAAABAgCSBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DSRecOf" Collapsed="true">
+    <Position X="165.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dsrecof.xsd.72cecc2a.vb</FileName>
+      <HashCode>AAAAAAABAwAAAAJABAAAQACEAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DsTer" Collapsed="true">
+    <Position X="156.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dster.xsd.72cecc2a.vb</FileName>
+      <HashCode>EAAAAAAAAwAAAAJABAAAQAAICAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DtEntidad" Collapsed="true">
+    <Position X="158.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dtentidad.xsd.72cecc2a.vb</FileName>
+      <HashCode>AAAAACIAAwAAAAJABAAAQAABAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DtIngresos" Collapsed="true">
+    <Position X="160" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dtingresos.xsd.72cecc2a.vb</FileName>
+      <HashCode>AAAAAEAAAwAAAAJAFAAAQAAAAAgCQBgAAAIAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DtMovIn" Collapsed="true">
+    <Position X="161.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dtmovin.xsd.72cecc2a.vb</FileName>
+      <HashCode>AAAgAAAQQwAAAAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProfileCommon" Collapsed="true">
+    <Position X="158.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\profile.cdcab7d2.vb</FileName>
+      <HashCode>IAAAAAAAAAAAAAAAAQAAAQAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Impuestos" Collapsed="true">
+    <Position X="46" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Impuestos.vb</FileName>
+      <HashCode>QAQAAEAAAIAAAAAAAAAAAAAAQAEAAAAAAAABAAIAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Impuestos1" Collapsed="true">
+    <Position X="55" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Impuestos1.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Informes" Collapsed="true">
+    <Position X="70.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Informes.vb</FileName>
+      <HashCode>AAAEQAAAAAAACIAAEAQCAAAAAEyAAAAgAAJAAJEgAgQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JAjax" Collapsed="true">
+    <Position X="160" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\JAjax.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LOficiales" Collapsed="true">
+    <Position X="66.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LOficiales.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mail" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\mail.vb</FileName>
+      <HashCode>AAAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Menudatos" Collapsed="true">
+    <Position X="129.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Menudatos.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAwAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Municipios" Collapsed="true">
+    <Position X="147.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Municipios.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAQAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotEmail" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\NotEmail.vb</FileName>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PaginaComun" Collapsed="true">
+    <Position X="156.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\PaginaComun.vb</FileName>
+      <HashCode>QAACCgAYgACBAIIAAIkECACAQQAICgAAAAIEKAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parametros" Collapsed="true">
+    <Position X="48.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Parametros.vb</FileName>
+      <HashCode>AAQAAIAEAIAAAACACAAAABAAQAkAAAIAIAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParametrosVig" Collapsed="true">
+    <Position X="57.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\ParametrosVig.vb</FileName>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Procesos" Collapsed="true">
+    <Position X="73" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Procesos.vb</FileName>
+      <HashCode>AAEAAAAEAAAAAAAAAAAAAAAAAAAAAAAABAAQAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Radicar_Dec" Collapsed="true">
+    <Position X="100" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Radicar_Dec.vb</FileName>
+      <HashCode>AAAAAEAAAAAAAAAAAACCAQQAAgAAABAAEAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReciboOf" Collapsed="true">
+    <Position X="113.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\ReciboOf.vb</FileName>
+      <HashCode>gAAEAEAAAIEBDIAAAEAAASBIAEAACAAgggAAEEQAIAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Requi_Declaracion" Collapsed="true">
+    <Position X="131.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Requi_Declaracion.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TIPO_SANCIONES" Collapsed="true">
+    <Position X="149.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Sanciones.vb</FileName>
+      <HashCode>AAQAAEAAAIAAQAAAAAAIAAgAAAEAgAAAAAAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Secciones" Collapsed="true">
+    <Position X="16.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Secciones.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Signatario" Collapsed="true">
+    <Position X="32.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Signatario.vb</FileName>
+      <HashCode>AAAAAEAAQIAAAAAAAAAAAAAAAAAAAAAAAAAAAQAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oracleSiteMapProvider" Collapsed="true">
+    <Position X="165.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\SiteMapProvider.vb</FileName>
+      <HashCode>ABAQIAAAABAAgQAAAAAAAIAAAAAQAAAAAAAABABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Terceros" Collapsed="true">
+    <Position X="59.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Terceros.vb</FileName>
+      <HashCode>AAQAAEAAAIAgAAIAAAAAABAAAAEAAAAAAgABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TipCod" Collapsed="true">
+    <Position X="75.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\TipCod.vb</FileName>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tipo_Agent" Collapsed="true">
+    <Position X="88.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Tipo_Agent.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tipo_Conceptos" Collapsed="true">
+    <Position X="102.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Tipo_Conceptos.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tipo_Cuenta" Collapsed="true">
+    <Position X="115.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Tipo_Cuenta.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tipo_Dec" Collapsed="true">
+    <Position X="133.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Tipo_Dec.vb</FileName>
+      <HashCode>AAQAAEAAAIABAAAAAAAAAAAAAAEAgAIAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TIPO_DOC" Collapsed="true">
+    <Position X="151.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Tipo_Doc.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tipo_Doc_Cons" Collapsed="true">
+    <Position X="19" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Tipo_Doc_Cons.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tipo_Mov" Collapsed="true">
+    <Position X="34.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Tipo_Mov.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TIPO_PAGO" Collapsed="true">
+    <Position X="50.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Tipo_Pago.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tipo_proceso" Collapsed="true">
+    <Position X="61.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Tipo_Proceso.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tipousua" Collapsed="true">
+    <Position X="77.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\TipoUsua.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TipUsu" Collapsed="true">
+    <Position X="91" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\TipUsu.vb</FileName>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TRAMITES" Collapsed="true">
+    <Position X="104.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Tramites.vb</FileName>
+      <HashCode>AAQAAEAAAIAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TTerc" Collapsed="true">
+    <Position X="118" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\TTerc.vb</FileName>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Unidades" Collapsed="true">
+    <Position X="136" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Unidades.vb</FileName>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Usuarios" Collapsed="true">
+    <Position X="154" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Usuarios.vb</FileName>
+      <HashCode>BAQAAAAAAIAAgAAAAAAAAAAECIAAAAAgAAABAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vigencias" Collapsed="true">
+    <Position X="21.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Vigencias.vb</FileName>
+      <HashCode>IAQAAEACBIAAAAAAAAQAAQAAAAAAgAAAAAAJAAAAAAk=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tawammar.CustomControls.Filter" Collapsed="true">
+    <Position X="158.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Filter.vb</FileName>
+      <HashCode>AAAAAAAAAAAAwAAEABBAAAAAAAAAAAAAAAEAAAIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DsDecConTableAdapters.VCODE_CDECTableAdapter" Collapsed="true">
+    <Position X="163.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dsdeccon.xsd.72cecc2a.vb</FileName>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DsDeclTableAdapters.VDECLARACIONTableAdapter" Collapsed="true">
+    <Position X="165.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dsdecl.xsd.72cecc2a.vb</FileName>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DsLiqImpTableAdapters.LIQPRIVIMPTableAdapter" Collapsed="true">
+    <Position X="161.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dsliqimp.xsd.72cecc2a.vb</FileName>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DSRecOfTableAdapters.VRecOfTableAdapter" Collapsed="true">
+    <Position X="158.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dsrecof.xsd.72cecc2a.vb</FileName>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DsTerTableAdapters.TERCEROSTableAdapter" Collapsed="true">
+    <Position X="161.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dster.xsd.72cecc2a.vb</FileName>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DtEntidadTableAdapters.ENTIDADTableAdapter" Collapsed="true">
+    <Position X="156.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dtentidad.xsd.72cecc2a.vb</FileName>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DtIngresosTableAdapters.VINGRESOSTableAdapter" Collapsed="true">
+    <Position X="156.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dtingresos.xsd.72cecc2a.vb</FileName>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DtMovInTableAdapters.MovIngTableAdapter" Collapsed="true">
+    <Position X="163.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\derweb\916af50e\21efe681\Sources_App_Code\dtmovin.xsd.72cecc2a.vb</FileName>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="VAsig_Ter" Collapsed="true">
+    <Position X="160" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\AsigCDec.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LPCODE_CDEC" Collapsed="true">
+    <Position X="156.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\CDeclaraciones.vb</FileName>
+      <HashCode>IAIAAAAAAABAAAAQAQABkAAAwCAACAAAEFABEAAgEYk=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Radicar_Decl" Collapsed="true">
+    <Position X="158.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Radicar_Dec.vb</FileName>
+      <HashCode>AgAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+</ClassDiagram>

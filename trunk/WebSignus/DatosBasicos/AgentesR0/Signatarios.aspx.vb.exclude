@@ -1,0 +1,95 @@
+Imports System.Data
+Imports System.Data.OleDb
+Partial Class DatosBasicos_AgentesR_Signatarios
+    Inherits PaginaComun
+    Dim NroRenglon As String = "00"
+    Dim objCd As CDeclaraciones = New CDeclaraciones
+    Dim Objsig As Signatario = New Signatario
+    Dim NomDec As String
+
+    Protected Function NRenglon() As String
+
+        NroRenglon = CStr(CInt(NroRenglon) + 1).PadLeft(2, "0")
+        Return NroRenglon
+
+    End Function
+    Protected Sub BtnBuscDP_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnBuscDP.Click
+        Me.ConsultaTer1.Tipo = "PD"
+        Me.ModalPopuTerceros.Show()
+    End Sub
+
+    Protected Sub BtnBuscRF_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnBuscRF.Click
+        Me.ConsultaTer1.Tipo = "RF"
+        Me.ModalPopuTerceros.Show()
+    End Sub
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Me.SetTitulo()
+
+        If Not Me.IsPostBack Then
+            Dim dt As DataTable = Me.UsuTercero.GetByUser()
+            If dt.Rows.Count > 0 Then
+                Me.Agente.Text = dt.Rows(0)("Ter_Nom").ToString
+                Me.LBTIPODEC.Text = dt.Rows(0)("TAG_NOM").ToString
+                Me.Identificaciòn.Text = dt.Rows(0)("Ter_nit").ToString
+                Me.DV.Text = dt.Rows(0)("Ter_dver").ToString
+                Me.TIP_DOC_IDE.Text = dt.Rows(0)("Ter_tdoc").ToString
+                Dim Datos As DataTable = Me.Objsig.GetRecords(dt.Rows(0)("Ter_nit").ToString)
+                If Datos.Rows.Count > 0 Then
+                    Me.TXTTIPDOC_PD.Text = Datos.Rows(0)("DEC_TDOC").ToString
+                    Me.TXTNRODOC_PD.Text = Datos.Rows(0)("DEC_NIT").ToString
+                    Me.TXTDV_PD.Text = Datos.Rows(0)("DEC_DVER").ToString
+                    Me.TXTRAZSOC_PD.Text = Datos.Rows(0)("DEC_NOM").ToString
+                    Me.CbTFIRMANTE_PD.SelectedValue = Datos.Rows(0)("DEC_TIP").ToString
+
+                    Me.TXTTIPDOC_RF.Text = Datos.Rows(0)("REV_TDOC").ToString
+                    Me.TXTNRODOC_RF.Text = Datos.Rows(0)("REV_NIT").ToString
+                    Me.TXTDV_RF.Text = Datos.Rows(0)("REV_DVER").ToString
+                    Me.TXTRAZSOC_RF.Text = Datos.Rows(0)("REV_NOM").ToString
+                    Me.CbTFIRMANTE_RF.SelectedValue = Datos.Rows(0)("REV_TREV").ToString
+                    Me.TXTTRAPRO_RF.Text = Datos.Rows(0)("REV_TAR_PRO").ToString
+                    Me.Operacion.Value = "Editar"
+                    Me.OldNit.Value = dt.Rows(0)("Ter_nit").ToString
+                    Me.OldDver.Value = dt.Rows(0)("Ter_dver").ToString
+                Else
+                    Me.Operacion.Value = "Guardar"
+                End If
+
+            Else
+                Me.Agente.Text = "No tiene asociado Tercero"
+            End If
+        End If
+
+    End Sub
+
+
+    Protected Sub guardar()
+        Dim ObjSig As Signatario = New Signatario
+        Me.MsgResult.Text = "Boton Guardar"
+        If Me.Operacion.Value = "Guardar" Then
+            MsgResult.Visible = True
+            Me.MsgResult.Text = ObjSig.Insert(Me.TIP_DOC_IDE.Text, Me.Identificaciòn.Text, Me.DV.Text, Me.TXTTIPDOC_RF.Text, Me.TXTNRODOC_RF.Text, Me.CbTFIRMANTE_RF.SelectedValue, Me.TXTTRAPRO_RF.Text, Me.TXTTIPDOC_PD.Text, Me.TXTNRODOC_PD.Text, Me.CbTFIRMANTE_PD.SelectedValue)
+            Me.MsgBox(MsgResult, ObjSig.lErrorG)
+            If ObjSig.lErrorG = False Then
+                Me.Operacion.Value = "Editar"
+            End If
+        Else
+            MsgResult.Visible = True
+            Me.MsgResult.Text = ObjSig.update(Identificaciòn.Text, Me.DV.Text, Me.TIP_DOC_IDE.Text, Me.Identificaciòn.Text, Me.DV.Text, Me.TXTTIPDOC_RF.Text, Me.TXTNRODOC_RF.Text, Me.CbTFIRMANTE_RF.SelectedValue, Me.TXTTRAPRO_RF.Text, Me.TXTTIPDOC_PD.Text, Me.TXTNRODOC_PD.Text, Me.CbTFIRMANTE_PD.SelectedValue)
+            Me.MsgBox(MsgResult, ObjSig.lErrorG)
+        End If
+    End Sub
+
+    Protected Sub BtnSave_Click1(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs)
+        guardar()
+    End Sub
+
+    '<System.Web.Services.WebMethodAttribute()> 
+    '<System.Web.Script.Services.ScriptMethodAttribute()>
+    'Public Shared Function GetDynamicContent(ByVal contextKey As System.String) As System.String
+    ' End Function
+
+    Protected Sub BtnCrearTer_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+        'Me.ModPopCearTer.Show()
+    End Sub
+End Class

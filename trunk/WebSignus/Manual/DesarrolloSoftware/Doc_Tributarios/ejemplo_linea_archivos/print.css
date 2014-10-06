@@ -1,0 +1,84 @@
+BODY {
+	
+}
+#content {
+	MARGIN: 0px auto
+}
+#navigation {
+	DISPLAY: none
+}
+#nav-space {
+	DISPLAY: none
+}
+#left-content {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 10px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#left-content .posts {
+	FONT-FAMILY: Georgia, "Times New Roman", Times, serif
+}
+#left-content HR {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+.posts H3 {
+	MARGIN-TOP: 10px; FONT-WEIGHT: normal; FONT-SIZE: 24px
+}
+.posts-date {
+	MARGIN-TOP: 10px; FONT-SIZE: 13px; TEXT-TRANSFORM: uppercase; COLOR: #666666; TEXT-ALIGN: right
+}
+.posts-author A {
+	FONT: 11px Arial, Helvetica, sans-serif; TEXT-TRANSFORM: uppercase; COLOR: #004276; TEXT-DECORATION: none
+}
+.posts-cate A {
+	FONT: 11px Arial, Helvetica, sans-serif; TEXT-TRANSFORM: uppercase; COLOR: #004276; TEXT-DECORATION: none
+}
+.posts-author {
+	FONT-SIZE: 13px; COLOR: #666666
+}
+.posts-cate {
+	FONT-SIZE: 13px; COLOR: #666666
+}
+.posts H3 A {
+	COLOR: #004276; TEXT-DECORATION: none
+}
+.posts .posts-content {
+	FONT-SIZE: 15px; LINE-HEIGHT: 1.5em
+}
+.posts-content UL {
+	LIST-STYLE-TYPE: square
+}
+.posts-content IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.posts-content A {
+	COLOR: #004276; TEXT-DECORATION: underline
+}
+.posts .posts-content P {
+	LINE-HEIGHT: 1.5em
+}
+.posts-meta {
+	FONT: bold 12px Arial, Helvetica, sans-serif; TEXT-TRANSFORM: uppercase
+}
+.posts-meta UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 5px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.posts-meta UL LI {
+	DISPLAY: inline; MARGIN-RIGHT: 20px
+}
+.posts-meta A {
+	COLOR: #004276; TEXT-DECORATION: none
+}
+#Post_Navigation A {
+	DISPLAY: none
+}
+#comments-wrapper {
+	DISPLAY: none
+}
+#sm-space {
+	DISPLAY: none
+}
+#right-content {
+	DISPLAY: none
+}
+.clear {
+	CLEAR: both
+}

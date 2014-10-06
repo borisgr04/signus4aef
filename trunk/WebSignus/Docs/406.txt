@@ -1,0 +1,35 @@
+892300123;1;40;2011;09;4001;6928; 02/09/11;CC;18904578;Pedro Leonardo Bautista Rueda;contrato prestacion de servicio;763600;0,01;7636
+892300123;1;40;2011;09;4001;6933; 07/09/11;CC;26863424;Angela Maria Ramos Sanchez; contrato prestacion de servicio;3000000;0,01;30000
+892300123;1;40;2011;09;4001;6934; 07/09/11;CC;18903559;Bealdo Ramos Medina; contrato prestacion de servicio ;4000000;0,01;40000
+892300123;1;40;2011;09;4001;6949; 12/09/11;CC;49782615;Liliana Santana Saumeth; contrato prestacion de servicio ;2300000;0,01;23000
+892300123;1;40;2011;09;4001;6994; 12/09/11;CC;8684876;Luis Alejandro Gonzalez Hernandez;contrato de obra ;159886000;0,01;1598860
+892300123;1;40;2011;09;4001;6923; 02/09/11;CC;26863625;Rosa Dilia Benavides Duran;contrato prestacion de servicio;1650000;0,01;16500
+892300123;1;40;2011;09;4001;6924; 02/09/11;CC;12502219;Jorge David Pacheco Carrascal;contrato prestacion de servicio;1760000;0,01;17600
+892300123;1;40;2011;09;4001;6925; 02/09/11;CC;26863391;Glenis Rocio Lengua Mieles; contrato prestacion de servicio;800000;0,01;8000
+892300123;1;40;2011;09;4001;6935; 07/09/11;CC;63504577;Maria Antonieta Avendaño Ch;contrato prestacion de servicio;2000000;0,01;20000
+892300123;1;40;2011;09;4001;6942; 07/09/11;CC;36563003;Catalina Cabrales Duran;contrato prestacion de servicio;2000000;0,01;20000
+892300123;1;40;2011;09;4001;6939; 07/09/11;CC;91277310;Hector Leonardo Mora Santiago;contrato prestacion de servicio;14000000;0,01;140000
+892300123;1;40;2011;09;4001;6940; 07/09/11;CC;5083148;Manuel Antonio Osorio Garcia;contrato de prestacion de servicio;1250000;0,01;12500
+892300123;1;40;2011;09;4001;6951; 14/09/11;CC;18903585;Edwin Gabriel Vides Herrera;contrato prestacion de servicio ;2500000;0,01;25000
+892300123;1;40;2011;09;4001;6972; 19/09/11;CC;18904412;Andres Mauricio Cardenas Osorio;contrato prestacion de servicio;1000000;0,01;10000
+892300123;1;40;2011;09;4001;6973; 19/09/11;CC;1979197;Jose Yair Sanguino Quiñones; contrato de prestacion de servicio;1800000;0,01;18000
+892300123;1;40;2011;09;4001;6974; 19/09/11;NIT;82400393;Vitalhcoop Ltda;contrato prestacion de servicio;5600000;0,01;56000
+892300123;1;40;2011;09;4001;6976; 22/09/11;CC;5083837;Luis Evelio Herrera Sanchez;contrato prestacion de servicio;1400000;0,01;14000
+892300123;1;40;2011;09;4001;6943; 07/09/11;CC;88279184;Rubiel Navarro Criado;contrato prestacion de servicio;1490000;0,01;14900
+892300123;1;40;2011;09;4001;6921; 02/09/11;CC;18903882;Walfran Enrrique Trillos Duarte; contrato de prestacion de servicio;850000;0,01;8500
+892300123;1;40;2011;09;4001;6927; 02/09/11;CC;19187621;Fabio Jeremias Peinado Herrera;contrato de prestacion de servicio;850000;0,01;8500
+892300123;1;40;2011;09;4001;6944; 07/09/11;CC;18926635;Euler Alonso Criado;contrato de prestacion de servicio;850000;0,01;8500
+892300123;1;40;2011;09;4001;6941; 07/09/11;CC;37745189;Laura Karina Sanchez Pineda;contrato de prestacion de servicio;1500000;0,01;15000
+892300123;1;40;2011;09;4002;6934; 07/09/11;CC;18903559;Bealdo Ramos Medina; contrato prestacion de servicio ;4000000;0,01;40000
+892300123;1;40;2011;09;4002;6949; 12/09/11;CC;49782615;Liliana Santana Saumeth; contrato prestacion de servicio ;2300000;0,01;23000
+892300123;1;40;2011;09;4002;6994; 28/09/11;CC;8684876;Luis Alejandro Gonzalez Hernandez;contrato de obra ;159886000;0,01;1598860
+892300123;1;40;2011;09;4002;6923; 02/09/11;CC;26863625;Rosa Dilia Benavides Duran;contrato prestacion de servicio;1650000;0,01;16500
+892300123;1;40;2011;09;4002;6924; 02/09/11;CC;12502219;Jorge David Pacheco Carrascal;contrato prestacion de servicio;1760000;0,01;17600
+892300123;1;40;2011;09;4002;6935; 07/09/11;CC;63504577;Maria Antonieta Avendaño Ch;contrato prestacion de servicio;2000000;0,01;20000
+892300123;1;40;2011;09;4002;6942; 07/09/11;CC;36563003;Catalina Cabrales Duran;contrato prestacion de servicio;2000000;0,01;20000
+892300123;1;40;2011;09;4002;6939; 07/09/11;CC;91277310;Hector Leonardo Mora Santiago;contrato prestacion de servicio;14000000;0,01;140000
+892300123;1;40;2011;09;4002;6940; 07/09/11;CC;5083148;Manuel Antonio Osorio Garcia;contrato de prestacion de servicio;1250000;0,01;12500
+892300123;1;40;2011;09;4002;6951; 14/09/11;CC;18903585;Edwin Gabriel Vides Herrera;contrato prestacion de servicio ;2500000;0,01;25000
+892300123;1;40;2011;09;4002;6973; 19/09/11;CC;1979197;Jose Yair Sanguino Quiñones; contrato de prestacion de servicio;1800000;0,01;18000
+892300123;1;40;2011;09;4002;6921; 02/09/11;CC;18903882;Walfran Enrrique Trillos Duarte; contrato de prestacion de servicio;850000;0,01;8500
+892300123;1;40;2011;09;4002;6941; 07/09/11;CC;37745189;Laura Karina Sanchez Pineda;contrato de prestacion de servicio;1500000;0,01;15000

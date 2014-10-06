@@ -1,0 +1,30 @@
+824001058;;40;2012;05;4001;23;2012/05/04;CC;65730592;Amaya Hoyos Nilvia Yolanda;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4001;23;2012/05/04;CC;94072765;Ariza Orozco Willman;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4001;23;2012/05/04;CC;77166648;Barros Carranza Wilson;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4001;23;2012/05/04;CC;77166811;Dominguez Pacheco Anderson;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4001;23;2012/05/04;CC;77165982;Guarnizo Ramirez Luifer;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4001;23;2012/05/04;CC;77167592;Hernandez Buelvas Abimael;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4001;23;2012/05/04;CC;71972809;Jaramillo Beltran Oscar Luis;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4001;23;2012/05/04;CC;77165406;Montes Arias Edwin ;Abono de sesiones ordinarias del mes de febrero de 2012;886700;0,01;8867
+824001058;;40;2012;05;4001;23;2012/05/04;CC;77165939;Orozco Almanza Jose Luis;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4001;23;2012/05/04;CC;12641706;Quiroz Morron Carlos;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4001;23;2012/05/04;CC;19586097;Salcedo Celis Teodoverto;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4001;23;2012/05/04;CC;12703720;Sierra Suarez Luis ;Abono de sesiones ordinarias del mes de febrero de 2012;895800;0,01;8958
+824001058;;40;2012;05;4001;23;2012/05/04;CC;77164036;Sotomayor Perez Jose Vicente;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4001;26;2012/05/17;CC;16717184;Ordoñez Lus Dario;Pago servicio de comedor y varios en reunion de los honorables concejales con motivo a la instalacion del segundo periodo de sesiones ordinarias de la vigencia 2012;195000;0,01;1950
+824001058;;40;2012;05;4001;27;2012/05/18;CC;77164535;Fernandez Buelvas Alberto;Pago de honorarios en la elaboracion de la informaion exogena vigencia 2011;1000000;0,01;10000
+824001058;;40;2012;05;4002;23;2012/05/04;CC;65730592;Amaya Hoyos Nilvia Yolanda;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4002;23;2012/05/04;CC;94072765;Ariza Orozco Willman;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4002;23;2012/05/04;CC;77166648;Barros Carranza Wilson;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4002;23;2012/05/04;CC;77166811;Dominguez Pacheco Anderson;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4002;23;2012/05/04;CC;77165982;Guarnizo Ramirez Luifer;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4002;23;2012/05/04;CC;77167592;Hernandez Buelvas Abimael;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4002;23;2012/05/04;CC;71972809;Jaramillo Beltran Oscar Luis;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4002;23;2012/05/04;CC;77165406;Montes Arias Edwin ;Abono de sesiones ordinarias del mes de febrero de 2012;886700;0,01;8867
+824001058;;40;2012;05;4002;23;2012/05/04;CC;77165939;Orozco Almanza Jose Luis;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4002;23;2012/05/04;CC;12641706;Quiroz Morron Carlos;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4002;23;2012/05/04;CC;19586097;Salcedo Celis Teodoverto;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4002;23;2012/05/04;CC;12703720;Sierra Suarez Luis ;Abono de sesiones ordinarias del mes de febrero de 2012;895800;0,01;8958
+824001058;;40;2012;05;4002;23;2012/05/04;CC;77164036;Sotomayor Perez Jose Vicente;Abono de sesiones ordinarias del mes de febrero de 2012;877500;0,01;8775
+824001058;;40;2012;05;4002;26;2012/05/17;CC;16717184;Ordoñez Lus Dario;Pago servicio de comedor y varios en reunion de los honorables concejales con motivo a la instalacion del segundo periodo de sesiones ordinarias de la vigencia 2012;195000;0,01;1950
+824001058;;40;2012;05;4002;27;2012/05/18;CC;77164535;Fernandez Buelvas Alberto;Pago de honorarios en la elaboracion de la informaion exogena vigencia 2011;1000000;0,01;10000

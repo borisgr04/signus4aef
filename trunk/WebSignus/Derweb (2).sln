@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "E:\DerWeb\", "E:\DerWeb\", "{8D6601FD-F1E2-48EE-8386-FDF8DE1AD3E2}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/Derweb"
+		Debug.AspNetCompiler.PhysicalPath = "E:\Derweb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Derweb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Derweb"
+		Release.AspNetCompiler.PhysicalPath = "E:\Derweb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Derweb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2017"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D6601FD-F1E2-48EE-8386-FDF8DE1AD3E2}.Debug|.NET.ActiveCfg = Debug|.NET
+		{8D6601FD-F1E2-48EE-8386-FDF8DE1AD3E2}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

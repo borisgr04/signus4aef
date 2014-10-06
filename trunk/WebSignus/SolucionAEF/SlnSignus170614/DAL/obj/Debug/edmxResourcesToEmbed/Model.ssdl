@@ -1,0 +1,3870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="ACPA_APG" EntityType="Model.Store.ACPA_APG" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ACPA_DEUDA" EntityType="Model.Store.ACPA_DEUDA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ACUE_PAGO" EntityType="Model.Store.ACUE_PAGO" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="AGENTES" EntityType="Model.Store.AGENTES" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ANULACIONES" EntityType="Model.Store.ANULACIONES" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="BANCOS" EntityType="Model.Store.BANCOS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="BASES_LIQ" EntityType="Model.Store.BASES_LIQ" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CALENDARIO" EntityType="Model.Store.CALENDARIO" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CARTERAD" EntityType="Model.Store.CARTERAD" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CLASE_DEC" EntityType="Model.Store.CLASE_DEC" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CLASE_IMPTO" EntityType="Model.Store.CLASE_IMPTO" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CLASE_NOTIFICACION" EntityType="Model.Store.CLASE_NOTIFICACION" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CLD_IMP" EntityType="Model.Store.CLD_IMP" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CODE_CDEC" EntityType="Model.Store.CODE_CDEC" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CON_ROF" EntityType="Model.Store.CON_ROF" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CONC_CART" EntityType="Model.Store.CONC_CART" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CONC_CDEC" EntityType="Model.Store.CONC_CDEC" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CONCEPTOS_IMP" EntityType="Model.Store.CONCEPTOS_IMP" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CONSECUTIVOS" EntityType="Model.Store.CONSECUTIVOS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CONT_PERI" EntityType="Model.Store.CONT_PERI" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="COPIAS_RPT" EntityType="Model.Store.COPIAS_RPT" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CORREOSE" EntityType="Model.Store.CORREOSE" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CTA_BANCO" EntityType="Model.Store.CTA_BANCO" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CTRL_PAGOS" EntityType="Model.Store.CTRL_PAGOS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="CUOT_ACPA" EntityType="Model.Store.CUOT_ACPA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="DEC_REQUI" EntityType="Model.Store.DEC_REQUI" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="DECLARACION" EntityType="Model.Store.DECLARACION" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="DEPARTAMENTOS" EntityType="Model.Store.DEPARTAMENTOS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="DIST_CART" EntityType="Model.Store.DIST_CART" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="DOC_APG" EntityType="Model.Store.DOC_APG" store:Type="Tables" store:Schema="SIGNUS0614" store:Name="DOC_APG">
+      <DefiningQuery>SELECT 
+      "DOC_APG"."DAPG_NIT" AS "DAPG_NIT", 
+      "DOC_APG"."DAPG_CDEC" AS "DAPG_CDEC", 
+      "DOC_APG"."DAPG_AÑO" AS "DAPG_AÑO", 
+      "DOC_APG"."DAPG_PER" AS "DAPG_PER", 
+      "DOC_APG"."DAPG_FELA" AS "DAPG_FELA", 
+      "DOC_APG"."DAPG_FNOT" AS "DAPG_FNOT", 
+      "DOC_APG"."DAPG_ESTA" AS "DAPG_ESTA", 
+      "DOC_APG"."DAPG_USBD" AS "DAPG_USBD", 
+      "DOC_APG"."DAPG_USAP" AS "DAPG_USAP", 
+      "DOC_APG"."DAPG_FREG" AS "DAPG_FREG", 
+      "DOC_APG"."DAPG_DOAD" AS "DAPG_DOAD", 
+      "DOC_APG"."DAPG_DCOD" AS "DAPG_DCOD"
+      FROM "SIGNUS0614"."DOC_APG" "DOC_APG"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DPAGO_ROAP" EntityType="Model.Store.DPAGO_ROAP" store:Type="Tables" store:Schema="SIGNUS0614" store:Name="DPAGO_ROAP">
+      <DefiningQuery>SELECT 
+      "DPAGO_ROAP"."DPAP_APNU" AS "DPAP_APNU", 
+      "DPAGO_ROAP"."DPAP_CUNU" AS "DPAP_CUNU", 
+      "DPAGO_ROAP"."DPAP_PAGO" AS "DPAP_PAGO", 
+      "DPAGO_ROAP"."DPAP_FEPA" AS "DPAP_FEPA", 
+      "DPAGO_ROAP"."DPAP_FREG" AS "DPAP_FREG", 
+      "DPAGO_ROAP"."DPAP_USBD" AS "DPAP_USBD", 
+      "DPAGO_ROAP"."DPAP_USAP" AS "DPAP_USAP", 
+      "DPAGO_ROAP"."DPAP_FNOV" AS "DPAP_FNOV", 
+      "DPAGO_ROAP"."DPAP_RNUM" AS "DPAP_RNUM"
+      FROM "SIGNUS0614"."DPAGO_ROAP" "DPAGO_ROAP"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EMPRESA_MENSAJERIA" EntityType="Model.Store.EMPRESA_MENSAJERIA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ENTIDAD" EntityType="Model.Store.ENTIDAD" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ESTADOS" EntityType="Model.Store.ESTADOS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="EXPE_ANULA" EntityType="Model.Store.EXPE_ANULA" store:Type="Tables" store:Schema="SIGNUS0614" store:Name="EXPE_ANULA">
+      <DefiningQuery>SELECT 
+      "EXPE_ANULA"."EXPE_NUME" AS "EXPE_NUME", 
+      "EXPE_ANULA"."EXPE_ID" AS "EXPE_ID", 
+      "EXPE_ANULA"."EXPE_FANU" AS "EXPE_FANU", 
+      "EXPE_ANULA"."EXPE_OBSE" AS "EXPE_OBSE", 
+      "EXPE_ANULA"."TABLA" AS "TABLA", 
+      "EXPE_ANULA"."EXPE_USAP" AS "EXPE_USAP", 
+      "EXPE_ANULA"."EXPE_USBD" AS "EXPE_USBD", 
+      "EXPE_ANULA"."EXPE_FREG" AS "EXPE_FREG"
+      FROM "SIGNUS0614"."EXPE_ANULA" "EXPE_ANULA"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EXPE_APG" EntityType="Model.Store.EXPE_APG" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="EXPE_NOTIF" EntityType="Model.Store.EXPE_NOTIF" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="EXPE_TRAM" EntityType="Model.Store.EXPE_TRAM" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="EXPEDIENTES" EntityType="Model.Store.EXPEDIENTES" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="FM_BASESLIQ01" EntityType="Model.Store.FM_BASESLIQ01" store:Type="Tables" store:Schema="SIGNUS0614" store:Name="FM_BASESLIQ01">
+      <DefiningQuery>SELECT 
+      "FM_BASESLIQ01"."NIT_AR" AS "NIT_AR", 
+      "FM_BASESLIQ01"."DV_AR" AS "DV_AR", 
+      "FM_BASESLIQ01"."CDEC" AS "CDEC", 
+      "FM_BASESLIQ01"."IMPTO" AS "IMPTO", 
+      "FM_BASESLIQ01"."AGRAVABLE" AS "AGRAVABLE", 
+      "FM_BASESLIQ01"."PGRAVABLE" AS "PGRAVABLE", 
+      "FM_BASESLIQ01"."NDOC" AS "NDOC", 
+      "FM_BASESLIQ01"."FOPER" AS "FOPER", 
+      "FM_BASESLIQ01"."TIDE" AS "TIDE", 
+      "FM_BASESLIQ01"."NIDE" AS "NIDE", 
+      "FM_BASESLIQ01"."DV" AS "DV", 
+      "FM_BASESLIQ01"."RAZSOC" AS "RAZSOC", 
+      "FM_BASESLIQ01"."CONCEPTO" AS "CONCEPTO", 
+      "FM_BASESLIQ01"."VALORBASE" AS "VALORBASE", 
+      "FM_BASESLIQ01"."TARIFA" AS "TARIFA", 
+      "FM_BASESLIQ01"."VALORIMPTO" AS "VALORIMPTO", 
+      "FM_BASESLIQ01"."NRO_RAD" AS "NRO_RAD", 
+      "FM_BASESLIQ01"."USAP" AS "USAP", 
+      "FM_BASESLIQ01"."USBD" AS "USBD", 
+      "FM_BASESLIQ01"."FESI" AS "FESI", 
+      "FM_BASESLIQ01"."FREG" AS "FREG", 
+      "FM_BASESLIQ01"."FNOV" AS "FNOV", 
+      "FM_BASESLIQ01"."COD_MPIO" AS "COD_MPIO"
+      FROM "SIGNUS0614"."FM_BASESLIQ01" "FM_BASESLIQ01"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FMTO_IMP" EntityType="Model.Store.FMTO_IMP" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="FMTOS" EntityType="Model.Store.FMTOS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="FORM_AYUD" EntityType="Model.Store.FORM_AYUD" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="FORMULARIOS_DEC" EntityType="Model.Store.FORMULARIOS_DEC" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="FORMULASL" EntityType="Model.Store.FORMULASL" store:Type="Tables" store:Schema="SIGNUS0614" store:Name="FORMULASL">
+      <DefiningQuery>SELECT 
+      "FORMULASL"."FORM_CODI" AS "FORM_CODI", 
+      "FORMULASL"."FORM_FEIN" AS "FORM_FEIN", 
+      "FORMULASL"."FORM_FEFI" AS "FORM_FEFI", 
+      "FORMULASL"."FORM_FORM" AS "FORM_FORM", 
+      "FORMULASL"."FORM_NORM" AS "FORM_NORM", 
+      "FORMULASL"."FORM_CONC" AS "FORM_CONC", 
+      "FORMULASL"."FORM_USAP" AS "FORM_USAP", 
+      "FORMULASL"."FORM_USBD" AS "FORM_USBD", 
+      "FORMULASL"."FORM_FREG" AS "FORM_FREG", 
+      "FORMULASL"."FORM_FNOV" AS "FORM_FNOV"
+      FROM "SIGNUS0614"."FORMULASL" "FORMULASL"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FORMULASLT" EntityType="Model.Store.FORMULASLT" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="HAUDITORIA" EntityType="Model.Store.HAUDITORIA" store:Type="Tables" store:Schema="SIGNUS0614" store:Name="HAUDITORIA">
+      <DefiningQuery>SELECT 
+      "HAUDITORIA"."HAUDCODI" AS "HAUDCODI", 
+      "HAUDITORIA"."HAUDTABL" AS "HAUDTABL", 
+      "HAUDITORIA"."HAUDIDEN" AS "HAUDIDEN", 
+      "HAUDITORIA"."HAUDTIPO" AS "HAUDTIPO", 
+      "HAUDITORIA"."HAUDDESC" AS "HAUDDESC", 
+      "HAUDITORIA"."HAUDUSER" AS "HAUDUSER", 
+      "HAUDITORIA"."HAUDFESI" AS "HAUDFESI", 
+      "HAUDITORIA"."HAUDUSBD" AS "HAUDUSBD"
+      FROM "SIGNUS0614"."HAUDITORIA" "HAUDITORIA"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="IMPUESTOS" EntityType="Model.Store.IMPUESTOS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="MENU" EntityType="Model.Store.MENU" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="MENU_PERFIL" EntityType="Model.Store.MENU_PERFIL" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="MOVIMIENTO" EntityType="Model.Store.MOVIMIENTO" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="MUNICIPIOS" EntityType="Model.Store.MUNICIPIOS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ORA_ASPNET_APPLICATIONS" EntityType="Model.Store.ORA_ASPNET_APPLICATIONS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ORA_ASPNET_MEMBERSHIP" EntityType="Model.Store.ORA_ASPNET_MEMBERSHIP" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ORA_ASPNET_PATHS" EntityType="Model.Store.ORA_ASPNET_PATHS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ORA_ASPNET_PERSONALIZNALLUSERS" EntityType="Model.Store.ORA_ASPNET_PERSONALIZNALLUSERS" store:Type="Tables" store:Schema="SIGNUS0614" store:Name="ORA_ASPNET_PERSONALIZNALLUSERS">
+      <DefiningQuery>SELECT 
+      "ORA_ASPNET_PERSONALIZNALLUSERS"."PATHID" AS "PATHID", 
+      "ORA_ASPNET_PERSONALIZNALLUSERS"."PAGESETTINGS" AS "PAGESETTINGS", 
+      "ORA_ASPNET_PERSONALIZNALLUSERS"."LASTUPDATEDDATE" AS "LASTUPDATEDDATE"
+      FROM "SIGNUS0614"."ORA_ASPNET_PERSONALIZNALLUSERS" "ORA_ASPNET_PERSONALIZNALLUSERS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ORA_ASPNET_PERSONALIZNPERUSER" EntityType="Model.Store.ORA_ASPNET_PERSONALIZNPERUSER" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ORA_ASPNET_PROFILE" EntityType="Model.Store.ORA_ASPNET_PROFILE" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ORA_ASPNET_ROLES" EntityType="Model.Store.ORA_ASPNET_ROLES" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ORA_ASPNET_SESSIONAPPLICATIONS" EntityType="Model.Store.ORA_ASPNET_SESSIONAPPLICATIONS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ORA_ASPNET_SESSIONS" EntityType="Model.Store.ORA_ASPNET_SESSIONS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ORA_ASPNET_SITEMAP" EntityType="Model.Store.ORA_ASPNET_SITEMAP" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ORA_ASPNET_USERS" EntityType="Model.Store.ORA_ASPNET_USERS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="ORA_ASPNET_USERSINROLES" EntityType="Model.Store.ORA_ASPNET_USERSINROLES" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="PAGOS" EntityType="Model.Store.PAGOS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="PAR_IMP" EntityType="Model.Store.PAR_IMP" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="PAR_LIQ_DET" EntityType="Model.Store.PAR_LIQ_DET" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="PARA_LIQU" EntityType="Model.Store.PARA_LIQU" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="PROC_LOTE" EntityType="Model.Store.PROC_LOTE" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="PROCESOS" EntityType="Model.Store.PROCESOS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="RECACUERDO" EntityType="Model.Store.RECACUERDO" store:Type="Tables" store:Schema="SIGNUS0614" store:Name="RECACUERDO">
+      <DefiningQuery>SELECT 
+      "RECACUERDO"."RAP_CONS" AS "RAP_CONS", 
+      "RECACUERDO"."RAP_NIT" AS "RAP_NIT", 
+      "RECACUERDO"."RAP_PER" AS "RAP_PER", 
+      "RECACUERDO"."RAP_ANO" AS "RAP_ANO", 
+      "RECACUERDO"."RAP_COD" AS "RAP_COD", 
+      "RECACUERDO"."RAP_CDEC" AS "RAP_CDEC", 
+      "RECACUERDO"."RAP_DECC" AS "RAP_DECC", 
+      "RECACUERDO"."RAP_VPA" AS "RAP_VPA", 
+      "RECACUERDO"."RAP_TRAP" AS "RAP_TRAP", 
+      "RECACUERDO"."RAP_FREG" AS "RAP_FREG", 
+      "RECACUERDO"."RAP_EST" AS "RAP_EST", 
+      "RECACUERDO"."RAP_TDOC" AS "RAP_TDOC", 
+      "RECACUERDO"."RAP_FRAD" AS "RAP_FRAD", 
+      "RECACUERDO"."RAP_FNOV" AS "RAP_FNOV", 
+      "RECACUERDO"."RAP_USBD" AS "RAP_USBD", 
+      "RECACUERDO"."RAP_USAP" AS "RAP_USAP"
+      FROM "SIGNUS0614"."RECACUERDO" "RECACUERDO"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RECOFICIAL" EntityType="Model.Store.RECOFICIAL" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="REL_INT_MORA" EntityType="Model.Store.REL_INT_MORA" store:Type="Tables" store:Schema="SIGNUS0614" store:Name="REL_INT_MORA">
+      <DefiningQuery>SELECT 
+      "REL_INT_MORA"."RLIM_NUM" AS "RLIM_NUM", 
+      "REL_INT_MORA"."RLIM_DOAD" AS "RLIM_DOAD", 
+      "REL_INT_MORA"."RLIM_VALOR" AS "RLIM_VALOR", 
+      "REL_INT_MORA"."RLIM_TDOC" AS "RLIM_TDOC", 
+      "REL_INT_MORA"."RLIM_PER" AS "RLIM_PER", 
+      "REL_INT_MORA"."RLIM_ANO" AS "RLIM_ANO", 
+      "REL_INT_MORA"."RLIM_NIT" AS "RLIM_NIT", 
+      "REL_INT_MORA"."RLIM_DCOD" AS "RLIM_DCOD", 
+      "REL_INT_MORA"."RLIM_CDEC" AS "RLIM_CDEC", 
+      "REL_INT_MORA"."RLIM_USAP" AS "RLIM_USAP", 
+      "REL_INT_MORA"."RLIM_USBD" AS "RLIM_USBD", 
+      "REL_INT_MORA"."RLIM_FREG" AS "RLIM_FREG"
+      FROM "SIGNUS0614"."REL_INT_MORA" "REL_INT_MORA"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RELA_AGETER" EntityType="Model.Store.RELA_AGETER" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="REQUI_DECLARACION" EntityType="Model.Store.REQUI_DECLARACION" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="SECCIONES" EntityType="Model.Store.SECCIONES" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TARIFAS_IMP" EntityType="Model.Store.TARIFAS_IMP" store:Type="Tables" store:Schema="SIGNUS0614" store:Name="TARIFAS_IMP">
+      <DefiningQuery>SELECT 
+      "TARIFAS_IMP"."TARI_FEIN" AS "TARI_FEIN", 
+      "TARIFAS_IMP"."TARI_FEFI" AS "TARI_FEFI", 
+      "TARIFAS_IMP"."TARI_FORM" AS "TARI_FORM", 
+      "TARIFAS_IMP"."TARI_NORM" AS "TARI_NORM", 
+      "TARIFAS_IMP"."TARI_IMP" AS "TARI_IMP", 
+      "TARIFAS_IMP"."TARI_CODI" AS "TARI_CODI", 
+      "TARIFAS_IMP"."TARI_USAP" AS "TARI_USAP", 
+      "TARIFAS_IMP"."TARI_USBD" AS "TARI_USBD", 
+      "TARIFAS_IMP"."TARI_FREG" AS "TARI_FREG", 
+      "TARIFAS_IMP"."TARI_FNOV" AS "TARI_FNOV"
+      FROM "SIGNUS0614"."TARIFAS_IMP" "TARIFAS_IMP"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TDECLARANTE" EntityType="Model.Store.TDECLARANTE" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TDOC_IDE" EntityType="Model.Store.TDOC_IDE" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TER_DEC" EntityType="Model.Store.TER_DEC" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TERCEROS" EntityType="Model.Store.TERCEROS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPO_AGENT" EntityType="Model.Store.TIPO_AGENT" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPO_CONCEPTOS" EntityType="Model.Store.TIPO_CONCEPTOS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPO_CUENTA" EntityType="Model.Store.TIPO_CUENTA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPO_DATO" EntityType="Model.Store.TIPO_DATO" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPO_DEC" EntityType="Model.Store.TIPO_DEC" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPO_DOC" EntityType="Model.Store.TIPO_DOC" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPO_DOC_CONS" EntityType="Model.Store.TIPO_DOC_CONS" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPO_MOV" EntityType="Model.Store.TIPO_MOV" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPO_PAGO" EntityType="Model.Store.TIPO_PAGO" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPO_PROCESO" EntityType="Model.Store.TIPO_PROCESO" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPO_SANCIONES" EntityType="Model.Store.TIPO_SANCIONES" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TIPOUSUA" EntityType="Model.Store.TIPOUSUA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TRAM_TER" EntityType="Model.Store.TRAM_TER" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TRAMITES" EntityType="Model.Store.TRAMITES" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="TRAMRELA" EntityType="Model.Store.TRAMRELA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="UNIDAD" EntityType="Model.Store.UNIDAD" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="USEREXT" EntityType="Model.Store.USEREXT" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_ASEGURADORA" EntityType="Model.Store.VH_ASEGURADORA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_BG_AUTO_2007" EntityType="Model.Store.VH_BG_AUTO_2007" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_BG_AUTO_2008" EntityType="Model.Store.VH_BG_AUTO_2008" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_BG_AUTO_2009" EntityType="Model.Store.VH_BG_AUTO_2009" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_CAPACIDAD_M" EntityType="Model.Store.VH_CAPACIDAD_M" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_CARGA_LETRA" EntityType="Model.Store.VH_CARGA_LETRA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_CARROCERIA" EntityType="Model.Store.VH_CARROCERIA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_CATEGORIA" EntityType="Model.Store.VH_CATEGORIA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_CLASE_CATEGORIA" EntityType="Model.Store.VH_CLASE_CATEGORIA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_CLASE_LIQ" EntityType="Model.Store.VH_CLASE_LIQ" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_COLOR" EntityType="Model.Store.VH_COLOR" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_DATOS_LIQ" EntityType="Model.Store.VH_DATOS_LIQ" store:Type="Tables" store:Schema="SIGNUS0614" store:Name="VH_DATOS_LIQ">
+      <DefiningQuery>SELECT 
+      "VH_DATOS_LIQ"."DECCOD" AS "DECCOD", 
+      "VH_DATOS_LIQ"."PLACA" AS "PLACA", 
+      "VH_DATOS_LIQ"."CLASE" AS "CLASE", 
+      "VH_DATOS_LIQ"."MARCA" AS "MARCA", 
+      "VH_DATOS_LIQ"."LINEA" AS "LINEA", 
+      "VH_DATOS_LIQ"."MODELO" AS "MODELO", 
+      "VH_DATOS_LIQ"."COLOR" AS "COLOR", 
+      "VH_DATOS_LIQ"."CARROCERIA" AS "CARROCERIA", 
+      "VH_DATOS_LIQ"."CILINDRAJE" AS "CILINDRAJE", 
+      "VH_DATOS_LIQ"."TONELAJE" AS "TONELAJE", 
+      "VH_DATOS_LIQ"."PASAJEROS" AS "PASAJEROS", 
+      "VH_DATOS_LIQ"."MOTOR" AS "MOTOR", 
+      "VH_DATOS_LIQ"."CHASIS" AS "CHASIS", 
+      "VH_DATOS_LIQ"."BLINDADO" AS "BLINDADO", 
+      "VH_DATOS_LIQ"."ANTIGUO" AS "ANTIGUO", 
+      "VH_DATOS_LIQ"."NIT" AS "NIT", 
+      "VH_DATOS_LIQ"."FECHA_COMPRA" AS "FECHA_COMPRA", 
+      "VH_DATOS_LIQ"."MUN_MATRICULA" AS "MUN_MATRICULA", 
+      "VH_DATOS_LIQ"."MUN_OPERACION" AS "MUN_OPERACION", 
+      "VH_DATOS_LIQ"."FECHA_MAT" AS "FECHA_MAT", 
+      "VH_DATOS_LIQ"."TIPO_MATRICULA" AS "TIPO_MATRICULA", 
+      "VH_DATOS_LIQ"."COD_ASEGURADORA" AS "COD_ASEGURADORA", 
+      "VH_DATOS_LIQ"."N_POLIZA" AS "N_POLIZA", 
+      "VH_DATOS_LIQ"."FECHA_VENCIMIENTO" AS "FECHA_VENCIMIENTO", 
+      "VH_DATOS_LIQ"."CONS" AS "CONS", 
+      "VH_DATOS_LIQ"."FEC_LIQ" AS "FEC_LIQ", 
+      "VH_DATOS_LIQ"."ESTADO" AS "ESTADO", 
+      "VH_DATOS_LIQ"."AVALUO" AS "AVALUO", 
+      "VH_DATOS_LIQ"."TARIFA" AS "TARIFA", 
+      "VH_DATOS_LIQ"."DSC_MAT_TRA" AS "DSC_MAT_TRA", 
+      "VH_DATOS_LIQ"."FRACCION" AS "FRACCION", 
+      "VH_DATOS_LIQ"."DEC_STOT" AS "DEC_STOT", 
+      "VH_DATOS_LIQ"."NOM_ASEGURADORA" AS "NOM_ASEGURADORA", 
+      "VH_DATOS_LIQ"."NRO_LIQG" AS "NRO_LIQG"
+      FROM "SIGNUS0614"."VH_DATOS_LIQ" "VH_DATOS_LIQ"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VH_INSTITUTO_TRANSITO" EntityType="Model.Store.VH_INSTITUTO_TRANSITO" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_LINEA" EntityType="Model.Store.VH_LINEA" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_LIQ_GRUPAL" EntityType="Model.Store.VH_LIQ_GRUPAL" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_LIQUIDLOG" EntityType="Model.Store.VH_LIQUIDLOG" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_MARCA_M" EntityType="Model.Store.VH_MARCA_M" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_PARQUE_AUTOMOTOR" EntityType="Model.Store.VH_PARQUE_AUTOMOTOR" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VH_PASAJERO_CAP" EntityType="Model.Store.VH_PASAJERO_CAP" store:Type="Tables" Schema="SIGNUS0614" />
+    <EntitySet Name="VIGENCIA" EntityType="Model.Store.VIGENCIA" store:Type="Tables" Schema="SIGNUS0614" />
+    <AssociationSet Name="ACPA_APG_ACUE_PAGO_FK1" Association="Model.Store.ACPA_APG_ACUE_PAGO_FK1">
+      <End Role="ACUE_PAGO" EntitySet="ACUE_PAGO" />
+      <End Role="ACPA_APG" EntitySet="ACPA_APG" />
+    </AssociationSet>
+    <AssociationSet Name="ACPA_APG_CALENDARIO_FK1" Association="Model.Store.ACPA_APG_CALENDARIO_FK1">
+      <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+      <End Role="ACPA_APG" EntitySet="ACPA_APG" />
+    </AssociationSet>
+    <AssociationSet Name="ACPA_DEUDA_CALENDARIO_FK1" Association="Model.Store.ACPA_DEUDA_CALENDARIO_FK1">
+      <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+      <End Role="ACPA_DEUDA" EntitySet="ACPA_DEUDA" />
+    </AssociationSet>
+    <AssociationSet Name="ACPA_DEUDA_CONC_CART_FK1" Association="Model.Store.ACPA_DEUDA_CONC_CART_FK1">
+      <End Role="CONC_CART" EntitySet="CONC_CART" />
+      <End Role="ACPA_DEUDA" EntitySet="ACPA_DEUDA" />
+    </AssociationSet>
+    <AssociationSet Name="ACPA_DEUDA_TIPO_DOC_FK1" Association="Model.Store.ACPA_DEUDA_TIPO_DOC_FK1">
+      <End Role="TIPO_DOC" EntitySet="TIPO_DOC" />
+      <End Role="ACPA_DEUDA" EntitySet="ACPA_DEUDA" />
+    </AssociationSet>
+    <AssociationSet Name="ACUE_PAGO_CLASE_DEC_FK1" Association="Model.Store.ACUE_PAGO_CLASE_DEC_FK1">
+      <End Role="CLASE_DEC" EntitySet="CLASE_DEC" />
+      <End Role="ACUE_PAGO" EntitySet="ACUE_PAGO" />
+    </AssociationSet>
+    <AssociationSet Name="ACUE_PAGO_TERCEROS_FK1" Association="Model.Store.ACUE_PAGO_TERCEROS_FK1">
+      <End Role="TERCEROS" EntitySet="TERCEROS" />
+      <End Role="ACUE_PAGO" EntitySet="ACUE_PAGO" />
+    </AssociationSet>
+    <AssociationSet Name="BASES_LIQ_CALENDARIO_FK1" Association="Model.Store.BASES_LIQ_CALENDARIO_FK1">
+      <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+      <End Role="BASES_LIQ" EntitySet="BASES_LIQ" />
+    </AssociationSet>
+    <AssociationSet Name="BASES_LIQ_FORMULARIOS_DEC_FK1" Association="Model.Store.BASES_LIQ_FORMULARIOS_DEC_FK1">
+      <End Role="FORMULARIOS_DEC" EntitySet="FORMULARIOS_DEC" />
+      <End Role="BASES_LIQ" EntitySet="BASES_LIQ" />
+    </AssociationSet>
+    <AssociationSet Name="CALENDARIO_CLASE_DEC_FK1" Association="Model.Store.CALENDARIO_CLASE_DEC_FK1">
+      <End Role="CLASE_DEC" EntitySet="CLASE_DEC" />
+      <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+    </AssociationSet>
+    <AssociationSet Name="CARTERAD_CALENDARIO2" Association="Model.Store.CARTERAD_CALENDARIO2">
+      <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+      <End Role="CARTERAD" EntitySet="CARTERAD" />
+    </AssociationSet>
+    <AssociationSet Name="CARTERAD_CONC_CART_FK1" Association="Model.Store.CARTERAD_CONC_CART_FK1">
+      <End Role="CONC_CART" EntitySet="CONC_CART" />
+      <End Role="CARTERAD" EntitySet="CARTERAD" />
+    </AssociationSet>
+    <AssociationSet Name="CARTERAD_TIPO_CONCEPTOS_FK1" Association="Model.Store.CARTERAD_TIPO_CONCEPTOS_FK1">
+      <End Role="TIPO_CONCEPTOS" EntitySet="TIPO_CONCEPTOS" />
+      <End Role="CARTERAD" EntitySet="CARTERAD" />
+    </AssociationSet>
+    <AssociationSet Name="CARTERAD_TIPO_DOC_FK1" Association="Model.Store.CARTERAD_TIPO_DOC_FK1">
+      <End Role="TIPO_DOC" EntitySet="TIPO_DOC" />
+      <End Role="CARTERAD" EntitySet="CARTERAD" />
+    </AssociationSet>
+    <AssociationSet Name="CLD_IMP_CLASE_DEC_FK1" Association="Model.Store.CLD_IMP_CLASE_DEC_FK1">
+      <End Role="CLASE_DEC" EntitySet="CLASE_DEC" />
+      <End Role="CLD_IMP" EntitySet="CLD_IMP" />
+    </AssociationSet>
+    <AssociationSet Name="CLD_IMP_IMPUESTOS_FK1" Association="Model.Store.CLD_IMP_IMPUESTOS_FK1">
+      <End Role="IMPUESTOS" EntitySet="IMPUESTOS" />
+      <End Role="CLD_IMP" EntitySet="CLD_IMP" />
+    </AssociationSet>
+    <AssociationSet Name="CODE_CDEC_CLASE_DEC_FK1" Association="Model.Store.CODE_CDEC_CLASE_DEC_FK1">
+      <End Role="CLASE_DEC" EntitySet="CLASE_DEC" />
+      <End Role="CODE_CDEC" EntitySet="CODE_CDEC" />
+    </AssociationSet>
+    <AssociationSet Name="CODE_CDEC_DECLARACION_FK1" Association="Model.Store.CODE_CDEC_DECLARACION_FK1">
+      <End Role="DECLARACION" EntitySet="DECLARACION" />
+      <End Role="CODE_CDEC" EntitySet="CODE_CDEC" />
+    </AssociationSet>
+    <AssociationSet Name="CODE_CDEC_SECCIONES_FK1" Association="Model.Store.CODE_CDEC_SECCIONES_FK1">
+      <End Role="SECCIONES" EntitySet="SECCIONES" />
+      <End Role="CODE_CDEC" EntitySet="CODE_CDEC" />
+    </AssociationSet>
+    <AssociationSet Name="CODE_CDEC_TIPO_CONCEPTOS_FK1" Association="Model.Store.CODE_CDEC_TIPO_CONCEPTOS_FK1">
+      <End Role="TIPO_CONCEPTOS" EntitySet="TIPO_CONCEPTOS" />
+      <End Role="CODE_CDEC" EntitySet="CODE_CDEC" />
+    </AssociationSet>
+    <AssociationSet Name="CODE_CDEC_TIPO_DOC_FK1" Association="Model.Store.CODE_CDEC_TIPO_DOC_FK1">
+      <End Role="TIPO_DOC" EntitySet="TIPO_DOC" />
+      <End Role="CODE_CDEC" EntitySet="CODE_CDEC" />
+    </AssociationSet>
+    <AssociationSet Name="CODE_CDEC_VIGENCIA_FK1" Association="Model.Store.CODE_CDEC_VIGENCIA_FK1">
+      <End Role="VIGENCIA" EntitySet="VIGENCIA" />
+      <End Role="CODE_CDEC" EntitySet="CODE_CDEC" />
+    </AssociationSet>
+    <AssociationSet Name="CONC_CART_TIPO_CONCEPTOS_FK1" Association="Model.Store.CONC_CART_TIPO_CONCEPTOS_FK1">
+      <End Role="TIPO_CONCEPTOS" EntitySet="TIPO_CONCEPTOS" />
+      <End Role="CONC_CART" EntitySet="CONC_CART" />
+    </AssociationSet>
+    <AssociationSet Name="CONC_CDEC_CLASE_DEC_FK1" Association="Model.Store.CONC_CDEC_CLASE_DEC_FK1">
+      <End Role="CLASE_DEC" EntitySet="CLASE_DEC" />
+      <End Role="CONC_CDEC" EntitySet="CONC_CDEC" />
+    </AssociationSet>
+    <AssociationSet Name="CONC_CDEC_FORMULARIOS_DEC_FK1" Association="Model.Store.CONC_CDEC_FORMULARIOS_DEC_FK1">
+      <End Role="FORMULARIOS_DEC" EntitySet="FORMULARIOS_DEC" />
+      <End Role="CONC_CDEC" EntitySet="CONC_CDEC" />
+    </AssociationSet>
+    <AssociationSet Name="CONC_CDEC_SECCIONES_FK1" Association="Model.Store.CONC_CDEC_SECCIONES_FK1">
+      <End Role="SECCIONES" EntitySet="SECCIONES" />
+      <End Role="CONC_CDEC" EntitySet="CONC_CDEC" />
+    </AssociationSet>
+    <AssociationSet Name="CONSECUTIVOS_VIGENCIA_FK1" Association="Model.Store.CONSECUTIVOS_VIGENCIA_FK1">
+      <End Role="VIGENCIA" EntitySet="VIGENCIA" />
+      <End Role="CONSECUTIVOS" EntitySet="CONSECUTIVOS" />
+    </AssociationSet>
+    <AssociationSet Name="CTA_BANCO_BANCOS_FK1" Association="Model.Store.CTA_BANCO_BANCOS_FK1">
+      <End Role="BANCOS" EntitySet="BANCOS" />
+      <End Role="CTA_BANCO" EntitySet="CTA_BANCO" />
+    </AssociationSet>
+    <AssociationSet Name="CTA_BANCO_TIPO_CUENTA_FK1" Association="Model.Store.CTA_BANCO_TIPO_CUENTA_FK1">
+      <End Role="TIPO_CUENTA" EntitySet="TIPO_CUENTA" />
+      <End Role="CTA_BANCO" EntitySet="CTA_BANCO" />
+    </AssociationSet>
+    <AssociationSet Name="CUOT_ACPA_ACUE_PAGO_FK1" Association="Model.Store.CUOT_ACPA_ACUE_PAGO_FK1">
+      <End Role="ACUE_PAGO" EntitySet="ACUE_PAGO" />
+      <End Role="CUOT_ACPA" EntitySet="CUOT_ACPA" />
+    </AssociationSet>
+    <AssociationSet Name="DEC_REQUI_REQUI_DECLARACI_FK1" Association="Model.Store.DEC_REQUI_REQUI_DECLARACI_FK1">
+      <End Role="REQUI_DECLARACION" EntitySet="REQUI_DECLARACION" />
+      <End Role="DEC_REQUI" EntitySet="DEC_REQUI" />
+    </AssociationSet>
+    <AssociationSet Name="DECLARACION_CALENDARIO_FK1" Association="Model.Store.DECLARACION_CALENDARIO_FK1">
+      <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+      <End Role="DECLARACION" EntitySet="DECLARACION" />
+    </AssociationSet>
+    <AssociationSet Name="DECLARACION_FORMULARIOS_D_FK1" Association="Model.Store.DECLARACION_FORMULARIOS_D_FK1">
+      <End Role="FORMULARIOS_DEC" EntitySet="FORMULARIOS_DEC" />
+      <End Role="DECLARACION" EntitySet="DECLARACION" />
+    </AssociationSet>
+    <AssociationSet Name="DECLARACION_TERCEROS_FK1" Association="Model.Store.DECLARACION_TERCEROS_FK1">
+      <End Role="TERCEROS" EntitySet="TERCEROS" />
+      <End Role="DECLARACION" EntitySet="DECLARACION" />
+    </AssociationSet>
+    <AssociationSet Name="DECLARACION_TERCEROS_FK2" Association="Model.Store.DECLARACION_TERCEROS_FK2">
+      <End Role="TERCEROS" EntitySet="TERCEROS" />
+      <End Role="DECLARACION" EntitySet="DECLARACION" />
+    </AssociationSet>
+    <AssociationSet Name="DECLARACION_TERCEROS_FK3" Association="Model.Store.DECLARACION_TERCEROS_FK3">
+      <End Role="TERCEROS" EntitySet="TERCEROS" />
+      <End Role="DECLARACION" EntitySet="DECLARACION" />
+    </AssociationSet>
+    <AssociationSet Name="DECLARACION_TIPO_DOC_FK1" Association="Model.Store.DECLARACION_TIPO_DOC_FK1">
+      <End Role="TIPO_DOC" EntitySet="TIPO_DOC" />
+      <End Role="DECLARACION" EntitySet="DECLARACION" />
+    </AssociationSet>
+    <AssociationSet Name="DECLARACION_VIGENCIA_FK1" Association="Model.Store.DECLARACION_VIGENCIA_FK1">
+      <End Role="VIGENCIA" EntitySet="VIGENCIA" />
+      <End Role="DECLARACION" EntitySet="DECLARACION" />
+    </AssociationSet>
+    <AssociationSet Name="DIST_CART_CLASE_DEC_FK1" Association="Model.Store.DIST_CART_CLASE_DEC_FK1">
+      <End Role="CLASE_DEC" EntitySet="CLASE_DEC" />
+      <End Role="DIST_CART" EntitySet="DIST_CART" />
+    </AssociationSet>
+    <AssociationSet Name="DIST_CART_CONC_CART_FK2" Association="Model.Store.DIST_CART_CONC_CART_FK2">
+      <End Role="CONC_CART" EntitySet="CONC_CART" />
+      <End Role="DIST_CART" EntitySet="DIST_CART" />
+    </AssociationSet>
+    <AssociationSet Name="DIST_CART_FORMULARIOS_DEC_FK1" Association="Model.Store.DIST_CART_FORMULARIOS_DEC_FK1">
+      <End Role="FORMULARIOS_DEC" EntitySet="FORMULARIOS_DEC" />
+      <End Role="DIST_CART" EntitySet="DIST_CART" />
+    </AssociationSet>
+    <AssociationSet Name="DOC_APG_CALENDARIO_FK1" Association="Model.Store.DOC_APG_CALENDARIO_FK1">
+      <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+      <End Role="DOC_APG" EntitySet="DOC_APG" />
+    </AssociationSet>
+    <AssociationSet Name="DOC_APG_TIPO_DOC_FK1" Association="Model.Store.DOC_APG_TIPO_DOC_FK1">
+      <End Role="TIPO_DOC" EntitySet="TIPO_DOC" />
+      <End Role="DOC_APG" EntitySet="DOC_APG" />
+    </AssociationSet>
+    <AssociationSet Name="EXPE_APG_CALENDARIO_FK1" Association="Model.Store.EXPE_APG_CALENDARIO_FK1">
+      <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+      <End Role="EXPE_APG" EntitySet="EXPE_APG" />
+    </AssociationSet>
+    <AssociationSet Name="EXPE_APG_FK" Association="Model.Store.EXPE_APG_FK">
+      <End Role="EXPEDIENTES" EntitySet="EXPEDIENTES" />
+      <End Role="EXPE_APG" EntitySet="EXPE_APG" />
+    </AssociationSet>
+    <AssociationSet Name="EXPE_APG_TIPO_DOC_FK1" Association="Model.Store.EXPE_APG_TIPO_DOC_FK1">
+      <End Role="TIPO_DOC" EntitySet="TIPO_DOC" />
+      <End Role="EXPE_APG" EntitySet="EXPE_APG" />
+    </AssociationSet>
+    <AssociationSet Name="EXPE_TRAM_FK" Association="Model.Store.EXPE_TRAM_FK">
+      <End Role="EXPEDIENTES" EntitySet="EXPEDIENTES" />
+      <End Role="EXPE_TRAM" EntitySet="EXPE_TRAM" />
+    </AssociationSet>
+    <AssociationSet Name="EXPEDIENTES_CLASE_DEC_FK1" Association="Model.Store.EXPEDIENTES_CLASE_DEC_FK1">
+      <End Role="CLASE_DEC" EntitySet="CLASE_DEC" />
+      <End Role="EXPEDIENTES" EntitySet="EXPEDIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="EXPEDIENTES_PROCESOS_FK1" Association="Model.Store.EXPEDIENTES_PROCESOS_FK1">
+      <End Role="PROCESOS" EntitySet="PROCESOS" />
+      <End Role="EXPEDIENTES" EntitySet="EXPEDIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="EXPEDIENTES_TIPO_DOC_FK1" Association="Model.Store.EXPEDIENTES_TIPO_DOC_FK1">
+      <End Role="TIPO_DOC" EntitySet="TIPO_DOC" />
+      <End Role="EXPEDIENTES" EntitySet="EXPEDIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="EXPEDIENTES_TIPO_PROCESO_FK1" Association="Model.Store.EXPEDIENTES_TIPO_PROCESO_FK1">
+      <End Role="TIPO_PROCESO" EntitySet="TIPO_PROCESO" />
+      <End Role="EXPEDIENTES" EntitySet="EXPEDIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="EXPEDIENTES_TRAMITES_FK1" Association="Model.Store.EXPEDIENTES_TRAMITES_FK1">
+      <End Role="TRAMITES" EntitySet="TRAMITES" />
+      <End Role="EXPEDIENTES" EntitySet="EXPEDIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_APPLICATIONID" Association="Model.Store.FK_APPLICATIONID">
+      <End Role="ORA_ASPNET_APPLICATIONS" EntitySet="ORA_ASPNET_APPLICATIONS" />
+      <End Role="ORA_ASPNET_ROLES" EntitySet="ORA_ASPNET_ROLES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASPNET_USERSINROLES_ROLEID" Association="Model.Store.FK_ASPNET_USERSINROLES_ROLEID">
+      <End Role="ORA_ASPNET_ROLES" EntitySet="ORA_ASPNET_ROLES" />
+      <End Role="ORA_ASPNET_USERSINROLES" EntitySet="ORA_ASPNET_USERSINROLES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASPNET_USERSINROLES_USERID" Association="Model.Store.FK_ASPNET_USERSINROLES_USERID">
+      <End Role="ORA_ASPNET_USERS" EntitySet="ORA_ASPNET_USERS" />
+      <End Role="ORA_ASPNET_USERSINROLES" EntitySet="ORA_ASPNET_USERSINROLES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EXPE_NOTIF" Association="Model.Store.FK_EXPE_NOTIF">
+      <End Role="EXPEDIENTES" EntitySet="EXPEDIENTES" />
+      <End Role="EXPE_NOTIF" EntitySet="EXPE_NOTIF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEMBERSHIP_APPID" Association="Model.Store.FK_MEMBERSHIP_APPID">
+      <End Role="ORA_ASPNET_APPLICATIONS" EntitySet="ORA_ASPNET_APPLICATIONS" />
+      <End Role="ORA_ASPNET_MEMBERSHIP" EntitySet="ORA_ASPNET_MEMBERSHIP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEMBERSHIP_USERID" Association="Model.Store.FK_MEMBERSHIP_USERID">
+      <End Role="ORA_ASPNET_USERS" EntitySet="ORA_ASPNET_USERS" />
+      <End Role="ORA_ASPNET_MEMBERSHIP" EntitySet="ORA_ASPNET_MEMBERSHIP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PATHS_APPID" Association="Model.Store.FK_PATHS_APPID">
+      <End Role="ORA_ASPNET_APPLICATIONS" EntitySet="ORA_ASPNET_APPLICATIONS" />
+      <End Role="ORA_ASPNET_PATHS" EntitySet="ORA_ASPNET_PATHS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROFILE_USERID" Association="Model.Store.FK_PROFILE_USERID">
+      <End Role="ORA_ASPNET_USERS" EntitySet="ORA_ASPNET_USERS" />
+      <End Role="ORA_ASPNET_PROFILE" EntitySet="ORA_ASPNET_PROFILE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SITEMAP_APPID" Association="Model.Store.FK_SITEMAP_APPID">
+      <End Role="ORA_ASPNET_APPLICATIONS" EntitySet="ORA_ASPNET_APPLICATIONS" />
+      <End Role="ORA_ASPNET_SITEMAP" EntitySet="ORA_ASPNET_SITEMAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USERS_APPID" Association="Model.Store.FK_USERS_APPID">
+      <End Role="ORA_ASPNET_APPLICATIONS" EntitySet="ORA_ASPNET_APPLICATIONS" />
+      <End Role="ORA_ASPNET_USERS" EntitySet="ORA_ASPNET_USERS" />
+    </AssociationSet>
+    <AssociationSet Name="FM_BASESLIQ01_BASES_LIQ_FK1" Association="Model.Store.FM_BASESLIQ01_BASES_LIQ_FK1">
+      <End Role="BASES_LIQ" EntitySet="BASES_LIQ" />
+      <End Role="FM_BASESLIQ01" EntitySet="FM_BASESLIQ01" />
+    </AssociationSet>
+    <AssociationSet Name="FMTO_IMP_TIPO_DATO_FK1" Association="Model.Store.FMTO_IMP_TIPO_DATO_FK1">
+      <End Role="TIPO_DATO" EntitySet="TIPO_DATO" />
+      <End Role="FMTO_IMP" EntitySet="FMTO_IMP" />
+    </AssociationSet>
+    <AssociationSet Name="FORM_AYUD_FORMULARIOS_DEC_FK1" Association="Model.Store.FORM_AYUD_FORMULARIOS_DEC_FK1">
+      <End Role="FORMULARIOS_DEC" EntitySet="FORMULARIOS_DEC" />
+      <End Role="FORM_AYUD" EntitySet="FORM_AYUD" />
+    </AssociationSet>
+    <AssociationSet Name="FORMULARIOS_DEC_CLASE_DEC_FK1" Association="Model.Store.FORMULARIOS_DEC_CLASE_DEC_FK1">
+      <End Role="CLASE_DEC" EntitySet="CLASE_DEC" />
+      <End Role="FORMULARIOS_DEC" EntitySet="FORMULARIOS_DEC" />
+    </AssociationSet>
+    <AssociationSet Name="FORMULASLT_IMPUESTOS_FK1" Association="Model.Store.FORMULASLT_IMPUESTOS_FK1">
+      <End Role="IMPUESTOS" EntitySet="IMPUESTOS" />
+      <End Role="FORMULASLT" EntitySet="FORMULASLT" />
+    </AssociationSet>
+    <AssociationSet Name="IMPUESTOS_UNIDAD_FK1" Association="Model.Store.IMPUESTOS_UNIDAD_FK1">
+      <End Role="UNIDAD" EntitySet="UNIDAD" />
+      <End Role="IMPUESTOS" EntitySet="IMPUESTOS" />
+    </AssociationSet>
+    <AssociationSet Name="MENU_MENU_FK1" Association="Model.Store.MENU_MENU_FK1">
+      <End Role="MENU" EntitySet="MENU" />
+      <End Role="MENU1" EntitySet="MENU" />
+    </AssociationSet>
+    <AssociationSet Name="MENU_PERFIL_MENU_FK1" Association="Model.Store.MENU_PERFIL_MENU_FK1">
+      <End Role="MENU" EntitySet="MENU" />
+      <End Role="MENU_PERFIL" EntitySet="MENU_PERFIL" />
+    </AssociationSet>
+    <AssociationSet Name="MOVIMIENTO_CALENDARIO_FK1" Association="Model.Store.MOVIMIENTO_CALENDARIO_FK1">
+      <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+      <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="MOVIMIENTO_TIPO_DOC_FK1" Association="Model.Store.MOVIMIENTO_TIPO_DOC_FK1">
+      <End Role="TIPO_DOC" EntitySet="TIPO_DOC" />
+      <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="MOVIMIENTO_TIPO_MOV_FK1" Association="Model.Store.MOVIMIENTO_TIPO_MOV_FK1">
+      <End Role="TIPO_MOV" EntitySet="TIPO_MOV" />
+      <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="PAGOS_CTA_BANCO_FK1" Association="Model.Store.PAGOS_CTA_BANCO_FK1">
+      <End Role="CTA_BANCO" EntitySet="CTA_BANCO" />
+      <End Role="PAGOS" EntitySet="PAGOS" />
+    </AssociationSet>
+    <AssociationSet Name="PAGOS_TIPO_DOC_FK1" Association="Model.Store.PAGOS_TIPO_DOC_FK1">
+      <End Role="TIPO_DOC" EntitySet="TIPO_DOC" />
+      <End Role="PAGOS" EntitySet="PAGOS" />
+    </AssociationSet>
+    <AssociationSet Name="PAR_LIQ_DET_PARA_LIQU_FK1" Association="Model.Store.PAR_LIQ_DET_PARA_LIQU_FK1">
+      <End Role="PARA_LIQU" EntitySet="PARA_LIQU" />
+      <End Role="PAR_LIQ_DET" EntitySet="PAR_LIQ_DET" />
+    </AssociationSet>
+    <AssociationSet Name="PARA_LIQU_TIPO_DATO_FK1" Association="Model.Store.PARA_LIQU_TIPO_DATO_FK1">
+      <End Role="TIPO_DATO" EntitySet="TIPO_DATO" />
+      <End Role="PARA_LIQU" EntitySet="PARA_LIQU" />
+    </AssociationSet>
+    <AssociationSet Name="PERSONALIZATIONALLUSERS_PATHID" Association="Model.Store.PERSONALIZATIONALLUSERS_PATHID">
+      <End Role="ORA_ASPNET_PATHS" EntitySet="ORA_ASPNET_PATHS" />
+      <End Role="ORA_ASPNET_PERSONALIZNALLUSERS" EntitySet="ORA_ASPNET_PERSONALIZNALLUSERS" />
+    </AssociationSet>
+    <AssociationSet Name="PERSONALIZATIONPERUSER_PATHID" Association="Model.Store.PERSONALIZATIONPERUSER_PATHID">
+      <End Role="ORA_ASPNET_PATHS" EntitySet="ORA_ASPNET_PATHS" />
+      <End Role="ORA_ASPNET_PERSONALIZNPERUSER" EntitySet="ORA_ASPNET_PERSONALIZNPERUSER" />
+    </AssociationSet>
+    <AssociationSet Name="PERSONALIZATIONPERUSER_USERID" Association="Model.Store.PERSONALIZATIONPERUSER_USERID">
+      <End Role="ORA_ASPNET_USERS" EntitySet="ORA_ASPNET_USERS" />
+      <End Role="ORA_ASPNET_PERSONALIZNPERUSER" EntitySet="ORA_ASPNET_PERSONALIZNPERUSER" />
+    </AssociationSet>
+    <AssociationSet Name="PROCESOS_TIPO_PROCESO_FK1" Association="Model.Store.PROCESOS_TIPO_PROCESO_FK1">
+      <End Role="TIPO_PROCESO" EntitySet="TIPO_PROCESO" />
+      <End Role="PROCESOS" EntitySet="PROCESOS" />
+    </AssociationSet>
+    <AssociationSet Name="RELA_AGETER_TERCEROS_FK1" Association="Model.Store.RELA_AGETER_TERCEROS_FK1">
+      <End Role="TERCEROS" EntitySet="TERCEROS" />
+      <End Role="RELA_AGETER" EntitySet="RELA_AGETER" />
+    </AssociationSet>
+    <AssociationSet Name="RELA_AGETER_TERCEROS_FK3" Association="Model.Store.RELA_AGETER_TERCEROS_FK3">
+      <End Role="TERCEROS" EntitySet="TERCEROS" />
+      <End Role="RELA_AGETER" EntitySet="RELA_AGETER" />
+    </AssociationSet>
+    <AssociationSet Name="REQUI_DECLARACION_CLASE_D_FK1" Association="Model.Store.REQUI_DECLARACION_CLASE_D_FK1">
+      <End Role="CLASE_DEC" EntitySet="CLASE_DEC" />
+      <End Role="REQUI_DECLARACION" EntitySet="REQUI_DECLARACION" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0050484" Association="Model.Store.SYS_C0050484">
+      <End Role="FMTOS" EntitySet="FMTOS" />
+      <End Role="FMTO_IMP" EntitySet="FMTO_IMP" />
+    </AssociationSet>
+    <AssociationSet Name="TER_DEC_CLASE_DEC_FK1" Association="Model.Store.TER_DEC_CLASE_DEC_FK1">
+      <End Role="CLASE_DEC" EntitySet="CLASE_DEC" />
+      <End Role="TER_DEC" EntitySet="TER_DEC" />
+    </AssociationSet>
+    <AssociationSet Name="TERCEROS_MUNICIPIOS_FK1" Association="Model.Store.TERCEROS_MUNICIPIOS_FK1">
+      <End Role="MUNICIPIOS" EntitySet="MUNICIPIOS" />
+      <End Role="TERCEROS" EntitySet="TERCEROS" />
+    </AssociationSet>
+    <AssociationSet Name="TERCEROS_TDOC_IDE_FK1" Association="Model.Store.TERCEROS_TDOC_IDE_FK1">
+      <End Role="TDOC_IDE" EntitySet="TDOC_IDE" />
+      <End Role="TERCEROS" EntitySet="TERCEROS" />
+    </AssociationSet>
+    <AssociationSet Name="TIPO_DEC_CLASE_DEC_FK1" Association="Model.Store.TIPO_DEC_CLASE_DEC_FK1">
+      <End Role="CLASE_DEC" EntitySet="CLASE_DEC" />
+      <End Role="TIPO_DEC" EntitySet="TIPO_DEC" />
+    </AssociationSet>
+    <AssociationSet Name="TIPO_DOC_CONS_TIPO_DOC_FK1" Association="Model.Store.TIPO_DOC_CONS_TIPO_DOC_FK1">
+      <End Role="TIPO_DOC" EntitySet="TIPO_DOC" />
+      <End Role="TIPO_DOC_CONS" EntitySet="TIPO_DOC_CONS" />
+    </AssociationSet>
+    <AssociationSet Name="VIGENCIA_ESTADOS_FK1" Association="Model.Store.VIGENCIA_ESTADOS_FK1">
+      <End Role="ESTADOS" EntitySet="ESTADOS" />
+      <End Role="VIGENCIA" EntitySet="VIGENCIA" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ACPA_APG">
+    <Key>
+      <PropertyRef Name="APG_APNU" />
+      <PropertyRef Name="APG_CDEC" />
+      <PropertyRef Name="APG_AGRA" />
+      <PropertyRef Name="APG_PGRA" />
+    </Key>
+    <Property Name="APG_APNU" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="APG_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="APG_AGRA" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="APG_PGRA" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="APG_FNOV" Type="date" Nullable="false" />
+    <Property Name="APG_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="APG_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="APG_FREG" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ACPA_DEUDA">
+    <Key>
+      <PropertyRef Name="APDE_APNU" />
+      <PropertyRef Name="APDE_CDEC" />
+      <PropertyRef Name="APDE_AGRA" />
+      <PropertyRef Name="APDE_PGRA" />
+      <PropertyRef Name="APDE_COCO" />
+    </Key>
+    <Property Name="APDE_APNU" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="APDE_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="APDE_AGRA" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="APDE_PGRA" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="APDE_COCO" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="APDE_VALO" Type="number" Nullable="false" Precision="10" />
+    <Property Name="APDE_DOAD" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="APDE_NDOC" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="APDE_FNOV" Type="date" Nullable="false" />
+    <Property Name="APDE_NOMC" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="APDE_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="APDE_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="APDE_FREG" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ACUE_PAGO">
+    <Key>
+      <PropertyRef Name="ACPA_NUME" />
+    </Key>
+    <Property Name="ACPA_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="ACPA_NUME" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ACPA_NIT_AR" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ACPA_TIP_AR" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="ACPA_REP_LEG" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="ACPA_NIT_REP_LEG" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ACPA_REP_EXP" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="ACPA_GARA" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="ACPA_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ACPA_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ACPA_FREG" Type="date" Nullable="false" />
+    <Property Name="ACPA_VALO" Type="number" Nullable="false" Precision="10" />
+    <Property Name="ACPA_POCI" Type="number" Precision="10" Scale="2" />
+    <Property Name="ACPA_VACI" Type="number" Precision="10" />
+    <Property Name="ACPA_NCUO" Type="number" Nullable="false" Precision="10" />
+    <Property Name="ACPA_FNOV" Type="date" />
+    <Property Name="ACPA_SALD" Type="number" Precision="10" />
+    <Property Name="ACPA_EST" Type="varchar2" MaxLength="2" />
+    <Property Name="ACPA_NEXP" Type="varchar2" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="AGENTES">
+    <Key>
+      <PropertyRef Name="AGE_NIT" />
+    </Key>
+    <Property Name="AGE_NIT" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="AGE_NOM" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="AGE_TIP" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="AGE_MPIO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="AGE_EMAI" Type="varchar2" MaxLength="100" />
+    <Property Name="AGE_TEL" Type="varchar2" MaxLength="25" />
+    <Property Name="AGE_DIR" Type="varchar2" MaxLength="75" />
+    <Property Name="AGE_CED" Type="varchar2" Nullable="false" />
+    <Property Name="AGE_REP" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="AGE_USU" Type="varchar2" MaxLength="16" />
+    <Property Name="AGE_FREG" Type="date" Nullable="false" />
+    <Property Name="AGE_FNOV" Type="date" />
+    <Property Name="AGE_EST" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="AGE_OBS" Type="varchar2" MaxLength="100" />
+    <Property Name="AGE_FFIN" Type="date" />
+    <Property Name="AGE_USAP" Type="varchar2" MaxLength="16" />
+    <Property Name="AGE_USBD" Type="varchar2" MaxLength="16" />
+    <Property Name="AGE_CONS" Type="number" Precision="10" />
+  </EntityType>
+  <EntityType Name="ANULACIONES">
+    <Key>
+      <PropertyRef Name="ANUL_TDAN" />
+      <PropertyRef Name="ANUL_NDAN" />
+    </Key>
+    <Property Name="ANUL_TDAN" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="ANUL_NDAN" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ANUL_TDOC" Type="varchar2" MaxLength="4" />
+    <Property Name="ANUL_NDOC" Type="varchar2" MaxLength="12" />
+    <Property Name="ANUL_OBSE" Type="varchar2" MaxLength="200" />
+    <Property Name="ANUL_FREG" Type="date" />
+    <Property Name="ANUL_USAP" Type="varchar2" MaxLength="20" />
+    <Property Name="ANUL_USBD" Type="varchar2" MaxLength="20" />
+    <Property Name="ANUL_EST" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="BANCOS">
+    <Key>
+      <PropertyRef Name="BAN_COD" />
+    </Key>
+    <Property Name="BAN_COD" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="BAN_NOM" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="BAN_USAP" Type="varchar2" Nullable="false" MaxLength="16" />
+    <Property Name="BAN_USBD" Type="varchar2" Nullable="false" MaxLength="16" />
+    <Property Name="BAN_EST" Type="varchar2" Nullable="false" />
+    <Property Name="BAN_FREG" Type="date" />
+    <Property Name="BAN_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="BASES_LIQ">
+    <Key>
+      <PropertyRef Name="BALI_NRAD" />
+    </Key>
+    <Property Name="BALI_NRAD" Type="number" Nullable="false" Precision="10" />
+    <Property Name="BALI_NIT" Type="varchar2" MaxLength="12" />
+    <Property Name="BALI_CDEC" Type="varchar2" MaxLength="2" />
+    <Property Name="BALI_AÑO" Type="varchar2" MaxLength="4" />
+    <Property Name="BALI_PERI" Type="varchar2" MaxLength="2" />
+    <Property Name="BALI_ARCH" Type="varchar2" MaxLength="256" />
+    <Property Name="BALI_EST" Type="varchar2" MaxLength="2" />
+    <Property Name="BALI_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="BALI_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="BALI_FESI" Type="date" />
+    <Property Name="BALI_FECH" Type="date" />
+    <Property Name="BALI_FDCO" Type="varchar2" MaxLength="4" />
+    <Property Name="BALI_FREG" Type="date" />
+    <Property Name="BALI_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="CALENDARIO">
+    <Key>
+      <PropertyRef Name="CAL_PER" />
+      <PropertyRef Name="CAL_VIG" />
+      <PropertyRef Name="CAL_CLA" />
+    </Key>
+    <Property Name="CAL_PER" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CAL_VIG" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="CAL_FINI" Type="date" Nullable="false" />
+    <Property Name="CAL_FFIN" Type="date" Nullable="false" />
+    <Property Name="CAL_CLA" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CAL_DES" Type="varchar2" Nullable="false" MaxLength="40" />
+    <Property Name="CAL_USBD" Type="varchar2" MaxLength="20" />
+    <Property Name="CAL_USAP" Type="varchar2" MaxLength="20" />
+    <Property Name="CAL_FREG" Type="date" />
+    <Property Name="CAL_FNOV" Type="date" />
+    <Property Name="CAL_FVEN" Type="date" />
+  </EntityType>
+  <EntityType Name="CARTERAD">
+    <Key>
+      <PropertyRef Name="CAR_NIT" />
+      <PropertyRef Name="CAR_ANO" />
+      <PropertyRef Name="CAR_PER" />
+      <PropertyRef Name="CAR_COCA" />
+      <PropertyRef Name="CAR_CDEC" />
+      <PropertyRef Name="CAR_SUIM" />
+    </Key>
+    <Property Name="CAR_ID" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="CAR_NIT" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="CAR_ANO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="CAR_PER" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CAR_COCA" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CAR_TCON" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CAR_VADE" Type="number" Nullable="false" Precision="12" />
+    <Property Name="CAR_VDB" Type="number" Nullable="false" Precision="12" />
+    <Property Name="CAR_VCR" Type="number" Nullable="false" Precision="12" />
+    <Property Name="CAR_VPA" Type="number" Nullable="false" Precision="12" />
+    <Property Name="CAR_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CAR_CCON" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="CAR_CIMP" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="CAR_TPAG" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="CAR_VIG" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="CAR_FNOV" Type="date" Nullable="false" />
+    <Property Name="CAR_EST" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CAR_FREG" Type="date" />
+    <Property Name="CAR_USAP" Type="varchar2" MaxLength="16" />
+    <Property Name="CAR_USBD" Type="varchar2" MaxLength="16" />
+    <Property Name="CAR_DCOD" Type="varchar2" MaxLength="11" />
+    <Property Name="CAR_FVEN" Type="date" />
+    <Property Name="CAR_TDOC" Type="varchar2" MaxLength="4" />
+    <Property Name="CAR_SUIM" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="CAR_ACPA" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CLASE_DEC">
+    <Key>
+      <PropertyRef Name="CLD_COD" />
+    </Key>
+    <Property Name="CLD_COD" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CLD_NOM" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="CLD_USBD" Type="varchar2" Nullable="false" MaxLength="8" />
+    <Property Name="CLD_USAP" Type="varchar2" Nullable="false" MaxLength="8" />
+    <Property Name="CLD_FREG" Type="date" Nullable="false" />
+    <Property Name="CLD_FNOV" Type="date" Nullable="false" />
+    <Property Name="CLD_FIN" Type="date" Nullable="false" />
+    <Property Name="CLD_FFI" Type="date" Nullable="false" />
+    <Property Name="CLD_CONS" Type="varchar2" MaxLength="10" />
+    <Property Name="CLD_EST" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="CLASE_IMPTO">
+    <Key>
+      <PropertyRef Name="CLIM_CODI" />
+    </Key>
+    <Property Name="CLIM_CODI" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CLIM_NOMB" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="CLIM_FEIN" Type="date" />
+    <Property Name="CLIM_FEFI" Type="date" />
+    <Property Name="CLIM_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="CLIM_FNOV" Type="date" />
+    <Property Name="CLIM_FREG" Type="date" />
+    <Property Name="CLIM_USAP" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CLASE_NOTIFICACION">
+    <Key>
+      <PropertyRef Name="COD_NOTIFICACION" />
+    </Key>
+    <Property Name="COD_NOTIFICACION" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="CLD_IMP">
+    <Key>
+      <PropertyRef Name="CLD_COD" />
+      <PropertyRef Name="CLD_CIMP" />
+    </Key>
+    <Property Name="CLD_COD" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CLD_CIMP" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="CLD_ABIM" Type="varchar2" MaxLength="2" />
+    <Property Name="CLD_ABVA" Type="varchar2" />
+    <Property Name="CLD_FNOV" Type="date" />
+    <Property Name="CLD_FREG" Type="date" />
+    <Property Name="CLD_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="CLD_USBD" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CODE_CDEC">
+    <Key>
+      <PropertyRef Name="CODE_CODI" />
+      <PropertyRef Name="CODE_DCOD" />
+      <PropertyRef Name="CODE_DOAD" />
+    </Key>
+    <Property Name="CODE_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CODE_CODI" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CODE_TICO" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CODE_NOMB" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="CODE_TMOV" Type="varchar2" MaxLength="4" />
+    <Property Name="CODE_ABVB" Type="varchar2" MaxLength="2" />
+    <Property Name="CODE_VADE" Type="number" Precision="20" />
+    <Property Name="CODE_ABVD" Type="varchar2" MaxLength="2" />
+    <Property Name="CODE_VACA" Type="number" Precision="20" />
+    <Property Name="CODE_SECO" Type="varchar2" MaxLength="2" />
+    <Property Name="CODE_TARI" Type="number" Precision="10" Scale="4" />
+    <Property Name="CODE_IMPTO" Type="varchar2" MaxLength="4" />
+    <Property Name="CODE_TSAN" Type="varchar2" MaxLength="2" />
+    <Property Name="CODE_CART" Type="varchar2" MaxLength="1" />
+    <Property Name="CODE_VABA" Type="number" Precision="20" />
+    <Property Name="CODE_ISVB" Type="varchar2" MaxLength="1" />
+    <Property Name="CODE_REDE" Type="varchar2" MaxLength="2" />
+    <Property Name="CODE_DENR" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="CODE_VASU" Type="number" Nullable="false" Precision="20" />
+    <Property Name="CODE_VAOF" Type="number" Precision="20" />
+    <Property Name="CODE_USBD" Type="varchar2" MaxLength="20" />
+    <Property Name="CODE_USAP" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="CODE_DEES" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CODE_FREG" Type="date" />
+    <Property Name="CODE_PESA" Type="varchar2" />
+    <Property Name="CODE_AÑSA" Type="varchar2" />
+    <Property Name="CODE_CCAR" Type="varchar2" MaxLength="2" />
+    <Property Name="CODE_SUM" Type="varchar2" MaxLength="1" />
+    <Property Name="CODE_DCOD" Type="varchar2" Nullable="false" MaxLength="11" />
+    <Property Name="CODE_VIG" Type="varchar2" MaxLength="4" />
+    <Property Name="CODE_DOAD" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="CODE_CTAR" Type="varchar2" MaxLength="1" />
+    <Property Name="CODE_FNOV" Type="date" />
+    <Property Name="CODE_VBCA" Type="number" Precision="12" />
+    <Property Name="CODE_TACA" Type="number" Precision="10" Scale="5" />
+  </EntityType>
+  <EntityType Name="CON_ROF">
+    <Key>
+      <PropertyRef Name="CORP_CODI" />
+      <PropertyRef Name="CORP_DCOD" />
+      <PropertyRef Name="CORP_DOAD" />
+    </Key>
+    <Property Name="CORP_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CORP_CODI" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CORP_TICO" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CORP_NOMB" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="CORP_TMOV" Type="varchar2" MaxLength="4" />
+    <Property Name="CORP_ABVB" Type="varchar2" MaxLength="2" />
+    <Property Name="CORP_VADE" Type="number" Precision="10" />
+    <Property Name="CORP_ABVD" Type="varchar2" MaxLength="2" />
+    <Property Name="CORP_VACA" Type="number" Precision="10" />
+    <Property Name="CORP_SECO" Type="varchar2" MaxLength="2" />
+    <Property Name="CORP_TARI" Type="number" Precision="10" Scale="4" />
+    <Property Name="CORP_IMPTO" Type="varchar2" MaxLength="4" />
+    <Property Name="CORP_TSAN" Type="varchar2" MaxLength="2" />
+    <Property Name="CORP_CART" Type="varchar2" MaxLength="1" />
+    <Property Name="CORP_VABA" Type="number" Precision="10" />
+    <Property Name="CORP_ISVB" Type="varchar2" MaxLength="1" />
+    <Property Name="CORP_REDE" Type="varchar2" MaxLength="2" />
+    <Property Name="CORP_DENR" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="CORP_VASU" Type="number" Nullable="false" Precision="10" />
+    <Property Name="CORP_VAOF" Type="number" Precision="10" />
+    <Property Name="CORP_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="CORP_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="CORP_DEES" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CORP_FREG" Type="date" />
+    <Property Name="CORP_PESA" Type="varchar2" />
+    <Property Name="CORP_AÑSA" Type="varchar2" />
+    <Property Name="CORP_CCAR" Type="varchar2" MaxLength="2" />
+    <Property Name="CORP_SUM" Type="varchar2" MaxLength="1" />
+    <Property Name="CORP_DCOD" Type="varchar2" Nullable="false" MaxLength="11" />
+    <Property Name="CORP_VIG" Type="varchar2" MaxLength="4" />
+    <Property Name="CORP_DOAD" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="CORP_CTAR" Type="varchar2" MaxLength="1" />
+    <Property Name="CORP_FNOV" Type="date" />
+    <Property Name="CORP_VBCA" Type="number" Precision="12" />
+    <Property Name="CORP_TACA" Type="number" Precision="10" Scale="5" />
+  </EntityType>
+  <EntityType Name="CONC_CART">
+    <Key>
+      <PropertyRef Name="CCAR_COD" />
+    </Key>
+    <Property Name="CCAR_COD" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CCAR_AVCO" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CCAR_NOM" Type="varchar2" Nullable="false" />
+    <Property Name="CCAR_TICO" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CCAR_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CCAR_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="CCAR_FREG" Type="date" />
+    <Property Name="CCAR_FNOV" Type="date" />
+    <Property Name="CCAR_USBD" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CONC_CDEC">
+    <Key>
+      <PropertyRef Name="COCD_CODI" />
+      <PropertyRef Name="COCD_FDCO" />
+    </Key>
+    <Property Name="COCD_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="COCD_CODI" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="COCD_TICO" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="COCD_NOMB" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="COCD_REDE" Type="varchar2" MaxLength="2" />
+    <Property Name="COCD_TMOV" Type="varchar2" MaxLength="4" />
+    <Property Name="COCD_ABVB" Type="varchar2" />
+    <Property Name="COCD_VADE" Type="number" Precision="17" Scale="2" />
+    <Property Name="COCD_ABVD" Type="varchar2" />
+    <Property Name="COCD_VACA" Type="number" Precision="10" />
+    <Property Name="COCD_SECO" Type="varchar2" MaxLength="2" />
+    <Property Name="COCD_TARI" Type="number" Precision="10" Scale="4" />
+    <Property Name="COCD_IMPTO" Type="varchar2" MaxLength="4" />
+    <Property Name="COCD_TSAN" Type="varchar2" MaxLength="2" />
+    <Property Name="COCD_CART" Type="varchar2" MaxLength="1" />
+    <Property Name="COCD_VABA" Type="number" Precision="10" />
+    <Property Name="COCD_ISVB" Type="varchar2" MaxLength="1" />
+    <Property Name="COCD_OPER" Type="varchar2" MaxLength="100" />
+    <Property Name="COCD_CCAR" Type="varchar2" MaxLength="2" />
+    <Property Name="COCD_AÑSA" Type="varchar2" MaxLength="4" />
+    <Property Name="COCD_PESA" Type="varchar2" MaxLength="2" />
+    <Property Name="COCD_SUM" Type="varchar2" MaxLength="1" />
+    <Property Name="COCD_FDCO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="COCD_CTAR" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="TIPO_TAR" Type="number" Precision="2" />
+    <Property Name="COCD_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="COCD_FREG" Type="date" />
+    <Property Name="COCD_FNOV" Type="date" />
+    <Property Name="COCD_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="COCD_REVB" Type="number" Precision="10" />
+    <Property Name="FORMULA" Type="varchar2" />
+  </EntityType>
+  <EntityType Name="CONCEPTOS_IMP">
+    <Key>
+      <PropertyRef Name="COIM_COD" />
+    </Key>
+    <Property Name="COIM_CIMP" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="COIM_COD" Type="varchar2" Nullable="false" MaxLength="7" />
+    <Property Name="COIM_NOM" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="COIM_TARIFA" Type="varchar2" Nullable="false" />
+    <Property Name="COIM_FNOV" Type="date" />
+    <Property Name="COIM_EST" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="COIM_PRI" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="COIM_TCON" Type="varchar2" MaxLength="3" />
+    <Property Name="COIM_TMOV" Type="varchar2" MaxLength="4" />
+    <Property Name="COIM_IDX" Type="number" />
+    <Property Name="COIM_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="COIM_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="COIM_FREG" Type="date" />
+  </EntityType>
+  <EntityType Name="CONSECUTIVOS">
+    <Key>
+      <PropertyRef Name="CONS_ID" />
+    </Key>
+    <Property Name="CONS_VIG" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="CONS_ID" Type="number" Nullable="false" Precision="10" />
+    <Property Name="CONS_NOM" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="CONS_PRX" Type="number" Nullable="false" Precision="10" />
+    <Property Name="CONS_INI" Type="number" Nullable="false" Precision="10" />
+    <Property Name="CONS_USAP" Type="varchar2" MaxLength="20" />
+    <Property Name="CONS_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="CONS_FREG" Type="date" />
+    <Property Name="CONS_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="CONT_PERI">
+    <Key>
+      <PropertyRef Name="COPE_AÑO" />
+      <PropertyRef Name="COPE_MES" />
+    </Key>
+    <Property Name="COPE_AÑO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="COPE_MES" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="COPE_ESTA" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="COPE_FNOV" Type="date" Nullable="false" />
+    <Property Name="COPE_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="COPE_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="COPE_FREG" Type="date" />
+  </EntityType>
+  <EntityType Name="COPIAS_RPT">
+    <Key>
+      <PropertyRef Name="COP_COD" />
+    </Key>
+    <Property Name="COP_COD" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="COP_NOM" Type="varchar2" MaxLength="200" />
+    <Property Name="COP_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="COP_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="COP_FREG" Type="date" />
+    <Property Name="COP_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="CORREOSE">
+    <Key>
+      <PropertyRef Name="CORR_CODI" />
+    </Key>
+    <Property Name="CORR_CODI" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="CORR_NOMB" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="CORR_DATO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="CORR_BODY" Type="clob" />
+    <Property Name="CORR_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="CORR_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="CORR_FREG" Type="date" />
+    <Property Name="CORR_FNOV" Type="date" />
+    <Property Name="CORR_CAMP" Type="varchar2" MaxLength="200" />
+    <Property Name="CORR_VISTA" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CTA_BANCO">
+    <Key>
+      <PropertyRef Name="CTA_BACO" />
+      <PropertyRef Name="CTA_NRO" />
+    </Key>
+    <Property Name="CTA_BACO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="CTA_NRO" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="CTA_TIP" Type="varchar2" Nullable="false" MaxLength="9" />
+    <Property Name="CTA_CODBAR" Type="varchar2" Nullable="false" />
+    <Property Name="CTA_EST" Type="varchar2" MaxLength="2" />
+    <Property Name="CTA_USAP" Type="varchar2" MaxLength="16" />
+    <Property Name="CTA_USBD" Type="varchar2" MaxLength="16" />
+    <Property Name="CTA_DESC" Type="varchar2" MaxLength="50" />
+    <Property Name="CTA_SUC" Type="varchar2" MaxLength="30" />
+    <Property Name="CTA_FREG" Type="date" />
+    <Property Name="CTA_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="CTRL_PAGOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="NUM_LOTE" Type="varchar2" MaxLength="15" />
+    <Property Name="FECHA_SUBIDA" Type="date" />
+    <Property Name="OBSERVACION" Type="varchar2" MaxLength="255" />
+    <Property Name="FEC_REG" Type="date" />
+    <Property Name="USBD" Type="varchar2" MaxLength="15" />
+    <Property Name="FEC_MOD" Type="date" />
+    <Property Name="USAP" Type="varchar2" MaxLength="15" />
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="DOCUMENTO" Type="blob" />
+  </EntityType>
+  <EntityType Name="CUOT_ACPA">
+    <Key>
+      <PropertyRef Name="CUAP_APNU" />
+      <PropertyRef Name="CUAP_CUNU" />
+    </Key>
+    <Property Name="CUAP_APNU" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="CUAP_CUNU" Type="number" Nullable="false" Precision="10" />
+    <Property Name="CUAP_VALO" Type="number" Nullable="false" Precision="10" />
+    <Property Name="CUAP_PAGO" Type="number" Nullable="false" Precision="10" />
+    <Property Name="CUAP_FEPA" Type="date" Nullable="false" />
+    <Property Name="CUAP_FREG" Type="date" Nullable="false" />
+    <Property Name="CUAP_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="CUAP_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="CUAP_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="DEC_REQUI">
+    <Key>
+      <PropertyRef Name="DR_CODDEC" />
+      <PropertyRef Name="DR_CODREQ" />
+    </Key>
+    <Property Name="DR_CODDEC" Type="varchar2" Nullable="false" MaxLength="11" />
+    <Property Name="DR_PERI" Type="varchar2" MaxLength="2" />
+    <Property Name="DR_ANO" Type="varchar2" MaxLength="4" />
+    <Property Name="DR_CODREQ" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DR_ESTADO" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DR_FECRAD" Type="date" Nullable="false" />
+    <Property Name="DR_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="DR_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="DR_FECPRE" Type="date" />
+    <Property Name="DR_FUNC" Type="varchar2" />
+    <Property Name="DR_NRORAD" Type="varchar2" MaxLength="16" />
+    <Property Name="DR_FREG" Type="date" />
+    <Property Name="DR_FNOV" Type="date" />
+    <Property Name="DR_CDEC" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="DECLARACION">
+    <Key>
+      <PropertyRef Name="DEC_COD" />
+      <PropertyRef Name="DEC_DOAD" />
+    </Key>
+    <Property Name="DEC_NRO" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="DEC_NIT" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="DEC_PER" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="DEC_ANO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="DEC_VIG" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="DEC_EST" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DEC_FREG" Type="date" Nullable="false" />
+    <Property Name="DEC_CNRO" Type="varchar2" MaxLength="11" />
+    <Property Name="DEC_USAP" Type="varchar2" Nullable="false" MaxLength="16" />
+    <Property Name="DEC_USBD" Type="varchar2" Nullable="false" MaxLength="16" />
+    <Property Name="DEC_CONS" Type="number" Nullable="false" Precision="10" />
+    <Property Name="DEC_TIP" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DEC_SIG_DEC" Type="varchar2" MaxLength="12" />
+    <Property Name="DEC_SIG_CTRF" Type="varchar2" MaxLength="12" />
+    <Property Name="DEC_RAZSOC" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="DEC_SCR_TIP" Type="varchar2" MaxLength="2" />
+    <Property Name="DEC_SIG_DEC_TDOC" Type="varchar2" MaxLength="2" />
+    <Property Name="DEC_SIG_CTRF_TDOC" Type="varchar2" MaxLength="2" />
+    <Property Name="DEC_SIG_CTRF_NOM" Type="varchar2" MaxLength="100" />
+    <Property Name="DEC_SIG_DEC_NOM" Type="varchar2" MaxLength="100" />
+    <Property Name="DEC_SIG_CTRF_TAR_PRO" Type="varchar2" MaxLength="12" />
+    <Property Name="DEC_TDOC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DEC_DVER" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DEC_TRET" Type="number" Precision="10" Scale="2" />
+    <Property Name="DEC_TSAN" Type="number" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="DEC_TRS" Type="number" Precision="10" Scale="2" />
+    <Property Name="DEC_PRS" Type="number" Precision="10" Scale="2" />
+    <Property Name="DEC_PIM" Type="number" Precision="10" Scale="2" />
+    <Property Name="DEC_PTOT" Type="number" Precision="20" Scale="2" />
+    <Property Name="DEC_CSAN" Type="varchar2" MaxLength="2" />
+    <Property Name="DEC_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DEC_EST_FIS" Type="varchar2" MaxLength="2" />
+    <Property Name="DEC_FPRE" Type="date" />
+    <Property Name="DEC_COD" Type="varchar2" Nullable="false" MaxLength="11" />
+    <Property Name="DEC_FDCO" Type="varchar2" MaxLength="4" />
+    <Property Name="DEC_FVEN" Type="date" />
+    <Property Name="DEC_BACO" Type="varchar2" MaxLength="2" />
+    <Property Name="DEC_CTA" Type="varchar2" MaxLength="30" />
+    <Property Name="DEC_ROF" Type="varchar2" MaxLength="1" />
+    <Property Name="DEC_DOAD" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="DEC_FNOV" Type="date" />
+    <Property Name="DEC_ESFI" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="DEPARTAMENTOS">
+    <Key>
+      <PropertyRef Name="COD_DEPTO" />
+    </Key>
+    <Property Name="COD_DEPTO" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="NOM_DEPTO" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="ABREV_DISFON" Type="varchar2" MaxLength="3" />
+    <Property Name="USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="FREG" Type="date" />
+    <Property Name="FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="DIST_CART">
+    <Key>
+      <PropertyRef Name="DICA_CDEC" />
+      <PropertyRef Name="DICA_CODD" />
+      <PropertyRef Name="DICA_CODC" />
+      <PropertyRef Name="DICA_FDCO" />
+    </Key>
+    <Property Name="DICA_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DICA_CODD" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DICA_CODC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DICA_FDCO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="DICA_ORDE" Type="number" Precision="2" />
+    <Property Name="DICA_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="DICA_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="DICA_FREG" Type="date" />
+    <Property Name="DICA_FNOV" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SIGNUS0614.DOC_APG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="DOC_APG">
+    <Key>
+      <PropertyRef Name="DAPG_NIT" />
+      <PropertyRef Name="DAPG_CDEC" />
+      <PropertyRef Name="DAPG_AÑO" />
+      <PropertyRef Name="DAPG_PER" />
+      <PropertyRef Name="DAPG_FELA" />
+      <PropertyRef Name="DAPG_ESTA" />
+      <PropertyRef Name="DAPG_USBD" />
+      <PropertyRef Name="DAPG_USAP" />
+      <PropertyRef Name="DAPG_FREG" />
+      <PropertyRef Name="DAPG_DOAD" />
+      <PropertyRef Name="DAPG_DCOD" />
+    </Key>
+    <Property Name="DAPG_NIT" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="DAPG_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DAPG_AÑO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="DAPG_PER" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DAPG_FELA" Type="date" Nullable="false" />
+    <Property Name="DAPG_FNOT" Type="date" />
+    <Property Name="DAPG_ESTA" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DAPG_USBD" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="DAPG_USAP" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="DAPG_FREG" Type="date" Nullable="false" />
+    <Property Name="DAPG_DOAD" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="DAPG_DCOD" Type="varchar2" Nullable="false" MaxLength="11" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SIGNUS0614.DPAGO_ROAP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="DPAGO_ROAP">
+    <Key>
+      <PropertyRef Name="DPAP_APNU" />
+      <PropertyRef Name="DPAP_CUNU" />
+      <PropertyRef Name="DPAP_PAGO" />
+      <PropertyRef Name="DPAP_FEPA" />
+      <PropertyRef Name="DPAP_FREG" />
+      <PropertyRef Name="DPAP_USBD" />
+      <PropertyRef Name="DPAP_USAP" />
+    </Key>
+    <Property Name="DPAP_APNU" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="DPAP_CUNU" Type="number" Nullable="false" Precision="10" />
+    <Property Name="DPAP_PAGO" Type="number" Nullable="false" Precision="10" />
+    <Property Name="DPAP_FEPA" Type="date" Nullable="false" />
+    <Property Name="DPAP_FREG" Type="date" Nullable="false" />
+    <Property Name="DPAP_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="DPAP_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="DPAP_FNOV" Type="date" />
+    <Property Name="DPAP_RNUM" Type="varchar2" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="EMPRESA_MENSAJERIA">
+    <Key>
+      <PropertyRef Name="COD_EMME" />
+    </Key>
+    <Property Name="COD_EMME" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ENTIDAD">
+    <Key>
+      <PropertyRef Name="ENT_NIT" />
+    </Key>
+    <Property Name="ENT_NIT" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ENT_NOM" Type="varchar2" MaxLength="200" />
+    <Property Name="ENT_DIR" Type="varchar2" MaxLength="20" />
+    <Property Name="ENT_TEL" Type="varchar2" MaxLength="50" />
+    <Property Name="ENT_EMAIL" Type="varchar2" MaxLength="100" />
+    <Property Name="ENT_DPTO" Type="varchar2" MaxLength="25" />
+    <Property Name="ENT_MPIO" Type="varchar2" MaxLength="25" />
+    <Property Name="ENT_CEDRES" Type="varchar2" MaxLength="12" />
+    <Property Name="ENT_NOMRES" Type="varchar2" MaxLength="200" />
+    <Property Name="ENT_LOGO" Type="varchar2" />
+    <Property Name="ENT_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="ENT_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="ENT_FREG" Type="date" />
+    <Property Name="ENT_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="ESTADOS">
+    <Key>
+      <PropertyRef Name="EST_COD" />
+    </Key>
+    <Property Name="EST_COD" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="EST_DES" Type="varchar2" MaxLength="100" />
+    <Property Name="EST_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="EST_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="EST_FREG" Type="date" />
+    <Property Name="EST_FNOV" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SIGNUS0614.EXPE_ANULA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="EXPE_ANULA">
+    <Key>
+      <PropertyRef Name="EXPE_USAP" />
+      <PropertyRef Name="EXPE_USBD" />
+      <PropertyRef Name="EXPE_FREG" />
+    </Key>
+    <Property Name="EXPE_NUME" Type="varchar2" MaxLength="12" />
+    <Property Name="EXPE_ID" Type="varchar2" MaxLength="12" />
+    <Property Name="EXPE_FANU" Type="date" />
+    <Property Name="EXPE_OBSE" Type="varchar2" />
+    <Property Name="TABLA" Type="varchar2" MaxLength="50" />
+    <Property Name="EXPE_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="EXPE_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="EXPE_FREG" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EXPE_APG">
+    <Key>
+      <PropertyRef Name="EXAP_NUME" />
+      <PropertyRef Name="EXAP_AGRA" />
+      <PropertyRef Name="EXAP_PGRA" />
+      <PropertyRef Name="EXPE_CDEC" />
+      <PropertyRef Name="EXAP_SUIM" />
+    </Key>
+    <Property Name="EXAP_NUME" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="EXAP_DOAD" Type="varchar2" MaxLength="4" />
+    <Property Name="EXAP_AGRA" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="EXAP_PGRA" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="EXAP_ESTA" Type="varchar2" MaxLength="2" />
+    <Property Name="EXPE_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="EXPE_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="EXPE_FREG" Type="date" Nullable="false" />
+    <Property Name="EXAP_OBSE" Type="varchar2" />
+    <Property Name="EXPE_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="EXAP_EXPR" Type="varchar2" MaxLength="4" />
+    <Property Name="EXAP_SUIM" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="EXAP_DCOD" Type="varchar2" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="EXPE_NOTIF">
+    <Key>
+      <PropertyRef Name="EXNF_ID" />
+    </Key>
+    <Property Name="EXNF_ID" Type="number" Nullable="false" />
+    <Property Name="EXNF_FREB" Type="date" />
+    <Property Name="EXNF_NOTIF" Type="varchar2" MaxLength="4" />
+    <Property Name="EXNF_MEDIO" Type="varchar2" MaxLength="150" />
+    <Property Name="EXNF_FENV" Type="date" />
+    <Property Name="EXNF_REC" Type="char" MaxLength="1" />
+    <Property Name="EXNF_OBS" Type="varchar2" MaxLength="250" />
+    <Property Name="EXNF_EMM" Type="varchar2" MaxLength="2" />
+    <Property Name="EXTR_NUME" Type="varchar2" MaxLength="12" />
+    <Property Name="EXTR_TRAC" Type="varchar2" MaxLength="6" />
+    <Property Name="EXTR_GUIA" Type="varchar2" MaxLength="30" />
+    <Property Name="EXTR_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="EXTR_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="EXTR_FREG" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EXPE_TRAM">
+    <Key>
+      <PropertyRef Name="EXTR_NUME" />
+      <PropertyRef Name="EXTR_TANT" />
+      <PropertyRef Name="EXTR_TACT" />
+    </Key>
+    <Property Name="EXTR_NUME" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="EXTR_DOAD" Type="varchar2" MaxLength="4" />
+    <Property Name="EXTR_FELA" Type="date" Nullable="false" />
+    <Property Name="EXTR_TANT" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXTR_TACT" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXTR_TRNU" Type="varchar2" MaxLength="10" />
+    <Property Name="EXTR_RENI" Type="varchar2" MaxLength="10" />
+    <Property Name="EXTR_TRPT" Type="varchar2" MaxLength="2" />
+    <Property Name="EXTR_RPTA" Type="varchar2" />
+    <Property Name="EXTR_OBSE" Type="varchar2" />
+    <Property Name="EXTR_ADJU" Type="varchar2" MaxLength="100" />
+    <Property Name="EXTR_ANEX" Type="varchar2" MaxLength="100" />
+    <Property Name="EXTR_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="EXTR_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="EXTR_FREG" Type="date" Nullable="false" />
+    <Property Name="EXTR_DONU" Type="varchar2" MaxLength="11" />
+    <Property Name="EXTR_PLAN" Type="blob" />
+    <Property Name="EXPE_FREB" Type="date" />
+    <Property Name="EXPE_FEXP" Type="date" />
+    <Property Name="EXPE_NOTIF" Type="varchar2" MaxLength="4" />
+    <Property Name="EXTR_DOC" Type="blob" />
+    <Property Name="EXTR_ID" Type="number" />
+    <Property Name="EXTR_DATO1" Type="varchar2" />
+    <Property Name="EXTR_PDF" Type="blob" />
+  </EntityType>
+  <EntityType Name="EXPEDIENTES">
+    <Key>
+      <PropertyRef Name="EXPE_NUME" />
+    </Key>
+    <Property Name="EXPE_NIT" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="EXPE_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="EXPE_FELA" Type="date" Nullable="false" />
+    <Property Name="EXPE_FCIE" Type="date" />
+    <Property Name="EXPE_TRAC" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXPE_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="EXPE_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="EXPE_FREG" Type="date" Nullable="false" />
+    <Property Name="EXPE_DOAD" Type="varchar2" MaxLength="4" />
+    <Property Name="EXPE_DONU" Type="varchar2" MaxLength="12" />
+    <Property Name="EXPE_FNOV" Type="date" Nullable="false" />
+    <Property Name="EXPE_OBSE" Type="varchar2" />
+    <Property Name="EXPE_TPRO" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="EXPE_PROC" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="EXPE_ANEX" Type="varchar2" />
+    <Property Name="EXPE_NUME" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="EXPE_NPRO" Type="varchar2" MaxLength="12" />
+    <Property Name="EXPE_FEXP" Type="date" />
+    <Property Name="EXPE_EXTRID" Type="number" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SIGNUS0614.FM_BASESLIQ01' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="FM_BASESLIQ01">
+    <Key>
+      <PropertyRef Name="NIT_AR" />
+      <PropertyRef Name="DV_AR" />
+      <PropertyRef Name="CDEC" />
+      <PropertyRef Name="IMPTO" />
+      <PropertyRef Name="AGRAVABLE" />
+      <PropertyRef Name="PGRAVABLE" />
+      <PropertyRef Name="NDOC" />
+      <PropertyRef Name="FOPER" />
+      <PropertyRef Name="TIDE" />
+      <PropertyRef Name="NIDE" />
+      <PropertyRef Name="RAZSOC" />
+      <PropertyRef Name="CONCEPTO" />
+      <PropertyRef Name="VALORBASE" />
+      <PropertyRef Name="TARIFA" />
+      <PropertyRef Name="VALORIMPTO" />
+      <PropertyRef Name="NRO_RAD" />
+      <PropertyRef Name="USAP" />
+      <PropertyRef Name="USBD" />
+      <PropertyRef Name="FESI" />
+    </Key>
+    <Property Name="NIT_AR" Type="number" Nullable="false" Precision="12" />
+    <Property Name="DV_AR" Type="number" Nullable="false" Precision="1" />
+    <Property Name="CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="IMPTO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="AGRAVABLE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="PGRAVABLE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="NDOC" Type="number" Nullable="false" Precision="12" />
+    <Property Name="FOPER" Type="date" Nullable="false" />
+    <Property Name="TIDE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="NIDE" Type="number" Nullable="false" Precision="12" />
+    <Property Name="DV" Type="number" Precision="1" />
+    <Property Name="RAZSOC" Type="varchar2" Nullable="false" MaxLength="300" />
+    <Property Name="CONCEPTO" Type="varchar2" Nullable="false" MaxLength="1000" />
+    <Property Name="VALORBASE" Type="number" Nullable="false" Precision="20" />
+    <Property Name="TARIFA" Type="number" Nullable="false" Precision="20" Scale="4" />
+    <Property Name="VALORIMPTO" Type="number" Nullable="false" Precision="20" Scale="4" />
+    <Property Name="NRO_RAD" Type="number" Nullable="false" Precision="10" />
+    <Property Name="USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="FESI" Type="date" Nullable="false" />
+    <Property Name="FREG" Type="date" />
+    <Property Name="FNOV" Type="date" />
+    <Property Name="COD_MPIO" Type="varchar2" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="FMTO_IMP">
+    <Key>
+      <PropertyRef Name="FMIM_CODI" />
+      <PropertyRef Name="FMIM_INDX" />
+    </Key>
+    <Property Name="FMIM_CAMP" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="FMIM_TIDA" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="FMIM_CODI" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="FMIM_INDX" Type="number" Nullable="false" Precision="2" />
+    <Property Name="FMIM_LONG" Type="varchar2" MaxLength="6" />
+    <Property Name="FMIM_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="FMIM_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="FMIM_FREG" Type="date" />
+    <Property Name="FMIM_FNOV" Type="date" />
+    <Property Name="FMIM_EST" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="FMTOS">
+    <Key>
+      <PropertyRef Name="FMTO_CODI" />
+    </Key>
+    <Property Name="FMTO_CODI" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="FMTO_NOMB" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="FMTO_DESC" Type="varchar2" MaxLength="200" />
+    <Property Name="FMTO_CDEC" Type="varchar2" MaxLength="2" />
+    <Property Name="FMTO_EST" Type="varchar2" MaxLength="2" />
+    <Property Name="FMTO_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="FMTO_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="FMTO_FREG" Type="date" />
+    <Property Name="FMTO_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="FORM_AYUD">
+    <Key>
+      <PropertyRef Name="FOAY_CODI" />
+    </Key>
+    <Property Name="FOAY_CODI" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="FOAY_NREN" Type="number" Precision="2" />
+    <Property Name="FOAY_FDCO" Type="varchar2" MaxLength="4" />
+    <Property Name="FOAY_TITU" Type="varchar2" MaxLength="50" />
+    <Property Name="FOAY_DESC" Type="varchar2" MaxLength="1000" />
+    <Property Name="FOAY_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="FOAY_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="FOAY_FREG" Type="date" />
+    <Property Name="FOAY_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="FORMULARIOS_DEC">
+    <Key>
+      <PropertyRef Name="FODE_CODI" />
+    </Key>
+    <Property Name="FODE_CODI" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="FODE_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="FODE_FOWE" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="FODE_RPTE" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="FODE_FEIN" Type="date" Nullable="false" />
+    <Property Name="FODE_FEFI" Type="date" Nullable="false" />
+    <Property Name="FODE_USBD" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="FODE_FREG" Type="date" Nullable="false" />
+    <Property Name="FODE_USAP" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="FODE_OPER" Type="varchar2" MaxLength="200" />
+    <Property Name="FODE_FOWI" Type="varchar2" MaxLength="50" />
+    <Property Name="FODE_NOMB" Type="varchar2" MaxLength="100" />
+    <Property Name="FODE_EST" Type="varchar2" MaxLength="2" />
+    <Property Name="FODE_OPVP" Type="varchar2" MaxLength="200" />
+    <Property Name="FODE_FNOV" Type="date" />
+    <Property Name="FODE_OBS" Type="varchar2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SIGNUS0614.FORMULASL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="FORMULASL">
+    <Key>
+      <PropertyRef Name="FORM_CODI" />
+      <PropertyRef Name="FORM_FEIN" />
+      <PropertyRef Name="FORM_FEFI" />
+      <PropertyRef Name="FORM_FORM" />
+      <PropertyRef Name="FORM_NORM" />
+      <PropertyRef Name="FORM_CONC" />
+    </Key>
+    <Property Name="FORM_CODI" Type="varchar2" Nullable="false" MaxLength="9" />
+    <Property Name="FORM_FEIN" Type="date" Nullable="false" />
+    <Property Name="FORM_FEFI" Type="date" Nullable="false" />
+    <Property Name="FORM_FORM" Type="varchar2" Nullable="false" />
+    <Property Name="FORM_NORM" Type="varchar2" Nullable="false" />
+    <Property Name="FORM_CONC" Type="varchar2" Nullable="false" MaxLength="9" />
+    <Property Name="FORM_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="FORM_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="FORM_FREG" Type="date" />
+    <Property Name="FORM_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="FORMULASLT">
+    <Key>
+      <PropertyRef Name="FORM_CODI" />
+      <PropertyRef Name="FORM_CIMP" />
+    </Key>
+    <Property Name="FORM_CODI" Type="varchar2" Nullable="false" MaxLength="9" />
+    <Property Name="FORM_FEIN" Type="date" Nullable="false" />
+    <Property Name="FORM_FEFI" Type="date" Nullable="false" />
+    <Property Name="FORM_FORM" Type="varchar2" Nullable="false" />
+    <Property Name="FORM_NORM" Type="varchar2" Nullable="false" />
+    <Property Name="FORM_CIMP" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="FORM_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="FORM_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="FORM_FREG" Type="date" />
+    <Property Name="FORM_FNOV" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SIGNUS0614.HAUDITORIA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="HAUDITORIA">
+    <Key>
+      <PropertyRef Name="HAUDCODI" />
+      <PropertyRef Name="HAUDTABL" />
+      <PropertyRef Name="HAUDIDEN" />
+      <PropertyRef Name="HAUDTIPO" />
+      <PropertyRef Name="HAUDDESC" />
+      <PropertyRef Name="HAUDUSER" />
+      <PropertyRef Name="HAUDFESI" />
+    </Key>
+    <Property Name="HAUDCODI" Type="number" Nullable="false" />
+    <Property Name="HAUDTABL" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="HAUDIDEN" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="HAUDTIPO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="HAUDDESC" Type="varchar2" Nullable="false" MaxLength="2000" />
+    <Property Name="HAUDUSER" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="HAUDFESI" Type="date" Nullable="false" />
+    <Property Name="HAUDUSBD" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="IMPUESTOS">
+    <Key>
+      <PropertyRef Name="IMP_COD" />
+    </Key>
+    <Property Name="IMP_COD" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="IMP_NOM" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="IMP_OBS" Type="varchar2" />
+    <Property Name="IMP_NOR" Type="varchar2" />
+    <Property Name="IMP_CLA" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="IMP_UNI" Type="varchar2" MaxLength="2" />
+    <Property Name="IMP_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="IMP_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="IMP_FREG" Type="date" />
+    <Property Name="IMP_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="MENU">
+    <Key>
+      <PropertyRef Name="MENUID" />
+    </Key>
+    <Property Name="MENUID" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="TITULO" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="DESCRIPCION" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="PADREID" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="POSICION" Type="number" Nullable="false" Precision="10" />
+    <Property Name="ICONO" Type="varchar2" MaxLength="30" />
+    <Property Name="HABILITADO" Type="number" Nullable="false" Precision="1" />
+    <Property Name="URL" Type="varchar2" MaxLength="100" />
+    <Property Name="MODULO" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ROLES" Type="nvarchar2" MaxLength="512" />
+    <Property Name="TARGET" Type="varchar2" MaxLength="20" />
+    <Property Name="PPAL" Type="varchar2" MaxLength="1" />
+    <Property Name="USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="FREG" Type="date" />
+    <Property Name="FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="MENU_PERFIL">
+    <Key>
+      <PropertyRef Name="MENUID" />
+      <PropertyRef Name="PERFIL" />
+    </Key>
+    <Property Name="MENUID" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="PERFIL" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="MODULO" Type="varchar2" MaxLength="8" />
+    <Property Name="USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="FREG" Type="date" />
+    <Property Name="FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="MOVIMIENTO">
+    <Key>
+      <PropertyRef Name="MOV_CONS" />
+    </Key>
+    <Property Name="MOV_CONS" Type="number" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="MOV_NIT" Type="varchar2" MaxLength="12" />
+    <Property Name="MOV_CDEC" Type="varchar2" MaxLength="2" />
+    <Property Name="MOV_CCAR" Type="varchar2" MaxLength="2" />
+    <Property Name="MOV_TICO" Type="varchar2" MaxLength="1" />
+    <Property Name="MOV_AÑO" Type="varchar2" MaxLength="4" />
+    <Property Name="MOV_PER" Type="varchar2" MaxLength="2" />
+    <Property Name="MOV_CID" Type="varchar2" MaxLength="2" />
+    <Property Name="MOV_SIG" Type="varchar2" MaxLength="1" />
+    <Property Name="MOV_VDB" Type="number" Precision="17" Scale="2" />
+    <Property Name="MOV_VCR" Type="number" Precision="17" Scale="2" />
+    <Property Name="MOV_FMOV" Type="date" />
+    <Property Name="MOV_EST" Type="varchar2" MaxLength="2" />
+    <Property Name="MOV_USAP" Type="varchar2" MaxLength="20" />
+    <Property Name="MOV_USBD" Type="varchar2" MaxLength="20" />
+    <Property Name="MOV_FNOV" Type="date" />
+    <Property Name="MOV_VIG" Type="varchar2" MaxLength="4" />
+    <Property Name="MOV_TMOV" Type="varchar2" MaxLength="4" />
+    <Property Name="MOV_TDOC" Type="varchar2" MaxLength="4" />
+    <Property Name="MOV_NDOC" Type="varchar2" MaxLength="15" />
+    <Property Name="MOV_PAG" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="MOV_PAID" Type="number" />
+    <Property Name="MOV_FREG" Type="date" />
+  </EntityType>
+  <EntityType Name="MUNICIPIOS">
+    <Key>
+      <PropertyRef Name="MUN_COD" />
+    </Key>
+    <Property Name="MUN_COD" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="MUN_NOM" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="MUN_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="MUN_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="MUN_FREG" Type="date" />
+    <Property Name="MUN_FNOV" Type="date" />
+    <Property Name="MUN_DPCO" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_APPLICATIONS">
+    <Key>
+      <PropertyRef Name="APPLICATIONID" />
+    </Key>
+    <Property Name="APPLICATIONNAME" Type="nvarchar2" Nullable="false" MaxLength="256" />
+    <Property Name="LOWEREDAPPLICATIONNAME" Type="nvarchar2" Nullable="false" MaxLength="256" />
+    <Property Name="APPLICATIONID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="DESCRIPTION" Type="nvarchar2" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_MEMBERSHIP">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="APPLICATIONID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="USERID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="PASSWORD" Type="nvarchar2" Nullable="false" MaxLength="128" />
+    <Property Name="PASSWORDFORMAT" Type="number" Nullable="false" />
+    <Property Name="PASSWORDSALT" Type="nvarchar2" Nullable="false" MaxLength="128" />
+    <Property Name="MOBILEPIN" Type="nvarchar2" MaxLength="16" />
+    <Property Name="EMAIL" Type="nvarchar2" MaxLength="256" />
+    <Property Name="LOWEREDEMAIL" Type="nvarchar2" MaxLength="256" />
+    <Property Name="PASSWORDQUESTION" Type="nvarchar2" MaxLength="256" />
+    <Property Name="PASSWORDANSWER" Type="nvarchar2" MaxLength="128" />
+    <Property Name="ISAPPROVED" Type="number" Nullable="false" />
+    <Property Name="ISLOCKEDOUT" Type="number" Nullable="false" />
+    <Property Name="CREATEDATE" Type="date" Nullable="false" />
+    <Property Name="LASTLOGINDATE" Type="date" Nullable="false" />
+    <Property Name="LASTPASSWORDCHANGEDDATE" Type="date" Nullable="false" />
+    <Property Name="LASTLOCKOUTDATE" Type="date" Nullable="false" />
+    <Property Name="FAILEDPWDATTEMPTCOUNT" Type="number" Nullable="false" />
+    <Property Name="FAILEDPWDATTEMPTWINSTART" Type="date" Nullable="false" />
+    <Property Name="FAILEDPWDANSWERATTEMPTCOUNT" Type="number" Nullable="false" />
+    <Property Name="FAILEDPWDANSWERATTEMPTWINSTART" Type="date" Nullable="false" />
+    <Property Name="COMMENTS" Type="nclob" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_PATHS">
+    <Key>
+      <PropertyRef Name="PATHID" />
+    </Key>
+    <Property Name="APPLICATIONID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="PATHID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="PATH" Type="nvarchar2" Nullable="false" MaxLength="256" />
+    <Property Name="LOWEREDPATH" Type="nvarchar2" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SIGNUS0614.ORA_ASPNET_PERSONALIZNALLUSERS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ORA_ASPNET_PERSONALIZNALLUSERS">
+    <Key>
+      <PropertyRef Name="PAGESETTINGS" />
+      <PropertyRef Name="LASTUPDATEDDATE" />
+    </Key>
+    <Property Name="PATHID" Type="raw" MaxLength="16" />
+    <Property Name="PAGESETTINGS" Type="blob" Nullable="false" />
+    <Property Name="LASTUPDATEDDATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_PERSONALIZNPERUSER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="PATHID" Type="raw" MaxLength="16" />
+    <Property Name="USERID" Type="raw" MaxLength="16" />
+    <Property Name="PAGESETTINGS" Type="blob" Nullable="false" />
+    <Property Name="LASTUPDATEDDATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_PROFILE">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="PROPERTYNAMES" Type="nclob" Nullable="false" />
+    <Property Name="PROPERTYVALUESSTRING" Type="nclob" Nullable="false" />
+    <Property Name="PROPERTYVALUESBINARY" Type="blob" Nullable="false" />
+    <Property Name="LASTUPDATEDDATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_ROLES">
+    <Key>
+      <PropertyRef Name="ROLEID" />
+    </Key>
+    <Property Name="APPLICATIONID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="ROLEID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="ROLENAME" Type="nvarchar2" Nullable="false" MaxLength="256" />
+    <Property Name="LOWEREDROLENAME" Type="nvarchar2" Nullable="false" MaxLength="256" />
+    <Property Name="DESCRIPTION" Type="nvarchar2" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_SESSIONAPPLICATIONS">
+    <Key>
+      <PropertyRef Name="APPID" />
+    </Key>
+    <Property Name="APPID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="APPNAME" Type="nvarchar2" Nullable="false" MaxLength="280" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_SESSIONS">
+    <Key>
+      <PropertyRef Name="SESSIONID" />
+    </Key>
+    <Property Name="SESSIONID" Type="nvarchar2" Nullable="false" MaxLength="116" />
+    <Property Name="CREATED" Type="date" Nullable="false" />
+    <Property Name="EXPIRES" Type="date" Nullable="false" />
+    <Property Name="LOCKDATE" Type="date" Nullable="false" />
+    <Property Name="LOCKDATELOCAL" Type="date" Nullable="false" />
+    <Property Name="LOCKCOOKIE" Type="number" Nullable="false" />
+    <Property Name="TIMEOUT" Type="number" Nullable="false" />
+    <Property Name="LOCKED" Type="number" Nullable="false" />
+    <Property Name="SESSIONITEMSHORT" Type="raw" />
+    <Property Name="SESSIONITEMLONG" Type="blob" />
+    <Property Name="FLAGS" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_SITEMAP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="APPLICATIONID" Type="raw" MaxLength="16" />
+    <Property Name="ID" Type="number" Nullable="false" Precision="10" />
+    <Property Name="TITLE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DESCRIPTION" Type="nvarchar2" MaxLength="512" />
+    <Property Name="URL" Type="nvarchar2" MaxLength="512" />
+    <Property Name="ROLES" Type="nvarchar2" MaxLength="512" />
+    <Property Name="PARENT" Type="number" Precision="10" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_USERS">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="APPLICATIONID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="USERID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="USERNAME" Type="nvarchar2" Nullable="false" MaxLength="256" />
+    <Property Name="LOWEREDUSERNAME" Type="nvarchar2" Nullable="false" MaxLength="256" />
+    <Property Name="MOBILEALIAS" Type="nvarchar2" MaxLength="16" />
+    <Property Name="ISANONYMOUS" Type="number" Nullable="false" />
+    <Property Name="LASTACTIVITYDATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_USERSINROLES">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="ROLEID" />
+    </Key>
+    <Property Name="USERID" Type="raw" Nullable="false" MaxLength="16" />
+    <Property Name="ROLEID" Type="raw" Nullable="false" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="PAGOS">
+    <Key>
+      <PropertyRef Name="PAG_ID" />
+    </Key>
+    <Property Name="PAG_CDEC" Type="varchar2" MaxLength="2" />
+    <Property Name="PAG_TDOC" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="PAG_NDOC" Type="varchar2" Nullable="false" MaxLength="11" />
+    <Property Name="PAG_ANO" Type="varchar2" MaxLength="4" />
+    <Property Name="PAG_PER" Type="varchar2" MaxLength="2" />
+    <Property Name="PAG_TOT" Type="number" Nullable="false" />
+    <Property Name="PAG_FPAG" Type="date" Nullable="false" />
+    <Property Name="PAG_EST" Type="varchar2" MaxLength="2" />
+    <Property Name="PAG_SALD" Type="number" Precision="20" />
+    <Property Name="PAG_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="PAG_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="PAG_FREG" Type="date" Nullable="false" />
+    <Property Name="PAG_CTAB" Type="varchar2" MaxLength="20" />
+    <Property Name="PAG_BACO" Type="varchar2" MaxLength="2" />
+    <Property Name="PAG_NIT" Type="varchar2" MaxLength="10" />
+    <Property Name="PAG_ID" Type="number" Nullable="false" Precision="10" />
+    <Property Name="PAG_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="PAR_IMP">
+    <Key>
+      <PropertyRef Name="PAR_CIM" />
+      <PropertyRef Name="PAR_COD" />
+    </Key>
+    <Property Name="PAR_CIM" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="PAR_COD" Type="varchar2" Nullable="false" MaxLength="7" />
+    <Property Name="PAR_NOM" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="PAR_TID" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="PAR_TAM" Type="varchar2" MaxLength="20" />
+    <Property Name="PAR_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="PAR_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="PAR_FREG" Type="date" />
+    <Property Name="PAR_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="PAR_LIQ_DET">
+    <Key>
+      <PropertyRef Name="PALI_PLCO" />
+      <PropertyRef Name="PALI_COID" />
+    </Key>
+    <Property Name="PALI_PLCO" Type="varchar2" Nullable="false" MaxLength="8" />
+    <Property Name="PALI_COID" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="PALI_FEIN" Type="date" Nullable="false" />
+    <Property Name="PALI_FEFI" Type="date" Nullable="false" />
+    <Property Name="PALI_VALO" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="PAR_DEC" Type="varchar2" MaxLength="2" />
+    <Property Name="PALI_VANU" Type="number" Precision="20" Scale="8" />
+    <Property Name="PALI_VADA" Type="date" />
+    <Property Name="PALI_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="PALI_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="PALI_FREG" Type="date" />
+    <Property Name="PALI_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="PARA_LIQU">
+    <Key>
+      <PropertyRef Name="PALI_CODI" />
+    </Key>
+    <Property Name="PALI_CODI" Type="varchar2" Nullable="false" MaxLength="8" />
+    <Property Name="PALI_NOMB" Type="varchar2" MaxLength="20" />
+    <Property Name="PALI_TIDA" Type="varchar2" MaxLength="1" />
+    <Property Name="PALI_VARI" Type="varchar2" MaxLength="50" />
+    <Property Name="PALI_ESTA" Type="varchar2" MaxLength="2" />
+    <Property Name="PALI_DESC" Type="varchar2" MaxLength="100" />
+    <Property Name="PALI_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="PALI_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="PALI_FREG" Type="date" />
+    <Property Name="PALI_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="PROC_LOTE">
+    <Key>
+      <PropertyRef Name="PRLT_NUM" />
+      <PropertyRef Name="PRLT_TRAM" />
+    </Key>
+    <Property Name="PRLT_NUM" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="PRLT_PLAN" Type="blob" />
+    <Property Name="PRLT_DOC" Type="blob" />
+    <Property Name="PRLT_PDF" Type="blob" />
+    <Property Name="PRLT_TRAM" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="PRLT_PROC" Type="varchar2" MaxLength="6" />
+    <Property Name="PRLT_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="PRLT_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="PRLT_FREG" Type="date" Nullable="false" />
+    <Property Name="PRLT_CDEC" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="PROCESOS">
+    <Key>
+      <PropertyRef Name="PROC_CODI" />
+    </Key>
+    <Property Name="PROC_CODI" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="PROC_NOMB" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="PROC_TPCO" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="PROC_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="PROC_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="PROC_FREG" Type="date" Nullable="false" />
+    <Property Name="PROC_FNOV" Type="date" Nullable="false" />
+    <Property Name="PROC_HAB" Type="char" MaxLength="1" />
+    <Property Name="PROC_TINI" Type="varchar2" MaxLength="6" />
+    <Property Name="PROC_TFIN" Type="varchar2" MaxLength="6" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SIGNUS0614.RECACUERDO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="RECACUERDO">
+    <Key>
+      <PropertyRef Name="RAP_CONS" />
+      <PropertyRef Name="RAP_NIT" />
+      <PropertyRef Name="RAP_PER" />
+      <PropertyRef Name="RAP_ANO" />
+      <PropertyRef Name="RAP_COD" />
+      <PropertyRef Name="RAP_CDEC" />
+      <PropertyRef Name="RAP_DECC" />
+      <PropertyRef Name="RAP_VPA" />
+      <PropertyRef Name="RAP_FNOV" />
+      <PropertyRef Name="RAP_USBD" />
+      <PropertyRef Name="RAP_USAP" />
+    </Key>
+    <Property Name="RAP_CONS" Type="varchar2" Nullable="false" />
+    <Property Name="RAP_NIT" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="RAP_PER" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="RAP_ANO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="RAP_COD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="RAP_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="RAP_DECC" Type="varchar2" Nullable="false" MaxLength="11" />
+    <Property Name="RAP_VPA" Type="number" Nullable="false" Precision="12" />
+    <Property Name="RAP_TRAP" Type="varchar2" MaxLength="4" />
+    <Property Name="RAP_FREG" Type="date" />
+    <Property Name="RAP_EST" Type="varchar2" MaxLength="2" />
+    <Property Name="RAP_TDOC" Type="varchar2" MaxLength="6" />
+    <Property Name="RAP_FRAD" Type="date" />
+    <Property Name="RAP_FNOV" Type="date" Nullable="false" />
+    <Property Name="RAP_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="RAP_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="RECOFICIAL">
+    <Key>
+      <PropertyRef Name="ROF_COD" />
+    </Key>
+    <Property Name="ROF_CONS" Type="varchar2" Nullable="false" />
+    <Property Name="ROF_NIT" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="ROF_VPA" Type="number" Nullable="false" Precision="12" />
+    <Property Name="ROF_INT" Type="number" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="ROF_COD" Type="varchar2" Nullable="false" MaxLength="11" />
+    <Property Name="ROF_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="ROF_DECC" Type="varchar2" Nullable="false" MaxLength="11" />
+    <Property Name="ROF_FNOV" Type="date" Nullable="false" />
+    <Property Name="ROF_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ROF_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ROF_FREG" Type="date" />
+    <Property Name="ROF_EST" Type="varchar2" MaxLength="2" />
+    <Property Name="ROF_SAN" Type="number" Precision="12" />
+    <Property Name="ROF_TDOC" Type="varchar2" MaxLength="6" />
+    <Property Name="ROF_FRAD" Type="date" />
+    <Property Name="ROF_TROF" Type="varchar2" MaxLength="4" />
+    <Property Name="ROF_TPAG" Type="number" Precision="10" />
+    <Property Name="ROF_CTABCO" Type="varchar2" MaxLength="100" />
+    <Property Name="ROF_BCO" Type="varchar2" MaxLength="2" />
+    <Property Name="ROF_ANO" Type="varchar2" MaxLength="4" />
+    <Property Name="ROF_PER" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SIGNUS0614.REL_INT_MORA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="REL_INT_MORA">
+    <Key>
+      <PropertyRef Name="RLIM_NUM" />
+      <PropertyRef Name="RLIM_USAP" />
+      <PropertyRef Name="RLIM_USBD" />
+      <PropertyRef Name="RLIM_FREG" />
+    </Key>
+    <Property Name="RLIM_NUM" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="RLIM_DOAD" Type="varchar2" MaxLength="12" />
+    <Property Name="RLIM_VALOR" Type="number" Precision="14" Scale="2" />
+    <Property Name="RLIM_TDOC" Type="varchar2" MaxLength="6" />
+    <Property Name="RLIM_PER" Type="varchar2" MaxLength="2" />
+    <Property Name="RLIM_ANO" Type="varchar2" MaxLength="4" />
+    <Property Name="RLIM_NIT" Type="varchar2" MaxLength="10" />
+    <Property Name="RLIM_DCOD" Type="varchar2" MaxLength="11" />
+    <Property Name="RLIM_CDEC" Type="varchar2" MaxLength="2" />
+    <Property Name="RLIM_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="RLIM_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="RLIM_FREG" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RELA_AGETER">
+    <Key>
+      <PropertyRef Name="REL_TDOC" />
+      <PropertyRef Name="REL_AGE" />
+    </Key>
+    <Property Name="REL_CONS" Type="number" />
+    <Property Name="REL_TDOC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="REL_AGE" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="REL_DVER" Type="varchar2" MaxLength="1" />
+    <Property Name="REL_TDOCREV" Type="varchar2" MaxLength="2" />
+    <Property Name="REL_REV" Type="varchar2" MaxLength="12" />
+    <Property Name="REL_TREV" Type="varchar2" MaxLength="2" />
+    <Property Name="REL_TARPRO" Type="varchar2" MaxLength="10" />
+    <Property Name="REL_TDOCDEC" Type="varchar2" MaxLength="2" />
+    <Property Name="REL_DEC" Type="varchar2" MaxLength="12" />
+    <Property Name="REL_TDEC" Type="varchar2" MaxLength="2" />
+    <Property Name="REL_EST" Type="varchar2" MaxLength="2" />
+    <Property Name="REL_USBD" Type="varchar2" MaxLength="12" />
+    <Property Name="REL_USAP" Type="varchar2" MaxLength="12" />
+    <Property Name="REL_FNOV" Type="date" />
+    <Property Name="REL_FREG" Type="date" />
+  </EntityType>
+  <EntityType Name="REQUI_DECLARACION">
+    <Key>
+      <PropertyRef Name="REQ_CLDEC" />
+      <PropertyRef Name="REQ_COD" />
+    </Key>
+    <Property Name="REQ_CLDEC" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="REQ_COD" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="REQ_DESC" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="REQ_FINI" Type="date" Nullable="false" />
+    <Property Name="REQ_FFIN" Type="date" />
+    <Property Name="REQ_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="REQ_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="REQ_FREG" Type="date" />
+    <Property Name="REQ_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="SECCIONES">
+    <Key>
+      <PropertyRef Name="SECC_CODI" />
+    </Key>
+    <Property Name="SECC_CODI" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="SECC_NOMB" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="SECC_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="SECC_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="SECC_FREG" Type="date" />
+    <Property Name="SECC_FNOV" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SIGNUS0614.TARIFAS_IMP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TARIFAS_IMP">
+    <Key>
+      <PropertyRef Name="TARI_FEIN" />
+      <PropertyRef Name="TARI_FEFI" />
+      <PropertyRef Name="TARI_FORM" />
+      <PropertyRef Name="TARI_NORM" />
+      <PropertyRef Name="TARI_IMP" />
+      <PropertyRef Name="TARI_CODI" />
+    </Key>
+    <Property Name="TARI_FEIN" Type="date" Nullable="false" />
+    <Property Name="TARI_FEFI" Type="date" Nullable="false" />
+    <Property Name="TARI_FORM" Type="varchar2" Nullable="false" />
+    <Property Name="TARI_NORM" Type="varchar2" Nullable="false" />
+    <Property Name="TARI_IMP" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="TARI_CODI" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="TARI_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TARI_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TARI_FREG" Type="date" />
+    <Property Name="TARI_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TDECLARANTE">
+    <Key>
+      <PropertyRef Name="TDEC_COD" />
+    </Key>
+    <Property Name="TDEC_COD" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="TDEC_NOMB" Type="varchar2" MaxLength="50" />
+    <Property Name="TDEC_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TDEC_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TDEC_FREG" Type="date" />
+    <Property Name="TDEC_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TDOC_IDE">
+    <Key>
+      <PropertyRef Name="TDOC_COD" />
+    </Key>
+    <Property Name="TDOC_COD" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TDOC_NOM" Type="varchar2" MaxLength="30" />
+    <Property Name="TDOC_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TDOC_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TDOC_FREG" Type="date" />
+    <Property Name="TDOC_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TER_DEC">
+    <Key>
+      <PropertyRef Name="TEDE_CODI" />
+    </Key>
+    <Property Name="TEDE_CODI" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="TEDE_TNIT" Type="varchar2" MaxLength="11" />
+    <Property Name="TEDE_CDEC" Type="varchar2" MaxLength="2" />
+    <Property Name="TEDE_FINI" Type="date" />
+    <Property Name="TEDE_FFIN" Type="date" />
+    <Property Name="TEDE_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TEDE_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TEDE_FREG" Type="date" />
+    <Property Name="TEDE_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TERCEROS">
+    <Key>
+      <PropertyRef Name="TER_TDOC" />
+      <PropertyRef Name="TER_NIT" />
+    </Key>
+    <Property Name="TER_CONS" Type="number" Nullable="false" Precision="10" />
+    <Property Name="TER_TDOC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TER_NIT" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="TER_DVER" Type="varchar2" MaxLength="1" />
+    <Property Name="TER_NOM" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="TER_TIP" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TER_MPIO" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="TER_EMAI" Type="varchar2" MaxLength="100" />
+    <Property Name="TER_TEL" Type="varchar2" MaxLength="25" />
+    <Property Name="TER_DIR" Type="varchar2" MaxLength="75" />
+    <Property Name="TER_CED" Type="varchar2" Nullable="false" />
+    <Property Name="TER_REP" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="TER_USU" Type="varchar2" Nullable="false" MaxLength="16" />
+    <Property Name="TER_TUS" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TER_FREG" Type="date" Nullable="false" />
+    <Property Name="TER_FNOV" Type="date" Nullable="false" />
+    <Property Name="TER_FFIN" Type="date" />
+    <Property Name="TER_EST" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TER_OBS" Type="varchar2" MaxLength="100" />
+    <Property Name="TER_USAP" Type="varchar2" Nullable="false" MaxLength="16" />
+    <Property Name="TER_USBD" Type="varchar2" Nullable="false" MaxLength="16" />
+    <Property Name="TER_REP_TD" Type="varchar2" MaxLength="2" />
+    <Property Name="TER_REP_EXP" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TIPO_AGENT">
+    <Key>
+      <PropertyRef Name="TAG_COD" />
+    </Key>
+    <Property Name="TAG_COD" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="TAG_NOM" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="TAG_EST" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TAG_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TAG_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TAG_FREG" Type="date" />
+    <Property Name="TAG_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TIPO_CONCEPTOS">
+    <Key>
+      <PropertyRef Name="TCON_COD" />
+    </Key>
+    <Property Name="TCON_COD" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="TCON_NOM" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="TCON_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="TCON_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="TCON_FREG" Type="date" Nullable="false" />
+    <Property Name="TCON_FNOV" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_CUENTA">
+    <Key>
+      <PropertyRef Name="TCTA_CODI" />
+    </Key>
+    <Property Name="TCTA_CODI" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TCTA_NOMB" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="TCTA_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TCTA_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TCTA_FREG" Type="date" />
+    <Property Name="TCTA_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TIPO_DATO">
+    <Key>
+      <PropertyRef Name="TIDA_CODI" />
+    </Key>
+    <Property Name="TIDA_CODI" Type="varchar2" Nullable="false" />
+    <Property Name="TIDA_ORACLE" Type="varchar2" Nullable="false" />
+    <Property Name="TIDA_NET" Type="varchar2" Nullable="false" />
+    <Property Name="TIDA_USAP" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="TIDA_USBD" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="TIDA_FREG" Type="date" Nullable="false" />
+    <Property Name="TIDA_FNOV" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_DEC">
+    <Key>
+      <PropertyRef Name="TDEC_COD" />
+      <PropertyRef Name="TDEC_CDEC" />
+    </Key>
+    <Property Name="TDEC_COD" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TDEC_NOM" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="TDEC_FIN" Type="date" />
+    <Property Name="TDEC_FFI" Type="date" />
+    <Property Name="TDEC_USBD" Type="varchar2" Nullable="false" MaxLength="8" />
+    <Property Name="TDEC_USAP" Type="varchar2" Nullable="false" MaxLength="8" />
+    <Property Name="TDEC_FREG" Type="date" Nullable="false" />
+    <Property Name="TDEC_FNOV" Type="date" Nullable="false" />
+    <Property Name="TDEC_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TDEC_CODI" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="TIPO_DOC">
+    <Key>
+      <PropertyRef Name="TIDO_CODI" />
+    </Key>
+    <Property Name="TIDO_CODI" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="TIDO_NOMB" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="TIDO_EST" Type="varchar2" MaxLength="2" />
+    <Property Name="TIDO_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TIDO_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TIDO_FREG" Type="date" />
+    <Property Name="TIDO_FNOV" Type="date" />
+    <Property Name="TIDO_FIRMA" Type="blob" />
+    <Property Name="TIDO_RESP" Type="varchar2" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="TIPO_DOC_CONS">
+    <Key>
+      <PropertyRef Name="TIDO_CODI" />
+      <PropertyRef Name="TIDO_CDEC" />
+    </Key>
+    <Property Name="TIDO_CODI" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="TIDO_CDEC" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TIDO_CONS" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="TIDO_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TIDO_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TIDO_FREG" Type="date" />
+    <Property Name="TIDO_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TIPO_MOV">
+    <Key>
+      <PropertyRef Name="TMOV_COD" />
+    </Key>
+    <Property Name="TMOV_COD" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="TMOV_NOM" Type="varchar2" MaxLength="200" />
+    <Property Name="TMOV_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TMOV_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TMOV_FREG" Type="date" />
+    <Property Name="TMOV_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TIPO_PAGO">
+    <Key>
+      <PropertyRef Name="TPAG_COD" />
+    </Key>
+    <Property Name="TPAG_COD" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TPAG_NOM" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="TPAG_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TPAG_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TPAG_FREG" Type="date" />
+    <Property Name="TPAG_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TIPO_PROCESO">
+    <Key>
+      <PropertyRef Name="TPRO_CODI" />
+    </Key>
+    <Property Name="TPRO_CODI" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="TPRO_NOMB" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="TPRO_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TPRO_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TPRO_FREG" Type="date" />
+    <Property Name="TPRO_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TIPO_SANCIONES">
+    <Key>
+      <PropertyRef Name="TSAN_COD" />
+    </Key>
+    <Property Name="TSAN_COD" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="TSAN_NOM" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="TSAN_FORM" Type="varchar2" />
+    <Property Name="TSAN_PAR" Type="varchar2" />
+    <Property Name="TSAN_DEC" Type="varchar2" MaxLength="1" />
+    <Property Name="TSAN_DETI" Type="varchar2" MaxLength="1" />
+    <Property Name="TSAN_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TSAN_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TSAN_FREG" Type="date" />
+    <Property Name="TSAN_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TIPOUSUA">
+    <Key>
+      <PropertyRef Name="TUS_COD" />
+    </Key>
+    <Property Name="TUS_COD" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TUS_NOM" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="TUS_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TUS_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TUS_FREG" Type="date" />
+    <Property Name="TUS_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TRAM_TER">
+    <Key>
+      <PropertyRef Name="TRTE_NIT" />
+      <PropertyRef Name="TRTE_TRAM" />
+    </Key>
+    <Property Name="TRTE_NIT" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="TRTE_TRAM" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="TRTE_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TRTE_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TRTE_FREG" Type="date" />
+    <Property Name="TRTE_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="TRAMITES">
+    <Key>
+      <PropertyRef Name="TRAM_CODI" />
+    </Key>
+    <Property Name="TRAM_CODI" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="TRAM_NOMB" Type="varchar2" MaxLength="100" />
+    <Property Name="TRAM_RESP" Type="varchar2" MaxLength="2" />
+    <Property Name="TRAM_GSAN" Type="varchar2" />
+    <Property Name="TRAM_COSA" Type="varchar2" />
+    <Property Name="TRAM_PLAN" Type="varchar2" />
+    <Property Name="TRAM_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TRAM_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TRAM_FREG" Type="date" />
+    <Property Name="TRAM_FNOV" Type="date" />
+    <Property Name="TRAM_PROC" Type="varchar2" MaxLength="4" />
+    <Property Name="TRAM_TIDO" Type="varchar2" MaxLength="4" />
+    <Property Name="TRAM_AUTO" Type="varchar2" MaxLength="1" />
+    <Property Name="TRAM_DIAS" Type="number" Precision="3" />
+    <Property Name="TRAM_TIPO" Type="char" MaxLength="1" />
+    <Property Name="TRAM_VFREB" Type="char" MaxLength="1" />
+    <Property Name="TRAM_TPRO" Type="varchar2" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="TRAMRELA">
+    <Key>
+      <PropertyRef Name="TRRE_DESD" />
+      <PropertyRef Name="TRRE_PARA" />
+    </Key>
+    <Property Name="TRRE_DESD" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="TRRE_PARA" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="TRRE_DILI" Type="number" Nullable="false" Precision="2" />
+    <Property Name="TRRE_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="TRRE_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="TRRE_FREG" Type="date" />
+    <Property Name="TRRE_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="UNIDAD">
+    <Key>
+      <PropertyRef Name="UNI_COD" />
+    </Key>
+    <Property Name="UNI_COD" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="UNI_NOM" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="UNI_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="UNI_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="UNI_FREG" Type="date" />
+    <Property Name="UNI_FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="USEREXT">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+    </Key>
+    <Property Name="USERNAME" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="TIPO_USUARIO" Type="varchar2" MaxLength="8" />
+    <Property Name="PERFIL" Type="varchar2" MaxLength="8" />
+    <Property Name="USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="FREG" Type="date" />
+    <Property Name="FNOV" Type="date" />
+  </EntityType>
+  <EntityType Name="VH_ASEGURADORA">
+    <Key>
+      <PropertyRef Name="COD_ASEG" />
+    </Key>
+    <Property Name="COD_ASEG" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="NOM_ASEG" Type="varchar2" MaxLength="100" />
+    <Property Name="EST_ASEG" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="VH_BG_AUTO_2007">
+    <Key>
+      <PropertyRef Name="GRUPO" />
+    </Key>
+    <Property Name="GRUPO" Type="number" Nullable="false" Precision="10" />
+    <Property Name="MARCA" Type="varchar2" MaxLength="250" />
+    <Property Name="LINEA" Type="varchar2" MaxLength="250" />
+    <Property Name="CILINDRADA" Type="number" Precision="10" />
+    <Property Name="V1983" Type="number" Precision="20" />
+    <Property Name="V1984" Type="number" Precision="20" />
+    <Property Name="V1985" Type="number" Precision="20" />
+    <Property Name="V1986" Type="number" Precision="20" />
+    <Property Name="V1987" Type="number" Precision="20" />
+    <Property Name="V1988" Type="number" Precision="20" />
+    <Property Name="V1989" Type="number" Precision="20" />
+    <Property Name="V1990" Type="number" Precision="20" />
+    <Property Name="V1991" Type="number" Precision="20" />
+    <Property Name="V1992" Type="number" Precision="20" />
+    <Property Name="V1993" Type="number" Precision="20" />
+    <Property Name="V1994" Type="number" Precision="20" />
+    <Property Name="V1995" Type="number" Precision="20" />
+    <Property Name="V1996" Type="number" Precision="20" />
+    <Property Name="V1997" Type="number" Precision="20" />
+    <Property Name="V1998" Type="number" Precision="20" />
+    <Property Name="V1999" Type="number" Precision="20" />
+    <Property Name="V2000" Type="number" Precision="20" />
+    <Property Name="V2001" Type="number" Precision="20" />
+    <Property Name="V2002" Type="number" Precision="20" />
+    <Property Name="V2003" Type="number" Precision="20" />
+    <Property Name="V2004" Type="number" Precision="20" />
+    <Property Name="V2005" Type="number" Precision="20" />
+    <Property Name="V2006" Type="number" Precision="20" />
+    <Property Name="LINEA_H" Type="varchar2" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="VH_BG_AUTO_2008">
+    <Key>
+      <PropertyRef Name="GRUPO" />
+    </Key>
+    <Property Name="GRUPO" Type="number" Nullable="false" Precision="10" />
+    <Property Name="MARCA" Type="varchar2" MaxLength="250" />
+    <Property Name="LINEA" Type="varchar2" MaxLength="250" />
+    <Property Name="LINEA_H" Type="varchar2" MaxLength="250" />
+    <Property Name="CILINDRADA" Type="number" Precision="10" />
+    <Property Name="V1983" Type="number" Precision="20" />
+    <Property Name="V1984" Type="number" Precision="20" />
+    <Property Name="V1985" Type="number" Precision="20" />
+    <Property Name="V1986" Type="number" Precision="20" />
+    <Property Name="V1987" Type="number" Precision="20" />
+    <Property Name="V1988" Type="number" Precision="20" />
+    <Property Name="V1989" Type="number" Precision="20" />
+    <Property Name="V1990" Type="number" Precision="20" />
+    <Property Name="V1991" Type="number" Precision="20" />
+    <Property Name="V1992" Type="number" Precision="20" />
+    <Property Name="V1993" Type="number" Precision="20" />
+    <Property Name="V1994" Type="number" Precision="20" />
+    <Property Name="V1995" Type="number" Precision="20" />
+    <Property Name="V1996" Type="number" Precision="20" />
+    <Property Name="V1997" Type="number" Precision="20" />
+    <Property Name="V1998" Type="number" Precision="20" />
+    <Property Name="V1999" Type="number" Precision="20" />
+    <Property Name="V2000" Type="number" Precision="20" />
+    <Property Name="V2001" Type="number" Precision="20" />
+    <Property Name="V2002" Type="number" Precision="20" />
+    <Property Name="V2003" Type="number" Precision="20" />
+    <Property Name="V2004" Type="number" Precision="20" />
+    <Property Name="V2005" Type="number" Precision="20" />
+    <Property Name="V2006" Type="number" Precision="20" />
+    <Property Name="V2007" Type="number" Precision="20" />
+  </EntityType>
+  <EntityType Name="VH_BG_AUTO_2009">
+    <Key>
+      <PropertyRef Name="GRUPO" />
+    </Key>
+    <Property Name="GRUPO" Type="number" Nullable="false" Precision="10" />
+    <Property Name="MARCA" Type="varchar2" MaxLength="250" />
+    <Property Name="LINEA" Type="varchar2" MaxLength="250" />
+    <Property Name="LINEA_H" Type="varchar2" MaxLength="250" />
+    <Property Name="CILINDRADA" Type="number" Precision="10" />
+    <Property Name="V1984" Type="number" Precision="20" />
+    <Property Name="V1985" Type="number" Precision="20" />
+    <Property Name="V1986" Type="number" Precision="20" />
+    <Property Name="V1987" Type="number" Precision="20" />
+    <Property Name="V1988" Type="number" Precision="20" />
+    <Property Name="V1989" Type="number" Precision="20" />
+    <Property Name="V1990" Type="number" Precision="20" />
+    <Property Name="V1991" Type="number" Precision="20" />
+    <Property Name="V1992" Type="number" Precision="20" />
+    <Property Name="V1993" Type="number" Precision="20" />
+    <Property Name="V1994" Type="number" Precision="20" />
+    <Property Name="V1995" Type="number" Precision="20" />
+    <Property Name="V1996" Type="number" Precision="20" />
+    <Property Name="V1997" Type="number" Precision="20" />
+    <Property Name="V1998" Type="number" Precision="20" />
+    <Property Name="V1999" Type="number" Precision="20" />
+    <Property Name="V2000" Type="number" Precision="20" />
+    <Property Name="V2001" Type="number" Precision="20" />
+    <Property Name="V2002" Type="number" Precision="20" />
+    <Property Name="V2003" Type="number" Precision="20" />
+    <Property Name="V2004" Type="number" Precision="20" />
+    <Property Name="V2005" Type="number" Precision="20" />
+    <Property Name="V2006" Type="number" Precision="20" />
+    <Property Name="V2007" Type="number" Precision="20" />
+    <Property Name="V2008" Type="number" Precision="20" />
+  </EntityType>
+  <EntityType Name="VH_CAPACIDAD_M">
+    <Key>
+      <PropertyRef Name="GRUPO" />
+      <PropertyRef Name="VIG" />
+    </Key>
+    <Property Name="GRUPO" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DESDE" Type="number" Precision="10" />
+    <Property Name="HASTA" Type="number" Precision="10" />
+    <Property Name="VIG" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="VH_CARGA_LETRA">
+    <Key>
+      <PropertyRef Name="GRUPO" />
+      <PropertyRef Name="VIG" />
+    </Key>
+    <Property Name="TIPO" Type="varchar2" MaxLength="20" />
+    <Property Name="GRUPO" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MARCA" Type="varchar2" />
+    <Property Name="VIG" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="CLASE_Y_CARROCERIA" Type="varchar2" MaxLength="150" />
+    <Property Name="CLASIFICACION" Type="varchar2" MaxLength="150" />
+    <Property Name="MARCA_H" Type="varchar2" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="VH_CARROCERIA">
+    <Key>
+      <PropertyRef Name="NOM_CARROCERIA" />
+    </Key>
+    <Property Name="NOM_CARROCERIA" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="ID_VH_CARROCERIA" Type="number" />
+  </EntityType>
+  <EntityType Name="VH_CATEGORIA">
+    <Key>
+      <PropertyRef Name="VCAT_CATEGORIA" />
+    </Key>
+    <Property Name="VCAT_CATEGORIA" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="VCAT_ID" Type="number" />
+  </EntityType>
+  <EntityType Name="VH_CLASE_CATEGORIA">
+    <Key>
+      <PropertyRef Name="VCC_CLASE" />
+      <PropertyRef Name="VCC_VIGENCIA" />
+    </Key>
+    <Property Name="VCC_CLASE" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="VCC_CATEGORIA" Type="varchar2" MaxLength="250" />
+    <Property Name="VCC_VIGENCIA" Type="varchar2" Nullable="false" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="VH_CLASE_LIQ">
+    <Key>
+      <PropertyRef Name="VCL_CODIGO" />
+    </Key>
+    <Property Name="VCL_CLASE" Type="varchar2" MaxLength="250" />
+    <Property Name="VCL_CODIGO" Type="varchar2" Nullable="false" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="VH_COLOR">
+    <Key>
+      <PropertyRef Name="NOM_COLOR" />
+    </Key>
+    <Property Name="NOM_COLOR" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="ID_VH_COLOR" Type="number" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SIGNUS0614.VH_DATOS_LIQ' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VH_DATOS_LIQ">
+    <Key>
+      <PropertyRef Name="PLACA" />
+    </Key>
+    <Property Name="DECCOD" Type="varchar2" MaxLength="11" />
+    <Property Name="PLACA" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="CLASE" Type="varchar2" MaxLength="250" />
+    <Property Name="MARCA" Type="varchar2" MaxLength="250" />
+    <Property Name="LINEA" Type="varchar2" MaxLength="250" />
+    <Property Name="MODELO" Type="varchar2" MaxLength="250" />
+    <Property Name="COLOR" Type="varchar2" MaxLength="250" />
+    <Property Name="CARROCERIA" Type="varchar2" MaxLength="250" />
+    <Property Name="CILINDRAJE" Type="number" Precision="10" />
+    <Property Name="TONELAJE" Type="number" Precision="10" />
+    <Property Name="PASAJEROS" Type="number" Precision="10" />
+    <Property Name="MOTOR" Type="varchar2" MaxLength="250" />
+    <Property Name="CHASIS" Type="varchar2" MaxLength="250" />
+    <Property Name="BLINDADO" Type="varchar2" MaxLength="2" />
+    <Property Name="ANTIGUO" Type="varchar2" MaxLength="2" />
+    <Property Name="NIT" Type="varchar2" MaxLength="15" />
+    <Property Name="FECHA_COMPRA" Type="date" />
+    <Property Name="MUN_MATRICULA" Type="varchar2" MaxLength="5" />
+    <Property Name="MUN_OPERACION" Type="varchar2" MaxLength="5" />
+    <Property Name="FECHA_MAT" Type="date" />
+    <Property Name="TIPO_MATRICULA" Type="varchar2" MaxLength="1" />
+    <Property Name="COD_ASEGURADORA" Type="varchar2" MaxLength="4" />
+    <Property Name="N_POLIZA" Type="varchar2" MaxLength="50" />
+    <Property Name="FECHA_VENCIMIENTO" Type="date" />
+    <Property Name="CONS" Type="number" Precision="20" />
+    <Property Name="FEC_LIQ" Type="date" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="2" />
+    <Property Name="AVALUO" Type="number" Precision="20" />
+    <Property Name="TARIFA" Type="number" Precision="5" Scale="4" />
+    <Property Name="DSC_MAT_TRA" Type="varchar2" MaxLength="1" />
+    <Property Name="FRACCION" Type="number" Precision="2" />
+    <Property Name="DEC_STOT" Type="number" Precision="17" Scale="2" />
+    <Property Name="NOM_ASEGURADORA" Type="varchar2" MaxLength="100" />
+    <Property Name="NRO_LIQG" Type="number" Precision="10" />
+  </EntityType>
+  <EntityType Name="VH_INSTITUTO_TRANSITO">
+    <Key>
+      <PropertyRef Name="VINS_CODIGO" />
+    </Key>
+    <Property Name="VINS_CODIGO" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="VINS_DESCRIPCION" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="VH_LINEA">
+    <Key>
+      <PropertyRef Name="NOM_LINEA" />
+    </Key>
+    <Property Name="NOM_LINEA" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="ID_VH_LINEA" Type="number" />
+    <Property Name="ID_VH_MARCA" Type="number" />
+  </EntityType>
+  <EntityType Name="VH_LIQ_GRUPAL">
+    <Key>
+      <PropertyRef Name="NRO_LIQG" />
+    </Key>
+    <Property Name="NRO_LIQG" Type="number" Nullable="false" Precision="10" />
+    <Property Name="FECHA_INI" Type="date" />
+    <Property Name="FECHA_FIN" Type="date" />
+    <Property Name="USBD" Type="varchar2" MaxLength="20" />
+    <Property Name="USAP" Type="varchar2" MaxLength="20" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="2" />
+    <Property Name="TOTAL" Type="number" />
+  </EntityType>
+  <EntityType Name="VH_LIQUIDLOG">
+    <Key>
+      <PropertyRef Name="NRO_LIQG" />
+      <PropertyRef Name="PLACA" />
+    </Key>
+    <Property Name="NRO_LIQG" Type="number" Nullable="false" Precision="10" />
+    <Property Name="PLACA" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="OBSERVACION" Type="varchar2" MaxLength="2000" />
+    <Property Name="LIQUIDO" Type="varchar2" MaxLength="1" />
+    <Property Name="CATEGORIA_LIQ" Type="varchar2" MaxLength="50" />
+    <Property Name="FECHA_REG" Type="date" />
+    <Property Name="USBD" Type="varchar2" MaxLength="20" />
+    <Property Name="USAP" Type="varchar2" MaxLength="20" />
+    <Property Name="VIGENCIALIQ" Type="varchar2" MaxLength="4" />
+    <Property Name="FILTROVEH" Type="varchar2" MaxLength="2000" />
+    <Property Name="DEC_COD" Type="varchar2" MaxLength="11" />
+    <Property Name="LIQ_CONS" Type="number" Precision="10" />
+  </EntityType>
+  <EntityType Name="VH_MARCA_M">
+    <Key>
+      <PropertyRef Name="GRUPO" />
+      <PropertyRef Name="VIG" />
+    </Key>
+    <Property Name="GRUPO" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MARCA" Type="varchar2" />
+    <Property Name="VIG" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="MARCA_H" Type="varchar2" />
+  </EntityType>
+  <EntityType Name="VH_PARQUE_AUTOMOTOR">
+    <Key>
+      <PropertyRef Name="PLACA" />
+    </Key>
+    <Property Name="PLACA" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="CLASE" Type="varchar2" MaxLength="250" />
+    <Property Name="MARCA" Type="varchar2" MaxLength="250" />
+    <Property Name="LINEA" Type="varchar2" MaxLength="250" />
+    <Property Name="MODELO" Type="varchar2" MaxLength="250" />
+    <Property Name="COLOR" Type="varchar2" MaxLength="250" />
+    <Property Name="CARROCERIA" Type="varchar2" MaxLength="250" />
+    <Property Name="CILINDRAJE" Type="number" Precision="10" />
+    <Property Name="TONELAJE" Type="number" Precision="10" />
+    <Property Name="PASAJEROS" Type="number" Precision="10" />
+    <Property Name="MOTOR" Type="varchar2" MaxLength="250" />
+    <Property Name="CHASIS" Type="varchar2" MaxLength="250" />
+    <Property Name="BLINDADO" Type="varchar2" MaxLength="2" />
+    <Property Name="ANTIGUO" Type="varchar2" MaxLength="2" />
+    <Property Name="NIT" Type="varchar2" MaxLength="15" />
+    <Property Name="FECHA_COMPRA" Type="date" />
+    <Property Name="MUN_MATRICULA" Type="varchar2" MaxLength="5" />
+    <Property Name="MUN_OPERACION" Type="varchar2" MaxLength="5" />
+    <Property Name="FECHA_MAT" Type="date" />
+    <Property Name="TIPO_MATRICULA" Type="varchar2" MaxLength="1" />
+    <Property Name="VALOR_FACT" Type="number" Precision="17" Scale="2" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="2" />
+    <Property Name="FECHA_INGRESO" Type="date" />
+    <Property Name="PARQ_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="PARQ_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="PARQ_FREG" Type="date" />
+    <Property Name="FEC_EXP_TP" Type="date" />
+    <Property Name="VINS_CODIGO" Type="varchar2" MaxLength="10" />
+    <Property Name="IMPORTADO" Type="varchar2" MaxLength="2" />
+    <Property Name="USO" Type="varchar2" MaxLength="20" />
+    <Property Name="CATEGORIA" Type="varchar2" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="VH_PASAJERO_CAP">
+    <Key>
+      <PropertyRef Name="GRUPO" />
+      <PropertyRef Name="VIG" />
+    </Key>
+    <Property Name="GRUPO" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DESDE" Type="number" Precision="10" />
+    <Property Name="HASTA" Type="number" Precision="10" />
+    <Property Name="VIG" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="VIGENCIA">
+    <Key>
+      <PropertyRef Name="VIG_COD" />
+    </Key>
+    <Property Name="VIG_COD" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="VIG_FINI" Type="date" Nullable="false" />
+    <Property Name="VIG_FFIN" Type="date" />
+    <Property Name="VIG_EST" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="VIG_USAP" Type="varchar2" MaxLength="10" />
+    <Property Name="VIG_USBD" Type="varchar2" MaxLength="10" />
+    <Property Name="VIG_FREG" Type="date" />
+    <Property Name="VIG_FNOV" Type="date" />
+  </EntityType>
+  <Association Name="ACPA_APG_ACUE_PAGO_FK1">
+    <End Role="ACUE_PAGO" Type="Model.Store.ACUE_PAGO" Multiplicity="1" />
+    <End Role="ACPA_APG" Type="Model.Store.ACPA_APG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACUE_PAGO">
+        <PropertyRef Name="ACPA_NUME" />
+      </Principal>
+      <Dependent Role="ACPA_APG">
+        <PropertyRef Name="APG_APNU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ACPA_APG_CALENDARIO_FK1">
+    <End Role="CALENDARIO" Type="Model.Store.CALENDARIO" Multiplicity="1" />
+    <End Role="ACPA_APG" Type="Model.Store.ACPA_APG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CALENDARIO">
+        <PropertyRef Name="CAL_PER" />
+        <PropertyRef Name="CAL_VIG" />
+        <PropertyRef Name="CAL_CLA" />
+      </Principal>
+      <Dependent Role="ACPA_APG">
+        <PropertyRef Name="APG_PGRA" />
+        <PropertyRef Name="APG_AGRA" />
+        <PropertyRef Name="APG_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ACPA_DEUDA_CALENDARIO_FK1">
+    <End Role="CALENDARIO" Type="Model.Store.CALENDARIO" Multiplicity="1" />
+    <End Role="ACPA_DEUDA" Type="Model.Store.ACPA_DEUDA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CALENDARIO">
+        <PropertyRef Name="CAL_PER" />
+        <PropertyRef Name="CAL_VIG" />
+        <PropertyRef Name="CAL_CLA" />
+      </Principal>
+      <Dependent Role="ACPA_DEUDA">
+        <PropertyRef Name="APDE_PGRA" />
+        <PropertyRef Name="APDE_AGRA" />
+        <PropertyRef Name="APDE_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ACPA_DEUDA_CONC_CART_FK1">
+    <End Role="CONC_CART" Type="Model.Store.CONC_CART" Multiplicity="1" />
+    <End Role="ACPA_DEUDA" Type="Model.Store.ACPA_DEUDA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONC_CART">
+        <PropertyRef Name="CCAR_COD" />
+      </Principal>
+      <Dependent Role="ACPA_DEUDA">
+        <PropertyRef Name="APDE_COCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ACPA_DEUDA_TIPO_DOC_FK1">
+    <End Role="TIPO_DOC" Type="Model.Store.TIPO_DOC" Multiplicity="1" />
+    <End Role="ACPA_DEUDA" Type="Model.Store.ACPA_DEUDA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DOC">
+        <PropertyRef Name="TIDO_CODI" />
+      </Principal>
+      <Dependent Role="ACPA_DEUDA">
+        <PropertyRef Name="APDE_DOAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ACUE_PAGO_CLASE_DEC_FK1">
+    <End Role="CLASE_DEC" Type="Model.Store.CLASE_DEC" Multiplicity="1" />
+    <End Role="ACUE_PAGO" Type="Model.Store.ACUE_PAGO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE_DEC">
+        <PropertyRef Name="CLD_COD" />
+      </Principal>
+      <Dependent Role="ACUE_PAGO">
+        <PropertyRef Name="ACPA_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ACUE_PAGO_TERCEROS_FK1">
+    <End Role="TERCEROS" Type="Model.Store.TERCEROS" Multiplicity="1" />
+    <End Role="ACUE_PAGO" Type="Model.Store.ACUE_PAGO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TERCEROS">
+        <PropertyRef Name="TER_NIT" />
+        <PropertyRef Name="TER_TDOC" />
+      </Principal>
+      <Dependent Role="ACUE_PAGO">
+        <PropertyRef Name="ACPA_NIT_AR" />
+        <PropertyRef Name="ACPA_TIP_AR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BASES_LIQ_CALENDARIO_FK1">
+    <End Role="CALENDARIO" Type="Model.Store.CALENDARIO" Multiplicity="0..1" />
+    <End Role="BASES_LIQ" Type="Model.Store.BASES_LIQ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CALENDARIO">
+        <PropertyRef Name="CAL_PER" />
+        <PropertyRef Name="CAL_VIG" />
+        <PropertyRef Name="CAL_CLA" />
+      </Principal>
+      <Dependent Role="BASES_LIQ">
+        <PropertyRef Name="BALI_PERI" />
+        <PropertyRef Name="BALI_AÑO" />
+        <PropertyRef Name="BALI_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BASES_LIQ_FORMULARIOS_DEC_FK1">
+    <End Role="FORMULARIOS_DEC" Type="Model.Store.FORMULARIOS_DEC" Multiplicity="0..1" />
+    <End Role="BASES_LIQ" Type="Model.Store.BASES_LIQ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FORMULARIOS_DEC">
+        <PropertyRef Name="FODE_CODI" />
+      </Principal>
+      <Dependent Role="BASES_LIQ">
+        <PropertyRef Name="BALI_FDCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CALENDARIO_CLASE_DEC_FK1">
+    <End Role="CLASE_DEC" Type="Model.Store.CLASE_DEC" Multiplicity="1" />
+    <End Role="CALENDARIO" Type="Model.Store.CALENDARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE_DEC">
+        <PropertyRef Name="CLD_COD" />
+      </Principal>
+      <Dependent Role="CALENDARIO">
+        <PropertyRef Name="CAL_CLA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CARTERAD_CALENDARIO2">
+    <End Role="CALENDARIO" Type="Model.Store.CALENDARIO" Multiplicity="1" />
+    <End Role="CARTERAD" Type="Model.Store.CARTERAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CALENDARIO">
+        <PropertyRef Name="CAL_PER" />
+        <PropertyRef Name="CAL_VIG" />
+        <PropertyRef Name="CAL_CLA" />
+      </Principal>
+      <Dependent Role="CARTERAD">
+        <PropertyRef Name="CAR_PER" />
+        <PropertyRef Name="CAR_ANO" />
+        <PropertyRef Name="CAR_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CARTERAD_CONC_CART_FK1">
+    <End Role="CONC_CART" Type="Model.Store.CONC_CART" Multiplicity="1" />
+    <End Role="CARTERAD" Type="Model.Store.CARTERAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONC_CART">
+        <PropertyRef Name="CCAR_COD" />
+      </Principal>
+      <Dependent Role="CARTERAD">
+        <PropertyRef Name="CAR_COCA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CARTERAD_TIPO_CONCEPTOS_FK1">
+    <End Role="TIPO_CONCEPTOS" Type="Model.Store.TIPO_CONCEPTOS" Multiplicity="1" />
+    <End Role="CARTERAD" Type="Model.Store.CARTERAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_CONCEPTOS">
+        <PropertyRef Name="TCON_COD" />
+      </Principal>
+      <Dependent Role="CARTERAD">
+        <PropertyRef Name="CAR_TCON" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CARTERAD_TIPO_DOC_FK1">
+    <End Role="TIPO_DOC" Type="Model.Store.TIPO_DOC" Multiplicity="0..1" />
+    <End Role="CARTERAD" Type="Model.Store.CARTERAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DOC">
+        <PropertyRef Name="TIDO_CODI" />
+      </Principal>
+      <Dependent Role="CARTERAD">
+        <PropertyRef Name="CAR_TDOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CLD_IMP_CLASE_DEC_FK1">
+    <End Role="CLASE_DEC" Type="Model.Store.CLASE_DEC" Multiplicity="1" />
+    <End Role="CLD_IMP" Type="Model.Store.CLD_IMP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE_DEC">
+        <PropertyRef Name="CLD_COD" />
+      </Principal>
+      <Dependent Role="CLD_IMP">
+        <PropertyRef Name="CLD_COD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CLD_IMP_IMPUESTOS_FK1">
+    <End Role="IMPUESTOS" Type="Model.Store.IMPUESTOS" Multiplicity="1" />
+    <End Role="CLD_IMP" Type="Model.Store.CLD_IMP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMPUESTOS">
+        <PropertyRef Name="IMP_COD" />
+      </Principal>
+      <Dependent Role="CLD_IMP">
+        <PropertyRef Name="CLD_CIMP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CODE_CDEC_CLASE_DEC_FK1">
+    <End Role="CLASE_DEC" Type="Model.Store.CLASE_DEC" Multiplicity="1" />
+    <End Role="CODE_CDEC" Type="Model.Store.CODE_CDEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE_DEC">
+        <PropertyRef Name="CLD_COD" />
+      </Principal>
+      <Dependent Role="CODE_CDEC">
+        <PropertyRef Name="CODE_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CODE_CDEC_DECLARACION_FK1">
+    <End Role="DECLARACION" Type="Model.Store.DECLARACION" Multiplicity="1" />
+    <End Role="CODE_CDEC" Type="Model.Store.CODE_CDEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DECLARACION">
+        <PropertyRef Name="DEC_COD" />
+        <PropertyRef Name="DEC_DOAD" />
+      </Principal>
+      <Dependent Role="CODE_CDEC">
+        <PropertyRef Name="CODE_DCOD" />
+        <PropertyRef Name="CODE_DOAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CODE_CDEC_SECCIONES_FK1">
+    <End Role="SECCIONES" Type="Model.Store.SECCIONES" Multiplicity="0..1" />
+    <End Role="CODE_CDEC" Type="Model.Store.CODE_CDEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECCIONES">
+        <PropertyRef Name="SECC_CODI" />
+      </Principal>
+      <Dependent Role="CODE_CDEC">
+        <PropertyRef Name="CODE_SECO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CODE_CDEC_TIPO_CONCEPTOS_FK1">
+    <End Role="TIPO_CONCEPTOS" Type="Model.Store.TIPO_CONCEPTOS" Multiplicity="1" />
+    <End Role="CODE_CDEC" Type="Model.Store.CODE_CDEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_CONCEPTOS">
+        <PropertyRef Name="TCON_COD" />
+      </Principal>
+      <Dependent Role="CODE_CDEC">
+        <PropertyRef Name="CODE_TICO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CODE_CDEC_TIPO_DOC_FK1">
+    <End Role="TIPO_DOC" Type="Model.Store.TIPO_DOC" Multiplicity="1" />
+    <End Role="CODE_CDEC" Type="Model.Store.CODE_CDEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DOC">
+        <PropertyRef Name="TIDO_CODI" />
+      </Principal>
+      <Dependent Role="CODE_CDEC">
+        <PropertyRef Name="CODE_DOAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CODE_CDEC_VIGENCIA_FK1">
+    <End Role="VIGENCIA" Type="Model.Store.VIGENCIA" Multiplicity="0..1" />
+    <End Role="CODE_CDEC" Type="Model.Store.CODE_CDEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VIGENCIA">
+        <PropertyRef Name="VIG_COD" />
+      </Principal>
+      <Dependent Role="CODE_CDEC">
+        <PropertyRef Name="CODE_VIG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CONC_CART_TIPO_CONCEPTOS_FK1">
+    <End Role="TIPO_CONCEPTOS" Type="Model.Store.TIPO_CONCEPTOS" Multiplicity="1" />
+    <End Role="CONC_CART" Type="Model.Store.CONC_CART" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_CONCEPTOS">
+        <PropertyRef Name="TCON_COD" />
+      </Principal>
+      <Dependent Role="CONC_CART">
+        <PropertyRef Name="CCAR_TICO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CONC_CDEC_CLASE_DEC_FK1">
+    <End Role="CLASE_DEC" Type="Model.Store.CLASE_DEC" Multiplicity="1" />
+    <End Role="CONC_CDEC" Type="Model.Store.CONC_CDEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE_DEC">
+        <PropertyRef Name="CLD_COD" />
+      </Principal>
+      <Dependent Role="CONC_CDEC">
+        <PropertyRef Name="COCD_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CONC_CDEC_FORMULARIOS_DEC_FK1">
+    <End Role="FORMULARIOS_DEC" Type="Model.Store.FORMULARIOS_DEC" Multiplicity="1" />
+    <End Role="CONC_CDEC" Type="Model.Store.CONC_CDEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FORMULARIOS_DEC">
+        <PropertyRef Name="FODE_CODI" />
+      </Principal>
+      <Dependent Role="CONC_CDEC">
+        <PropertyRef Name="COCD_FDCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CONC_CDEC_SECCIONES_FK1">
+    <End Role="SECCIONES" Type="Model.Store.SECCIONES" Multiplicity="0..1" />
+    <End Role="CONC_CDEC" Type="Model.Store.CONC_CDEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECCIONES">
+        <PropertyRef Name="SECC_CODI" />
+      </Principal>
+      <Dependent Role="CONC_CDEC">
+        <PropertyRef Name="COCD_SECO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CONSECUTIVOS_VIGENCIA_FK1">
+    <End Role="VIGENCIA" Type="Model.Store.VIGENCIA" Multiplicity="1" />
+    <End Role="CONSECUTIVOS" Type="Model.Store.CONSECUTIVOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VIGENCIA">
+        <PropertyRef Name="VIG_COD" />
+      </Principal>
+      <Dependent Role="CONSECUTIVOS">
+        <PropertyRef Name="CONS_VIG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CTA_BANCO_BANCOS_FK1">
+    <End Role="BANCOS" Type="Model.Store.BANCOS" Multiplicity="1" />
+    <End Role="CTA_BANCO" Type="Model.Store.CTA_BANCO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BANCOS">
+        <PropertyRef Name="BAN_COD" />
+      </Principal>
+      <Dependent Role="CTA_BANCO">
+        <PropertyRef Name="CTA_BACO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CTA_BANCO_TIPO_CUENTA_FK1">
+    <End Role="TIPO_CUENTA" Type="Model.Store.TIPO_CUENTA" Multiplicity="1" />
+    <End Role="CTA_BANCO" Type="Model.Store.CTA_BANCO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_CUENTA">
+        <PropertyRef Name="TCTA_CODI" />
+      </Principal>
+      <Dependent Role="CTA_BANCO">
+        <PropertyRef Name="CTA_TIP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CUOT_ACPA_ACUE_PAGO_FK1">
+    <End Role="ACUE_PAGO" Type="Model.Store.ACUE_PAGO" Multiplicity="1" />
+    <End Role="CUOT_ACPA" Type="Model.Store.CUOT_ACPA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACUE_PAGO">
+        <PropertyRef Name="ACPA_NUME" />
+      </Principal>
+      <Dependent Role="CUOT_ACPA">
+        <PropertyRef Name="CUAP_APNU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DEC_REQUI_REQUI_DECLARACI_FK1">
+    <End Role="REQUI_DECLARACION" Type="Model.Store.REQUI_DECLARACION" Multiplicity="0..1" />
+    <End Role="DEC_REQUI" Type="Model.Store.DEC_REQUI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REQUI_DECLARACION">
+        <PropertyRef Name="REQ_COD" />
+        <PropertyRef Name="REQ_CLDEC" />
+      </Principal>
+      <Dependent Role="DEC_REQUI">
+        <PropertyRef Name="DR_CODREQ" />
+        <PropertyRef Name="DR_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DECLARACION_CALENDARIO_FK1">
+    <End Role="CALENDARIO" Type="Model.Store.CALENDARIO" Multiplicity="1" />
+    <End Role="DECLARACION" Type="Model.Store.DECLARACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CALENDARIO">
+        <PropertyRef Name="CAL_PER" />
+        <PropertyRef Name="CAL_VIG" />
+        <PropertyRef Name="CAL_CLA" />
+      </Principal>
+      <Dependent Role="DECLARACION">
+        <PropertyRef Name="DEC_PER" />
+        <PropertyRef Name="DEC_ANO" />
+        <PropertyRef Name="DEC_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DECLARACION_FORMULARIOS_D_FK1">
+    <End Role="FORMULARIOS_DEC" Type="Model.Store.FORMULARIOS_DEC" Multiplicity="0..1" />
+    <End Role="DECLARACION" Type="Model.Store.DECLARACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FORMULARIOS_DEC">
+        <PropertyRef Name="FODE_CODI" />
+      </Principal>
+      <Dependent Role="DECLARACION">
+        <PropertyRef Name="DEC_FDCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DECLARACION_TERCEROS_FK1">
+    <End Role="TERCEROS" Type="Model.Store.TERCEROS" Multiplicity="0..1" />
+    <End Role="DECLARACION" Type="Model.Store.DECLARACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TERCEROS">
+        <PropertyRef Name="TER_NIT" />
+        <PropertyRef Name="TER_TDOC" />
+      </Principal>
+      <Dependent Role="DECLARACION">
+        <PropertyRef Name="DEC_SIG_CTRF" />
+        <PropertyRef Name="DEC_SIG_CTRF_TDOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DECLARACION_TERCEROS_FK2">
+    <End Role="TERCEROS" Type="Model.Store.TERCEROS" Multiplicity="0..1" />
+    <End Role="DECLARACION" Type="Model.Store.DECLARACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TERCEROS">
+        <PropertyRef Name="TER_NIT" />
+        <PropertyRef Name="TER_TDOC" />
+      </Principal>
+      <Dependent Role="DECLARACION">
+        <PropertyRef Name="DEC_SIG_DEC" />
+        <PropertyRef Name="DEC_SIG_DEC_TDOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DECLARACION_TERCEROS_FK3">
+    <End Role="TERCEROS" Type="Model.Store.TERCEROS" Multiplicity="1" />
+    <End Role="DECLARACION" Type="Model.Store.DECLARACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TERCEROS">
+        <PropertyRef Name="TER_NIT" />
+        <PropertyRef Name="TER_TDOC" />
+      </Principal>
+      <Dependent Role="DECLARACION">
+        <PropertyRef Name="DEC_NIT" />
+        <PropertyRef Name="DEC_TDOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DECLARACION_TIPO_DOC_FK1">
+    <End Role="TIPO_DOC" Type="Model.Store.TIPO_DOC" Multiplicity="1" />
+    <End Role="DECLARACION" Type="Model.Store.DECLARACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DOC">
+        <PropertyRef Name="TIDO_CODI" />
+      </Principal>
+      <Dependent Role="DECLARACION">
+        <PropertyRef Name="DEC_DOAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DECLARACION_VIGENCIA_FK1">
+    <End Role="VIGENCIA" Type="Model.Store.VIGENCIA" Multiplicity="1" />
+    <End Role="DECLARACION" Type="Model.Store.DECLARACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VIGENCIA">
+        <PropertyRef Name="VIG_COD" />
+      </Principal>
+      <Dependent Role="DECLARACION">
+        <PropertyRef Name="DEC_VIG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DIST_CART_CLASE_DEC_FK1">
+    <End Role="CLASE_DEC" Type="Model.Store.CLASE_DEC" Multiplicity="1" />
+    <End Role="DIST_CART" Type="Model.Store.DIST_CART" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE_DEC">
+        <PropertyRef Name="CLD_COD" />
+      </Principal>
+      <Dependent Role="DIST_CART">
+        <PropertyRef Name="DICA_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DIST_CART_CONC_CART_FK2">
+    <End Role="CONC_CART" Type="Model.Store.CONC_CART" Multiplicity="1" />
+    <End Role="DIST_CART" Type="Model.Store.DIST_CART" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONC_CART">
+        <PropertyRef Name="CCAR_COD" />
+      </Principal>
+      <Dependent Role="DIST_CART">
+        <PropertyRef Name="DICA_CODC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DIST_CART_FORMULARIOS_DEC_FK1">
+    <End Role="FORMULARIOS_DEC" Type="Model.Store.FORMULARIOS_DEC" Multiplicity="1" />
+    <End Role="DIST_CART" Type="Model.Store.DIST_CART" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FORMULARIOS_DEC">
+        <PropertyRef Name="FODE_CODI" />
+      </Principal>
+      <Dependent Role="DIST_CART">
+        <PropertyRef Name="DICA_FDCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DOC_APG_CALENDARIO_FK1">
+    <End Role="CALENDARIO" Type="Model.Store.CALENDARIO" Multiplicity="1" />
+    <End Role="DOC_APG" Type="Model.Store.DOC_APG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CALENDARIO">
+        <PropertyRef Name="CAL_PER" />
+        <PropertyRef Name="CAL_VIG" />
+        <PropertyRef Name="CAL_CLA" />
+      </Principal>
+      <Dependent Role="DOC_APG">
+        <PropertyRef Name="DAPG_PER" />
+        <PropertyRef Name="DAPG_AÑO" />
+        <PropertyRef Name="DAPG_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DOC_APG_TIPO_DOC_FK1">
+    <End Role="TIPO_DOC" Type="Model.Store.TIPO_DOC" Multiplicity="1" />
+    <End Role="DOC_APG" Type="Model.Store.DOC_APG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DOC">
+        <PropertyRef Name="TIDO_CODI" />
+      </Principal>
+      <Dependent Role="DOC_APG">
+        <PropertyRef Name="DAPG_DOAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EXPE_APG_CALENDARIO_FK1">
+    <End Role="CALENDARIO" Type="Model.Store.CALENDARIO" Multiplicity="1" />
+    <End Role="EXPE_APG" Type="Model.Store.EXPE_APG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CALENDARIO">
+        <PropertyRef Name="CAL_PER" />
+        <PropertyRef Name="CAL_VIG" />
+        <PropertyRef Name="CAL_CLA" />
+      </Principal>
+      <Dependent Role="EXPE_APG">
+        <PropertyRef Name="EXAP_PGRA" />
+        <PropertyRef Name="EXAP_AGRA" />
+        <PropertyRef Name="EXPE_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EXPE_APG_FK">
+    <End Role="EXPEDIENTES" Type="Model.Store.EXPEDIENTES" Multiplicity="1" />
+    <End Role="EXPE_APG" Type="Model.Store.EXPE_APG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXPEDIENTES">
+        <PropertyRef Name="EXPE_NUME" />
+      </Principal>
+      <Dependent Role="EXPE_APG">
+        <PropertyRef Name="EXAP_NUME" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EXPE_APG_TIPO_DOC_FK1">
+    <End Role="TIPO_DOC" Type="Model.Store.TIPO_DOC" Multiplicity="0..1" />
+    <End Role="EXPE_APG" Type="Model.Store.EXPE_APG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DOC">
+        <PropertyRef Name="TIDO_CODI" />
+      </Principal>
+      <Dependent Role="EXPE_APG">
+        <PropertyRef Name="EXAP_DOAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EXPE_TRAM_FK">
+    <End Role="EXPEDIENTES" Type="Model.Store.EXPEDIENTES" Multiplicity="1" />
+    <End Role="EXPE_TRAM" Type="Model.Store.EXPE_TRAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXPEDIENTES">
+        <PropertyRef Name="EXPE_NUME" />
+      </Principal>
+      <Dependent Role="EXPE_TRAM">
+        <PropertyRef Name="EXTR_NUME" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EXPEDIENTES_CLASE_DEC_FK1">
+    <End Role="CLASE_DEC" Type="Model.Store.CLASE_DEC" Multiplicity="1" />
+    <End Role="EXPEDIENTES" Type="Model.Store.EXPEDIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE_DEC">
+        <PropertyRef Name="CLD_COD" />
+      </Principal>
+      <Dependent Role="EXPEDIENTES">
+        <PropertyRef Name="EXPE_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EXPEDIENTES_PROCESOS_FK1">
+    <End Role="PROCESOS" Type="Model.Store.PROCESOS" Multiplicity="1" />
+    <End Role="EXPEDIENTES" Type="Model.Store.EXPEDIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROCESOS">
+        <PropertyRef Name="PROC_CODI" />
+      </Principal>
+      <Dependent Role="EXPEDIENTES">
+        <PropertyRef Name="EXPE_PROC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EXPEDIENTES_TIPO_DOC_FK1">
+    <End Role="TIPO_DOC" Type="Model.Store.TIPO_DOC" Multiplicity="0..1" />
+    <End Role="EXPEDIENTES" Type="Model.Store.EXPEDIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DOC">
+        <PropertyRef Name="TIDO_CODI" />
+      </Principal>
+      <Dependent Role="EXPEDIENTES">
+        <PropertyRef Name="EXPE_DOAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EXPEDIENTES_TIPO_PROCESO_FK1">
+    <End Role="TIPO_PROCESO" Type="Model.Store.TIPO_PROCESO" Multiplicity="1" />
+    <End Role="EXPEDIENTES" Type="Model.Store.EXPEDIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_PROCESO">
+        <PropertyRef Name="TPRO_CODI" />
+      </Principal>
+      <Dependent Role="EXPEDIENTES">
+        <PropertyRef Name="EXPE_TPRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EXPEDIENTES_TRAMITES_FK1">
+    <End Role="TRAMITES" Type="Model.Store.TRAMITES" Multiplicity="1" />
+    <End Role="EXPEDIENTES" Type="Model.Store.EXPEDIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRAMITES">
+        <PropertyRef Name="TRAM_CODI" />
+      </Principal>
+      <Dependent Role="EXPEDIENTES">
+        <PropertyRef Name="EXPE_TRAC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_APPLICATIONID">
+    <End Role="ORA_ASPNET_APPLICATIONS" Type="Model.Store.ORA_ASPNET_APPLICATIONS" Multiplicity="1" />
+    <End Role="ORA_ASPNET_ROLES" Type="Model.Store.ORA_ASPNET_ROLES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_APPLICATIONS">
+        <PropertyRef Name="APPLICATIONID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_ROLES">
+        <PropertyRef Name="APPLICATIONID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASPNET_USERSINROLES_ROLEID">
+    <End Role="ORA_ASPNET_ROLES" Type="Model.Store.ORA_ASPNET_ROLES" Multiplicity="1" />
+    <End Role="ORA_ASPNET_USERSINROLES" Type="Model.Store.ORA_ASPNET_USERSINROLES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_ROLES">
+        <PropertyRef Name="ROLEID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_USERSINROLES">
+        <PropertyRef Name="ROLEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASPNET_USERSINROLES_USERID">
+    <End Role="ORA_ASPNET_USERS" Type="Model.Store.ORA_ASPNET_USERS" Multiplicity="1" />
+    <End Role="ORA_ASPNET_USERSINROLES" Type="Model.Store.ORA_ASPNET_USERSINROLES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_USERS">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_USERSINROLES">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EXPE_NOTIF">
+    <End Role="EXPEDIENTES" Type="Model.Store.EXPEDIENTES" Multiplicity="0..1" />
+    <End Role="EXPE_NOTIF" Type="Model.Store.EXPE_NOTIF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXPEDIENTES">
+        <PropertyRef Name="EXPE_NUME" />
+      </Principal>
+      <Dependent Role="EXPE_NOTIF">
+        <PropertyRef Name="EXTR_NUME" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEMBERSHIP_APPID">
+    <End Role="ORA_ASPNET_APPLICATIONS" Type="Model.Store.ORA_ASPNET_APPLICATIONS" Multiplicity="1" />
+    <End Role="ORA_ASPNET_MEMBERSHIP" Type="Model.Store.ORA_ASPNET_MEMBERSHIP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_APPLICATIONS">
+        <PropertyRef Name="APPLICATIONID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_MEMBERSHIP">
+        <PropertyRef Name="APPLICATIONID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEMBERSHIP_USERID">
+    <End Role="ORA_ASPNET_USERS" Type="Model.Store.ORA_ASPNET_USERS" Multiplicity="1" />
+    <End Role="ORA_ASPNET_MEMBERSHIP" Type="Model.Store.ORA_ASPNET_MEMBERSHIP" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_USERS">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_MEMBERSHIP">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PATHS_APPID">
+    <End Role="ORA_ASPNET_APPLICATIONS" Type="Model.Store.ORA_ASPNET_APPLICATIONS" Multiplicity="1" />
+    <End Role="ORA_ASPNET_PATHS" Type="Model.Store.ORA_ASPNET_PATHS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_APPLICATIONS">
+        <PropertyRef Name="APPLICATIONID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_PATHS">
+        <PropertyRef Name="APPLICATIONID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROFILE_USERID">
+    <End Role="ORA_ASPNET_USERS" Type="Model.Store.ORA_ASPNET_USERS" Multiplicity="1" />
+    <End Role="ORA_ASPNET_PROFILE" Type="Model.Store.ORA_ASPNET_PROFILE" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_USERS">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_PROFILE">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SITEMAP_APPID">
+    <End Role="ORA_ASPNET_APPLICATIONS" Type="Model.Store.ORA_ASPNET_APPLICATIONS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ORA_ASPNET_SITEMAP" Type="Model.Store.ORA_ASPNET_SITEMAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_APPLICATIONS">
+        <PropertyRef Name="APPLICATIONID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_SITEMAP">
+        <PropertyRef Name="APPLICATIONID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USERS_APPID">
+    <End Role="ORA_ASPNET_APPLICATIONS" Type="Model.Store.ORA_ASPNET_APPLICATIONS" Multiplicity="1" />
+    <End Role="ORA_ASPNET_USERS" Type="Model.Store.ORA_ASPNET_USERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_APPLICATIONS">
+        <PropertyRef Name="APPLICATIONID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_USERS">
+        <PropertyRef Name="APPLICATIONID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FM_BASESLIQ01_BASES_LIQ_FK1">
+    <End Role="BASES_LIQ" Type="Model.Store.BASES_LIQ" Multiplicity="1" />
+    <End Role="FM_BASESLIQ01" Type="Model.Store.FM_BASESLIQ01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASES_LIQ">
+        <PropertyRef Name="BALI_NRAD" />
+      </Principal>
+      <Dependent Role="FM_BASESLIQ01">
+        <PropertyRef Name="NRO_RAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FMTO_IMP_TIPO_DATO_FK1">
+    <End Role="TIPO_DATO" Type="Model.Store.TIPO_DATO" Multiplicity="1" />
+    <End Role="FMTO_IMP" Type="Model.Store.FMTO_IMP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DATO">
+        <PropertyRef Name="TIDA_CODI" />
+      </Principal>
+      <Dependent Role="FMTO_IMP">
+        <PropertyRef Name="FMIM_TIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FORM_AYUD_FORMULARIOS_DEC_FK1">
+    <End Role="FORMULARIOS_DEC" Type="Model.Store.FORMULARIOS_DEC" Multiplicity="0..1" />
+    <End Role="FORM_AYUD" Type="Model.Store.FORM_AYUD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FORMULARIOS_DEC">
+        <PropertyRef Name="FODE_CODI" />
+      </Principal>
+      <Dependent Role="FORM_AYUD">
+        <PropertyRef Name="FOAY_FDCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FORMULARIOS_DEC_CLASE_DEC_FK1">
+    <End Role="CLASE_DEC" Type="Model.Store.CLASE_DEC" Multiplicity="1" />
+    <End Role="FORMULARIOS_DEC" Type="Model.Store.FORMULARIOS_DEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE_DEC">
+        <PropertyRef Name="CLD_COD" />
+      </Principal>
+      <Dependent Role="FORMULARIOS_DEC">
+        <PropertyRef Name="FODE_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FORMULASLT_IMPUESTOS_FK1">
+    <End Role="IMPUESTOS" Type="Model.Store.IMPUESTOS" Multiplicity="1" />
+    <End Role="FORMULASLT" Type="Model.Store.FORMULASLT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMPUESTOS">
+        <PropertyRef Name="IMP_COD" />
+      </Principal>
+      <Dependent Role="FORMULASLT">
+        <PropertyRef Name="FORM_CIMP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IMPUESTOS_UNIDAD_FK1">
+    <End Role="UNIDAD" Type="Model.Store.UNIDAD" Multiplicity="0..1" />
+    <End Role="IMPUESTOS" Type="Model.Store.IMPUESTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIDAD">
+        <PropertyRef Name="UNI_COD" />
+      </Principal>
+      <Dependent Role="IMPUESTOS">
+        <PropertyRef Name="IMP_UNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MENU_MENU_FK1">
+    <End Role="MENU" Type="Model.Store.MENU" Multiplicity="1" />
+    <End Role="MENU1" Type="Model.Store.MENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MENU">
+        <PropertyRef Name="MENUID" />
+      </Principal>
+      <Dependent Role="MENU1">
+        <PropertyRef Name="PADREID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MENU_PERFIL_MENU_FK1">
+    <End Role="MENU" Type="Model.Store.MENU" Multiplicity="1" />
+    <End Role="MENU_PERFIL" Type="Model.Store.MENU_PERFIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MENU">
+        <PropertyRef Name="MENUID" />
+      </Principal>
+      <Dependent Role="MENU_PERFIL">
+        <PropertyRef Name="MENUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MOVIMIENTO_CALENDARIO_FK1">
+    <End Role="CALENDARIO" Type="Model.Store.CALENDARIO" Multiplicity="0..1" />
+    <End Role="MOVIMIENTO" Type="Model.Store.MOVIMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CALENDARIO">
+        <PropertyRef Name="CAL_PER" />
+        <PropertyRef Name="CAL_VIG" />
+        <PropertyRef Name="CAL_CLA" />
+      </Principal>
+      <Dependent Role="MOVIMIENTO">
+        <PropertyRef Name="MOV_PER" />
+        <PropertyRef Name="MOV_AÑO" />
+        <PropertyRef Name="MOV_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MOVIMIENTO_TIPO_DOC_FK1">
+    <End Role="TIPO_DOC" Type="Model.Store.TIPO_DOC" Multiplicity="0..1" />
+    <End Role="MOVIMIENTO" Type="Model.Store.MOVIMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DOC">
+        <PropertyRef Name="TIDO_CODI" />
+      </Principal>
+      <Dependent Role="MOVIMIENTO">
+        <PropertyRef Name="MOV_TDOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MOVIMIENTO_TIPO_MOV_FK1">
+    <End Role="TIPO_MOV" Type="Model.Store.TIPO_MOV" Multiplicity="0..1" />
+    <End Role="MOVIMIENTO" Type="Model.Store.MOVIMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_MOV">
+        <PropertyRef Name="TMOV_COD" />
+      </Principal>
+      <Dependent Role="MOVIMIENTO">
+        <PropertyRef Name="MOV_TMOV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PAGOS_CTA_BANCO_FK1">
+    <End Role="CTA_BANCO" Type="Model.Store.CTA_BANCO" Multiplicity="0..1" />
+    <End Role="PAGOS" Type="Model.Store.PAGOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CTA_BANCO">
+        <PropertyRef Name="CTA_BACO" />
+        <PropertyRef Name="CTA_NRO" />
+      </Principal>
+      <Dependent Role="PAGOS">
+        <PropertyRef Name="PAG_BACO" />
+        <PropertyRef Name="PAG_CTAB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PAGOS_TIPO_DOC_FK1">
+    <End Role="TIPO_DOC" Type="Model.Store.TIPO_DOC" Multiplicity="1" />
+    <End Role="PAGOS" Type="Model.Store.PAGOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DOC">
+        <PropertyRef Name="TIDO_CODI" />
+      </Principal>
+      <Dependent Role="PAGOS">
+        <PropertyRef Name="PAG_TDOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PAR_LIQ_DET_PARA_LIQU_FK1">
+    <End Role="PARA_LIQU" Type="Model.Store.PARA_LIQU" Multiplicity="1" />
+    <End Role="PAR_LIQ_DET" Type="Model.Store.PAR_LIQ_DET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PARA_LIQU">
+        <PropertyRef Name="PALI_CODI" />
+      </Principal>
+      <Dependent Role="PAR_LIQ_DET">
+        <PropertyRef Name="PALI_PLCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PARA_LIQU_TIPO_DATO_FK1">
+    <End Role="TIPO_DATO" Type="Model.Store.TIPO_DATO" Multiplicity="0..1" />
+    <End Role="PARA_LIQU" Type="Model.Store.PARA_LIQU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DATO">
+        <PropertyRef Name="TIDA_CODI" />
+      </Principal>
+      <Dependent Role="PARA_LIQU">
+        <PropertyRef Name="PALI_TIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PERSONALIZATIONALLUSERS_PATHID">
+    <End Role="ORA_ASPNET_PATHS" Type="Model.Store.ORA_ASPNET_PATHS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ORA_ASPNET_PERSONALIZNALLUSERS" Type="Model.Store.ORA_ASPNET_PERSONALIZNALLUSERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_PATHS">
+        <PropertyRef Name="PATHID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_PERSONALIZNALLUSERS">
+        <PropertyRef Name="PATHID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PERSONALIZATIONPERUSER_PATHID">
+    <End Role="ORA_ASPNET_PATHS" Type="Model.Store.ORA_ASPNET_PATHS" Multiplicity="0..1" />
+    <End Role="ORA_ASPNET_PERSONALIZNPERUSER" Type="Model.Store.ORA_ASPNET_PERSONALIZNPERUSER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_PATHS">
+        <PropertyRef Name="PATHID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_PERSONALIZNPERUSER">
+        <PropertyRef Name="PATHID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PERSONALIZATIONPERUSER_USERID">
+    <End Role="ORA_ASPNET_USERS" Type="Model.Store.ORA_ASPNET_USERS" Multiplicity="0..1" />
+    <End Role="ORA_ASPNET_PERSONALIZNPERUSER" Type="Model.Store.ORA_ASPNET_PERSONALIZNPERUSER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_USERS">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_PERSONALIZNPERUSER">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PROCESOS_TIPO_PROCESO_FK1">
+    <End Role="TIPO_PROCESO" Type="Model.Store.TIPO_PROCESO" Multiplicity="1" />
+    <End Role="PROCESOS" Type="Model.Store.PROCESOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_PROCESO">
+        <PropertyRef Name="TPRO_CODI" />
+      </Principal>
+      <Dependent Role="PROCESOS">
+        <PropertyRef Name="PROC_TPCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RELA_AGETER_TERCEROS_FK1">
+    <End Role="TERCEROS" Type="Model.Store.TERCEROS" Multiplicity="1" />
+    <End Role="RELA_AGETER" Type="Model.Store.RELA_AGETER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TERCEROS">
+        <PropertyRef Name="TER_NIT" />
+        <PropertyRef Name="TER_TDOC" />
+      </Principal>
+      <Dependent Role="RELA_AGETER">
+        <PropertyRef Name="REL_AGE" />
+        <PropertyRef Name="REL_TDOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RELA_AGETER_TERCEROS_FK3">
+    <End Role="TERCEROS" Type="Model.Store.TERCEROS" Multiplicity="0..1" />
+    <End Role="RELA_AGETER" Type="Model.Store.RELA_AGETER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TERCEROS">
+        <PropertyRef Name="TER_NIT" />
+        <PropertyRef Name="TER_TDOC" />
+      </Principal>
+      <Dependent Role="RELA_AGETER">
+        <PropertyRef Name="REL_DEC" />
+        <PropertyRef Name="REL_TDOCDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REQUI_DECLARACION_CLASE_D_FK1">
+    <End Role="CLASE_DEC" Type="Model.Store.CLASE_DEC" Multiplicity="1" />
+    <End Role="REQUI_DECLARACION" Type="Model.Store.REQUI_DECLARACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE_DEC">
+        <PropertyRef Name="CLD_COD" />
+      </Principal>
+      <Dependent Role="REQUI_DECLARACION">
+        <PropertyRef Name="REQ_CLDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0050484">
+    <End Role="FMTOS" Type="Model.Store.FMTOS" Multiplicity="1" />
+    <End Role="FMTO_IMP" Type="Model.Store.FMTO_IMP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FMTOS">
+        <PropertyRef Name="FMTO_CODI" />
+      </Principal>
+      <Dependent Role="FMTO_IMP">
+        <PropertyRef Name="FMIM_CODI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TER_DEC_CLASE_DEC_FK1">
+    <End Role="CLASE_DEC" Type="Model.Store.CLASE_DEC" Multiplicity="0..1" />
+    <End Role="TER_DEC" Type="Model.Store.TER_DEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE_DEC">
+        <PropertyRef Name="CLD_COD" />
+      </Principal>
+      <Dependent Role="TER_DEC">
+        <PropertyRef Name="TEDE_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TERCEROS_MUNICIPIOS_FK1">
+    <End Role="MUNICIPIOS" Type="Model.Store.MUNICIPIOS" Multiplicity="1" />
+    <End Role="TERCEROS" Type="Model.Store.TERCEROS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUNICIPIOS">
+        <PropertyRef Name="MUN_COD" />
+      </Principal>
+      <Dependent Role="TERCEROS">
+        <PropertyRef Name="TER_MPIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TERCEROS_TDOC_IDE_FK1">
+    <End Role="TDOC_IDE" Type="Model.Store.TDOC_IDE" Multiplicity="1" />
+    <End Role="TERCEROS" Type="Model.Store.TERCEROS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDOC_IDE">
+        <PropertyRef Name="TDOC_COD" />
+      </Principal>
+      <Dependent Role="TERCEROS">
+        <PropertyRef Name="TER_TDOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TIPO_DEC_CLASE_DEC_FK1">
+    <End Role="CLASE_DEC" Type="Model.Store.CLASE_DEC" Multiplicity="1" />
+    <End Role="TIPO_DEC" Type="Model.Store.TIPO_DEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASE_DEC">
+        <PropertyRef Name="CLD_COD" />
+      </Principal>
+      <Dependent Role="TIPO_DEC">
+        <PropertyRef Name="TDEC_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TIPO_DOC_CONS_TIPO_DOC_FK1">
+    <End Role="TIPO_DOC" Type="Model.Store.TIPO_DOC" Multiplicity="1" />
+    <End Role="TIPO_DOC_CONS" Type="Model.Store.TIPO_DOC_CONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_DOC">
+        <PropertyRef Name="TIDO_CODI" />
+      </Principal>
+      <Dependent Role="TIPO_DOC_CONS">
+        <PropertyRef Name="TIDO_CODI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VIGENCIA_ESTADOS_FK1">
+    <End Role="ESTADOS" Type="Model.Store.ESTADOS" Multiplicity="1" />
+    <End Role="VIGENCIA" Type="Model.Store.VIGENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOS">
+        <PropertyRef Name="EST_COD" />
+      </Principal>
+      <Dependent Role="VIGENCIA">
+        <PropertyRef Name="VIG_EST" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

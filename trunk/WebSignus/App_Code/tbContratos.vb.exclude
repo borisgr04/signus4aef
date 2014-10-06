@@ -1,0 +1,2214 @@
+Imports Microsoft.VisualBasic
+Imports oracle.DataAccess.Client
+Imports oracle.DataAccess.Types
+Imports System.IO
+Public Class tbContratos
+    Dim cUser As System.Collections.Specialized.NameValueCollection
+    Dim Sw_cUser As Boolean = False
+    Dim MsgOk As String = "Se Realizó la Operación Exitosamente"
+    Dim msg As String = ""
+    Public Doc As String, NroCon As String
+    Public dadd As String
+    Public dbConnection As New OracleConnection
+    Public lErrorG As Boolean
+    Public f As New Funciones
+    Dim usuario As String
+    Public doc_act As String
+    Public Ruta_Doc As String = "E:\SIRCC\Docs\"
+
+    Public Function GetRecords() As System.Data.DataSet
+
+        Dim queryString As String = "SELECT * FROM vContratosc "
+
+
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+        Dim dataAdapter As New OracleDataAdapter
+
+        dataAdapter.SelectCommand = dbCommand
+
+        Dim dataSet As System.Data.DataSet = New System.Data.DataSet
+        dataAdapter.Fill(dataSet)
+
+        Return dataSet
+
+    End Function
+    Public Function GetRecords(ByVal Tipo As String, ByVal feci As Date, ByVal fecf As Date) As System.Data.DataSet
+
+
+        Dim queryString As String = "SELECT NUMERO,OBJ_CON OBJETO,IDE_CON IDENT_CONTRATISTA, CONTRATISTA,TIPO,FECHASUSCRIP,PLAZOEJEC,VALOR FROM vContratosc Where cod_tip='" + Tipo + "' And FECHASUSCRIP BetWeen TO_DATE('" + feci.ToShortDateString + "','dd/mm/yyyy') And TO_DATE('" + fecf.ToShortDateString + "','dd/mm/yyyy')"
+
+
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+        Dim dataAdapter As New OracleDataAdapter
+
+        dataAdapter.SelectCommand = dbCommand
+
+        Dim dataSet As System.Data.DataSet = New System.Data.DataSet
+        dataAdapter.Fill(dataSet)
+
+        Return dataSet
+
+    End Function
+
+    Public Function GetCodigo(ByVal tip As String, ByVal nro_con As String) As String
+
+        Dim ncon As New tbVigencias(usuario)
+        Dim año As Integer = ncon.GetAñoByIde()
+
+        If Sw_cUser = True Then
+            Return Right(cUser.Item("vigencia").ToString, 2) + tip.ToString + Right("0000" + nro_con.ToString, 4)
+        Else
+            Return Right(año.ToString, 2) + tip.ToString + Right("0000" + nro_con.ToString, 4)
+        End If
+
+    End Function
+
+    Public Function Legalizar_Contrato(ByVal cod_con As String, ByVal dtpolizas As Data.DataTable, ByVal ncp As String, ByVal gac As String) As String
+        Dim fecp As Date, i As Integer
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        ncp = IIf(ncp.ToString <> "", ncp.ToString, "-")
+        gac = IIf(gac <> "", gac, "-")
+        If Me.IsLegalizado(cod_con, msg) Then
+            Me.lErrorG = True
+            Return msg
+            Exit Function
+        End If
+        Try
+
+            For i = 0 To dtpolizas.Rows.Count - 1
+                fecp = dtpolizas.Rows(i)("fechalimite").ToString
+                Dim queryString As String = "INSERT INTO Polizas_Contrato(COD_CON,COD_POL,COD_ASE,VAL_POL,FEC_POL)VALUES('" + cod_con + "',TO_NUMBER(:COD_POL),TO_NUMBER(:COD_ASE),TO_NUMBER(:VAL_POL),TO_DATE('" + fecp.ToShortDateString + "','dd/mm/yyyy')) "
+                Dim dbCommand As New OracleCommand(queryString, dbConnection)
+                dbCommand.Parameters.Add("COD_POL", (dtpolizas.Rows(i)("cod_pol").ToString))
+                dbCommand.Parameters.Add("COD_ASE", (dtpolizas.Rows(i)("cod_ase").ToString))
+                dbCommand.Parameters.Add("VAL_POL", (dtpolizas.Rows(i)("valor").ToString))
+                dbCommand.ExecuteNonQuery()
+            Next i
+            Dim queryString2 As String = "update Contratos Set gac_con='" + gac.ToString + "', nro_com_pag='" + ncp.ToString + "' Where cod_con='" + cod_con + "'"
+            Dim dbCommand2 As New OracleCommand(queryString2, dbConnection)
+            dbCommand2.ExecuteNonQuery()
+
+            msg = "Se Asignó Poliza(s) a Contrato Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+    End Function
+    Public Function AsigImpContrato(ByVal cod_con As String, ByVal nro_imp As String, ByVal nro_com As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "INSERT INTO Imp_Contratos(COD_CON,NRO_IMP,NRO_COM)VALUES('" + cod_con + "',TO_NUMBER('" + nro_imp + "'),'" + nro_com + "') "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Asignó Imp Nº" + nro_imp + " Al Contrato N°" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function DAsigImpContrato(ByVal cod_con As String, ByVal nro_imp As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "DELETE FROM Imp_Contratos WHERE COD_CON ='" + cod_con + "' AND NRO_IMP=TO_NUMBER('" + nro_imp + "')"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Quitó Impuesto Nº" + nro_imp + " Al Contrato N° " + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function AsigRubros(ByVal cod_con As String, ByVal cod_rub As String) As String
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "INSERT INTO Rubros_Contratos(COD_CON,cod_rub)VALUES('" + cod_con + "','" + cod_rub + "') "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Asignó Rubro al Contrato Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function AsigRp(ByVal cod_con As String, ByVal nro_rp As String, ByVal fec_rp As Date) As String
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "INSERT INTO RP_Contratos(COD_CON,FEC_RP,NRO_RP,VIGENCIA)VALUES('" + cod_con + "',TO_DATE('" + fec_rp.ToShortDateString + "','dd/mm/yyyy'),'" + nro_rp + "'," + cUser.Item("vigencia").ToString + ") "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Asignó RP al Contrato Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function AsigCDP(ByVal cod_con As String, ByVal nro_cdp As String, ByVal fec_cdp As Date) As String
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "INSERT INTO CDP_Contratos(COD_CON,FEC_CDP,NRO_CDP)VALUES('" + cod_con + "',TO_DATE('" + fec_cdp.ToShortDateString + "','dd/mm/yyyy'),'" + nro_cdp + "') "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Asignó CDP Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function DAsigCDP(ByVal cod_con As String, ByVal nro_cdp As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "DELETE FROM CDP_Contratos WHERE COD_CON ='" + cod_con + "' AND NRO_CDP='" + nro_cdp + "'"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Quitó CDP Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function DAsigRubro(ByVal cod_con As String, ByVal cod_rub As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "DELETE FROM Rubros_Contratos WHERE COD_CON ='" + cod_con + "' AND cod_rub='" + cod_rub + "'"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Quitó Rubro Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function DAsigRP(ByVal cod_con As String, ByVal nro_rp As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "DELETE FROM RP_Contratos WHERE COD_CON ='" + cod_con + "' AND NRO_RP='" + nro_rp + "'"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Quitó RP Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            lErrorG = False
+            msg = MsgOk + "<br>" + msg
+
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function AsigPolizas(ByVal cod_con As String, ByVal cod_pol As String, ByVal cod_ase As String, ByVal nro_pol As Long, ByVal val_pol As Long, ByVal fec_pol As Date) As String
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "INSERT INTO Polizas_Contrato(COD_CON,COD_POL,COD_ASE,VAL_POL,FEC_POL,NRO_POL)VALUES('" + cod_con + "',TO_NUMBER(:COD_POL),TO_NUMBER(:COD_ASE),TO_NUMBER(:VAL_POL),TO_DATE('" + fec_pol.ToShortDateString + "','dd/mm/yyyy'),to_number(:nro_pol)) "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.Parameters.Add("COD_POL", cod_pol)
+            dbCommand.Parameters.Add("COD_ASE", cod_ase)
+            dbCommand.Parameters.Add("VAL_POL", val_pol)
+            dbCommand.Parameters.Add("NRO_POL", nro_pol)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Asignó Poliza a Contrato Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function DAsigPolizas(ByVal cod_con As String, ByVal cod_pol As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "DELETE FROM Polizas_Contrato WHERE COD_CON ='" + cod_con + "' AND COD_POL=TO_NUMBER(" + cod_pol.ToString + ")"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Quitó Poliza a Contrato Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function AsigImp_Add(ByVal nro_adi As String, ByVal nro_imp As String, ByVal nro_com As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "INSERT INTO Imp_adiciones(nro_adi,NRO_IMP,NRO_COM)VALUES('" + nro_adi + "',TO_NUMBER('" + nro_imp + "'),'" + nro_com + "') "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Asignó Imp Nº" + nro_imp + " A la Adición N°" + nro_adi
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function DAsigImp_Add(ByVal nro_adi As String, ByVal nro_imp As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "DELETE FROM Imp_Adiciones WHERE nro_adi ='" + nro_adi + "' AND NRO_IMP=TO_NUMBER('" + nro_imp + "')"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Quitó Impuesto Nº" + nro_imp + " A la Adición N° " + nro_adi
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function AsigPolizas_Add(ByVal nro_adi As String, ByVal cod_pol As String, ByVal cod_ase As String, ByVal nro_pol As Long, ByVal val_pol As Long, ByVal fec_pol As Date) As String
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "INSERT INTO Polizas_Adiciones(nro_adi,COD_POL,COD_ASE,VAL_POL,FEC_POL,NRO_POL)VALUES('" + nro_adi + "',TO_NUMBER(:COD_POL),TO_NUMBER(:COD_ASE),TO_NUMBER(:VAL_POL),TO_DATE('" + fec_pol.ToShortDateString + "','dd/mm/yyyy'),to_number(:nro_pol)) "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.Parameters.Add("COD_POL", cod_pol)
+            dbCommand.Parameters.Add("COD_ASE", cod_ase)
+            dbCommand.Parameters.Add("VAL_POL", val_pol)
+            dbCommand.Parameters.Add("NRO_POL", nro_pol)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Asignó Poliza a Adici+on Nº" + nro_adi
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function DAsigPolizas_Add(ByVal nro_adi As String, ByVal cod_pol As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "DELETE FROM Polizas_Adiciones WHERE nro_adi ='" + nro_adi + "' AND COD_POL=TO_NUMBER(" + cod_pol.ToString + ")"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Quitó Poliza a Adición Nº" + nro_adi
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function AsigRp_Add(ByVal nro_adi As String, ByVal nro_rp As String, ByVal fec_rp As Date) As String
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "INSERT INTO RP_Adiciones(nro_adi,FEC_RP,NRO_RP)VALUES('" + nro_adi + "',TO_DATE('" + fec_rp.ToShortDateString + "','dd/mm/yyyy'),'" + nro_rp + "') "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Asignó a Adición RP Nº" + nro_adi
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function DAsigRP_Add(ByVal nro_adi As String, ByVal nro_rp As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "DELETE FROM RP_Adiciones WHERE nro_adi ='" + nro_adi + "' AND NRO_RP='" + nro_rp + "'"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se Quitó RP Nº" + nro_adi
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function Insert(ByVal ide As String, ByVal obj As String, ByVal pro As String, ByVal fsus As Date, ByVal pla As Integer, ByVal dep As String, ByVal stip As String, ByVal tip As String, ByVal val_con As Long, ByVal Mun() As String, ByVal nm As Integer, ByVal cod_sec As String, ByVal tip_for As String, ByVal cc As String, ByVal tp As String, ByVal pla_pre As String, ByVal ide_rep As String, ByVal fup As FileUpload, ByVal dtrubros As Data.DataTable, ByVal dtCdp As Data.DataTable, ByVal dtRp As Data.DataTable) As String
+
+        Dim ncon As New tbVigencias(usuario)
+
+        Dim año As Integer = 0
+        Dim nro As Integer = 0
+        Dim cpc As String = ""
+        Dim gac As String = ""
+
+        ncon.GetNroConByIde(tip, año, nro)
+
+        nro = nro + 1
+
+        Me.NroCon = Right(año.ToString, 2) + tip.ToString + Right("0000" + nro.ToString, 4)
+
+        Dim fsa As Date
+        If Me.UltFecSus(tip, fsa) Then
+            If fsa > fsus Then
+                msg = "La Ultima Fecha de Suscripción para este Tipo de Contratos es " + fsa.ToShortDateString
+                Me.lErrorG = True
+                Return msg
+                Exit Function
+            End If
+        End If
+
+        'If dtrubros.Rows.Count <= 0 Then
+        'msg = "Debe especificar Rubro(s) del Contrato"
+        'Me.lErrorG = True
+        'Return msg
+        'Exit Function
+        'End If
+
+        If fup.HasFile Then
+            Me.Doc = Me.NroCon + "." + Right(fup.FileName, 3)
+        Else
+            Me.Doc = ""
+        End If
+
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Dim i As Integer
+        Dim Fecp As Date
+        Try
+            gac = IIf(gac <> "", gac, " ")
+            pla_pre = IIf(pla_pre <> "", pla_pre, " ")
+
+            Dim queryString As String = "INSERT INTO Contratos (nro_con,ide_con,obj_con,pro_con,FEC_SUS_CON,PLA_EJE_CON,DEP_CON,VIG_CON,STIP_CON,EST_CON,tip_con,val_con,doc_con,cod_con,cod_sec,tip_for,COD_TPRO,OTR_CNS,IDE_REP,NRO_PLA_CON,USUARIO, FEC_REG)  VALUES(to_number('" + nro.ToString + "'),:ide_con,:obj_con,:pro_con,to_date('" + fsus.ToShortDateString + "','dd/mm/yyyy'),:PLA_EJE_CON,:DEP_CON,to_number('" + año.ToString + "'),:STIP_CON,:EST_CON,'" + tip + "',to_number('" + val_con.ToString + "'),'" + Me.Doc + "','" + Me.NroCon + "','" + cod_sec + "','" + tip_for + "','" + tp + "',:OTR_CNS,'" + ide_rep + "','" + pla_pre + "','" + usuario + "',SYSDATE) "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+            Dim queryString2 As String = "UPDATE NroConVig Set Nro_Act_con=:Nro_Act_con Where year_vig=:year_vig and cod_tip=:cod_tip"
+            Dim dbCommand2 As New OracleCommand(queryString2, dbConnection)
+
+
+            Dim pide As OracleParameter = New OracleParameter("ide_con", OracleDbType.Varchar2)
+            pide.Value = ide
+            dbCommand.Parameters.Add(pide)
+
+            Dim pobj As OracleParameter = New OracleParameter("obj_con", OracleDbType.Varchar2)
+            pobj.Value = UCase(obj)
+            dbCommand.Parameters.Add(pobj)
+
+
+            Dim ppro As OracleParameter = New OracleParameter("pro_con", OracleDbType.Varchar2)
+            ppro.Value = pro
+            dbCommand.Parameters.Add(ppro)
+
+
+            Dim ppla As OracleParameter = New OracleParameter("PLA_EJE_CON", OracleDbType.Decimal)
+            ppla.Value = pla
+            dbCommand.Parameters.Add(ppla)
+
+            Dim pdep As OracleParameter = New OracleParameter("DEP_CON", OracleDbType.Varchar2)
+            pdep.Value = dep
+            dbCommand.Parameters.Add(pdep)
+
+            Dim pstip As OracleParameter = New OracleParameter("STIP_CON", OracleDbType.Varchar2)
+            pstip.Value = stip
+            dbCommand.Parameters.Add(pstip)
+
+            Dim est As String = "00"
+            Dim pest As OracleParameter = New OracleParameter("EST_CON", OracleDbType.Varchar2)
+            pest.Value = est
+            dbCommand.Parameters.Add(pest)
+
+            Dim pcc As OracleParameter = New OracleParameter("OTR_CNS", OracleDbType.Varchar2)
+            pcc.Value = cc
+            dbCommand.Parameters.Add(pcc)
+
+
+            dbCommand2.Parameters.Add("Nro_Act_con", nro)
+            dbCommand2.Parameters.Add("year_vig", año)
+            dbCommand2.Parameters.Add("cod_tip", tip)
+
+
+
+            dbCommand.ExecuteNonQuery()
+
+            dbCommand2.ExecuteNonQuery()
+
+
+
+
+            For i = 0 To nm
+                Dim queryString3 As String = "INSERT INTO ConMun(Cod_Mun,nro_con)VALUES('" + Mun(i) + "','" + Me.NroCon + "') "
+                Dim dbCommand3 As New OracleCommand(queryString3, dbConnection)
+                dbCommand3.ExecuteNonQuery()
+            Next i
+
+            For i = 0 To dtCdp.Rows.Count - 1
+                Fecp = dtCdp.Rows(i)("fec_cdp").ToString
+                Dim queryString4 As String = "INSERT INTO CDP_CONTRATOS(COD_CON,NRO_CDP,FEC_CDP)VALUES('" + Me.NroCon + "',:NRO_CDP,TO_DATE('" + Fecp.ToShortDateString + "','dd/mm/yyyy')) "
+                Dim dbCommand4 As New OracleCommand(queryString4, dbConnection)
+                dbCommand4.Parameters.Add("nro_cdp", (dtCdp.Rows(i)("nro_cdp").ToString))
+                dbCommand4.ExecuteNonQuery()
+            Next i
+
+            For i = 0 To dtRp.Rows.Count - 1
+                Fecp = dtRp.Rows(i)("fec_cdp").ToString
+                Dim queryString4 As String = "INSERT INTO RP_CONTRATOS(COD_CON,NRO_RP,FEC_RP)VALUES('" + Me.NroCon + "',:NRO_CDP,TO_DATE('" + Fecp.ToShortDateString + "','dd/mm/yyyy')) "
+                Dim dbCommand4 As New OracleCommand(queryString4, dbConnection)
+                dbCommand4.Parameters.Add("nro_rp", (dtRp.Rows(i)("nro_rp").ToString))
+                dbCommand4.ExecuteNonQuery()
+            Next i
+
+            For i = 0 To dtrubros.Rows.Count - 1
+                Dim queryString5 As String = "INSERT INTO Rubros_Contratos(cod_rub,cod_con)values(:cod_rub,:cod_con) "
+                Dim dbCommand5 As New OracleCommand(queryString5, dbConnection)
+                dbCommand5.Parameters.Add("cod_rub", (dtrubros.Rows(i)("cod_rub").ToString))
+                dbCommand5.Parameters.Add("cod_con", Me.NroCon)
+                dbCommand5.ExecuteNonQuery()
+            Next i
+
+
+            If fup.HasFile Then
+                fup.SaveAs("c:\SIRCC\Docs\" & Me.Doc)
+            End If
+
+            msg = "Se Agrego un Nuevo Contrato Nº" + Me.NroCon
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+
+        Return msg
+
+    End Function
+    Public Function InsertXP(ByVal ide As String, ByVal obj As String, ByVal pro As String, ByVal fsus As Date, ByVal pla As Integer, ByVal dep As String, ByVal stip As String, ByVal tip As String, ByVal val_con As Long, ByVal Mun() As String, ByVal nm As Integer, ByVal cod_sec As String, ByVal tip_for As String, ByVal cc As String, ByVal tp As String, ByVal pla_pre As String, ByVal ide_rep As String, ByVal fup As FileUpload) As String
+
+        Dim ncon As New tbVigencias(usuario)
+
+        Dim año As Integer = 0
+        Dim nro As Integer = 0
+        Dim cpc As String = ""
+        Dim gac As String = ""
+
+        ncon.GetNroConByIde(tip, año, nro)
+
+        nro = nro + 1
+
+        Me.NroCon = Right(año.ToString, 2) + tip.ToString + Right("0000" + nro.ToString, 4)
+
+        Dim fsa As Date
+        If Me.UltFecSus(tip, fsa) Then
+            If fsa > fsus Then
+                msg = "La Ultima Fecha de Suscripción para este Tipo de Contratos es " + fsa.ToShortDateString
+                Me.lErrorG = True
+                Return msg
+                Exit Function
+            End If
+        End If
+
+
+        If fup.HasFile Then
+            Me.Doc = Me.NroCon + "." + Right(fup.FileName, 3)
+        Else
+            Me.Doc = ""
+        End If
+
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Dim i As Integer
+        'Dim Fecp As Date
+        Try
+            gac = IIf(gac <> "", gac, " ")
+            pla_pre = IIf(pla_pre <> "", pla_pre, " ")
+
+            Dim queryString As String = "INSERT INTO Contratos (nro_con,ide_con,obj_con,pro_con,FEC_SUS_CON,PLA_EJE_CON,DEP_CON,VIG_CON,STIP_CON,EST_CON,tip_con,val_con,doc_con,cod_con,cod_sec,tip_for,COD_TPRO,OTR_CNS,IDE_REP,NRO_PLA_CON,USUARIO, FEC_REG)  VALUES(to_number('" + nro.ToString + "'),:ide_con,:obj_con,:pro_con,to_date('" + fsus.ToShortDateString + "','dd/mm/yyyy'),:PLA_EJE_CON,:DEP_CON,to_number('" + año.ToString + "'),:STIP_CON,:EST_CON,'" + tip + "',to_number('" + val_con.ToString + "'),'" + Me.Doc + "','" + Me.NroCon + "','" + cod_sec + "','" + tip_for + "','" + tp + "',:OTR_CNS,'" + ide_rep + "','" + pla_pre + "','" + usuario + "',SYSDATE) "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+            Dim queryString2 As String = "UPDATE NroConVig Set Nro_Act_con=:Nro_Act_con Where year_vig=:year_vig and cod_tip=:cod_tip"
+            Dim dbCommand2 As New OracleCommand(queryString2, dbConnection)
+
+
+            Dim pIde As OracleParameter = New OracleParameter("ide_con", OracleDbType.Varchar2)
+            pIde.Value = ide
+            dbCommand.Parameters.Add(pIde)
+
+            Dim pobj As OracleParameter = New OracleParameter("obj_con", OracleDbType.Varchar2)
+            pobj.Value = UCase(obj)
+            dbCommand.Parameters.Add(pobj)
+
+
+            Dim ppro As OracleParameter = New OracleParameter("pro_con", OracleDbType.Varchar2)
+            ppro.Value = pro
+            dbCommand.Parameters.Add(ppro)
+
+
+            Dim ppla As OracleParameter = New OracleParameter("PLA_EJE_CON", OracleDbType.Decimal)
+            ppla.Value = pla
+            dbCommand.Parameters.Add(ppla)
+
+            Dim pdep As OracleParameter = New OracleParameter("DEP_CON", OracleDbType.Varchar2)
+            pdep.Value = dep
+            dbCommand.Parameters.Add(pdep)
+
+            Dim pstip As OracleParameter = New OracleParameter("STIP_CON", OracleDbType.Varchar2)
+            pstip.Value = stip
+            dbCommand.Parameters.Add(pstip)
+
+            Dim est As String = "00"
+            Dim pest As OracleParameter = New OracleParameter("EST_CON", OracleDbType.Varchar2)
+            pest.Value = est
+            dbCommand.Parameters.Add(pest)
+
+            Dim pcc As OracleParameter = New OracleParameter("OTR_CNS", OracleDbType.Varchar2)
+            pcc.Value = cc
+            dbCommand.Parameters.Add(pcc)
+
+
+            dbCommand2.Parameters.Add("Nro_Act_con", nro)
+            dbCommand2.Parameters.Add("year_vig", año)
+            dbCommand2.Parameters.Add("cod_tip", tip)
+
+            'AGREGAR EL CONTRATO A LA BD
+            dbCommand.ExecuteNonQuery()
+
+            'ACTUALIZAR EL NUMERO DE CONSECUTIVO
+            dbCommand2.ExecuteNonQuery()
+
+            'ASOCIAR LOS MUNICIPIOS A LOS CONTRATOS
+            For i = 0 To nm
+                Dim queryString3 As String = "INSERT INTO ConMun(Cod_Mun,nro_con)VALUES('" + Mun(i) + "','" + Me.NroCon + "') "
+                Dim dbCommand3 As New OracleCommand(queryString3, dbConnection)
+                dbCommand3.ExecuteNonQuery()
+            Next i
+
+
+            If fup.HasFile Then
+                fup.SaveAs("E:\SIRCC\Docs\" & Me.Doc)
+            End If
+
+            msg = "Se Agrego un Nuevo Contrato Nº" + Me.NroCon
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+
+        Return msg
+
+    End Function
+    Public Function InsertXP2(ByVal num_con As Integer, ByVal ide As String, ByVal obj As String, ByVal pro As String, ByVal fsus As Date, ByVal pla As Integer, ByVal dep As String, ByVal stip As String, ByVal tip As String, ByVal val_con As Long, ByVal Mun() As String, ByVal nm As Integer, ByVal cod_sec As String, ByVal tip_for As String, ByVal cc As String, ByVal tp As String, ByVal pla_pre As String, ByVal ide_rep As String, ByVal fup As FileUpload) As String
+
+        Dim ncon As New tbVigencias(usuario)
+
+        Dim año As Integer = 0
+        Dim nro As Integer = 0
+        Dim cpc As String = ""
+        Dim gac As String = ""
+
+        ncon.GetNroConByIde(tip, año, nro)
+
+        nro = num_con
+
+        Me.NroCon = Right(año.ToString, 2) + tip.ToString + Right("0000" + nro.ToString, 4)
+
+
+        If fup.HasFile Then
+            Me.Doc = Me.NroCon + "." + Right(fup.FileName, 3)
+        Else
+            Me.Doc = ""
+        End If
+
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Dim i As Integer
+        Try
+            gac = IIf(gac <> "", gac, " ")
+            pla_pre = IIf(pla_pre <> "", pla_pre, " ")
+
+            Dim queryString As String = "INSERT INTO Contratos (nro_con,ide_con,obj_con,pro_con,FEC_SUS_CON,PLA_EJE_CON,DEP_CON,VIG_CON,STIP_CON,EST_CON,tip_con,val_con,doc_con,cod_con,cod_sec,tip_for,COD_TPRO,OTR_CNS,IDE_REP,NRO_PLA_CON,USUARIO, FEC_REG)  VALUES(to_number('" + nro.ToString + "'),:ide_con,:obj_con,:pro_con,to_date('" + fsus.ToShortDateString + "','dd/mm/yyyy'),:PLA_EJE_CON,:DEP_CON,to_number('" + año.ToString + "'),:STIP_CON,:EST_CON,'" + tip + "',to_number('" + val_con.ToString + "'),'" + Me.Doc + "','" + Me.NroCon + "','" + cod_sec + "','" + tip_for + "','" + tp + "',:OTR_CNS,'" + ide_rep + "','" + pla_pre + "','" + usuario + "',SYSDATE) "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+            Dim pIde As OracleParameter = New OracleParameter("ide_con", OracleDbType.Varchar2)
+            pIde.Value = ide
+            dbCommand.Parameters.Add(pIde)
+
+            Dim pobj As OracleParameter = New OracleParameter("obj_con", OracleDbType.Varchar2)
+            pobj.Value = UCase(obj)
+            dbCommand.Parameters.Add(pobj)
+
+
+            Dim ppro As OracleParameter = New OracleParameter("pro_con", OracleDbType.Varchar2)
+            ppro.Value = pro
+            dbCommand.Parameters.Add(ppro)
+
+
+            Dim ppla As OracleParameter = New OracleParameter("PLA_EJE_CON", OracleDbType.Decimal)
+            ppla.Value = pla
+            dbCommand.Parameters.Add(ppla)
+
+            Dim pdep As OracleParameter = New OracleParameter("DEP_CON", OracleDbType.Varchar2)
+            pdep.Value = dep
+            dbCommand.Parameters.Add(pdep)
+
+            Dim pstip As OracleParameter = New OracleParameter("STIP_CON", OracleDbType.Varchar2)
+            pstip.Value = stip
+            dbCommand.Parameters.Add(pstip)
+
+            Dim est As String = "00"
+            Dim pest As OracleParameter = New OracleParameter("EST_CON", OracleDbType.Varchar2)
+            pest.Value = est
+            dbCommand.Parameters.Add(pest)
+
+            Dim pcc As OracleParameter = New OracleParameter("OTR_CNS", OracleDbType.Varchar2)
+            pcc.Value = cc
+            dbCommand.Parameters.Add(pcc)
+
+
+            dbCommand.ExecuteNonQuery()
+
+            'ASOCIAR LOS MUNICIPIOS A LOS CONTRATOS
+            For i = 0 To nm
+                Dim queryString3 As String = "INSERT INTO ConMun(Cod_Mun,nro_con)VALUES('" + Mun(i) + "','" + Me.NroCon + "') "
+                Dim dbCommand3 As New OracleCommand(queryString3, dbConnection)
+                dbCommand3.ExecuteNonQuery()
+            Next i
+
+            If fup.HasFile Then
+                fup.SaveAs("E:\SIRCC\Docs\" & Me.Doc)
+            End If
+
+            msg = "Se Agrego un Nuevo Contrato Nº" + Me.NroCon
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+
+        Return msg
+
+    End Function
+
+    'CLASE              : TbContratos
+    'METODO             : Insert
+    'DESCRIPCIÓNl       : Método para insertar COntratos, se agregó el parametro vigencia y num_com del Insert Original
+    'AUTOR              : BORIS G.
+    'FECHA CREACIÓN     : 21 de Enero del 2009
+    'FECHA MODIFICACION :
+    Public Function Insert(ByVal vigencia As Integer, ByVal ide As String, ByVal obj As String, ByVal pro As String, ByVal fsus As Date, ByVal pla As Integer, ByVal dep As String, ByVal stip As String, ByVal tip As String, ByVal val_con As Long, ByVal Mun() As String, ByVal nm As Integer, ByVal cod_sec As String, ByVal tip_for As String, ByVal cc As String, ByVal tp As String, ByVal pla_pre As String, ByVal ide_rep As String, ByVal fup As FileUpload) As String
+
+        Dim ncon As New tbVigencias(usuario)
+
+        Dim año As Integer = 0
+        Dim nro As Integer = 0
+        Dim cpc As String = ""
+        Dim gac As String = ""
+
+        ncon.GetNroConByIdeVig(tip, año, nro)
+
+        nro = nro + 1
+
+        Me.NroCon = Right(año.ToString, 2) + tip.ToString + Right("0000" + nro.ToString, 4)
+
+        Dim fsa As Date
+        If Me.UltFecSus(tip, fsa) Then
+            If fsa > fsus Then
+                msg = "La Ultima Fecha de Suscripción para este Tipo de Contratos es " + fsa.ToShortDateString
+                Me.lErrorG = True
+                Return msg
+                Exit Function
+            End If
+        End If
+
+
+        If fup.HasFile Then
+            Me.Doc = Me.NroCon + "." + Right(fup.FileName, 3)
+        Else
+            Me.Doc = ""
+        End If
+
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Dim i As Integer
+        'Dim Fecp As Date
+        Try
+            gac = IIf(gac <> "", gac, " ")
+            pla_pre = IIf(pla_pre <> "", pla_pre, " ")
+
+            Dim queryString As String = "INSERT INTO Contratos (nro_con,ide_con,obj_con,pro_con,FEC_SUS_CON,PLA_EJE_CON,DEP_CON,VIG_CON,STIP_CON,EST_CON,tip_con,val_con,doc_con,cod_con,cod_sec,tip_for,COD_TPRO,OTR_CNS,IDE_REP,NRO_PLA_CON,USUARIO, FEC_REG)  VALUES(to_number('" + nro.ToString + "'),:ide_con,:obj_con,:pro_con,to_date('" + fsus.ToShortDateString + "','dd/mm/yyyy'),:PLA_EJE_CON,:DEP_CON,to_number('" + año.ToString + "'),:STIP_CON,:EST_CON,'" + tip + "',to_number('" + val_con.ToString + "'),'" + Me.Doc + "','" + Me.NroCon + "','" + cod_sec + "','" + tip_for + "','" + tp + "',:OTR_CNS,'" + ide_rep + "','" + pla_pre + "','" + usuario + "',SYSDATE) "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+            Dim queryString2 As String = "UPDATE NroConVig Set Nro_Act_con=:Nro_Act_con Where year_vig=:year_vig and cod_tip=:cod_tip"
+            Dim dbCommand2 As New OracleCommand(queryString2, dbConnection)
+
+
+            Dim pIde As OracleParameter = New OracleParameter("ide_con", OracleDbType.Varchar2)
+            pIde.Value = ide
+            dbCommand.Parameters.Add(pIde)
+
+            Dim pobj As OracleParameter = New OracleParameter("obj_con", OracleDbType.Varchar2)
+            pobj.Value = UCase(obj)
+            dbCommand.Parameters.Add(pobj)
+
+
+            Dim ppro As OracleParameter = New OracleParameter("pro_con", OracleDbType.Varchar2)
+            ppro.Value = pro
+            dbCommand.Parameters.Add(ppro)
+
+
+            Dim ppla As OracleParameter = New OracleParameter("PLA_EJE_CON", OracleDbType.Decimal)
+            ppla.Value = pla
+            dbCommand.Parameters.Add(ppla)
+
+            Dim pdep As OracleParameter = New OracleParameter("DEP_CON", OracleDbType.Varchar2)
+            pdep.Value = dep
+            dbCommand.Parameters.Add(pdep)
+
+            Dim pstip As OracleParameter = New OracleParameter("STIP_CON", OracleDbType.Varchar2)
+            pstip.Value = stip
+            dbCommand.Parameters.Add(pstip)
+
+            Dim est As String = "00"
+            Dim pest As OracleParameter = New OracleParameter("EST_CON", OracleDbType.Varchar2)
+            pest.Value = est
+            dbCommand.Parameters.Add(pest)
+
+            Dim pcc As OracleParameter = New OracleParameter("OTR_CNS", OracleDbType.Varchar2)
+            pcc.Value = cc
+            dbCommand.Parameters.Add(pcc)
+
+
+            dbCommand2.Parameters.Add("Nro_Act_con", nro)
+            dbCommand2.Parameters.Add("year_vig", año)
+            dbCommand2.Parameters.Add("cod_tip", tip)
+
+            'AGREGAR EL CONTRATO A LA BD
+            dbCommand.ExecuteNonQuery()
+
+            'ACTUALIZAR EL NUMERO DE CONSECUTIVO
+            dbCommand2.ExecuteNonQuery()
+
+            'ASOCIAR LOS MUNICIPIOS A LOS CONTRATOS
+            For i = 0 To nm
+                Dim queryString3 As String = "INSERT INTO ConMun(Cod_Mun,nro_con)VALUES('" + Mun(i) + "','" + Me.NroCon + "') "
+                Dim dbCommand3 As New OracleCommand(queryString3, dbConnection)
+                dbCommand3.ExecuteNonQuery()
+            Next i
+
+
+            If fup.HasFile Then
+                fup.SaveAs("E:\SIRCC\Docs\" & Me.Doc)
+            End If
+
+            msg = "Se Agrego un Nuevo Contrato Nº" + Me.NroCon
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+
+        Return msg
+
+    End Function
+    'CLASE              : TbContratos
+    'METODO             : Insert
+    'DESCRIPCIÓNl       : Método para insertar COntratos, se agregó el parametro vigencia y num_com del Insert Original
+    'AUTOR              : BORIS G.
+    'FECHA CREACIÓN     : 21 de Enero del 2009
+    'FECHA MODIFICACION :
+
+    Public Function Insert(ByVal vigencia As Integer, ByVal num_con As Integer, ByVal ide As String, ByVal obj As String, ByVal pro As String, ByVal fsus As Date, ByVal pla As Integer, ByVal dep As String, ByVal stip As String, ByVal tip As String, ByVal val_con As Long, ByVal Mun() As String, ByVal nm As Integer, ByVal cod_sec As String, ByVal tip_for As String, ByVal cc As String, ByVal tp As String, ByVal pla_pre As String, ByVal ide_rep As String, ByVal fup As FileUpload) As String
+
+        Dim ncon As New tbVigencias(usuario)
+
+        Dim año As Integer = vigencia
+        Dim nro As Integer = num_con
+        Dim cpc As String = ""
+        Dim gac As String = ""
+
+        'ncon.GetNroConByIde(tip, año, nro)
+        'año = 
+        'nro = 
+
+        Me.NroCon = Right(año.ToString, 2) + tip.ToString + Right("0000" + nro.ToString, 4)
+
+
+        If fup.HasFile Then
+            Me.Doc = Me.NroCon + "." + Right(fup.FileName, 3)
+        Else
+            Me.Doc = ""
+        End If
+
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Dim i As Integer
+        Try
+            gac = IIf(gac <> "", gac, " ")
+            pla_pre = IIf(pla_pre <> "", pla_pre, " ")
+
+            Dim queryString As String = "INSERT INTO Contratos (nro_con,ide_con,obj_con,pro_con,FEC_SUS_CON,PLA_EJE_CON,DEP_CON,VIG_CON,STIP_CON,EST_CON,tip_con,val_con,doc_con,cod_con,cod_sec,tip_for,COD_TPRO,OTR_CNS,IDE_REP,NRO_PLA_CON,USUARIO, FEC_REG)  VALUES(to_number('" + nro.ToString + "'),:ide_con,:obj_con,:pro_con,to_date('" + fsus.ToShortDateString + "','dd/mm/yyyy'),:PLA_EJE_CON,:DEP_CON,to_number('" + año.ToString + "'),:STIP_CON,:EST_CON,'" + tip + "',to_number('" + val_con.ToString + "'),'" + Me.Doc + "','" + Me.NroCon + "','" + cod_sec + "','" + tip_for + "','" + tp + "',:OTR_CNS,'" + ide_rep + "','" + pla_pre + "','" + usuario + "',SYSDATE) "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+            Dim pIde As OracleParameter = New OracleParameter("ide_con", OracleDbType.Varchar2)
+            pIde.Value = ide
+            dbCommand.Parameters.Add(pIde)
+
+            Dim pobj As OracleParameter = New OracleParameter("obj_con", OracleDbType.Varchar2)
+            pobj.Value = UCase(obj)
+            dbCommand.Parameters.Add(pobj)
+
+
+            Dim ppro As OracleParameter = New OracleParameter("pro_con", OracleDbType.Varchar2)
+            ppro.Value = pro
+            dbCommand.Parameters.Add(ppro)
+
+
+            Dim ppla As OracleParameter = New OracleParameter("PLA_EJE_CON", OracleDbType.Decimal)
+            ppla.Value = pla
+            dbCommand.Parameters.Add(ppla)
+
+            Dim pdep As OracleParameter = New OracleParameter("DEP_CON", OracleDbType.Varchar2)
+            pdep.Value = dep
+            dbCommand.Parameters.Add(pdep)
+
+            Dim pstip As OracleParameter = New OracleParameter("STIP_CON", OracleDbType.Varchar2)
+            pstip.Value = stip
+            dbCommand.Parameters.Add(pstip)
+
+            Dim est As String = "00"
+            Dim pest As OracleParameter = New OracleParameter("EST_CON", OracleDbType.Varchar2)
+            pest.Value = est
+            dbCommand.Parameters.Add(pest)
+
+            Dim pcc As OracleParameter = New OracleParameter("OTR_CNS", OracleDbType.Varchar2)
+            pcc.Value = cc
+            dbCommand.Parameters.Add(pcc)
+
+
+            'Dim queryString2 As String = "UPDATE NroConVig Set Nro_Act_con=:Nro_Act_con Where year_vig=:year_vig and cod_tip=:cod_tip"
+            'Dim dbCommand2 As New OracleCommand(queryString2, dbConnection)
+
+            'dbCommand2.Parameters.Add("Nro_Act_con", nro)
+            'dbCommand2.Parameters.Add("year_vig", año)
+            'dbCommand2.Parameters.Add("cod_tip", tip)
+
+            'AGREGAR EL CONTRATO A LA BD
+            dbCommand.ExecuteNonQuery()
+
+            'ACTUALIZAR EL NUMERO DE CONSECUTIVO
+            'dbCommand2.ExecuteNonQuery()
+
+            'ASOCIAR LOS MUNICIPIOS A LOS CONTRATOS
+            For i = 0 To nm
+                Dim queryString3 As String = "INSERT INTO ConMun(Cod_Mun,nro_con)VALUES('" + Mun(i) + "','" + Me.NroCon + "') "
+                Dim dbCommand3 As New OracleCommand(queryString3, dbConnection)
+                dbCommand3.ExecuteNonQuery()
+            Next i
+
+
+            If fup.HasFile Then
+                fup.SaveAs("E:\SIRCC\Docs\" & Me.Doc)
+            End If
+
+            msg = "Se Agrego un Nuevo Contrato Nº" + Me.NroCon
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+
+        Return msg
+
+    End Function
+
+    Public Function Update(ByVal cod_con As String, ByVal ide As String, ByVal obj As String, ByVal stip As String, ByVal pro As String, ByVal fsus As Date, ByVal pla As Integer, ByVal dep As String, ByVal val_con As Long, ByVal cod_sec As String, ByVal tip_for As String, ByVal cc As String, ByVal tp As String, ByVal pla_pre As String, ByVal ide_rep As String, ByVal fup As FileUpload, ByVal dtrubros As Data.DataTable, ByVal dtCdp As Data.DataTable, ByVal dtRp As Data.DataTable, ByVal Mun() As String, ByVal nm As Integer) As String
+
+        Dim ncon As New tbVigencias(usuario)
+
+        Dim año As Integer = 0
+        Dim nro As Integer = 0
+        Dim cpc As String = ""
+        Dim gac As String = ""
+
+        Me.NroCon = cod_con
+        'Dim fsa As Date
+        'If Me.UltFecSus(tip, fsa) Then
+        'If fsa > fsus Then
+        'msg = "La Ultima Fecha de Suscripción para este Tipo de Contratos es " + fsa.ToShortDateString
+        'Me.lErrorG = True
+        'Return msg
+        'Exit Function
+        'End If
+        'End If
+
+        If fup.HasFile Then
+            Me.Doc = Me.NroCon + "." + Right(fup.FileName, 3)
+        Else
+            Me.Doc = ""
+        End If
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        '  Dim i As Integer
+        ' Dim Fecp As Date
+        Try
+            gac = IIf(gac <> "", gac, " ")
+            pla_pre = IIf(pla_pre <> "", pla_pre, " ")
+
+            Dim queryString As String = "UPDATE Contratos SET STIP_CON='" + stip + "',ide_con=:ide_con,obj_con=:obj_con,pro_con=:pro_con,FEC_SUS_CON=to_date('" + fsus.ToShortDateString + "','dd/mm/yyyy'),PLA_EJE_CON=:PLA_EJE_CON,DEP_CON=:DEP_CON,val_con=to_number('" + val_con.ToString + "'),doc_con='" + Me.Doc + "',cod_sec='" + cod_sec + "',tip_for='" + tip_for + "',COD_TPRO='" + tp + "',OTR_CNS=:OTR_CNS,IDE_REP='" + ide_rep + "',NRO_PLA_CON='" + pla_pre + "' Where cod_con='" + cod_con + "' "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+            Dim pide As OracleParameter = New OracleParameter("ide_con", OracleDbType.Varchar2)
+            pide.Value = ide
+            dbCommand.Parameters.Add(pide)
+
+            Dim pobj As OracleParameter = New OracleParameter("obj_con", OracleDbType.Varchar2)
+            pobj.Value = obj
+            dbCommand.Parameters.Add(pobj)
+
+
+            Dim ppro As OracleParameter = New OracleParameter("pro_con", OracleDbType.Varchar2)
+            ppro.Value = pro
+            dbCommand.Parameters.Add(ppro)
+
+
+            Dim ppla As OracleParameter = New OracleParameter("PLA_EJE_CON", OracleDbType.Decimal)
+            ppla.Value = pla
+            dbCommand.Parameters.Add(ppla)
+
+            Dim pdep As OracleParameter = New OracleParameter("DEP_CON", OracleDbType.Varchar2)
+            pdep.Value = dep
+            dbCommand.Parameters.Add(pdep)
+
+            'Dim est As String = "00"
+            'Dim pest As OracleParameter = New OracleParameter("EST_CON", OracleDbType.Varchar2)
+            'pest.Value = est
+            'dbCommand.Parameters.Add(pest)
+
+            Dim pcc As OracleParameter = New OracleParameter("OTR_CNS", OracleDbType.Varchar2)
+            pcc.Value = cc
+            dbCommand.Parameters.Add(pcc)
+
+            dbCommand.ExecuteNonQuery()
+
+            Dim q_del_rub As String = "delete from rubros_contratos where cod_con='" + cod_con + "'"
+            Dim cmd_del_rub As New OracleCommand(q_del_rub, dbConnection)
+            cmd_del_rub.ExecuteNonQuery()
+
+            Dim q_del_cdp As String = "delete from cdp_contratos where cod_con='" + cod_con + "'"
+            Dim cmd_del_cdp As New OracleCommand(q_del_cdp, dbConnection)
+            cmd_del_cdp.ExecuteNonQuery()
+
+            Dim q_del_rp As String = "delete from rp_contratos where cod_con='" + cod_con + "'"
+            Dim cmd_del_rp As New OracleCommand(q_del_rp, dbConnection)
+            cmd_del_rp.ExecuteNonQuery()
+
+            Dim fecp As Date, i As Integer
+            For i = 0 To dtCdp.Rows.Count - 1
+                fecp = dtCdp.Rows(i)("fec_cdp").ToString
+                Dim queryString4 As String = "INSERT INTO CDP_CONTRATOS(COD_CON,NRO_CDP,FEC_CDP)VALUES('" + cod_con + "',:NRO_CDP,TO_DATE('" + fecp.ToShortDateString + "','dd/mm/yyyy')) "
+                Dim dbCommand4 As New OracleCommand(queryString4, dbConnection)
+                dbCommand4.Parameters.Add("nro_cdp", (dtCdp.Rows(i)("nro_cdp").ToString))
+                dbCommand4.ExecuteNonQuery()
+            Next i
+
+            For i = 0 To dtrubros.Rows.Count - 1
+                Dim queryString5 As String = "INSERT INTO Rubros_Contratos(cod_rub,cod_con)values(:cod_rub,:cod_con) "
+                Dim dbCommand5 As New OracleCommand(queryString5, dbConnection)
+                dbCommand5.Parameters.Add("cod_rub", (dtrubros.Rows(i)("cod_rub").ToString))
+                dbCommand5.Parameters.Add("cod_con", cod_con)
+                dbCommand5.ExecuteNonQuery()
+            Next i
+
+            For i = 0 To dtRp.Rows.Count - 1
+                fecp = dtRp.Rows(i)("fec_rp").ToString
+                Dim queryString6 As String = "INSERT INTO RP_CONTRATOS(COD_CON,NRO_RP,FEC_RP)VALUES('" + cod_con + "',:NRO_CDP,TO_DATE('" + fecp.ToShortDateString + "','dd/mm/yyyy')) "
+                Dim dbCommand6 As New OracleCommand(queryString6, dbConnection)
+                dbCommand6.Parameters.Add("nro_rp", (dtRp.Rows(i)("nro_rp").ToString))
+                dbCommand6.ExecuteNonQuery()
+            Next i
+
+            For i = 0 To nm
+                Dim queryString3 As String = "INSERT INTO ConMun(Cod_Mun,nro_con)VALUES('" + Mun(i) + "','" + Me.NroCon + "') "
+                Dim dbCommand3 As New OracleCommand(queryString3, dbConnection)
+                dbCommand3.ExecuteNonQuery()
+            Next i
+
+
+            If fup.HasFile Then
+                fup.SaveAs("c:\SIRCC\Docs\" & Me.Doc)
+            End If
+
+            msg = "Se Actualizó Contrato Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            Me.NroCon = cod_con
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+
+        Return msg
+
+    End Function
+    Public Function UpdateXP(ByVal cod_con As String, ByVal ide As String, ByVal obj As String, ByVal stip As String, ByVal pro As String, ByVal fsus As Date, ByVal pla As Integer, ByVal dep As String, ByVal val_con As Long, ByVal cod_sec As String, ByVal tip_for As String, ByVal cc As String, ByVal tp As String, ByVal pla_pre As String, ByVal ide_rep As String, ByVal fup As FileUpload, ByVal Mun() As String, ByVal nm As Integer) As String
+
+        'Dim ncon As New tbVigencias(usuario)
+
+        Dim año As Integer = 0
+        Dim nro As Integer = 0
+        Dim cpc As String = ""
+        Dim gac As String = ""
+        Dim i As Integer
+        Me.NroCon = cod_con
+
+        If fup.HasFile Then
+            Me.Doc = Me.NroCon + "." + Right(fup.FileName, 3)
+        Else
+            Me.Doc = ""
+        End If
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        '  Dim i As Integer
+        ' Dim Fecp As Date
+        Try
+            gac = IIf(gac <> "", gac, " ")
+            pla_pre = IIf(pla_pre <> "", pla_pre, " ")
+
+            Dim queryString As String = "UPDATE Contratos SET STIP_CON='" + stip + "',ide_con=:ide_con,obj_con=:obj_con,pro_con=:pro_con,FEC_SUS_CON=to_date('" + fsus.ToShortDateString + "','dd/mm/yyyy'),PLA_EJE_CON=:PLA_EJE_CON,DEP_CON=:DEP_CON,val_con=to_number('" + val_con.ToString + "'),doc_con='" + Me.Doc + "',cod_sec='" + cod_sec + "',tip_for='" + tip_for + "',COD_TPRO='" + tp + "',OTR_CNS=:OTR_CNS,IDE_REP='" + ide_rep + "',NRO_PLA_CON='" + pla_pre + "' Where cod_con='" + cod_con + "' "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+            Dim pide As OracleParameter = New OracleParameter("ide_con", OracleDbType.Varchar2)
+            pide.Value = ide
+            dbCommand.Parameters.Add(pide)
+
+            Dim pobj As OracleParameter = New OracleParameter("obj_con", OracleDbType.Varchar2)
+            pobj.Value = obj
+            dbCommand.Parameters.Add(pobj)
+
+
+            Dim ppro As OracleParameter = New OracleParameter("pro_con", OracleDbType.Varchar2)
+            ppro.Value = pro
+            dbCommand.Parameters.Add(ppro)
+
+
+            Dim ppla As OracleParameter = New OracleParameter("PLA_EJE_CON", OracleDbType.Decimal)
+            ppla.Value = pla
+            dbCommand.Parameters.Add(ppla)
+
+            Dim pdep As OracleParameter = New OracleParameter("DEP_CON", OracleDbType.Varchar2)
+            pdep.Value = dep
+            dbCommand.Parameters.Add(pdep)
+
+            Dim pcc As OracleParameter = New OracleParameter("OTR_CNS", OracleDbType.Varchar2)
+            pcc.Value = cc
+            dbCommand.Parameters.Add(pcc)
+
+            dbCommand.ExecuteNonQuery()
+
+            For i = 0 To nm
+                Dim queryString3 As String = "INSERT INTO ConMun(Cod_Mun,nro_con)VALUES('" + Mun(i) + "','" + Me.NroCon + "') "
+                Dim dbCommand3 As New OracleCommand(queryString3, dbConnection)
+                dbCommand3.ExecuteNonQuery()
+            Next i
+
+
+            If fup.HasFile Then
+                fup.SaveAs("E:\SIRCC\Docs\" & Me.Doc)
+            End If
+
+            msg = "Se Actualizó Contrato Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            Me.NroCon = cod_con
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+
+        Return msg
+
+    End Function
+    Public Function UpdateXP2(ByVal cod_con As String, ByVal ide As String, ByVal obj As String, ByVal stip As String, ByVal pro As String, ByVal fsus As Date, ByVal pla As Integer, ByVal dep As String, ByVal val_con As Long, ByVal cod_sec As String, ByVal tip_for As String, ByVal cc As String, ByVal tp As String, ByVal pla_pre As String, ByVal ide_rep As String, ByVal fup As FileUpload, ByVal Mun() As String, ByVal nm As Integer) As String
+
+        Dim ncon As New tbVigencias(usuario)
+
+        Dim año As Integer = 0
+        Dim nro As Integer = 0
+        Dim cpc As String = ""
+        Dim gac As String = ""
+        Dim i As Integer
+        Me.NroCon = cod_con
+
+        If fup.HasFile Then
+            Me.Doc = Me.NroCon + "." + Right(fup.FileName, 3)
+        Else
+            Me.Doc = ""
+        End If
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        '  Dim i As Integer
+        ' Dim Fecp As Date
+        Try
+            gac = IIf(gac <> "", gac, " ")
+            pla_pre = IIf(pla_pre <> "", pla_pre, " ")
+
+            Dim queryString As String = "UPDATE Contratos SET STIP_CON='" + stip + "',ide_con=:ide_con,obj_con=:obj_con,pro_con=:pro_con,FEC_SUS_CON=to_date('" + fsus.ToShortDateString + "','dd/mm/yyyy'),PLA_EJE_CON=:PLA_EJE_CON,DEP_CON=:DEP_CON,val_con=to_number('" + val_con.ToString + "'),doc_con='" + Me.Doc + "',cod_sec='" + cod_sec + "',tip_for='" + tip_for + "',COD_TPRO='" + tp + "',OTR_CNS=:OTR_CNS,IDE_REP='" + ide_rep + "',NRO_PLA_CON='" + pla_pre + "' Where cod_con='" + cod_con + "' "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+            Dim pide As OracleParameter = New OracleParameter("ide_con", OracleDbType.Varchar2)
+            pide.Value = ide
+            dbCommand.Parameters.Add(pide)
+
+            Dim pobj As OracleParameter = New OracleParameter("obj_con", OracleDbType.Varchar2)
+            pobj.Value = obj
+            dbCommand.Parameters.Add(pobj)
+
+
+            Dim ppro As OracleParameter = New OracleParameter("pro_con", OracleDbType.Varchar2)
+            ppro.Value = pro
+            dbCommand.Parameters.Add(ppro)
+
+
+            Dim ppla As OracleParameter = New OracleParameter("PLA_EJE_CON", OracleDbType.Decimal)
+            ppla.Value = pla
+            dbCommand.Parameters.Add(ppla)
+
+            Dim pdep As OracleParameter = New OracleParameter("DEP_CON", OracleDbType.Varchar2)
+            pdep.Value = dep
+            dbCommand.Parameters.Add(pdep)
+
+            Dim pcc As OracleParameter = New OracleParameter("OTR_CNS", OracleDbType.Varchar2)
+            pcc.Value = cc
+            dbCommand.Parameters.Add(pcc)
+
+            dbCommand.ExecuteNonQuery()
+
+            For i = 0 To nm
+                Dim queryString3 As String = "INSERT INTO ConMun(Cod_Mun,nro_con)VALUES('" + Mun(i) + "','" + Me.NroCon + "') "
+                Dim dbCommand3 As New OracleCommand(queryString3, dbConnection)
+                dbCommand3.ExecuteNonQuery()
+            Next i
+
+
+            If fup.HasFile Then
+                fup.SaveAs("E:\SIRCC\Docs\" & Me.Doc)
+            End If
+
+            msg = "Se Actualizó Contrato Nº" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            Me.NroCon = cod_con
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            lErrorG = True
+        End Try
+
+        Return msg
+
+    End Function
+
+
+    Public Function InsAdicion(ByVal codcon As String, ByVal fsus As Date, ByVal pla As Integer, ByVal valor As Double, ByVal fup As FileUpload, ByVal tip As String) As String
+
+        Select Case tip
+            Case 1
+                If (pla = 0) Or (valor = 0) Then
+                    msg = "Debe tener un plazo y valor de adición diferentes de 0"
+                    Me.lErrorG = True
+                    Return msg
+                    Exit Function
+                End If
+            Case 2
+                If (valor = 0) Then
+                    msg = "Debe tener  valor de adición diferente de 0"
+                    Me.lErrorG = True
+                    Return msg
+                    Exit Function
+                End If
+            Case 3
+                If (pla = 0) Then
+                    msg = "Debe tener Plazo de adición diferente de 0"
+                    Me.lErrorG = True
+                    Return msg
+                    Exit Function
+                End If
+        End Select
+        Dim nVig As New tbVigencias(usuario)
+        Dim tbCon As New Data.DataTable
+        Dim tbVig As New Data.DataTable
+        Dim año As Integer = 0, nro As String
+        Dim vadd As Double, cadd As Integer, vcon As Double
+        Dim padi As Double
+        Dim fecsus As Date, fecsusant As Date
+
+        tbCon = Me.GetConAdiByIde(codcon)
+
+
+        vadd = Val(tbCon.Rows(0)("val_adi").ToString)
+        cadd = Val(tbCon.Rows(0)("can_adi").ToString)
+        vcon = Val(tbCon.Rows(0)("val_con").ToString)
+        año = Val(tbCon.Rows(0)("vig_con").ToString)
+        fecsus = CDate(tbCon.Rows(0)("fec_sus_con").ToString)
+
+        tbVig = nVig.GetByIde(año)
+        padi = Val(tbVig.Rows(0)("por_adi_vig").ToString)
+
+
+        ' VALIDACION DE FECHA DE SUSCRIPCION
+
+        If fecsus > fsus Then
+            msg = "La Fecha de Suscripción de la Adición debe ser mayor a la Fecha de Suscripción del Contrato"
+            Me.lErrorG = True
+            Return msg
+            Exit Function
+        End If
+
+        ' VALIDACION DE FECHA DE SUSCRIPCION
+        tbCon = Me.GetAdiByIde(codcon)
+        If tbCon.Rows.Count > 0 Then
+            fecsusant = CDate(tbCon.Rows(0)("fec_sus_adi").ToString)
+            If fecsusant > fsus Then
+                msg = "La Fecha de la Adición debe ser mayor a la Fecha de la Adición Anterior :" + fecsusant.ToShortDateString
+                Me.lErrorG = True
+                Return msg
+                Exit Function
+            End If
+        End If
+
+        If (vadd + valor) > (vcon * padi / 100) Then
+            msg = msg + "El Valor a Adicionar, supera el Porcentaje de Adición (" + padi.ToString + "%) equivalente a " + (vcon * padi / 100).ToString + " <br>" + "Valor Adicionado es " + vadd.ToString
+            Me.lErrorG = True
+        Else
+            Dim t As OracleTransaction = dbConnection.BeginTransaction()
+            Try
+
+                cadd = cadd + 1
+                nro = codcon + "-" + Right("00" + cadd.ToString, 2)
+
+                If fup.HasFile = True Then
+                    Me.dadd = "add" + nro + "." + Right(fup.FileName, 3)
+                Else
+                    Me.dadd = ""
+                End If
+                Dim queryString As String = "INSERT INTO Adiciones (cod_con,FEC_SUS_ADI,PLA_EJE_ADI,VIG_ADI,val_adi,doc_adi,nro_adi,tip_adi)VALUES(:cod_con,:FEC_SUS_ADI,:PLA_EJE_ADI,:VIG_ADI,:val_adi,:doc_adi,'" + nro + "','" + tip + "')"
+                Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+                Dim queryString2 As String = "UPDATE Contratos Set Can_Adi=:Can_Adi,val_Adi=:val_adi Where cod_con=:cod_con"
+                Dim dbCommand2 As New OracleCommand(queryString2, dbConnection)
+
+
+
+                dbCommand.Parameters.Add("COD_CON", OracleDbType.Varchar2).Value = codcon
+                dbCommand.Parameters.Add("FEC_SUS_ADI", fsus)
+                dbCommand.Parameters.Add("PLA_EJE_ADI", pla)
+                dbCommand.Parameters.Add("VIG_ADI", año)
+                dbCommand.Parameters.Add("VAL_ADI", valor)
+
+
+                dbCommand.Parameters.Add("doc_adi", Me.dadd)
+
+                dbCommand2.Parameters.Add("can_adi", cadd)
+                dbCommand2.Parameters.Add("val_adi", vadd + valor)
+                dbCommand2.Parameters.Add("cod_con", codcon)
+
+                dbCommand.ExecuteNonQuery()
+
+                dbCommand2.ExecuteNonQuery()
+
+                msg = "ADICION A CONTRATO Nº: " + codcon + " Adición Nº: " + nro.ToString
+                f.InsAud(Me.dbConnection, "CONTRATOS", msg, Me.usuario)
+                t.Commit()
+                msg = MsgOk + "<br>" + msg
+                Me.lErrorG = False
+            Catch ex As Exception
+                t.Rollback()
+                msg = ex.Message
+                Me.lErrorG = True
+            End Try
+
+        End If
+        Return msg
+
+    End Function
+
+    Public Function InsActa(ByVal cod_con As String, ByVal est_ini As String, ByVal est_fin As String, ByVal fec_ent As Date, ByVal tfil As String, ByVal obs As String) As String
+        Dim tbCon As New Data.DataTable
+        Dim fecsus As Date, fecentant As Date
+        Dim estfinant As String
+        Me.lErrorG = True
+        ' VALIDACION DE FECHA DE SUSCRIPCION
+        tbCon = Me.GetByIde(cod_con)
+        fecsus = CDate(tbCon.Rows(0)("fec_sus_con").ToString)
+        If fecsus > fec_ent Then
+            msg = "La Fecha del Acta debe ser mayor a la Fecha de Suscripción"
+            Return msg
+            Exit Function
+        End If
+
+        ' VALIDACION DE FECHA DE SUSCRIPCION
+        tbCon = Me.GetEstByIde(cod_con)
+        If tbCon.Rows.Count > 0 Then
+            fecentant = CDate(tbCon.Rows(0)("fec_ent").ToString)
+            If fecentant > fec_ent Then
+                msg = "La Fecha del Acta debe ser mayor a la Fecha del Acta Anterior :" + fecentant.ToShortDateString
+                Return msg
+                Exit Function
+            End If
+
+
+            estfinant = tbCon.Rows(0)("est_fin").ToString
+            If estfinant <> est_ini Then
+                msg = "El Estado Final Actual no Coincide el Nuevo Estado Inicial "
+                Return msg
+                Exit Function
+            End If
+        End If
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+
+        Try
+
+            Dim queryString As String = "INSERT INTO EstContratos (cod_con,est_ini,est_fin,fec_ent,doc_act,usuario,fec_reg,obs_est)Values(:cod_con,:est_ini,:est_fin,:fec_ent,:doc_act,'" & Me.usuario & "',:fec_reg,:obs_est)"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+            Dim queryString2 As String = "UPDATE Contratos Set est_con='" & est_fin & "' Where cod_con='" & cod_con & "'"
+            Dim dbCommand2 As New OracleCommand(queryString2, dbConnection)
+
+
+            doc_act = cod_con + "e" + est_fin + fec_ent.ToShortDateString.Replace("/", "-") + "." + tfil
+            dbCommand.Parameters.Add("cod_con", cod_con)
+            dbCommand.Parameters.Add("est_ini", est_ini)
+            dbCommand.Parameters.Add("est_fin", est_fin)
+            dbCommand.Parameters.Add("fec_ent", fec_ent)
+            dbCommand.Parameters.Add("doc_act", doc_act)
+            dbCommand.Parameters.Add("fec_reg", Now())
+            dbCommand.Parameters.Add("obs_est", obs)
+
+            dbCommand.ExecuteNonQuery()
+            dbCommand2.ExecuteNonQuery()
+
+            f.InsAud(Me.dbConnection, t, "CONTRATOS", "REGISTRO DE ACTA/CAMBIO DE ESTADO", Me.usuario)
+            t.Commit()
+            msg = MsgOk
+            Me.lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            Me.lErrorG = True
+        End Try
+
+
+        Return msg
+
+    End Function
+
+    Public Function AnxContratos(ByVal cod_con As String, ByVal fup As FileUpload, ByVal obs As String) As String
+        Dim tbCon As New Data.DataTable
+
+        Me.lErrorG = True
+
+        ' VALIDACION DE FECHA DE SUSCRIPCION
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        If fup.HasFile Then
+            Me.Doc = cod_con + "." + Right(fup.FileName, 3)
+        Else
+            Me.Doc = ""
+            Return "Error seleccionó ningún documento"
+        End If
+
+        Try
+
+            Dim queryString As String = "UPDATE Contratos Set doc_con='" & Me.Doc & "', obs_doc_con='" & obs & "' Where cod_con='" & cod_con & "'"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+            If fup.HasFile Then
+                fup.SaveAs(Me.Ruta_Doc & Me.Doc)
+            End If
+            dbCommand.ExecuteNonQuery()
+
+            f.InsAud(Me.dbConnection, t, "CONTRATOS", "Anexo de Doc Digitalizado del Contrato", Me.usuario)
+            t.Commit()
+            msg = MsgOk + "<br>File Size: " & fup.PostedFile.ContentLength & " kb<br>"
+            Me.lErrorG = False
+
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            Me.lErrorG = True
+        End Try
+
+
+        Return msg
+
+    End Function
+
+    Public Function AnxContratos2(ByVal cod_con As String, ByVal TIP_DOC As String, ByVal fup As FileUpload, ByVal obs_con As String) As String
+        Dim tbCon As New Data.DataTable
+
+        Me.lErrorG = True
+
+        ' VALIDACION DE FECHA DE SUSCRIPCION
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        If fup.HasFile Then
+            Me.Doc = Trim(cod_con & "_" & fup.FileName.Replace(" ", "_"))
+        Else
+            Me.Doc = ""
+            Return "Error seleccionó ningún documento"
+        End If
+
+        Try
+
+            Dim queryString As String = "INSERT INTO ANX_CONTRATOS (TIP_DOC, NOM_DOC, OBS_DOC, COD_CON, USUARIO, FEC_REG) VALUES ('" & TIP_DOC & "', '" & Me.Doc & "', '" & obs_con & "', '" & cod_con & "', '" & Me.usuario & "', SYSDATE) "
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+
+            If fup.HasFile Then
+                fup.SaveAs(Me.Ruta_Doc & Me.Doc)
+            End If
+            dbCommand.ExecuteNonQuery()
+
+            f.InsAud(Me.dbConnection, t, "CONTRATOS", "Anexo de Doc Digitalizado del Contrato", Me.usuario)
+            t.Commit()
+            msg = MsgOk + "<br>File Size: " & fup.PostedFile.ContentLength & " kb<br>"
+            Me.lErrorG = False
+
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            Me.lErrorG = True
+        End Try
+
+
+        Return msg
+
+    End Function
+
+    Public Function GetAnxContratos2(ByVal cod As String, ByVal tip_doc As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT Nom_Doc FROM ANX_CONTRATOS Where cod_con ='" & cod & "' And tip_doc='" & tip_doc & "'"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.ExecuteScalar()
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+
+    
+
+
+    Public Function GetDocAnxContratos2(ByVal cod As String, ByVal tip_doc As String) As String
+        Dim queryString As String = "SELECT Nom_Doc FROM ANX_CONTRATOS Where cod_con ='" & cod & "' And tip_doc='" & tip_doc & "'"
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+        Return CStr(dbCommand.ExecuteScalar())
+    End Function
+    Public Function DelAnxContratos2(ByVal cod_con As String, ByVal Tip_Doc As String) As String
+
+        Me.lErrorG = True
+        Dim nom_doc As String = GetDocAnxContratos2(cod_con, Tip_Doc)
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Try
+            Dim queryString As String = "DELETE FROM ANX_CONTRATOS WHERE TIP_DOC='" & Tip_Doc & "' AND COD_CON= '" & cod_con & "'"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            Dim szFileName As String = Me.Ruta_Doc & nom_doc
+            
+
+            dbCommand.ExecuteNonQuery()
+
+            
+            f.InsAud(Me.dbConnection, t, "CONTRATOS", "Eliminar TIP_DOC='" & Tip_Doc & "' COD_CON= '" & cod_con & "'", Me.usuario)
+
+            If System.IO.File.Exists(szFileName) = True Then
+                System.IO.File.Delete(szFileName)
+            End If
+
+            t.Commit()
+
+            msg = MsgOk
+            Me.lErrorG = False
+
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            Me.lErrorG = True
+        End Try
+
+
+        Return msg
+
+    End Function
+
+    Public Function GetByIde(ByVal cod As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT * FROM VContratosC2 Where numero =:cod_con"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function GetByIde2(ByVal cod As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT * FROM VContratosC3 Where numero =:cod_con"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function GetConAdiByIde(ByVal cod As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT * FROM Contratos Where cod_con =:cod_con"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+
+    Public Function GetRubrosByIde(ByVal cod As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT cod_rub,des_rub FROM vRubrosContratos Where cod_con =:cod_con"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function GetCDPByIde(ByVal cod As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT nro_cdp,fec_cdp,cod_con FROM CDP_Contratos Where cod_con =:cod_con"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function GetvContratos3(ByVal fi As Date, ByVal ff As Date, ByVal tp As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT * FROM vContratos3 Where    (FEC_SUS_CON BETWEEN :fi AND :ff) AND TIP_CON = :tp ORDER BY NUMERO, nro_cdp,cod_rub,nro_rp"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("fi", fi)
+        dbCommand.Parameters.Add("ff", ff)
+        dbCommand.Parameters.Add("tp", tp)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function GetvContratos2(ByVal fi As Date, ByVal ff As Date, ByVal tp As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT * FROM vContratosC2 Where    (FEC_SUS_CON BETWEEN :fi AND :ff) AND TIP_CON = :tp   ORDER BY NUMERO"
+
+        'queryString = "Select  substr(rc.cod_rub,6,1) TipoGasto,c1.*,rc.* From vContratosC2 C1, rubros_contratos RC Where c1.numero=rc.cod_con and dep_con=10 And  substr(rc.cod_rub,6,1)='3'"
+        'queryString = "Select  substr(rc.cod_rub,6,1) TipoGasto,c1.*,rc.* From vContratosC2 C1, rubros_contratos RC, TiposGastos TG Where c1.numero=rc.cod_con and dep_con=10 And   TIP_CON = '02' "
+        'substr(rc.cod_rub,6,1)= TG.COD_GASTO AND
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("fi", fi)
+        dbCommand.Parameters.Add("ff", ff)
+        dbCommand.Parameters.Add("tp", tp)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function GetvContratos(ByVal cSql As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = cSql
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function GetvContratos3(ByVal fi As Date, ByVal ff As Date, ByVal tp As String, ByVal v1 As Decimal, ByVal v2 As Decimal) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT * FROM vContratosC2 Where (FEC_SUS_CON BETWEEN :fi AND :ff) AND (TIP_CON = :tp) And (val_con BetWeen :v1 And :v2) ORDER BY NUMERO"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("fi", fi)
+        dbCommand.Parameters.Add("ff", ff)
+        dbCommand.Parameters.Add("tp", tp)
+        dbCommand.Parameters.Add("v1", v1)
+        dbCommand.Parameters.Add("v2", v2)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function GetRPByIde(ByVal cod As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT nro_rp,fec_rp,cod_con FROM RP_Contratos Where cod_con =:cod_con"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function GetPolizasByIde(ByVal cod As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT [COD_POL], [NOM_POL], [NOM_ASE], [FEC_POL], [NRO_POL], [VAL_POL], [COD_ASE], [COD_CON] FROM [VPOLIZAS_CONTRATO] where cod_con=:cod_con"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function GetPolizasByIde2(ByVal cod As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "SELECT * FROM VPOLIZAS_CONTRATO2 WHERE COD_CON=:COD_CON"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+
+    Public Function GetEstByIde(ByVal cod As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "select * from estcontratos where cod_con =:cod_con Order By Id Desc"
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function GetAdiByIde(ByVal cod As String) As System.Data.DataTable
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "select * from Adiciones where cod_con =:cod_con "
+
+        Dim dbCommand As New OracleCommand(queryString, Me.dbConnection)
+
+        dbCommand.Parameters.Add("cod_con", cod)
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        Return datat
+
+    End Function
+    Public Function UltId(ByVal cod_tip As String) As String
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+
+        Dim queryString As String = "SELECT cod_con FROM Contratos Where Tip_Con=:cod_tip Order By to_number(cod_con) desc"
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+        dbCommand.Parameters.Add("cod_tip", cod_tip)
+
+        Dim c As String
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+
+        If datat.Rows.Count > 0 Then
+            c = datat.Rows(0)("cod_con").ToString
+        Else
+            c = "Ninguno"
+        End If
+
+        Return c
+
+
+    End Function
+
+    Public Function UltId(ByVal cod_tip As String, ByVal vigencia As Integer) As String
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+
+        Dim queryString As String = "SELECT cod_con FROM Contratos Where Tip_Con=:cod_tip and vig_con=to_number('" + vigencia.ToString + "') Order By to_number(cod_con) desc"
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+        dbCommand.Parameters.Add("cod_tip", cod_tip)
+
+        Dim c As String
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+
+        If datat.Rows.Count > 0 Then
+            c = datat.Rows(0)("cod_con").ToString
+        Else
+            c = "Ninguno"
+        End If
+
+        Return c
+
+
+    End Function
+    Public Function UltFecSus(ByVal cod_tip As String, ByRef ult_fec_sus As Date) As Boolean
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+
+        Dim queryString As String = "SELECT fec_sus_con FROM Contratos Where Tip_Con=:cod_tip Order By to_number(cod_con) desc"
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+        dbCommand.Parameters.Add("cod_tip", cod_tip)
+
+        Dim c As Boolean = False
+
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+
+        If datat.Rows.Count > 0 Then
+            ult_fec_sus = CDate(datat.Rows(0)("fec_sus_con").ToString)
+            c = True
+        End If
+
+        Return c
+
+
+    End Function
+
+
+    Public Function IsLegalizado(ByVal cod_con As String, ByRef msgrp As String) As Boolean
+
+        Dim dataAdapter As New OracleDataAdapter
+        Dim datat As New Data.DataTable
+
+        Dim queryString As String = "select count(*) as Np from polizas_contrato where cod_con='" + cod_con.ToString + "'"
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+        Dim c As Boolean = False
+        dataAdapter.SelectCommand = dbCommand
+        dataAdapter.Fill(datat)
+
+        If datat.Rows.Count > 0 Then
+            If (Val(datat.Rows(0)("Np").ToString) > 0) Then
+                msgrp = " EL Contrato ya fue Legalizado "
+                c = True
+                Return c
+                Exit Function
+            End If
+        End If
+
+        queryString = "select count(*) as nr  from contratos where  ( nro_com_pag<>'-' Or gac_con<>'-') And cod_con='" + cod_con.ToString + "'"
+        Dim dbCommand2 As New OracleCommand(queryString, dbConnection)
+        dataAdapter.SelectCommand = dbCommand2
+        dataAdapter.Fill(datat)
+
+        If datat.Rows.Count > 0 Then
+            If (Val(datat.Rows(0)("Nr").ToString) > 0) Then
+                msgrp = " EL Contrato ya fue Legalizado "
+                c = True
+                Return c
+                Exit Function
+            End If
+        Else
+            msgrp = " EL Contrato no esta Radicado, Revise el Código de Contrato "
+            c = True
+            Return c
+            Exit Function
+        End If
+
+        Return c
+
+
+    End Function
+
+
+    Public Function AsigInterventor(ByVal cod_con As String, ByVal ide_int As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        If Me.ValInt(cod_con, ide_int) = True Then
+            msg = " EL Interventor es el Representante Legal o El Contratista, Verifique los Datos"
+            Me.lErrorG = True
+            Return msg
+            Exit Function
+        Else
+
+            Try
+                Dim queryString As String = "Insert Into Interventores_Contrato (cod_con, ide_int,usuario,fec_reg)Values('" + cod_con + "','" + ide_int + "','" + usuario + "',SYSDATE)"
+                Dim dbCommand As New OracleCommand(queryString, dbConnection)
+                dbCommand.ExecuteNonQuery()
+                msg = "Se Asignó Interventor Identificación " + ide_int + " al Contrato" + cod_con
+                f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+                t.Commit()
+                msg = MsgOk + "<br>" + msg
+                lErrorG = False
+            Catch ex As Exception
+                t.Rollback()
+                msg = ex.Message
+                Me.lErrorG = True
+            End Try
+            Return msg
+        End If
+    End Function
+    Function ValInt(ByVal cod_con As String, ByVal ide As String) As Boolean
+        Dim queryString As String = "SELECT COUNT(*) AS CAN FROM CONTRATOS WHERE ((IDE_CON = '" + ide + "') OR (IDE_REP = '" + ide + "')) AND (COD_CON = '" + cod_con + "')"
+        Dim dbCommand As New OracleCommand(queryString, dbConnection)
+        dbCommand.ExecuteScalar()
+        Dim c As Boolean = (CInt(dbCommand.ExecuteScalar()) >= 1)
+        Return c
+    End Function
+
+
+    Public Function AsigSupervisor(ByVal cod_con As String, ByVal ide_sup As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        If Me.ValInt(cod_con, ide_sup) = True Then
+            msg = " EL Interventor es el Representante Legal o El Contratista, Verifique los Datos"
+            Me.lErrorG = True
+            Return msg
+            Exit Function
+        Else
+
+            Try
+                Dim queryString As String = "Insert Into Interventores_Contrato (cod_con, ide_int,tip_int,usuario,fec_reg)Values('" + cod_con + "','" + ide_sup + "','S','" + usuario + "',SYSDATE)"
+                Dim dbCommand As New OracleCommand(queryString, dbConnection)
+                dbCommand.ExecuteNonQuery()
+                msg = "Se Asignó Supervisor Identificación " + ide_sup + " al Contrato" + cod_con
+                f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+                t.Commit()
+                msg = MsgOk + "<br>" + msg
+                lErrorG = False
+            Catch ex As Exception
+                t.Rollback()
+                msg = ex.Message
+                Me.lErrorG = True
+            End Try
+            Return msg
+
+        End If
+    End Function
+    Public Function DAsigSupervisor(ByVal cod_con As String, ByVal ide_sup As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+
+        Try
+            Dim queryString As String = "Delete From Interventores_Contrato Where tip_int='S' And cod_con = '" + cod_con + "' And ide_int='" + ide_sup + "'"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se DesAsignó Supervisor Identificación " + ide_sup + " al Contrato" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg + ide_sup
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            Me.lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+
+    Public Function DAsigInterventor(ByVal cod_con As String, ByVal ide_int As String) As String
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+
+        Try
+            Dim queryString As String = "Delete From Interventores_Contrato Where tip_int='I' And cod_con = '" + cod_con + "' And ide_int='" + ide_int + "'"
+            Dim dbCommand As New OracleCommand(queryString, dbConnection)
+            dbCommand.ExecuteNonQuery()
+            msg = "Se DesAsignó Interventor Identificación " + ide_int + " al Contrato" + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            Me.lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function AsigInterventor(ByVal cod_con As String, ByVal dtInt As Data.DataTable) As String
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Dim i As Integer, ide_int As String
+        Try
+            For i = 0 To dtInt.Rows.Count - 1
+                ide_int = dtInt.Rows(i)("ide_int").ToString
+                Dim queryString As String = "Insert Into Interventores_Contrato (cod_con, ide_int)Values('" + cod_con + "','" + ide_int + "')"
+                Dim dbCommand As New OracleCommand(queryString, dbConnection)
+                dbCommand.ExecuteNonQuery()
+            Next i
+            msg = "Se Asigno Interventor al Contrato Nº " + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            Me.lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Function AsigSupervisor(ByVal cod_con As String, ByVal dtInt As Data.DataTable) As String
+
+        Dim t As OracleTransaction = dbConnection.BeginTransaction()
+        Dim i As Integer, ide_sup As String
+        Try
+            For i = 0 To dtInt.Rows.Count - 1
+                ide_sup = dtInt.Rows(i)("ide_int").ToString
+                Dim queryString As String = "Insert Into Supervisores_Contrato (cod_con, ide_sup)Values('" + cod_con + "','" + ide_sup + "')"
+                Dim dbCommand As New OracleCommand(queryString, dbConnection)
+                dbCommand.ExecuteNonQuery()
+            Next i
+            msg = "Se Asigno Supervisor al Contrato Nº " + cod_con
+            f.InsAud(Me.dbConnection, t, "Contratos", msg, usuario)
+            t.Commit()
+            msg = MsgOk + "<br>" + msg
+            lErrorG = False
+        Catch ex As Exception
+            t.Rollback()
+            msg = ex.Message
+            Me.lErrorG = True
+        End Try
+        Return msg
+
+    End Function
+    Public Sub New(ByVal user As String)
+        Dim connectionString As String = ConfigurationManager.ConnectionStrings("ConnectionString").ConnectionString
+        dbConnection.ConnectionString = connectionString
+        dbConnection.Open()
+        Me.usuario = user
+        Sw_cUser = False
+    End Sub
+
+    Public Sub New(ByVal cUsuario As System.Collections.Specialized.NameValueCollection)
+        Dim connectionString As String = ConfigurationManager.ConnectionStrings("ConnectionString").ConnectionString
+        dbConnection.ConnectionString = connectionString
+        dbConnection.Open()
+        cUser = cUsuario
+        Me.usuario = cUser.Item("username")
+        Sw_cUser = True
+
+    End Sub
+    Protected Overrides Sub Finalize()
+        'dbConnection.Close()
+        MyBase.Finalize()
+    End Sub
+    Public Sub CerrarBD()
+        dbConnection.Close()
+        dbConnection.Dispose()
+    End Sub
+End Class
+

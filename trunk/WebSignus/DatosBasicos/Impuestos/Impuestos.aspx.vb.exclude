@@ -1,0 +1,132 @@
+Imports System.Data
+
+Partial Class DatosBasicos_Impuestos_Impuestos
+    Inherits PaginaComun
+    Dim Obj As Impuestos = New Impuestos
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Me.Opcion = Me.Tit.Text
+        Me.SetTitulo()
+
+        If Not IsPostBack Then
+            FillCustomerInGrid()
+            Me.MultiView1.ActiveViewIndex = -1
+        End If
+    End Sub
+
+    Protected Sub GridView1_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs)
+
+        Me.Oper.Value = e.CommandName
+        MultiView1.ActiveViewIndex = -1
+
+        Select Case Me.Oper.Value
+            Case "Nuevo"
+                Me.SubT.Text = "Nuevo..."
+                MultiView1.ActiveViewIndex = 0
+                Me.TxtCodNew.ReadOnly = True
+                Me.SetFocus(Me.TxtNomNew)
+
+            Case "Editar"
+                Me.SubT.Text = "Editando..."
+                Dim index As Integer = Convert.ToInt32(e.CommandArgument)
+                Me.GridView1.SelectedIndex = index
+                Me.TxtCodNew.ReadOnly = True
+                Dim tb As DataTable = Obj.GetByIde(GridView1.SelectedValue)
+                If tb.Rows.Count > 0 Then
+                    Me.TxtCodNew.Text = tb.Rows(0)("IMP_COD").ToString
+                    Me.TxtNomNew.Text = tb.Rows(0)("IMP_NOM").ToString
+                    Me.txtFINew.Text = tb.Rows(0)("IMP_FIN").ToString
+                    Me.TxtFFnew.Text = tb.Rows(0)("IMP_FFI").ToString
+                    Me.TxtBarNew.Text = tb.Rows(0)("IMP_BAR").ToString
+                    Me.CboUniNew.SelectedValue = tb.Rows(0)("IMP_UNI").ToString
+                    Me.TxtAbrNew.Text = tb.Rows(0)("IMP_ABR").ToString
+                    Me.TxtNorNew.Text = tb.Rows(0)("IMP_NOR").ToString
+                    Me.TxtObsNew.Text = tb.Rows(0)("IMP_OBS").ToString
+                End If
+                MultiView1.ActiveViewIndex = 0
+                Me.MsgResult.Text = "Editando: Código [" + Me.TxtCodNew.Text + "]"
+
+            Case "Eliminar"
+                Dim index As Integer = Convert.ToInt32(e.CommandArgument)
+                Me.GridView1.SelectedIndex = index
+
+                Me.MsgResult.Text = Obj.Delete(GridView1.DataKeys(index).Values(0).ToString())
+                Me.MsgBox(MsgResult, Obj.lErrorG)
+                FillCustomerInGrid()
+
+        End Select
+
+    End Sub
+
+    Protected Sub GridView1_RowEditing(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewEditEventArgs) Handles GridView1.RowEditing
+        GridView1.EditIndex = e.NewEditIndex
+        FillCustomerInGrid()
+    End Sub
+
+    
+    Private Sub FillCustomerInGrid()
+        Dim cl As String = Me.CmbClase.SelectedValue
+        If Me.CmbClase.SelectedIndex = -1 Then
+            Me.CmbClase.SelectedIndex = 0
+            cl = "01"
+        End If
+        Dim dtCustomer As DataTable = Obj.GetByCLASE(cl)
+        If (dtCustomer.Rows.Count > 0) Then
+            GridView1.DataSource = dtCustomer
+            GridView1.DataBind()
+        Else
+            dtCustomer.Rows.Add(dtCustomer.NewRow())
+            GridView1.DataSource = dtCustomer
+            GridView1.DataBind()
+            Dim TotalColumns As Integer = GridView1.Rows(0).Cells.Count
+            GridView1.Rows(0).Cells.Clear()
+            GridView1.Rows(0).Cells.Add(New TableCell())
+            GridView1.Rows(0).Cells(0).ColumnSpan = TotalColumns
+            GridView1.Rows(0).Cells(0).Text = "No se encontraron Registro"
+        End If
+    End Sub
+
+    Protected Sub BtnGuardar_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+
+        Select Case Me.Oper.Value
+            Case "Nuevo"
+                Me.MsgResult.Text = Obj.Insert(Me.CmbClase.SelectedValue, Me.TxtNomNew.Text, Me.CboUniNew.SelectedValue, Me.TxtBarNew.Text, Me.TxtNorNew.Text, Me.TxtAbrNew.Text, CDate(Me.txtFINew.Text), CDate(Me.TxtFFnew.Text), Me.TxtObsNew.Text)
+            Case "Editar"
+                Me.MsgResult.Text = Obj.Update(Me.TxtCodNew.Text, Me.TxtNomNew.Text, Me.CboUniNew.SelectedValue, Me.TxtBarNew.Text, Me.TxtNorNew.Text, Me.TxtAbrNew.Text, CDate(Me.txtFINew.Text), CDate(Me.TxtFFnew.Text), Me.TxtObsNew.Text)
+        End Select
+
+        Me.MsgBox(MsgResult, Obj.lErrorG)
+        FillCustomerInGrid()
+        If Obj.lErrorG = False Then
+            Me.Limpiar()
+        End If
+
+
+
+    End Sub
+
+    Protected Sub Limpiar()
+        Me.TxtCodNew.Text = ""
+        Me.TxtNomNew.Text = ""
+        Me.TxtBarNew.Text = ""
+        Me.TxtNorNew.Text = ""
+        Me.TxtAbrNew.Text = ""
+        Me.txtFINew.Text = ""
+        Me.TxtFFnew.Text = ""
+        Me.TxtObsNew.Text = ""
+        Me.MultiView1.ActiveViewIndex = -1
+    End Sub
+    Protected Sub BtnCancelar_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+        Me.Limpiar()
+    End Sub
+
+    Protected Sub CmbClase_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+        Me.FillCustomerInGrid()
+        Me.MultiView1.ActiveViewIndex = -1
+    End Sub
+
+    
+    Protected Sub BtnEliminar_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+
+    End Sub
+End Class
+

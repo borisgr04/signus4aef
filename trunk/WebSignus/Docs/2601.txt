@@ -1,0 +1,6 @@
+824001542;4;40;2012;07;4001;63;13/07/2012;CC;17956095;DUARTE AMAYA ADRIAN;Instalacion electricas de Aires Acondicionados en distintas aulas de la sede principal de la I.E. san jose de la paz.;2097200;0,01;20972
+824001542;4;40;2012;07;4002;63;13/07/2012;CC;17956095;DUARTE AMAYA ADRIAN;Instalacion electricas de Aires Acondicionados en distintas aulas de la sede principal de la I.E. san jose de la paz.;2097200;0,01;20972
+824001542;4;40;2012;07;4001;66;19/07/2012;CC;17956095;DUARTE AMAYA ADRIAN;Instalaciones de cielo razo en diferentes aulas de la sede principal de la I.E. san jose de la paz.;3707700;0,01;37077
+824001542;4;40;2012;07;4002;66;19/07/2012;CC;17956095;DUARTE AMAYA ADRIAN;Instalaciones de cielo razo en diferentes aulas de la sede principal de la I.E. san jose de la paz.;3707700;0,01;37077
+824001542;4;40;2012;07;4001;67;27/07/2012;CC;17956095;DUARTE AMAYA ADRIAN;Reparaciones electricas en la sede la Florida  de la I.E. San Jose de la paz.;1308600;0,01;13086
+824001542;4;40;2012;07;4002;67;27/07/2012;CC;17956095;DUARTE AMAYA ADRIAN;Reparaciones electricas en la sede la Florida  de la I.E. San Jose de la paz.;1308600;0,01;13086

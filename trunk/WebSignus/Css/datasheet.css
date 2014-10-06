@@ -1,0 +1,72 @@
+﻿/* Core datasheet styles */
+.datasheet {
+    font-family:lucida grande,arial,helvetica,sans-serif;
+    font-size:11px;	
+    width:700px;
+    background-color:#e3e3f3;
+    border:solid 1px #9c9;
+    padding:5px 10px;
+}
+.datasheet .outer {
+    border-top:1px solid #669;
+    border-bottom:1px solid #fff;
+    border-right:1px solid #fff;
+}
+.datasheet .inner { border-left:1px solid #669; }
+
+
+.datatable {
+	/* fill the container */
+    width:100%;
+}
+.datatable TH {
+    padding:3px;
+    border-top:1px solid #eef;
+    border-left:1px solid #eef;
+    border-right:1px solid #999;
+    border-bottom:1px solid #999;
+    color:#003;
+    background-color:#ddd;
+    font-weight:bold;
+    text-align:left;
+}
+.datatable TD {
+    padding:2px 2px;
+    border-right:1px solid #999;
+    border-bottom:1px solid #999;
+    background-color:#fff;
+}
+.datatable TD INPUT {
+    border:0px none;
+    width:95%;
+    text-align:right;
+}
+
+
+.datatable TH.first {
+    text-align:center;
+    width:25px;
+    color:#222;
+}
+.datatable .command{ text-align:center; width:100px; }
+.datatable .command A{ color:#003; }
+
+/* Excel 2007 Style */
+.excel2007 .outer {
+    border-top-color:#bfdbff;
+}
+.excel2007 .inner { border-left-color:#bfdbff; }
+.excel2007 TH {
+    border-top-color:#eef;
+    border-left-color:#eef;
+    border-right-color:#d0d7e5;
+    border-bottom-color:#d0d7e5;
+    color:#27413e;
+    background-color:#e4ecf7;
+}
+.excel2007 TD {
+    border-right-color:#d0d7e5;
+    border-bottom-color:#d0d7e5;
+    background-color:#fff;
+}
+.excel2007 .command A{ color:#27413e; }

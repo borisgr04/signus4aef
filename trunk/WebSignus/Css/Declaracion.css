@@ -1,0 +1,262 @@
+﻿/* Header Declaracion*/
+.DecHeaderP {
+    font-family:lucida grande,arial,helvetica,sans-serif;
+    font-size:11px;	
+    width:700px;
+    background-color:Transparent;
+    border-top:1px solid #999;
+    border-left:1px solid #999;
+    border-right:1pt solid #999;
+    border-bottom:1pt solid #999;
+    padding:0px 0px;
+    margin:0 auto 0 auto;
+}
+.DecHeader {
+    font-family:lucida grande,arial,helvetica,sans-serif;
+    font-size:11px;	
+    width:700px;
+    background-color:Transparent;
+    border-top:0px solid #999;
+    border-left:1px solid #999;
+    border-right:1pt solid #999;
+    border-bottom:1pt solid #999;
+    padding:0px 0px;
+    margin:0 auto 0 auto;
+}
+
+/* Core datasheet styles */
+.datasheet {
+    font-family:lucida grande,arial,helvetica,sans-serif;
+    font-size:11px;	
+    width:700px;
+    background-color:#999;
+    border-top:1px solid #999;
+    border-left:1px solid #999;
+    border-right:0,5pt solid #000000;
+    border-bottom:0,5pt solid #000000;
+    padding:0px 0px;
+    margin:0 auto 0 auto;
+}
+.datasheet .outer {
+    border-top:1px solid #669;
+    border-bottom:1px solid #fff;
+    border-right:1px solid #fff;
+}
+.datasheet .inner { border-left:1px solid #669; }
+
+
+.datatable {
+	/* fill the container */
+    width:100%;
+}
+.datatable TH {
+    padding:3px;
+    border-top:1px solid #eef;
+    border-left:1px solid #eef;
+    border-right:0,5pt solid #000000;
+    border-bottom:0,5pt solid #000000;
+    
+    color:#FFFFFF;
+    
+    background-color:#000000;
+    
+    font-weight:bold;
+    text-align:left;
+    
+}
+    
+.datatable TH.center {
+    padding:3px;
+    border-right:0,5pt solid #000000;
+    border-bottom:0,5pt solid #000000;
+    
+    border-right:1px solid #999;
+    border-bottom:1px solid #999;
+    
+    color:#FFFFFF;
+    
+    background-color:#000000;
+    
+    font-weight:bold;
+    text-align:center;
+    
+}
+
+.datatable TD {
+    padding:2px 2px;
+    border-right:1px solid #999;
+    border-bottom:1px solid #999;
+    background-color:#fff;
+    
+}
+.datatable Span.AB {
+    padding:2px 2px;
+    background-color:#fff;
+    text-align:center;
+    
+}
+
+.datatable TD INPUT {
+    border:0px none;
+    width:95%;
+    text-align:right;
+}
+.TitDecl 
+{
+	border:0px none;
+    width:95%;
+}
+
+.NRenglon
+{
+ font-size:8pt;	
+ border:0px none;
+ width:90%;
+ background-color:Transparent;
+ 
+}
+
+#flotante
+{
+	position: absolute;
+	display:none;
+	font-family:Arial;
+	font-size:0.8em;
+	width:180px;
+	border:1px solid #808080;
+	background-color:#f1f1f1;
+	background-color:#DBE7F6;
+}
+
+
+
+
+.datatable TH.first {
+    text-align:center;
+    width:25px;
+    color:#222;
+}
+.datatable .command{ text-align:center; width:100px; }
+.datatable .command A{ color:#003; }
+
+/* Excel 2007 Style */
+.excel2007 .outer {
+    border-top-color:#bfdbff;
+}
+.excel2007 .inner { border-left-color:#bfdbff; }
+.excel2007 TH {
+    border-top-color:#eef;
+    border-left-color:#eef;
+    border-right-color:#d0d7e5;
+    border-bottom-color:#d0d7e5;
+    color:#27413e;
+    background-color:#e4ecf7;
+}
+.excel2007 TD {
+    border-right-color:#d0d7e5;
+    border-bottom-color:#d0d7e5;
+    background-color:#fff;
+}
+.excel2007 .command A{ color:#27413e; }
+
+
+
+.BarTitleModal
+{
+    width: 100%;
+    height: 30px;
+    background-repeat: repeat-x;
+    color: #FFF;
+    cursor: move;
+    font-weight: bold;
+}
+
+#master_content .BarTitleModal a {color:#FFF;}
+#master_content .BarTitleModal a:hover {text-decoration:none;background:none;}
+
+
+.ModalPanel {
+	
+	background-color:white;
+	overflow:hidden;
+	font-family: Tahoma, Arial, sans-serif;
+	font-size:75%;
+}
+
+.ModalPanel .container
+{
+    font-family:tahoma,helvetica,arial,sans-serif;
+    font-size:11px;
+    width:340px;
+    border:solid 1px #99aabd;
+    background-color:#F2F9FF;
+} 
+
+/* dialog header */
+
+.ModalPanel .header
+{
+    background:url(../images/modal/sprite.gif) repeat-x 0px -1100px;	
+    height:25px;
+    padding-top:5px;
+}
+
+.ModalPanel .header .msg
+{
+    vertical-align:middle;
+    padding-left:6px;
+    color:#fff;
+    font-size:12px;
+    font-weight:bold;
+} 
+
+/* dialog close */
+.ModalPanel .close
+{
+    right:4px;	
+    background: url(/images/modal/icons.gif) no-repeat -732px 0px;	
+    width:16px;	
+    cursor:hand;	
+    position:absolute;	
+    top:5px;	
+    height:16px;
+}
+
+/* dialog close hover */
+.ModalPanel .close:hover { background: url(/images/modal/icons.gif) no-repeat -749px 0px;	}
+
+
+DivMarco 
+{
+     
+}
+/*Modal Popup*/
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+
+.modalPopup {
+	background-color:#ffffdd;
+	border-width:3px;
+	border-style:solid;
+	border-color:Gray;
+	padding:3px;
+	width:250px;
+}
+
+
+/* Loading - VCARGAR */
+
+        .Loading {
+            background-color:#CF4342;
+            color:#fff;
+            top:0px;
+            right:0px;
+            position:fixed;
+            }
+            .Loading img {
+            vertical-align:middle;
+            margin:1px;
+            }

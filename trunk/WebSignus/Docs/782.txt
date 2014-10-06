@@ -1,0 +1,12 @@
+824001510;9;40;2011;11;4002;79;03/11/2011;CC;91237618;alvaro juaquin quintero rivanedeira;pago suministro;915300;0,01;9153
+824001510;9;40;2011;11;4002;89;03/11/2011;CC;19705518;rafael enrrique torres herrera;pag mantenimiento;774000;0,01;7740
+824001510;9;40;2011;11;4002;81;03/11/2011;CC;12722247;donaldo enrrique viloria jimenez;pago suministro de utiles de oficina;4178200;0,01;41782
+824001510;9;40;2011;11;4002;82;03/11/2011;CC;12686572;armando aramendiz jaramillo;cuenta por a la provision la espera del valle;4422600;0,01;44226
+824001510;9;40;2011;11;4002;83;03/11/2011;CC;49730487;isabel cristina campo;pago suministro de utiles de oficina;5182400;0,01;51824
+824001510;9;40;2011;11;4002;84;11/11/2011;CC;12685393;asley luis barrios medina;pago de transporte de estudiantes;1050000;0,01;10500
+824001510;9;40;2011;11;4002;85;11/11/2011;CC;77011995;giovanni perez charris;pago compra de equipo;2030000;0,01;20300
+824001510;9;40;2011;11;4002;86;11/11/2011;CC;5136900;jorge de jesus hernandez rodriguez;pago transporte de alumnos;1050000;0,01;10500
+824001510;9;40;2011;11;4002;87;11/11/2011;CC;12686018;miguel de la cruz herrera;pago suministro cuenta por pagar ;7401100;0,01;74011
+824001510;9;40;2011;11;4002;88;22/11/2011;CC;12683542;jose armenta escorcia;pago mantenimiento de infraestructura;1817000;0,01;18170
+824001510;9;40;2011;11;4002;90;22/11/2011;CC;12685263;victor rafael quiroz garcia;pago mantenimiento de infraestructura;432000;0,01;4320
+824001510;9;40;2011;11;4002;91;28/11/2011;CC;49730487;hernando yepes montes;pago de suministro de materiales;3825700;0,01;38257

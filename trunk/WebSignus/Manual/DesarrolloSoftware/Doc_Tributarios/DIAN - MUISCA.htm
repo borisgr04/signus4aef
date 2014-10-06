@@ -1,0 +1,355 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head><title>DIAN - MUISCA</title>
+    <link href="/WebArquitectura/estilos/tabla.css" rel="stylesheet" type="text/css">
+    <link href="/WebArquitectura/estilos/tree.css" rel="stylesheet" type="text/css">
+    <link href="/WebArquitectura/estilos/estilosMuisca.css" rel="stylesheet" type="text/css">
+    <link href="/WebArquitectura/estilos/estilosMuiscaV2.css" rel="stylesheet" type="text/css">
+    <link href="/WebArquitectura/estilos/menu.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/WebArquitectura/funciones/AdmTabla.js"></script>
+    <script type="text/javascript" src="/WebArquitectura/funciones/AdmLista.js"></script>
+    <script type="text/javascript" src="/WebArquitectura/funciones/Hashtable.js"></script>
+    <script type="text/javascript" src="/WebArquitectura/funciones/AdmFabricaMensajes.js"></script>
+    <script type="text/javascript" src="/WebArquitectura/funciones/AdmMensajes.js"></script>
+    <script type="text/javascript" src="/WebArquitectura/funciones/AdmValidaciones.js"></script>
+    <script type="text/javascript" src="/WebArquitectura/javascript/PasswordRules.js"></script>
+    <script type="text/javascript" src="/WebArquitectura/funciones/Menu.js"></script>
+
+ <!--   <script type="text/javascript">
+    function abrirVentana(){
+      window.open("/WebArquitectura/portal/portal.html","","width=550,height=450,left=250,top=250,resizable=1,scrollbars=1");
+      return false;
+       }
+    </script>  -->
+  </head>
+
+  <!-- <body onload="abrirVentana();"> -->
+  <body>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+       <td class="esq_sup_izq"><img src="imagenes/es/fondos/1x1_white.gif" width="1" height="1" alt=""/></td>
+       <td class="borde_superior"></td>
+       <td class="esq_sup_der"></td>
+      </tr>
+      <tr>
+        <td  class="borde_izquierdo">&nbsp;</td>
+        <td width="760">
+        <!-- CONTENEDOR -->
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td colspan="2" align="center"><!--tiles:insert attribute="encabezado" flush="false"/--><img src="imagenes/es/fondos/v2/bg11.jpg" width="760" height="130" align="top" alt=""/></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><img src="imagenes/es/fondos/v2/bandera_lisa.jpg" width="760" height="3" align="top" alt=""/></td>
+          </tr>
+          <tr>
+            <td width="200" height="400" bgcolor="#EFEFEF" align="left" valign="top">
+              
+
+<div class="dtree">
+    <script type="text/javascript">
+
+        var menuMuisca = new dTree('menuMuisca');
+        menuMuisca.add(0, -1,'DIAN Virtual');
+
+        menuMuisca.add(1 ,  0, 'Tenga en cuenta', '/WebArquitectura/portal/portal.html', 'Tenga en cuenta','popup',null,null,null,410,560);
+        menuMuisca.add(2 ,  0, 'Iniciar sesi&oacute;n', '/WebArquitectura/DefLogin.faces', 'Iniciar sesi&oacute;n');
+
+/*        menuMuisca.add(2, 0,'Registro Unico Tributario', '', 'Registro Unico Tributario');
+        menuMuisca.add(17,2,'Inscripci&oacute;n RUT', '/WebRutMuisca/DefInscripcionRut.faces', 'Inscripci&oacute;n RUT');
+        menuMuisca.add(18,2,'Inscripci&oacute;n RUT C&aacute;mara', '/WebRutMuisca/DefInscripcionRutCamara.faces', 'Inscripci&oacute;n RUT C&aacute;mara');
+*/
+
+        //menuMuisca.add(1, 0,'Inscripci&oacute;n RUT', '/WebRutMuisca/DefInscripcionRut.faces', 'Inscripci&oacute;n RUT');
+        //menuMuisca.add(13, 12, 'Iniciar sesi&oacute;n con mecanismo digital', '/WebArquitectura/DefLoginCertificado.faces', 'Iniciar sesi&oacute;n con mecanismo digital');
+
+        document.write(menuMuisca);
+        document.write("<br>");
+
+        var menuMuisca1 = new dTree('menuMuisca1');
+        menuMuisca1.add(0, -1,'Otros servicios');
+        menuMuisca1.add(1, 0,'Verificar su sistema para firma', '/WebArquitectura/DefVerificarSistema.faces', 'Verificar su sistema para firma');
+        menuMuisca1.add(2, 0,'Verificar Requisitos', '/WebArquitectura/DefVerificarSistemaNoJava.faces', 'Verificar Requisitos');
+        menuMuisca1.add(3, 0,'Crear cuenta de usuario', '/WebArquitectura/DefCrearCuentaUsuario.faces', 'Crear cuenta de usuario');
+        menuMuisca1.add(4, 0,'Habilitar cuenta', '/WebArquitectura/DefActivacionCuenta.faces?siguienteURL=DefVerificarNit', 'Habilitar cuenta');
+       // menuMuisca1.add(5, 0,'Consulta de Declaraciones Programa de Control MUISCA Bernoulli', '/WebBernoulli/DefDocumentosInspeccion.faces', 'Consulta de Declaraciones Programa de Control MUISCA Bernoulli');
+        menuMuisca1.add(6, 0,'Consulta de Inconsistencias', '/WebGestionmasiva/DefSelPublicacionesExterna.faces', 'Consulta de Inconsistencias');
+        menuMuisca1.add(7, 0,'Consulta del Arancel', '/WebArancel/DefMenuConsultas.faces', 'Consulta del Arancel');
+//        menuMuisca1.add(8, 0,'Creacion de Usuarios para Capacitacion', '/WebOperacionaduanera/DefCrearRolesExportacion.faces', 'Creacion de Usuarios para Capacitacion');
+
+//        menuMuisca1.add(5, 0,'Consulta de Correcciones Automáticas', '/WebGestionmasiva/DefSelPublicacionesExterna.faces', 'Consulta de Correcciones Automáticas');
+
+
+//        menuMuisca1.add(1, 0,'Descarga Prevalidador información exógena tributaria', '', 'Descarga Prevalidador información exógena tributaria');
+//-- NO DEBE IR EN CHIA
+//        menuMuisca1.add(2, 0,'Capacitación', 'http://chia.dian.gov.co/WebArquitectura/', 'Portal Capacitación');
+
+        document.write(menuMuisca1);
+
+
+//        document.write("<table width='100%' height='100px'><tr><td align='center' valign='bottom'><img src='/WebArquitectura/videos/publicidadMenu.jpg'/></td></tr></table>");
+
+        /*document.write("<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0' height='35' width='200'>");
+        document.write("<param name='movie' value='/WebArquitectura/videos/publicidadMenu.swf'><param name='quality' value='high'><embed src='/WebArquitectura/videos/publicidadMenu.swf' quality='high' pluginspage='https://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash' height='35' width='200'>");
+        document.write("</object>");*/
+
+       //-- POP UP PAGO VIRTUAL
+       function launchInfoPagoVirtual() {
+         blankWin = window.open('http://www.dian.gov.co/dian/20dian-virtual.nsf/pages/Transaccion_pago?OpenDocument','_blank','menubar=yes,toolbar=yes,location=yes,directories=yes,fullscreen=no,titlebar=yes,hotkeys=yes,status=yes,scrollbars=yes,resizable=yes');
+       }
+       //window.open("/WebArquitectura/portal/pago.html","","width=171,height=301,resizable=0,scrollbars=0,status =0");
+     </script>
+</div>
+
+            </td>
+            <td width="560" bgcolor="#FFFFFF" align="center" valign="top" style="padding: 5px;">
+              <br /><br /><br />
+              <table>
+<tbody>
+<tr>
+<td><script type="text/javascript">
+                function validarPassword() {
+                    var nuevaContrasena = ReceiveDataFromFlashMovie('nuevaContrasena', 'cont');
+                    var confirmacionContrasena = ReceiveDataFromFlashMovie('confirmarContrasena', 'cont');
+                    document.getElementById("vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:hddNuevaContrasena").value = nuevaContrasena;
+                    document.getElementById("vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:hddConfirmarContrasena").value = confirmacionContrasena;
+                    return validarContrasena(null, nuevaContrasena, confirmacionContrasena);
+                }
+
+                /**
+                * Funciones Teclado
+                */
+                function abrirVentana(tipoPelicula) {
+                    openNewWindow('/WebArquitectura/seguridad/teclado/pantalla.html','tecladoVirtual','height=300,width=355,toolbar=no,scrollbars=no,modal=yes');
+                    var hddTeclado = document.getElementById("hddTeclado");
+                    hddTeclado.value = (tipoPelicula == 'nueva') ? "nuevaContrasena" : "confirmarContrasena";
+                }
+
+                function openNewWindow(URLtoOpen,windowName, windowFeatures) {
+                    newWindow=window.open(URLtoOpen, windowName, windowFeatures);
+                }
+
+                function getFlashMovieObject(movieName)
+                {
+                    if (window.document[movieName])
+                    {
+                        return window.document[movieName];
+                    }
+                    if (navigator.appName.indexOf("Microsoft Internet")==-1)
+                    {
+                        if (document.embeds && document.embeds[movieName]!=null)
+                        return document.embeds[movieName];
+                    }
+                    return document.getElementById(movieName);
+                }
+
+                function SendDataToFlashMovie(flashswf,message1,cajaTxt)
+                {
+                    var flashMovie=getFlashMovieObject(flashswf);
+                    flashMovie.SetVariable(cajaTxt,message1);
+                }
+                function ReceiveDataFromFlashMovie(flashswf, varName)
+                {
+                    var flashMovie=getFlashMovieObject(flashswf);
+                    var message=flashMovie.GetVariable(varName);
+                    return message;
+                }
+
+                </script></td>
+</tr>
+</tbody>
+</table>
+<form id="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente" method="post" action="/WebArquitectura/DefCambiarClaveContribuyenteNoSeguro.faces" enctype="application/x-www-form-urlencoded">
+<table id="tblMensajes" style="display:none"></table><input id="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:modoPresentacionSeleccionBO" type="hidden" name="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:modoPresentacionSeleccionBO" value="pantalla" /><input id="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:siguienteURL" type="hidden" name="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:siguienteURL" value="DefVerificarNit" /><input id="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:modoPresentacionFormBO" type="hidden" name="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:modoPresentacionFormBO" value="pantalla" /><input id="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:modoOperacionFormBO" type="hidden" name="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:modoOperacionFormBO" /><input id="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:hddNuevaContrasena" type="hidden" name="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:hddNuevaContrasena" /><input id="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:hddConfirmarContrasena" type="hidden" name="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:hddConfirmarContrasena" /><input type="hidden" id="hddTeclado"/><table>
+<tbody>
+<tr>
+<td><span class="titulo2">Establecer Contrase&ntilde;a</span></td>
+</tr>
+<tr>
+<td><table width="100%">
+<tbody>
+<tr>
+<td><hr></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td><span class="textoVerde">Por favor establezca una contrase&ntilde;a para su cuenta de usuario. Recuerde que debe memorizar su contrase&ntilde;a para ingresar a los servicios de la DIAN.</span></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td><table width="100%">
+<tbody>
+<tr>
+<td><hr></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td><span class="textoVerde">Antes de establecer su contraseña recuerde lo siguiente: <br><li>La longitud mínima es de 6 carácteres</li><li>El número mínimo de carácteres alfabéticos es 2</li><li>El número mínimo de carácteres numéricos y especiales es 1</li><li>El número máximo de carácteres repetidos es 5</li><li>El número mínimo de carácteres diferentes de la contraseña anterior es 2</li></span></td>
+</tr>
+</tbody>
+</table>
+<table width="100%">
+<tbody>
+<tr>
+<td><hr></td>
+</tr>
+</tbody>
+</table>
+<input id="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:hddActualContrasenaUsuario" type="hidden" name="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:hddActualContrasenaUsuario" /><table>
+<tbody>
+<tr>
+<td><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540001" codebase="https://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="381" height="22" id="nuevaContrasena" align="middle">
+                                    <param name="allowScriptAccess" value="sameDomain" />
+                                    <param name="movie" value="/WebArquitectura/seguridad/teclado/contribuyente.swf" />
+                                    <param name="quality" value="high" />
+                                    <param name="bgcolor" value="#ffffff" />
+                                    <embed src="/WebArquitectura/seguridad/teclado/contribuyente.swf" quality="high" bgcolor="#ffffff" width="381" height="22" name="nuevaContrasena" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                </object></td>
+</tr>
+<tr>
+<td><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540002" codebase="https://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="381" height="22" id="confirmarContrasena" align="middle">
+                                    <param name="allowScriptAccess" value="sameDomain" />
+                                    <param name="movie" value="/WebArquitectura/seguridad/teclado/contribuyenteConfirmacion.swf" />
+                                    <param name="quality" value="high" />
+                                    <param name="bgcolor" value="#ffffff" />
+                                    <embed src="/WebArquitectura/seguridad/teclado/contribuyenteConfirmacion.swf" quality="high" bgcolor="#ffffff" width="381" height="22" name="confirmarContrasena" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                </object></td>
+</tr>
+</tbody>
+</table>
+<table class="center" width="100%">
+<tbody>
+<tr>
+<td><input type="image" src="/WebArquitectura/imagenes/es/botones/botsiguiente.gif" name="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente:_id21" border="0" onmouseout="this.src='/WebArquitectura/imagenes/es/botones/botsiguiente.gif'" onmouseover="this.src='/WebArquitectura/imagenes/es/botones/botrollover.gif'" onclick="return validarPassword();" /></td>
+</tr>
+</tbody>
+</table>
+ <input type="hidden" name="com.sun.faces.VIEW" value="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" />
+ <input type="hidden" name="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente" id="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente" value="vistaCambiarClaveContribuyente:frmCambiarClaveContribuyente" /></form>
+
+
+
+
+    
+        
+            
+
+            
+
+                
+
+                
+                
+                
+                
+                
+                
+                
+
+                
+                
+
+                
+                    
+                    
+                        
+                        
+
+                        
+
+                        
+
+                        
+                            
+                            
+
+                            
+                        
+
+                        
+                            
+                            
+
+                            
+
+                            
+                                
+
+                                
+                            
+
+                            
+                                
+                                
+
+                            
+
+                        
+
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" width="760" bgcolor="#EFEFEF" align="center" valign="middle" style="padding: 5px;">
+              <form id="vistaPiePagina:frmPiePagina" method="post" action="/WebArquitectura/DefCambiarClaveContribuyenteNoSeguro.faces" enctype="application/x-www-form-urlencoded">
+<table>
+<tbody>
+<tr class="center">
+<td><span style="color:#2D5544;font-family:Arial Narrow;font-size:10px;">2005 Derechos Reservados DIAN</span></td>
+</tr>
+<tr class="center">
+<td><span style="color:#2D5544;font-family:Arial Narrow;font-size:10px;">Direccion de Impuestos y Aduanas Nacionales</span></td>
+</tr>
+</tbody>
+</table>
+ <input type="hidden" name="com.sun.faces.VIEW" value="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" />
+ <input type="hidden" name="vistaPiePagina:frmPiePagina" id="vistaPiePagina:frmPiePagina" value="vistaPiePagina:frmPiePagina" /></form>
+
+
+
+    
+        
+            
+            
+        
+    
+
+
+
+            </td>
+          </tr>
+        </table>
+        <!-- FIN CONTENEDOR-->
+        </td>
+        <td class="borde_derecho">&nbsp;</td>
+      </tr>
+      <tr>
+       <td class="esq_inf_izq">&nbsp;</td>
+       <td class="borde_inferior"></td>
+       <td class="esq_inf_der">&nbsp;</td>
+      </tr>
+    </table>
+    <script type="text/javascript">manejarMensajes();</script>
+    <!--script type="text/javascript">abrirVentana;</script-->
+
+
+
+  </body>
+
+
