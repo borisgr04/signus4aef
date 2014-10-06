@@ -3,6 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="SampleContent" Runat="Server">
 
     <div class="demoarea">
+        <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePageMethods="true" EnableScriptGlobalization="True" EnableScriptLocalization="True">
+    </ajaxToolkit:ToolkitScriptManager>
         <asp:Label ID="LBTITULO" runat="server" CssClass="Titulo">REGISTRO DE SOPORTES DE PAGO</asp:Label>&nbsp;
 
         <table style="width: 100%">
@@ -31,6 +33,8 @@
                 <td>Fecha de Pago</td>
                 <td>
                     <asp:TextBox ID="txtFecPag" runat="server"></asp:TextBox>
+                    <ajaxToolkit:CalendarExtender id="CalendarExtender1" runat="server"  TargetControlID="txtFecPag" >
+                </ajaxToolkit:CalendarExtender> 
                 </td>
                 <td>&nbsp;</td>
             </tr>

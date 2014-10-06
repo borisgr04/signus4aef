@@ -1,9 +1,0 @@
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Release\BLL.dll
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Release\BLL.pdb
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Release\ByAUtil.dll
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Release\DAL.dll
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Release\ByAUtil.pdb
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\bin\Release\DAL.pdb
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\obj\Release\BLL.dll
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\BLL\obj\Release\BLL.pdb

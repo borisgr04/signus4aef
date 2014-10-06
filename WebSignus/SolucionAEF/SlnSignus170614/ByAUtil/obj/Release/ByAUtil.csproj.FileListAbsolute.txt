@@ -1,5 +1,0 @@
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\ByAUtil\bin\Release\ByAUtil.dll
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\ByAUtil\bin\Release\ByAUtil.pdb
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\ByAUtil\obj\Release\ByAUtil.dll
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\ByAUtil\obj\Release\ByAUtil.pdb
-C:\Users\borsigr04\Documents\Visual Studio 2010\Projects\svnSignus01102013\ByAUtil\obj\Release\ByAUtil.csprojResolveAssemblyReference.cache
