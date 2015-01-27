@@ -135,7 +135,6 @@ namespace BLL
                 var q=db.PAGOS_SOP.Where(t=>t.PAG_NIT==NIT).ToList();
                 Mapper.Map(q,l);
                 return l;
-
             }
         }
 
