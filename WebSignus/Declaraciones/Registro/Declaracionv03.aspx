@@ -92,7 +92,7 @@
             </tr>
             <tr>
                 <td rowspan="3" style="width: 435px">
-                    <img src="../../images/Reportes/Img_gob.jpg" /></td>
+                    <img src="../../images/Reportes/Img_gob.jpg" height="50px" width="100px"/></td>
                 <td style="width: 457px; text-align: right">
                     <asp:Label ID="Label23" runat="server" Font-Bold="True"></asp:Label></td>
             </tr>
@@ -215,6 +215,98 @@
             </table>
         </div>
         <div class="datasheet">
+               <asp:Repeater ID="RptBGDev" runat="server" >
+                    <HeaderTemplate>
+                            <table class="datatable" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td colspan="7"><b>III. DEVOLUCIONES</b></td>
+                                </tr>
+                                <tr>
+                                    <td class="center" style="width: 17px; "></td>
+                                    <td class="center"><b>CLASE DE ACTOS</b></td>
+                                    <td class="center"><b>N° DE ACTOS</b></td>
+                                    <td class="center"><b>CUANTÍA </b></td>
+                                    <td class="center"><b>TARIFA</b></td>
+                                    <td class="center"><b>Vr IMPUESTO</b></td>   
+                                    <td class="center"><b>Vr INTERESES</b></td>   
+                                </tr>
+                                <tr id="itemPlaceholder" runat="server" />
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <tr>
+                            <%--<asp:HiddenField ID="HdCodi" runat="server" value='<%#(DataBinder.Eval(Container.DataItem, "COCD_CODI"))%>' />--%>
+                            <td style="width: 17px; " >
+                                <asp:textbox ID="NR" ReadOnly="true" runat="server" Text='<%#NRenglon()%>' CssClass="NRenglon"></asp:textbox></td>
+                            <td style="width: 200px; ">
+                                <asp:Label ID="lbClaseActos" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "CLASE_ACTOS")%>'></asp:Label>
+                            </td>
+                            <td style="width: 100px; text-align:right ">
+                                <asp:Label ID="lbNActos"  runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "NACTOS")%>' ></asp:Label>
+                            </td>
+                            <td class="center" style="width: 100px; text-align:right ">
+                                 <asp:Label ID="lbCuantia" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Cuantia", "{0:c}")%>'></asp:Label>
+                            </td>
+                            <td class="center" style="width: 100px; text-align:right ">
+                                <asp:Label ID="lbTarifa" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Tarifa", "{0:c}")%>'></asp:Label>
+                            </td>
+                            <td class="center" style="width: 100px; text-align:right ">
+                                <asp:Label ID="lbVrImpto" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "VrImpto", "{0:c}")%>'></asp:Label>
+                            </td>   
+                            <td class="center" style="width: 100px; text-align:right ">
+                                <asp:Label ID="lbVrIntereses" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "VrIntereses","{0:c}")%>'></asp:Label>
+                            </td>   
+                        </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                </table>
+                </FooterTemplate>
+            </asp:Repeater>
+               <asp:Repeater ID="RptBGImpto" runat="server" >
+                    <HeaderTemplate>
+                            <table class="datatable" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td colspan="7"><b>IV. LIQUIDACIÓN</b></td>
+                                </tr>
+                                <tr>
+                                    <td class="center" style="width: 17px; "></td>
+                                    <td class="center"><b>CLASE DE ACTOS</b></td>
+                                    <td class="center"><b>N° DE ACTOS</b></td>
+                                    <td class="center"><b>CUANTÍA </b></td>
+                                    <td class="center"><b>TARIFA</b></td>
+                                    <td class="center"><b>Vr IMPUESTO</b></td>   
+                                    <td class="center"><b>Vr INTERESES</b></td>   
+                                </tr>
+                                <tr id="itemPlaceholder" runat="server" />
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <tr>
+                            <%--<asp:HiddenField ID="HdCodi" runat="server" value='<%#(DataBinder.Eval(Container.DataItem, "COCD_CODI"))%>' />--%>
+                            <td style="width: 17px; " >
+                                <asp:textbox ID="NR" ReadOnly="true" runat="server" Text='<%#NRenglon()%>' CssClass="NRenglon"></asp:textbox></td>
+                            <td style="width: 200px; ">
+                                <asp:Label ID="lbClaseActos" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "CLASE_ACTOS")%>'></asp:Label>
+                            </td>
+                            <td style="width: 100px; text-align:right ">
+                                <asp:Label ID="lbNActos"  runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "NACTOS")%>' ></asp:Label>
+                            </td>
+                            <td class="center" style="width: 100px; text-align:right ">
+                                 <asp:Label ID="lbCuantia" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Cuantia", "{0:c}")%>'></asp:Label>
+                            </td>
+                            <td class="center" style="width: 100px; text-align:right ">
+                                <asp:Label ID="lbTarifa" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Tarifa", "{0:c}")%>'></asp:Label>
+                            </td>
+                            <td class="center" style="width: 100px; text-align:right ">
+                                <asp:Label ID="lbVrImpto" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "VrImpto", "{0:c}")%>'></asp:Label>
+                            </td>   
+                            <td class="center" style="width: 100px; text-align:right ">
+                                <asp:Label ID="lbVrIntereses" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "VrIntereses","{0:c}")%>'></asp:Label>
+                            </td>   
+                        </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                </table>
+                </FooterTemplate>
+            </asp:Repeater>
                      <asp:Repeater ID="Repeater1" runat="server" DataSourceID="ObjLP">
                     <HeaderTemplate>
                             <table class="datatable" cellpadding="0" cellspacing="0">
@@ -264,7 +356,8 @@
                 <FooterTemplate>
                 </table>
                 </FooterTemplate>
-            </asp:Repeater><asp:Repeater ID="Repeater2" runat="server" DataSourceID="ObjVP">
+            </asp:Repeater>
+            <asp:Repeater ID="Repeater2" runat="server" DataSourceID="ObjVP">
                 <FooterTemplate>
                     </table>
                 </FooterTemplate>
@@ -314,7 +407,7 @@
                         <table width="100%">
                             <tr onmouseout="Resaltar_Off(this);" onmouseover="Resaltar_On(this);">
                                 <td style="height: 20px; text-align: left; width: 122px;">
-                                    <asp:TextBox ID="R19" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">19.</asp:TextBox>
+                                    <asp:TextBox ID="R19" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">22.</asp:TextBox>
                                     <asp:CheckBox ID="CE_PD" runat="server" Enabled="False" Text="CE" />
                                     <asp:CheckBox ID="CC_PD" runat="server" Enabled="False" Text="CC" />&nbsp;
                                 </td>
@@ -322,14 +415,14 @@
                                     &nbsp;&nbsp;
                                 </td>
                                 <td colspan="12" style="height: 20px">
-                                    &nbsp;<asp:TextBox ID="R20" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">20.</asp:TextBox>
+                                    &nbsp;<asp:TextBox ID="R20" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">23.</asp:TextBox>
                                     <asp:Label ID="LT20" runat="server" CssClass="TitDecl" Font-Bold="True"
                                         ForeColor="Black" Text="APELLIDOS Y NOMBRES DE QUIEN FIRMA EN CALIDAD DE DECLARANTE"
                                         Width="443px"></asp:Label></td>
                             </tr>
                             <tr onmouseout="Resaltar_Off(this);" onmouseover="Resaltar_On(this);">
                                 <td style="width: 122px">
-                                    <asp:TextBox ID="R21" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">21.</asp:TextBox>
+                                    <asp:TextBox ID="R21" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">24.</asp:TextBox>
                                     <asp:Label ID="Label32" runat="server" CssClass="TitDecl" Font-Bold="True" Text="NÚMERO"
                                         Width="81px"></asp:Label></td>
                                 <td colspan="2" style="width: 84px; text-align: right">
@@ -341,21 +434,21 @@
                         <table width="100%">
                             <tr onmouseout="Resaltar_Off(this);" onmouseover="Resaltar_On(this);">
                                 <td style="height: 23px; width: 108px;">
-                                    <asp:TextBox ID="R22" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">22.</asp:TextBox>
+                                    <asp:TextBox ID="R22" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">25.</asp:TextBox>
                                     <asp:CheckBox ID="CE_RF" runat="server" Enabled="False" Text="CE" />
                                     &nbsp;<asp:CheckBox ID="CC_RF" runat="server" Enabled="False" Text="CC" /></td>
                                 <td colspan="2" style="height: 23px">
                                     &nbsp; &nbsp;
                                 </td>
                                 <td colspan="14" style="height: 23px">
-                                    &nbsp;<asp:TextBox ID="R23" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">23.</asp:TextBox>
+                                    &nbsp;<asp:TextBox ID="R23" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">26.</asp:TextBox>
                                     <asp:Label ID="Label48" runat="server" CssClass="TitDecl" Font-Bold="True"
                                         ForeColor="Black" Text="APELLIDOS Y NOMBRE DEL REVISOR FISCAL O CONTADOR"
                                         Width="369px"></asp:Label></td>
                             </tr>
                             <tr onmouseout="Resaltar_Off(this);" onmouseover="Resaltar_On(this);">
                                 <td style="width: 108px; height: 20px">
-                                    <asp:TextBox ID="R24" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">24.</asp:TextBox><asp:Label ID="Label1" runat="server" CssClass="TitDecl" Font-Bold="True" Text="NÚMERO"
+                                    <asp:TextBox ID="R24" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">27.</asp:TextBox><asp:Label ID="Label1" runat="server" CssClass="TitDecl" Font-Bold="True" Text="NÚMERO"
                                         Width="78px"></asp:Label></td>
                                 <td colspan="2" style="height: 20px">
                                     <asp:Label ID="LbNRODOC_RF" runat="server" ForeColor="Black"></asp:Label></td>
@@ -364,12 +457,12 @@
                             </tr>
                             <tr onmouseout="Resaltar_Off(this);" onmouseover="Resaltar_On(this);">
                                 <td colspan="3" style="height: 11px">
-                                    <asp:TextBox ID="R25" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">25.</asp:TextBox>
+                                    <asp:TextBox ID="R25" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">28.</asp:TextBox>
                                     <asp:CheckBox ID="ChkContador" runat="server" Enabled="False" Text="Contador" />
                                     &nbsp;
-                                    <asp:CheckBox ID="ChkRevisor" runat="server" Enabled="False" Text="Revisor Fiscal" /></td>
+                                    <asp:CheckBox ID="ChkRevisor" runat="server" Enabled="False" Text="Rev. Fiscal" /></td>
                                 <td colspan="14" style="height: 11px">
-                                    <asp:TextBox ID="R26" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">26.</asp:TextBox>
+                                    <asp:TextBox ID="R26" runat="server" CssClass="NRenglon" ReadOnly="True" Width="20px">29.</asp:TextBox>
                                     <asp:Label ID="Label4" runat="server" CssClass="TitDecl" ForeColor="Black"
                                         Text="TARJETA PROFESIONAL" Width="165px"></asp:Label>&nbsp;
                                     <asp:Label ID="LbTarPro" runat="server" ForeColor="Black" Width="34px"></asp:Label></td>
