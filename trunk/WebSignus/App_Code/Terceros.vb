@@ -273,6 +273,17 @@ Namespace Signus
             Return dataTb
         End Function
 
+        Public Function GetAgentes() As DataTable
+            Me.Conectar()
+            querystring = "Select TER_NIT from vterceros Where ter_tus = 'AR'"
+            CrearComando(querystring)
+            Dim dataTb As DataTable = EjecutarConsultaDataTable()
+            Me.Desconectar()
+            Return dataTb
+        End Function
+
+
+
         <DataObjectMethodAttribute(DataObjectMethodType.Select, True)> _
         Public Overloads Function GetByUser(Optional ByVal User As String = "") As DataTable
 

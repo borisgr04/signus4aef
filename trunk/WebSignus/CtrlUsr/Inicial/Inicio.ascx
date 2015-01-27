@@ -179,6 +179,7 @@
                 Envie el formulario diligenciado y firmado de forma correcta a la Oficina de 
                 Rentas de la Gobernación del Departamento del Cesar, dentro de los primeros 5 
                 dias hábiles de cada mes para Estampillas y Registro. 
+                
             </td>
         </tr>
         <tr>
@@ -188,6 +189,40 @@
 
                 &nbsp;</td>
         </tr>
+
+
+
+        <tr>
+            <td class="TdIzq" rowspan="2">
+                <asp:Image ID="Image7" runat="server" 
+                    ImageUrl="~/images/imagev2/subirpdf.png" />
+            </td>
+            <td>
+                <span class=class1>
+                  <asp:HyperLink ID="HyperLink9" runat="server" 
+                    NavigateUrl="~/SoportesPagos/Agentes/GesSoportePago.aspx" CssClass="class1">7. SUBIR EL SOPORTE DE PAGO.</asp:HyperLink>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Escanee el soporte del pago realizado (tranferencia electrónica o consignación) en formato PDF y carguelo una vez haya realizado el pago.
+                Este soporte permitirá actualizar los datos de la cartera en el sistema.
+                </td>
+        </tr>
+        <tr>
+            <td >
+                
+            </td>
+            <td>
+            
+                <br /><b>Video Tutorial de Cómo Subir Soporte de Pago</b><br />
+                    <iframe src="https://onedrive.live.com/embed?cid=67F8F29659AF4B82&resid=67F8F29659AF4B82%21138&authkey=AFktY7UAvKH0WDE" width="100" height="50" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                </td>
+        </tr>
+
+
+
     </table>
 </p>
 

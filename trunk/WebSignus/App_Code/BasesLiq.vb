@@ -793,6 +793,7 @@ Public Class BasesLiq
     Public Function Tarifa_Registro(ByVal tip As String, ByVal TAG As String, ByVal fecha As Date) As Double
         Dim objCd As New CDeclaraciones("30")
         Dim Input_par As String = objCd.GetParametrosTar("30", TAG, tip)
+
         Return objCd.GetTarifa("3001", Input_par, fecha)
     End Function
 
