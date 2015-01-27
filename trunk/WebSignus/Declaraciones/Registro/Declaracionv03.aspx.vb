@@ -63,6 +63,7 @@ Partial Class Declaraciones_Registro_Declaracionv02
             avce.Enabled = True
             Cargar_datos()
             Cargar_Ayuda()
+
         End If
     End Sub
     Private Function mostrar_renglon(ByVal nr As String) As String
@@ -303,6 +304,18 @@ Partial Class Declaraciones_Registro_Declaracionv02
                 Me.Agente.Text = "No tiene Asociado Tercero"
             End If
         End If
+
+        Dim de_bg As New De_Bg_Registro()
+
+        RptBGDev.DataSource = de_bg.Get_BaseG_Registro(Me.HdTAG.Value, Me.Identificaciòn.Text, Me.AGravable.Text, Me.PGravable.Text, "D")
+        RptBGDev.DataBind()
+
+        RptBGImpto.DataSource = de_bg.Get_BaseG_Registro(Me.HdTAG.Value, Me.Identificaciòn.Text, Me.AGravable.Text, Me.PGravable.Text, "I")
+        RptBGImpto.DataBind()
+
+        'RptBG.DataSource
+        'RptBG
+
         'Me.BtnPDF.Enabled = True
     End Sub
 
