@@ -78,4 +78,10 @@ Partial Class Seguridad_GenUserAR_ARSinUsuario
         Me.Opcion = Me.Tit.Text
         Me.SetTitulo()
     End Sub
+
+    Protected Sub BtnAgregarRolAR_Click(sender As Object, e As EventArgs) Handles BtnAgregarRolAR.Click
+        Dim mngRol As New RolesAR
+        lbMsg.Text = mngRol.AsignarRolToAR(TxtRol.Text)
+
+    End Sub
 End Class

@@ -6,9 +6,13 @@
     </ajaxToolkit:ToolkitScriptManager>
     <asp:Label ID="Tit" runat="server" CssClass="Titulo" Text="AGENTER RECAUDADORES SIN USUARIO"
         Width="286px"></asp:Label><br />
-    <%--<asp:UpdatePanel id="UpdatePanel1" runat="server">
-        <contenttemplate>--%>
-            &nbsp; 
+        <%--<asp:UpdateProgress id="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+        <progresstemplate>
+            <div class="Loading">
+            <img src="../../images/loading.gif" alt="" title="" /> Cargando …
+            </div>
+        </progresstemplate>
+    </asp:UpdateProgress>--%>&nbsp; 
             <asp:Button ID="BtnCrearUsua" runat="server" OnClick="BtnCrearUsua_Click" 
                 Text="Crear Usuarios" />
             <BR /><BR /><asp:GridView id="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="ter_nit" DataSourceID="ObjTerceros" OnRowCommand="GridView1_RowCommand" OnRowDataBound="GridView1_RowDataBound" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" ShowFooter="True"><Columns>
@@ -52,11 +56,13 @@
             
 </EmptyDataTemplate>
 </asp:GridView>Mostrar Por Pagina <asp:TextBox id="TxtPag" runat="server" Width="63px">10</asp:TextBox> <asp:Button id="BtnPag" onclick="BtnPag_Click" runat="server" Text="Paginar"></asp:Button>&nbsp;<BR /><asp:Label id="Tit2" runat="server" Width="286px" Text="LOGS.." CssClass="SubTitulo"></asp:Label>&nbsp; <BR /><asp:Label id="MsgResult" runat="server"></asp:Label>
-<%--</contenttemplate>
-        <Triggers>
-            <asp:AsyncPostBackTrigger ControlID="BtnCrearUsua" EventName="Click" />
-        </Triggers>
-    </asp:UpdatePanel>&nbsp; &nbsp; &nbsp--%>;
+        <%--<asp:UpdateProgress id="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+        <progresstemplate>
+            <div class="Loading">
+            <img src="../../images/loading.gif" alt="" title="" /> Cargando …
+            </div>
+        </progresstemplate>
+    </asp:UpdateProgress>--%>;
     <asp:ObjectDataSource ID="ObjTerceros" runat="server" SelectMethod="GetAgentesSinUsuario"
         TypeName="Signus.Terceros"></asp:ObjectDataSource>
     <br />
@@ -67,6 +73,12 @@
             </div>
         </progresstemplate>
     </asp:UpdateProgress>--%>
+        Rol<asp:TextBox ID="TxtRol" runat="server"></asp:TextBox>
+&nbsp;<asp:ObjectDataSource ID="ObjMenu" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetRecords" TypeName="DBMenu"></asp:ObjectDataSource>
+        <br />
+        <asp:Button ID="BtnAgregarRolAR" runat="server" Text="Agregar Rol" />
+        <br />
+        <asp:Label ID="lbMsg" runat="server"></asp:Label>
     <br />
 
 </div>
