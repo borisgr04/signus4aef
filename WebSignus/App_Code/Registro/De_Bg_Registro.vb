@@ -32,6 +32,28 @@ Public Class De_Bg_Registro
         Return dt
     End Function
 
+    <DataObjectMethodAttribute(DataObjectMethodType.Select, True)> _
+    Public Function Get_BaseG_Registro(ByVal Tipo_Agente As String, ByVal Nit As String, ByVal Año As String, ByVal Peri As String) As DataTable
+        Dim dataTb As DataTable, dt As DataTable
+        dataTb = Me.GetRecords(Nit, "30", Año, Peri)
+        If dataTb.Rows.Count > 0 Then
+            dt = Me.GetAforoRegistro(Tipo_Agente, dataTb.Rows(0)("NRAD").ToString)
+        Else
+            dt = New DataTable()
+        End If
+        Return dt
+    End Function
+
+    <DataObjectMethodAttribute(DataObjectMethodType.Select, True)> _
+    Private Function GetAforoRegistro(ByVal Tipo_Agente As String, ByVal Nro_rad As Integer) As DataTable
+        Dim dtDev As DataTable = GetAforoRegistroDev(Tipo_Agente, Nro_rad)
+        Dim dtImp As DataTable = GetAforoRegistroImp(Tipo_Agente, Nro_rad)
+        dtDev.Merge(dtImp)
+        Dim view As DataView = New DataView(dtDev)
+        view.Sort = "Mov,Tacto "
+        Return view.ToTable()
+
+    End Function
 
     <DataObjectMethodAttribute(DataObjectMethodType.Select, True)> _
     Private Function GetAforoRegistroDev(ByVal Tipo_Agente As String, ByVal Nro_rad As Integer) As DataTable
@@ -48,11 +70,11 @@ Public Class De_Bg_Registro
 
         sb.Clear()
         '--DEVOLUCION CON CUUANTIA OFICINA DE REGSITRO
-        sb.Append(" Select 'DEV' MOV,'ACTOS CON CUANTIA' CLASE_ACTOS,Tacto, Count(*) NACTOS, Sum(ValorBase) AS Cuantia,fn_ejecutar_tarifa ('3001', 'Valor_Base Number:=1;Tipo_Agente Number:=" + Tipo_Agente + ";Tipo_Acto Number:=1;') Tarifa, Sum(ValorImpto) VrImpto,Sum(Intereses) VrIntereses  ")
+        sb.Append(" Select 'DEV' MOV,'ACTOS CON CUANTIA' CLASE_ACTOS,Tacto, Count(*) NACTOS, Sum(ValorBase) AS CUANTIA,fn_ejecutar_tarifa ('3001', 'Valor_Base Number:=1;Tipo_Agente Number:=" + Tipo_Agente + ";Tipo_Acto Number:=1;') TARIFA, Sum(ValorImpto) VRIMPTO,Sum(Intereses) VRINTERESES  ")
         sb.Append(" From fm_bliqreg01 where tacto='01' and ES_DEVOLUCION ='SI' And Nro_Rad=" + Nro_rad.ToString + " group by Tacto ")
         '--DEVOLUCION SIN CUUANTIA OFICINA DE REGSITRO
         sb.Append(" UNION ")
-        sb.Append(" Select 'DEV' MOV,'ACTOS SIN CUANTIA' CLASE_ACTOS,Tacto, Count(*) NACTOS, Sum(ValorBase) AS Cuantia,fn_ejecutar_tarifa ('3001', 'Valor_Base Number:=1;Tipo_Agente Number:=" + Tipo_Agente + ";Tipo_Acto Number:=2;') Tarifa, Sum(ValorImpto) VrImpto,Sum(Intereses) VrIntereses ")
+        sb.Append(" Select 'DEV' MOV,'ACTOS SIN CUANTIA' CLASE_ACTOS,Tacto, Count(*) NACTOS, Sum(ValorBase) AS CUANTIA,fn_ejecutar_tarifa ('3001', 'Valor_Base Number:=1;Tipo_Agente Number:=" + Tipo_Agente + ";Tipo_Acto Number:=2;') TARIFA, Sum(ValorImpto) VRIMPTO,Sum(Intereses) VRINTERESES ")
         sb.Append(" From fm_bliqreg01 where tacto='02' and ES_DEVOLUCION ='SI' And Nro_Rad=" + Nro_rad.ToString + " group by Tacto")
         BD.CrearComando(sb.ToString)
         Dim dataTb As DataTable = BD.EjecutarConsultaDataTable()
@@ -100,12 +122,12 @@ Public Class De_Bg_Registro
         sb.Clear()
 
         '--INGRESO  CON CUUANTIA OFICINA DE REGSITRO
-        sb.Append("Select 'ING' MOV,'ACTOS CON CUANTIA' CLASE_ACTOS, Tacto, Count(*) NACTOS, Sum(ValorBase) AS Cuantia,fn_ejecutar_tarifa ('3001', 'Valor_Base Number:=1;Tipo_Agente Number:=" + Tipo_Agente + ";Tipo_Acto Number:=1;') Tarifa, Sum(ValorImpto) VrImpto,Sum(Intereses) VrIntereses  ")
+        sb.Append("Select 'ING' MOV,'ACTOS CON CUANTIA' CLASE_ACTOS, Tacto, Count(*) NACTOS, Sum(ValorBase) AS CUANTIA,fn_ejecutar_tarifa ('3001', 'Valor_Base Number:=1;Tipo_Agente Number:=" + Tipo_Agente + ";Tipo_Acto Number:=1;') TARIFA, Sum(ValorImpto) VRIMPTO,Sum(Intereses) VRINTERESES  ")
         sb.Append(" From fm_bliqreg01 where tacto='01' and ES_DEVOLUCION ='NO' And Nro_Rad=" + Nro_rad.ToString + " group by Tacto ")
 
         '--INGRESO CON CUUANTIA OFICINA DE REGSITRO
         sb.Append(" UNION ")
-        sb.Append(" Select 'ING' MOV,'ACTOS SIN CUANTIA' CLASE_ACTOS, Tacto, Count(*) NACTOS, Sum(ValorBase) AS Cuantia,fn_ejecutar_tarifa ('3001', 'Valor_Base Number:=1;Tipo_Agente Number:=" + Tipo_Agente + ";Tipo_Acto Number:=2;') Tarifa, Sum(ValorImpto) VrImpto,Sum(Intereses) VrIntereses  ")
+        sb.Append(" Select 'ING' MOV,'ACTOS SIN CUANTIA' CLASE_ACTOS, Tacto, Count(*) NACTOS, Sum(ValorBase) AS CUANTIA,fn_ejecutar_tarifa ('3001', 'Valor_Base Number:=1;Tipo_Agente Number:=" + Tipo_Agente + ";Tipo_Acto Number:=2;') TARIFA, Sum(ValorImpto) VRIMPTO,Sum(Intereses) VRINTERESES  ")
         sb.Append(" From fm_bliqreg01 where tacto='02' and ES_DEVOLUCION ='NO' And Nro_Rad=" + Nro_rad.ToString + " group by Tacto")
         BD.CrearComando(sb.ToString)
         Dim dataTb As DataTable = BD.EjecutarConsultaDataTable()

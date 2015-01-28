@@ -26,10 +26,7 @@ Partial Class Declaraciones_Radicar_RadicarDecl2
         Me.SetTitulo()
         'Me.TxtCta.Attributes.Add("onfocus", "this.setfocus=false;")
         If Not IsPostBack Then
-            Me.MultiView1.ActiveViewIndex = -1
-            Me.MultiView2.ActiveViewIndex = -1
             Me.BtnDetalleShow.Visible = False
-            Me.BtnDetalleHide.Visible = False
             Me.TFec_pre.Text = Now.ToShortDateString
 
             nro_dec = Request.QueryString("nro_dec")
@@ -79,40 +76,14 @@ Partial Class Declaraciones_Radicar_RadicarDecl2
     Protected Sub BtRadicar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtRadicar.Click
         Radicar()
     End Sub
-    Public Sub Cargar_Rpt()
-        Dim obj As CDeclaraciones = New CDeclaraciones
-        If obj.Existe_Declaracion(Me.TxtNroDec.Text) Then
-            'Me.MsgResult.Text = obj.GetRpt(Me.TxtNroDec.Text)
-            'Response.Write(Me.MsgResult.Text)
-            Me.MsgBox(Me.MsgResult, True)
-            Dim dtSource As ReportDataSource = New ReportDataSource("DsDecl_VDECLARACION", GetDatosP().Tables(0))
-            Dim rptEntidad As New ReportDataSource(Me.DS_Entidad, Cargar_Logo())
-            ReportViewer1.LocalReport.DataSources.Clear()
-            ReportViewer1.LocalReport.DataSources.Add(dtSource)
-            ReportViewer1.LocalReport.DataSources.Add(rptEntidad)
-            Me.ReportViewer1.LocalReport.ReportPath = obj.GetRpt(Me.TxtNroDec.Text)
-            Me.ReportViewer1.LocalReport.DisplayName = Me.TxtNroDec.Text
-            ReportViewer1.LocalReport.Refresh()
-            Me.MsgResult.CssClass = ""
-        Else
-            Me.MsgResult.Text = " No se encuentra la formulario con este número"
-            Me.MsgBox(Me.MsgResult, True)
 
-        End If
-
-    End Sub
-    Protected Sub ReportViewer1_SubreportProcessing(ByVal sender As Object, ByVal e As SubreportProcessingEventArgs)
-        Dim dtSet As DataSet = New DataSet()
-        Dim obj As CDeclaraciones = New CDeclaraciones(Me.CmbClDec.SelectedValue)
-        dtSet = obj.GetLiqConcep(Me.TxtNroDec.Text)
-        Dim dataSource As ReportDataSource = New ReportDataSource("DsDecCon_VCODE_CDEC", dtSet.Tables(0))
-        e.DataSources.Add(dataSource)
-    End Sub
     Private Function GetDatosP() As DataSet
         Dim dt As DataSet = New DataSet
         Dim obj As CDeclaraciones = New CDeclaraciones(Me.CmbClDec.SelectedValue)
         dt = obj.GetDeclaracion(Me.TxtNroDec.Text)
         Dim dTabla As DataTable = dt.Tables(0)
+
+
         If dTabla.Rows.Count > 0 Then
             Me.Agente.Text = dTabla.Rows(0)("DEC_RAZSOC").ToString
             Me.LBTIPODEC.Text = dTabla.Rows(0)("TAG_NOM").ToString
@@ -139,12 +110,15 @@ Partial Class Declaraciones_Radicar_RadicarDecl2
             If dTabTotPag.Rows.Count > 0 Then
                 Me.TxtIntMora.Text = dTabIM.Rows(0)("code_vade").ToString
             End If
-            Me.MultiView2.ActiveViewIndex = 0
+
             Me.MsgResult.Text = ""
         Else
             Me.MsgResult.Text = "No se ha encontrado Formulario de Declaración con este Número" + Me.TxtNroDec.Text
             Me.Cancelar()
         End If
+
+        ' Me.MsgResult.Text += Me.TxtNroDec.Text + dTabla.Rows.Count.ToString
+        ' Me.MsgResult.Visible = True
 
         Return dt
     End Function
@@ -152,22 +126,18 @@ Partial Class Declaraciones_Radicar_RadicarDecl2
 
     Protected Sub ImageButton1_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles ImageButton1.Click
         Me.BtnDetalleShow.Visible = True
-        Me.BtnDetalleHide.Visible = False
-        Cargar_Rpt()
+        GetDatosP()
     End Sub
 
 
     Protected Sub BtnDetalleShow_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnDetalleShow.Click
-        MultiView1.ActiveViewIndex = 0
-        Me.BtnDetalleShow.Visible = False
-        Me.BtnDetalleHide.Visible = True
+
+        'Me.BtnDetalleShow.Visible = False
+        Redireccionar_Pagina("/ashx/RptForm.ashx?dec_cod=" + TxtNroDec.Text)
+
     End Sub
 
-    Protected Sub BtnDetalleHide_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnDetalleHide.Click
-        MultiView1.ActiveViewIndex = -1
-        Me.BtnDetalleShow.Visible = True
-        Me.BtnDetalleHide.Visible = False
-    End Sub
+    
 
     Protected Sub Cancelar()
         Me.Agente.Text = ""
@@ -180,8 +150,6 @@ Partial Class Declaraciones_Radicar_RadicarDecl2
         Me.TTOTALDEC.Text = ""
         Me.TTOTALPAGO.Text = ""
 
-        Me.MultiView1.ActiveViewIndex = -1
-        Me.MultiView2.ActiveViewIndex = -1
         Me.MsgResult.Text = ""
 
         Dim Cant As Integer = DataList1.Items.Count
@@ -202,7 +170,5 @@ Partial Class Declaraciones_Radicar_RadicarDecl2
 
     Protected Sub TxtNroDec_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TxtNroDec.TextChanged
         Me.BtnDetalleShow.Visible = True
-        Me.BtnDetalleHide.Visible = False
-        Cargar_Rpt()
     End Sub
 End Class

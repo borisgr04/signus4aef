@@ -30,7 +30,14 @@ Partial Class Declaraciones_Registro_Declaracionv02
     Dim TOTAL_RETENCIONES As Double
     Dim fnTotalizar As String
     Dim Nit As String
-    Dim TD As String
+    Property TD() As String
+        Get
+            Return ViewState("TD")
+        End Get
+        Set(ByVal value As String)
+            ViewState("TD") = value
+        End Set
+    End Property
     Dim FODE_CODI As String
     Dim dtForm As DataTable
     Dim Operaciones_Form As String
@@ -370,6 +377,21 @@ Partial Class Declaraciones_Registro_Declaracionv02
         dtSet = obj.GetLiqConcep(Me.HdNroDec.Value)
         Dim dataSource As ReportDataSource = New ReportDataSource("DsDecCon_VCODE_CDEC", dtSet.Tables(0))
         e.DataSources.Add(dataSource)
+
+        'este es solo de registo
+        Dim dbg As New De_Bg_Registro()
+
+        Dim dtReg As DataTable = dbg.Get_BaseG_Registro(Me.HdTAG.Value, Me.Identificaciòn.Text, Me.AGravable.Text, Me.PGravable.Text, "I")
+        Dim dtDev As DataTable = dbg.Get_BaseG_Registro(Me.HdTAG.Value, Me.Identificaciòn.Text, Me.AGravable.Text, Me.PGravable.Text, "D")
+
+        'Throw New Exception("Registro" + dtReg.Rows.Count + "Impto" + dtDev.Rows.Count)
+
+        Dim ds_bg_registro As ReportDataSource = New ReportDataSource("ds_bg_ingresos", dtReg)
+        e.DataSources.Add(ds_bg_registro)
+
+        Dim ds_bg_devoluciones As ReportDataSource = New ReportDataSource("ds_bg_devoluciones", dtDev)
+        e.DataSources.Add(ds_bg_devoluciones)
+
     End Sub
     Private Function GetDatosP() As DataSet
         Dim dt As DataSet = New DataSet
@@ -407,7 +429,10 @@ Partial Class Declaraciones_Registro_Declaracionv02
         ReportViewer1.LocalReport.DataSources.Clear()
         ReportViewer1.LocalReport.DataSources.Add(dtSource)
         ReportViewer1.LocalReport.DataSources.Add(rptEntidad)
-        Me.ReportViewer1.LocalReport.DisplayName = HdNroDec.Value
+
+        Dim ds_rg_registo As ReportDataSource = New ReportDataSource("ds_bg_registro", GetDatosP().Tables(0))
+        ReportViewer1.LocalReport.DataSources.Add(ds_rg_registo)
+
         Me.RenderReport(Me.ReportViewer1.LocalReport)
     End Sub
     Protected Sub ImageButton1_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs)
@@ -855,9 +880,22 @@ Partial Class Declaraciones_Registro_Declaracionv02
                 LiqP(j).CODE_VADE = Tr
                 HdTot.Value = Tr
             Else
-                Tr += CDbl(txtR.Text.Replace("$", ""))
-                LiqP(j).CODE_VADE = CDbl(txtR.Text.Replace("$", ""))
+
+                'LiqP(j).CODE_VADE = CDbl(txtR.Text.Replace("$", ""))
+                LiqP(j).CODE_VADE = objCd.RedondearUp(txtR.Text)
+                txtR.Text = LiqP(j).CODE_VADE
+
+
+                If HdTICO.Value = "F" Then
+                    Tr -= LiqP(j).CODE_VADE
+                Else
+                    Tr += LiqP(j).CODE_VADE
+                End If
+
             End If
+
+
+
             j += 1
         Next i
 
@@ -982,6 +1020,19 @@ Partial Class Declaraciones_Registro_Declaracionv02
     End Sub
 
     Public Function Liquidar() As Boolean
+        If Me.HdTD.Value = "I" Then
+            LiquidarInicial()
+        ElseIf Me.TD = "C" Then
+            ' LiquidarCorreccion()
+            Me.MsgResult.Text = "No esta implementada"
+            Me.ModalPopup.Show()
+        End If
+
+
+        Return True
+    End Function
+
+    Public Function LiquidarInicial() As Boolean
 
         Me.Label2.Text = ""
         Dim Cant As Integer = Me.Repeater1.Items.Count
@@ -1141,6 +1192,28 @@ Partial Class Declaraciones_Registro_Declaracionv02
                 txtR.Text = LiqP(j).CODE_VADE
                 C_I = LiqP(j).CODE_VADE
                 Tr += LiqP(j).CODE_VADE
+            End If
+
+            Me.MsgResult.Text = HdTICO.Value
+            Me.ModalPopup.Show()
+
+            If HdTICO.Value = "F" Then
+                Dim SaldoAFavor As Decimal = objCd.RedondearUp(txtR.Text)
+
+                'Me.MsgResult.Text = SaldoAFavor.ToString
+                'Me.ModalPopup.Show()
+
+                If SaldoAFavor > (C_D + C_I) Then
+                    Me.MsgResult.Text = "El Saldo a Favor para esta declaración, no debe exceder el valor a pagar."
+                    LiqP(j).CODE_VADE = (C_D + C_I)
+                    txtR.Text = (C_D + C_I)
+                    Tr -= LiqP(j).CODE_VADE
+                    Me.ModalPopup.Show()
+                Else
+                    LiqP(j).CODE_VADE = SaldoAFavor
+                    txtR.Text = LiqP(j).CODE_VADE
+                    Tr -= LiqP(j).CODE_VADE
+                End If
             End If
 
             If HdSum.Value = "S" And HdTICO.Value = "T" Then

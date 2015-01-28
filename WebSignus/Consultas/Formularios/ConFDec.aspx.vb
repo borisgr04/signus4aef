@@ -40,7 +40,6 @@ Partial Class Consultas_Formularios_ConFDec
                 End If
             End If
         End If
-
         Me.BtnAnular.Visible = False
     End Sub
 
@@ -97,12 +96,11 @@ Partial Class Consultas_Formularios_ConFDec
         If grDec.SelectedValue <> "" Then
             Dec_cod = grDec.SelectedValue
             Dec_Tdoc = grDec.SelectedRow.Cells(1).Text()
-            'Public Dec_cdec As String
 
-            'Response.Redirect(Me.RUTA_VIRTUAL + "Consultas/Formularios/VerRptDec.aspx?dec_cod=" + grDec.SelectedValue)
-            Cargar_Rpt()
+            'Cargar_Rpt()
             'Me.MsgResult.Text = "Seleccionando:Declaracion[" + grDec.SelectedValue + "]"
             'Me.MsgBox(MsgResult, False)
+            Redireccionar_Pagina("/ashx/RptForm.ashx?dec_cod=" + Dec_cod + "&dec_doad=" + Dec_Tdoc)
         Else
             Me.MsgResult.Text = "Seleccione en la lista de Declaraciones una para Visualizar"
             Me.MsgBox(MsgResult, True)
@@ -151,7 +149,33 @@ Partial Class Consultas_Formularios_ConFDec
         dtSet = obj.GetLiqConcep(Dec_cod)
         Dim dataSource As ReportDataSource = New ReportDataSource("DsDecCon_VCODE_CDEC", dtSet.Tables(0))
         e.DataSources.Add(dataSource)
+
+        'If e.ReportPath =
+
+        If CbCdec.SelectedValue = "30" Then '' Si es registro
+            Dim dbg As New De_Bg_Registro()
+            Dim ter As New Signus.Terceros
+            Dim dt As DataTable = ter.GetByIde(Me.Nit.Text)
+            Dim tag As String = dt.Rows(0)("Ter_tip").ToString
+
+            Dim dtReg As DataTable = dbg.Get_BaseG_Registro(tag, Me.Nit.Text, Me.CboVigencia.SelectedValue, Periodo.SelectedValue, "I")
+            Dim dtDev As DataTable = dbg.Get_BaseG_Registro(tag, Me.Nit.Text, Me.CboVigencia.SelectedValue, Periodo.SelectedValue, "D")
+
+            'Throw New Exception("Registro" + dtReg.Rows.Count + "Impto" + dtDev.Rows.Count)
+
+            Dim ds_bg_registro As ReportDataSource = New ReportDataSource("ds_bg_ingresos", dtReg)
+            e.DataSources.Add(ds_bg_registro)
+
+            Dim ds_bg_devoluciones As ReportDataSource = New ReportDataSource("ds_bg_devoluciones", dtDev)
+            e.DataSources.Add(ds_bg_devoluciones)
+        End If
+
+
     End Sub
+
+
+
+
 
     Private Sub RenderReport(ByVal Rpt As LocalReport)
         'string reportType = "Image"; 
@@ -177,7 +201,7 @@ Partial Class Consultas_Formularios_ConFDec
         Response.BinaryWrite(renderedBytes)
         Response.End()
     End Sub
-    
+
     Public Sub Cargar_Rpt()
         Dim nomReporte As String = ""
         Dim obj As CDeclaraciones = New CDeclaraciones
@@ -193,6 +217,20 @@ Partial Class Consultas_Formularios_ConFDec
         ReportViewer1.LocalReport.DataSources.Clear()
         ReportViewer1.LocalReport.DataSources.Add(dtSource)
         ReportViewer1.LocalReport.DataSources.Add(rptEntidad)
+
+
+        If CbCdec.SelectedValue = "30" Then '' Si es registro
+            Dim dbg As New De_Bg_Registro()
+            Dim ter As New Signus.Terceros
+            Dim dt As DataTable = ter.GetByIde(Me.Nit.Text)
+            Dim tag As String = dt.Rows(0)("Ter_tip").ToString
+            Dim dtReg As DataTable = dbg.Get_BaseG_Registro(tag, Me.Nit.Text, Me.CboVigencia.SelectedValue, Periodo.SelectedValue, "DEV")
+            Dim ds_bg_registro As ReportDataSource = New ReportDataSource("ds_bg_registro", dtReg)
+            'Throw New Exception(dtReg.Rows.Count)
+            'e.DataSources.Add(ds_bg_registro)
+        End If
+
+
         nomReporte = obj.GetRpt(Dec_cod)
         If Dec_Tdoc = "LOAF" Then
             nomReporte = "Af_" & nomReporte
@@ -203,5 +241,6 @@ Partial Class Consultas_Formularios_ConFDec
         Me.RenderReport(Me.ReportViewer1.LocalReport)
     End Sub
 
+   
 
 End Class
