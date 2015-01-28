@@ -70,8 +70,9 @@
             position: absolute; top: 0px; height: 100px">
             <rsweb:ReportViewer ID="ReportViewer1" runat="server" AsyncRendering="False" Font-Names="Verdana"
                 Font-Size="8pt" Height="100%" SizeToReportContent="True" Width="800px">
-                <LocalReport OnSubreportProcessing="ReportViewer1_SubreportProcessing" ReportPath="">
+                <LocalReport OnSubreportProcessing="ReportViewer1_SubreportProcessing" ReportPath="" ShowDetailedSubreportMessages="true">
                 </LocalReport>
+                
             </rsweb:ReportViewer>
         </div>
 

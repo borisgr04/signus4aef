@@ -85,8 +85,7 @@ AutoEventWireup="false" CodeFile="RadicarDecl2.aspx.vb" Inherits="Declaraciones_
                     </tr>
                 </table>
         <asp:HiddenField ID="HdTDOC" runat="server" />
-                <asp:MultiView ID="MultiView2" runat="server">
-                    <asp:View ID="View2" runat="server">
+                
                 <table style="width: 624px; height: 265px;">
                     <tr>
                         <td colspan="4">
@@ -166,18 +165,10 @@ AutoEventWireup="false" CodeFile="RadicarDecl2.aspx.vb" Inherits="Declaraciones_
                     </tr>
                     <tr>
                         <td colspan="4">
-                            <asp:LinkButton ID="BtnDetalleHide" runat="server" Width="241px">Ocultar Detalles de Declaracion</asp:LinkButton><br />
-                            <asp:LinkButton ID="BtnDetalleShow" runat="server" Width="166px">Ver Detalles De Declaracion</asp:LinkButton></td>
+                            <asp:LinkButton ID="BtnDetalleShow" runat="server" Width="166px">Ver Declaración</asp:LinkButton></td>
                     </tr>
                 </table>
                         &nbsp;
-                <asp:MultiView ID="MultiView1" runat="server">
-                    <asp:View ID="View1" runat="server">
-                    <rsweb:reportviewer id="ReportViewer1" runat="server" asyncrendering="False" font-names="Verdana"
-                        font-size="8pt" height="100%" sizetoreportcontent="True" width="800px">
-                        <LOCALREPORT ReportPath="" OnSubreportProcessing="ReportViewer1_SubreportProcessing" /></rsweb:reportviewer>
-                    </asp:View>
-                </asp:MultiView>
                         <table style="height: 53px">
                             <tr>
                                 <td style="width: 100px">
@@ -251,8 +242,8 @@ AutoEventWireup="false" CodeFile="RadicarDecl2.aspx.vb" Inherits="Declaraciones_
                 </asp:DataList><br />
                         <br />
                         <br />
-                    </asp:View>
-                </asp:MultiView><br />
+                
+        <br />
                 <br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
                 <br />

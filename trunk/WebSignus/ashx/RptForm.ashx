@@ -89,6 +89,31 @@ Public Class RptForm : Implements IHttpHandler
         dtSet = obj.GetLiqConcep(Dec_cod)
         Dim dataSource As ReportDataSource = New ReportDataSource("DsDecCon_VCODE_CDEC", dtSet.Tables(0))
         e.DataSources.Add(dataSource)
+        Dim tip_dec As String = Dec_cod.Substring(4, 2)
+        If tip_dec = "30" Then '' Si es registro
+            Dim dbg As New De_Bg_Registro()
+            Dim d As New CDeclaraciones(tip_dec)
+            Dim dec As New DataTable
+            dec = d.GetDeclaracion(Dec_cod).Tables(0)
+            Dim nit, vig, per As String
+            nit = dec.Rows(0)("Dec_Nit")
+            vig = dec.Rows(0)("Dec_Ano")
+            per = dec.Rows(0)("Dec_Per")
+            Dim ter As New Signus.Terceros
+            Dim dt As DataTable = ter.GetByIde(nit)
+            Dim tag As String = dt.Rows(0)("Ter_tip").ToString
+
+            Dim dtReg As DataTable = dbg.Get_BaseG_Registro(tag, nit, vig, per, "I")
+            Dim dtDev As DataTable = dbg.Get_BaseG_Registro(tag, nit, vig, per, "D")
+
+            'Throw New Exception("Registro" + dtReg.Rows.Count + "Impto" + dtDev.Rows.Count)
+
+            Dim ds_bg_registro As ReportDataSource = New ReportDataSource("ds_bg_ingresos", dtReg)
+            e.DataSources.Add(ds_bg_registro)
+
+            Dim ds_bg_devoluciones As ReportDataSource = New ReportDataSource("ds_bg_devoluciones", dtDev)
+            e.DataSources.Add(ds_bg_devoluciones)
+        End If
     End Sub
     
     Protected Function Cargar_Logo() As DataTable
