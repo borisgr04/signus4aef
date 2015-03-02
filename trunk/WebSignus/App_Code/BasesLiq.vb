@@ -201,16 +201,7 @@ Public Class BasesLiq
         End If
 
     End Function
-    Public Overloads Function Validarx() As Boolean
-        If Me.LeerArchivo() = True Then
-            Me.Msg += "Subio"
-            Return True
-        Else
-            Me.Msg += "Error Validación de Formato"
-            Return False
-        End If
-
-    End Function
+    
     <DataObjectMethodAttribute(DataObjectMethodType.Select, True)> _
     Public Overloads Function GetFmtos() As DataTable
         Me.Conectar()
@@ -234,12 +225,19 @@ Public Class BasesLiq
 
 
     Public Function Validar_Datos() As Boolean
-        If Me.Codigo <> "3001" Then
-            Return Val_BasesLiq01()
-        Else
-            Return Val_Fm_BLiqReg01()
-        End If
+        Select Case Me.Codigo
+            Case "2001"
+                Return Val_BasesLiq01()
+            Case "4001"
+                Return Val_BasesLiq01()
+            Case "3001"
+                Return Val_Fm_BLiqReg01()
+            Case "5001"
+                Return Val_FM_BLSobreTasa01()
+        End Select
+
     End Function
+    
     ' Validacion de degüello y de Estampillas
     Public Function Val_BasesLiq01() As Boolean
         Dim TVALORIMPTO As Double = 0
@@ -363,9 +361,6 @@ Public Class BasesLiq
         Return (Me.Nro_Error = 0)
 
     End Function
-
-
- 
 
     Public Function Val_Fm_BLiqReg01() As Boolean
 
@@ -492,9 +487,130 @@ Public Class BasesLiq
 
     End Function
 
-    'Public Sub New(ByVal PathLibro As String)
-    '   Me.Libro = PathLibro
-    'End Sub
+    Public Function Val_FM_BLSobreTasa01() As Boolean
+
+        Dim TVALORIMPTO As Double = 0
+        Dim TVALORBASE As Double = 0
+        Me.Nro_Error = 0
+        For i As Integer = 0 To dt.Rows.Count - 1
+            Dim objT As Terceros = New Terceros
+            Dim dtT As DataTable
+            'Verificación de Nit
+            'Encabezado
+            Dim NIT As String = dt.Rows(i)("NIT_AR")
+            Dim DV As String = dt.Rows(i)("DV_AR")
+            Dim ClaDec As String = dt.Rows(i)("CDEC")
+            Dim AGravable As String = dt.Rows(i)("AGravable")
+            Dim PGravable As String = dt.Rows(i)("PGravable")
+
+            Dim NDOC As Double = dt.Rows(i)("NDOC")
+            Dim FOPER As Date = dt.Rows(i)("FOPER")
+            Dim TIDE As String = dt.Rows(i)("TIDE")
+
+            'Gasolina
+            Dim CLASE As String = dt.Rows(i)("CLASE")
+            Dim GALONES As Double = dt.Rows(i)("GALONES")
+            Dim PRECIO_REF As Double = dt.Rows(i)("PRECIO_REF")
+            Dim PORC_ALCOHOL As Double = dt.Rows(i)("PORC_ALCOHOL")
+            
+            'General de otros Impuestos
+            Dim VALORBASE As Double = dt.Rows(i)("VALORBASE")
+            Dim TARIFA As Double = dt.Rows(i)("TARIFA")
+            Dim VALORIMPTO As Double = dt.Rows(i)("VALORIMPTO")
+
+
+            Dim VALORIMPTOC As Double = VALORBASE * TARIFA
+            TVALORIMPTO += VALORIMPTO
+            TVALORBASE += VALORBASE
+
+            If Me.CLDEC <> ClaDec Then
+                Msg += String.Format("Error Clase Dec {0}, No Corresponde a la Clase de Declaración definida <br>", ClaDec)
+                dt.Rows(i)("log_Error") += String.Format("Error Clase Dec {0}, No Corresponde a la Clase de Declaración definida <br>", ClaDec)
+                Nro_Error += 1
+            End If
+
+            If Me.AÑO <> AGravable Then
+                Msg += String.Format("Error Año Gravable {0}, No Corresponde al definido <br>", AGravable)
+                dt.Rows(i)("log_Error") += String.Format("Error Año Gravable {0}, No Corresponde al definido <br>", AGravable)
+                Nro_Error += 1
+            End If
+
+            If Me.PERI <> PGravable Then
+                Msg += String.Format("Error Periodo Gravable {0}, No Corresponde al definido <br>", PGravable)
+                dt.Rows(i)("log_Error") += String.Format("Error Periodo Gravable {0}, No Corresponde al definido <br>", PGravable)
+                Nro_Error += 1
+            End If
+
+            dtT = objT.GetByIde(NIT, DV, "AR")
+            Dim TAG As String = ""
+            If dtT.Rows.Count < 1 Then
+                Msg += String.Format("Error Nit {0}, No Corresponde a un Declarante de Sobretasa a la Gasolina<br>", NIT)
+                dt.Rows(i)("log_Error") += String.Format("Error Nit {0}, No Corresponde a un Agente Recuadador<br>", NIT)
+                Nro_Error += 1
+            Else
+                TAG = dtT.Rows(0)("TAG_COD").ToString
+                'Msg += "Si Existe el Nit"
+            End If
+            Dim ObjC As CDeclaraciones = New CDeclaraciones(ClaDec)
+
+            If Not ObjC.IsCDec_Nit(NIT, ClaDec) Then
+                Msg += String.Format("Error Cdec, NIT {0} No tiene Asociado la Clase de Declaración {1}<br>", NIT, ClaDec)
+                dt.Rows(i)(Me.CampoError) += String.Format("Error Cdec, NIT {0} No tiene Asociado la Clase de Declaración {1}<br>", NIT, ClaDec)
+                Nro_Error += 1
+            Else
+                'Msg += "Si Tiene Asociado, la Cdec"
+            End If
+
+            'Validar Clase
+            'If Not ObjC.IsCDec_Impto(ClaDec, Imp) Then
+            '    Msg += String.Format("Error Cdec, Impto {0} No esta Asociado a la Clase de Declaración {1}<br>", Imp, ClaDec)
+            '    dt.Rows(i)(Me.CampoError) += String.Format("Error Cdec, Impto {0} No esta Asociado a la Clase de Declaración {1}<br>", Imp, ClaDec)
+            '    Nro_Error += 1
+            'Else
+            '    'Msg += "Si Tiene Asociado, la Impto"
+            'End If
+
+            Dim dtCal As DataTable = ObjC.Cdec_APGravable(ClaDec, AGravable, PGravable)
+            If dtCal.Rows.Count = 0 Then
+                Msg += String.Format("Error Cdec, Año: {0} y Periodo: {1} Gravable No Corresponden  No esta Asociado a la Clase de Declaración {2}<br>", AGravable, PGravable, ClaDec)
+                dt.Rows(i)(Me.CampoError) += String.Format("Error Cdec, Año: {0} y Periodo: {1} Gravable No Corresponden  No esta Asociado a la Clase de Declaración {2}<br>", AGravable, PGravable, ClaDec)
+                Nro_Error += 1
+            Else
+                'Msg += "Si Tiene Asociado, la A y P Gravable"
+
+                If (FOPER < dtCal.Rows(0)("Cal_Fini")) Or (FOPER > dtCal.Rows(0)("Cal_FFin")) Then
+                    Msg += String.Format("Error Fecha {0}, no esta dentro del periodo gravable: {1} y Periodo: {2} Gravable [{3} - {4}] <br>", FOPER, AGravable, PGravable, dtCal.Rows(0)("Cal_Fini"), dtCal.Rows(0)("Cal_FFin"))
+                    dt.Rows(i)(Me.CampoError) += String.Format("Error Fecha {0}, no esta dentro del periodo gravable: {1} y Periodo: {2} Gravable [{3} - {4}] <br>", FOPER, AGravable, PGravable, dtCal.Rows(0)("Cal_Fini"), dtCal.Rows(0)("Cal_FFin"))
+                    Nro_Error += 1
+                End If
+            End If
+            'Dim TARIFA_REAL As Double = Tarifa_Registro(TACTO, TAG, FECH)
+            'If TARIFA_REAL <> TARIFA Then
+            '    Msg += String.Format("Tarifa del Archivo Plano {0} Tarifa del sistema {1}, No corresponden", TARIFA, TARIFA_REAL)
+            '    dt.Rows(i)(Me.CampoError) += String.Format("Tarifa del Archivo Plano {0} Tarifa del sistema {1}, No corresponden", TARIFA, TARIFA_REAL)
+            '    Nro_Error += 1
+            'Else
+            '    Msg += "Si Corresponde el Cálculo de Impto"
+            'End If
+
+            'VALORIMPTOC = VALORBASE * TARIFA_REAL
+
+            'If VALORIMPTO <> VALORIMPTOC Then
+            '    Msg += String.Format("Valor Base {0} x Tarifa {1} = Valor Impto {2}, No corresponde con el Valor del Archivo Valor_Impto {3}", VALORBASE, TARIFA_REAL, VALORIMPTOC, VALORIMPTO)
+            '    dt.Rows(i)(Me.CampoError) += String.Format("Valor Base {0} x Tarifa {1} = Valor Impto {2}, No corresponde con el Valor del Archivo Valor_Impto {3}", VALORBASE, TARIFA_REAL, VALORIMPTOC, VALORIMPTO)
+            '    Nro_Error += 1
+            'Else
+            '    'Msg += "Si Corresponde el Cálculo de Impto"
+            'End If
+
+        Next
+        
+        Return (Me.Nro_Error = 0)
+
+    End Function
+
+
+    
     <DataObjectMethodAttribute(DataObjectMethodType.Select, True)> _
     Public Overloads Function GetRecords(ByVal NIT As String, ByVal CLDEC As String, ByVal AÑO As String, ByVal PERI As String) As DataTable
 
@@ -545,14 +661,66 @@ Public Class BasesLiq
 
     <DataObjectMethodAttribute(DataObjectMethodType.Select, True)> _
     Public Overloads Function GetAforoCdec(ByVal Cla_dec As String, ByVal Tipo_Agente As String, Optional ByVal nro_rad As Long = 0) As DataTable
-        If Cla_dec = "30" Then
-            Return GetAforoReg(Tipo_Agente, nro_rad)
-        Else
-            Return GetAforo(Tipo_Agente, nro_rad)
-        End If
+        Select Case Cla_dec
+            Case "20"
+                Return GetAforo(Tipo_Agente, nro_rad)
+            Case "40"
+                Return GetAforo(Tipo_Agente, nro_rad)
+            Case "30"
+                Return GetAforoReg(Tipo_Agente, nro_rad)
+            Case "50"
+                Return GetAforoGas(Tipo_Agente, nro_rad)
+            Case Else
+                Return New DataTable
+        End Select
+
     End Function
 
+    <DataObjectMethodAttribute(DataObjectMethodType.Select, True)> _
+    Public Overloads Function GetAforoGas(ByVal Tipo_Agente As String, Optional ByVal nro_rad As Long = 0) As DataTable
+        Me.Conectar()
+        'Para Mostrar Detalle de la Liquidacion
+        'querystring = "SELECT '50' CoCd_Cdec,'01' CoCd_Codi,'Gasolina' CoCd_Nomb,'5001' CoCd_Impto, Clase, SUM (galones) galones, AVG (precio_ref),"
+        'querystring += " AVG (porc_alcohol) porc_alcohol, SUM (valorbase) BASEGRAVABLE, "
+        'querystring += " AVG (tarifa) tarifa, AVG (valorimpto) VALORIMPUESTO "
+        'querystring += " FROM fm_blsobretasa WHERE nro_rad = " + nro_rad.ToString + " GROUP BY clase "
 
+        querystring = " Select af.CoCd_Cdec,af.CoCd_CoDi,af.Cocd_Tico,af.CoCd_Nomb,af.CoCd_Impto,0 BASEGRAVABLE, 0 Tarifa,h.VALORIMPUESTO From ("
+        querystring += " Select Lp.CoCd_Cdec,Lp.CoCd_CoDi,Cocd_Tico,CoCd_Nomb,CoCd_Impto From Bases_liq  "
+        querystring += " Inner Join Conc_Cdec Lp On cocd_fdco=BaLi_FdCo And cocd_seco='LP' And CoCd_Tico='K' "
+        querystring += " WHERE BaLi_NRad = " + nro_rad.ToString
+        querystring += " ) Af  Left Join  ("
+        querystring += " SELECT '50' CoCd_Cdec,'01' CoCd_Codi, Sum (valorimpto) VALORIMPUESTO FROM fm_blsobretasa Where Nro_Rad=" + nro_rad.ToString
+        querystring += " ) H On af.cocd_cdec = H.cocd_cdec AND af.cocd_codi=h.cocd_codi "
+
+        CrearComando(querystring)
+        Dim dataTb As DataTable = EjecutarConsultaDataTable()
+        Me.Desconectar()
+        Return dataTb
+    End Function
+
+    <DataObjectMethodAttribute(DataObjectMethodType.Select, True)> _
+    Public Overloads Function GetAforoGas(ByVal Tipo_Agente As String, ByVal nro_rad As Integer, ByVal Codi As String) As DataTable
+        Me.Conectar()
+
+        querystring = " Select af.CoCd_Cdec,af.CoCd_CoDi,af.Cocd_Tico,af.CoCd_Nomb,af.CoCd_Impto,0 BASEGRAVABLE, 0 Tarifa,h.VALORIMPUESTO From ("
+        querystring += " Select Lp.CoCd_Cdec,Lp.CoCd_CoDi,Cocd_Tico,CoCd_Nomb,CoCd_Impto From Bases_liq  "
+        querystring += " Inner Join Conc_Cdec Lp On cocd_fdco=BaLi_FdCo And cocd_seco='LP' And CoCd_Tico='K' "
+        querystring += " WHERE BaLi_NRad = " + nro_rad.ToString
+        querystring += " ) Af  Left Join  ("
+        querystring += " SELECT '50' CoCd_Cdec,'01' CoCd_Codi, Sum (valorimpto) VALORIMPUESTO FROM fm_blsobretasa Where Nro_Rad=" + nro_rad.ToString
+        querystring += " ) H On af.cocd_cdec = H.cocd_cdec AND af.cocd_codi=h.cocd_codi And af.cocd_codi='" + Codi + "'"
+
+        Msg = querystring
+        'Throw New Exception(querystring)
+        CrearComando(querystring)
+        'AsignarParametroCadena(":Nrad", nro_rad)
+        Dim dataTb As DataTable = EjecutarConsultaDataTable()
+        Me.Desconectar()
+        Return dataTb
+    End Function
+
+    'Estampillas y Degüello
     <DataObjectMethodAttribute(DataObjectMethodType.Select, True)> _
     Public Overloads Function GetAforo(ByVal Tipo_Agente As String, Optional ByVal nro_rad As Long = 0) As DataTable
         Me.Conectar()
@@ -597,7 +765,6 @@ Public Class BasesLiq
         querystring += "Where BaLi_NRad=" + nro_rad.ToString + " And bali_est='AC' Order By CoCd_Codi "
         querystring += ") Aforo Left Join "
         querystring += "("
-        'queryString += "Select Impto, Sum(ValorBase) BaseGravable, Sum(valorImpto) ValorImpuesto From Fm_BasesLiq01  Where Nro_rad=" + nro_rad.ToString + "  Group by Impto "
         querystring += "SELECT   '30' cdec, CASE WHEN es_devolucion = 'NO' THEN '01' ELSE '02' END codi, SUM (valorbase) basegravable, SUM (valorimpto+intereses) valorimpuesto FROM fm_bliqreg01  WHERE nro_rad = " + nro_rad.ToString + " GROUP BY impto, es_devolucion"
         querystring += ") On cdec = cocd_cdec AND cocd_codi=codi "
         Msg = querystring
@@ -704,30 +871,23 @@ Public Class BasesLiq
     Public Overloads Function GetAforo(ByVal Tipo_Agente As String, ByVal cla_dec As String, ByVal nit As String, ByVal año As String, ByVal peri As String) As DataTable
         Dim dataTb As DataTable, dt As DataTable
         dataTb = Me.GetRecords(nit, cla_dec, año, peri) 'Consulta el numero de Radicacion. 
-
-        If dataTb.Rows.Count > 0 Then
-            If cla_dec = "30" Then ' Si es Registro
-                dt = Me.GetAforoReg(Tipo_Agente, dataTb.Rows(0)("NRAD").ToString)
-            Else
-                dt = Me.GetAforo(Tipo_Agente, dataTb.Rows(0)("NRAD").ToString)
-            End If
-
-        Else
-            dt = New DataTable
-        End If
-
-        Return dt
+        Return GetAforoCdec(cla_dec, Tipo_Agente, dataTb.Rows(0)("NRAD").ToString)
     End Function
     <DataObjectMethodAttribute(DataObjectMethodType.Select, True)> _
     Public Overloads Function GetAforo(ByVal Tipo_Agente As String, ByVal cla_dec As String, ByVal nit As String, ByVal año As String, ByVal peri As String, ByVal cod_impto As String) As DataTable
-        Dim dataTb As DataTable, dt As DataTable
+        Dim dataTb As DataTable, dt As New DataTable
         dataTb = Me.GetRecords(nit, cla_dec, año, peri)
         If dataTb.Rows.Count > 0 Then
-            If cla_dec = "30" Then ' Si es Registro
-                dt = Me.GetAforoReg(Tipo_Agente, dataTb.Rows(0)("NRAD").ToString, cod_impto)
-            Else
-                dt = Me.GetAforo(Tipo_Agente, dataTb.Rows(0)("NRAD").ToString, cod_impto)
-            End If
+            Select Case cla_dec
+                Case "20"
+                    dt = Me.GetAforo(Tipo_Agente, dataTb.Rows(0)("NRAD").ToString, cod_impto)
+                Case "40"
+                    dt = Me.GetAforo(Tipo_Agente, dataTb.Rows(0)("NRAD").ToString, cod_impto)
+                Case "30"
+                    dt = Me.GetAforoReg(Tipo_Agente, dataTb.Rows(0)("NRAD").ToString, cod_impto)
+                Case "50"
+                    dt = Me.GetAforoGas(Tipo_Agente, dataTb.Rows(0)("NRAD").ToString, cod_impto)
+            End Select
         Else
             dt = New DataTable
         End If
