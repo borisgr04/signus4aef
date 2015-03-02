@@ -17,7 +17,7 @@ Imports Microsoft.Reporting.WebForms
 Imports AjaxControlToolkit
 
 
-Partial Class Declaraciones_Registro_Declaracionv02
+Partial Class Declaraciones_SobreTasa_Declaracionv01
     Inherits PaginaComun
     Dim NroRenglon As String = "9"
     Dim Dec_nro As String
@@ -242,7 +242,7 @@ Partial Class Declaraciones_Registro_Declaracionv02
         Me.RenglonVP = objCd.GetRenglones(Me.Cla_Dec.Value, "VP", Me.HdFODE.Value).Rows.Count
         Me.redondear = objCd.pRedondeo()
         Me.fnTotalizar = "Totalizar(" + Me.RenglonLP.ToString + "," + Me.RenglonVP.ToString + ",'" + Me.Operaciones_Form.Trim + "'," + redondear.ToString + ");"
-     
+
         Me.ReportViewer1.LocalReport.ReportPath = Me.Server.MapPath("~") + "\" + dtForm.Rows(0)("FODE_RPTE").ToString.Trim
 
         'Me.LbPGravable.Text = dtForm.Rows(0)("FODE_RPTE").ToString.Trim
@@ -312,16 +312,11 @@ Partial Class Declaraciones_Registro_Declaracionv02
             End If
         End If
 
-        Dim de_bg As New De_Bg_Registro()
+        Dim de_bg As New De_Bg_Gasolina()
 
-        RptBGDev.DataSource = de_bg.Get_BaseG_Registro(Me.HdTAG.Value, Me.Identificaciòn.Text, Me.AGravable.Text, Me.PGravable.Text, "D")
-        RptBGDev.DataBind()
-
-        RptBGImpto.DataSource = de_bg.Get_BaseG_Registro(Me.HdTAG.Value, Me.Identificaciòn.Text, Me.AGravable.Text, Me.PGravable.Text, "I")
+        RptBGImpto.DataSource = de_bg.GetAforo(Me.HdTAG.Value, Me.Identificaciòn.Text, Me.AGravable.Text, Me.PGravable.Text)
         RptBGImpto.DataBind()
 
-        'RptBG.DataSource
-        'RptBG
 
         'Me.BtnPDF.Enabled = True
     End Sub
@@ -333,22 +328,7 @@ Partial Class Declaraciones_Registro_Declaracionv02
     Public Function Tarifa(ByVal Cod_imp As String, ByVal tip As String) As String
         objCd = New CDeclaraciones(Me.Cla_Dec.Value)
         Dim Input_par As String = ""
-
-        'If Me.Cla_Dec.Value = "01" Then
-        ' Input_par = String.Format("Valor_Base Number:=1;Tipo_Acto Number:={0};", tip)
-        ' ElseIf Me.Cla_Dec.Value = "02" Then
-        ' Input_par = "Valor_Base Number:=1;Tipo_Acto Number:=1;"
-        ' ElseIf Me.Cla_Dec.Value = "03" Then
-        ' If Me.HdTAG.Value = "12" Then
-        ' Input_par = "Valor_Base Number:=1;Tipo Number:=1;"
-        ' End If
-        'If Me.HdTAG.Value = "13" Then
-        ' Input_par = "Valor_Base Number:=1;Tipo Number:=2;"
-        ' End If
-        ' End If
         Input_par = objCd.GetParametrosTar(Me.Cla_Dec.Value, Me.HdTAG.Value, tip)
-        'Response.Write(Input_par)
-        'Response.End()
         Return objCd.GetTarifa(Cod_imp, Input_par, Me.fecha_dec)
     End Function
 
@@ -461,16 +441,11 @@ Partial Class Declaraciones_Registro_Declaracionv02
 
             Dim CVMM As String = objCd.GetCVMM(Me.HdFecLim.Value)
             If (CVMM = "S") Then
-                If (HdCodi.Value = "01") Or (HdCodi.Value = "02") Then
+                If (HdCodi.Value = "01") Then
                     Dim obj As BasesLiq = New BasesLiq
                     Dim dt As DataTable = obj.GetAforo(Me.HdTAG.Value, Me.Cla_Dec.Value, Me.Identificaciòn.Text, Me.AGravable.Text, Me.PGravable.Text, HdCodi.Value)
-                    'Me.Labe25.Text = Me.Labe25.Text + Me.Identificaciòn.Text + "," + Me.AGravable.Text + "," + Me.PGravable.Text + "," + HdIMPTO.Value + "," + dt.Rows.Count.ToString + "<br>"
-                    'Response.Write(HdIMPTO.Value)
-                    'Me.MsgResult.Text += HdIMPTO.Value + ";" + dt.Rows.Count.ToString
-                    'Response.End()
-                    'Me.MsgResult.Text += dt.Rows.Count.ToString
+                    Me.Labe25.Text = Me.Labe25.Text + Me.Identificaciòn.Text + "," + Me.AGravable.Text + "," + Me.PGravable.Text + "," + HdIMPTO.Value + "," + dt.Rows.Count.ToString + "<br>"
                     If dt.Rows.Count > 0 Then
-                        'TxtValBas.Text = dt.Rows(0)("BASEGRAVABLE").ToString
                         TxtR.Text = dt.Rows(0)("VALORIMPUESTO").ToString
                     End If
                 End If
@@ -501,22 +476,8 @@ Partial Class Declaraciones_Registro_Declaracionv02
             End If
             'Operaciones
             TxtR.Attributes.Add("onBlur", Me.fnTotalizar + "Resaltar_Off(this);")
-            'TxtR.Attributes.Add("onkeypress", "return tabular(event,this);")
-
-            'Dim r As String = CStr(DirectCast(e.Item.DataItem, DataRowView)("Cocd_REVB"))
-            'If r > 1 Then
-            ' TxtValBas.Attributes.Add("onBlur", Me.fnTotalizar + "Resaltar_Off(this);redondear_input(this," & r.ToString & ");")
-            'Else
-            '   TxtValBas.Attributes.Add("onBlur", Me.fnTotalizar + "Resaltar_Off(this);")
-            'End If
-
-
-            '   TxtValBas.Attributes.Add("onFocus", "Resaltar_On(this);")
-
             'definición de Renglones ReadOnly- Sumados o calculados
             If (HdSum.Value = "S") Then
-                'TxtR.Attributes.Add("onfocus", "validar_focus('T')")
-                'TxtR.Attributes.Add("onfocus", "this.blur()")
                 TxtR.Attributes.Add("onFocus", "ResaltarD_On(this)")
                 TxtR.ReadOnly = True
             Else
@@ -1070,8 +1031,6 @@ Partial Class Declaraciones_Registro_Declaracionv02
             Dim CboTSan As DropDownList = DirectCast(Me.Repeater1.Items(i).FindControl("CboTSan"), DropDownList)
 
             LiqP(i).CODE_DEES = ""
-            'LiqP(i).CODE_ABVB = LbABIM.Text
-            'LiqP(i).CODE_ABVD = LbABVD.Text
             LiqP(i).CODE_CART = HdCART.Value
             LiqP(i).CODE_CDEC = Me.Cla_Dec.Value
             LiqP(i).CODE_CODI = HdCodi.Value
@@ -1088,22 +1047,13 @@ Partial Class Declaraciones_Registro_Declaracionv02
             LiqP(i).CODE_VASU = 0
             LiqP(i).CODE_CCAR = HdCCAR.Value
             LiqP(i).CODE_SUM = HdSum.Value
-            'si tiene valor base
-            'If HdIsVB.Value = "S" Then
-            'Dim TxtValBas As TextBox = DirectCast(Me.Repeater1.Items(i).FindControl("TxtValBas"), TextBox)
-            'LiqP(i).CODE_VABA = CDbl(TxtValBas.Text.Replace("$", ""))
-            'LiqP(i).CODE_IMPTO = HdCimp.Value
-            'LiqP(i).CODE_TARI = HdTari.Value
-            'Else
+            
             LiqP(i).CODE_VABA = Nothing
-            'End If
+
             r = i + 1
-            ' si calcula el valor declaracdo
-            'If HdCTar.Value = "S" Then
-            'LiqP(i).CODE_VADE = objCd.RedondearUp(LiqP(i).CODE_VABA * LiqP(i).CODE_TARI)
-            'Else
+            
             LiqP(i).CODE_VADE = CDbl(txtR.Text.Replace("$", ""))
-            'End If
+
             'SI ES SANCIÓN
             If HdTICO.Value = "S" Then
                 LiqP(i).CODE_TSAN = CboTSan.SelectedValue
